@@ -1,0 +1,5 @@
+google-genai
+google-generativeai
+deep-translator
+tqdm
+Pillow
