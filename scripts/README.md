@@ -21,6 +21,7 @@ This folder contains the Python suite developed to generate, translate, and augm
 Ensure you have Python installed, then run:
 ```bash
 pip install -r requirements.txt
+```
 
 > [!IMPORTANT]
 > **API Configuration Required**
