@@ -1,0 +1,5 @@
+• ogni prodotto ha un codice SKU, un nome ed è realizzato da una marca
+• ogni marca ha un nome, appartiene a un gruppo industriale e ha un codice che la identifica univocamente
+• ogni gruppo industriale ha un codice e un nome
+• ogni prodotto appartiene a una sottocategoria specifica (ad esempio "Smartphone") che a sua volta appartiene a una categoria merceologica (ad esempio "Elettronica"); ogni sottocategoria ha un nome e un codice che la identifica nell'ambito della categoria
+• ogni categoria merceologica ha un codice e un nome

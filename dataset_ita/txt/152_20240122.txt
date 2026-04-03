@@ -1,0 +1,6 @@
+- ogni artista principale è associato a uno e un solo genere musicale e collabora con uno o più musicisti di supporto
+• ad ogni genere musicale sono associati uno o più artisti principali e ad esso afferiscono tutti e soli i musicisti di supporto che collaborano con tali artisti
+• ogni musicista di supporto collabora con uno e un solo artista principale e afferisce al genere musicale a cui è associato tale artista
+• ogni musicista di supporto e ogni artista principale hanno ciascuno uno e un solo studio di registrazione, ma lo studio di un musicista di supporto non coincide necessariamente con quello del relativo artista principale;
+- per ogni studio di registrazione ci possono essere più musicisti di supporto e più artisti principali
+• si noti che il concetto di genere musicale è una classificazione e non si parla di uno studio di registrazione di un genere musicale

@@ -1,0 +1,9 @@
+• each manager works in one or more offices and with one or more assistants, and it is important to be able to say that
+collaborates with an assistant at an office and with another assistant (or others or even with the same one) at
+another office
+• it is possible for a manager X to collaborate with an assistant Y at an office Z and with another assistant V
+at another office W without X collaborating with Y at office W
+• one or more managers and one or more assistants collaborate with each office
+• each assistant collaborates with one or more offices and with one or more managers
+• each office has one and only one office and each office has multiple offices
+• managers and assistants have links with the headquarters only through offices

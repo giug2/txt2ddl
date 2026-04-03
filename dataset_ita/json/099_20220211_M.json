@@ -1,0 +1,111 @@
+{
+    "entities": [
+        {
+            "name": "Museo",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Itinerario",
+            "attributes": [
+                {
+                    "name": "Sigla",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_idmuseo",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Visita guidata",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Durata",
+                    "is_pk": false
+                },
+                {
+                    "name": "Orario",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Opera",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Giorno",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Itinerario",
+            "entity2": "Museo",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Opera",
+            "entity2": "Itinerario",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "N_ordine",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Itinerario",
+            "entity2": "Visita guidata",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Giorno",
+            "entity2": "Visita guidata",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Num_partecipanti",
+                    "is_pk": false
+                }
+            ]
+        }
+    ]
+}

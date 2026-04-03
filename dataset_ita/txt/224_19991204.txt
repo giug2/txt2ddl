@@ -1,0 +1,7 @@
+Viene presentato uno schema logico per la gestione di collezioni museali di opere d'arte.
+L'entità centrale è OperaArte, descritta dagli attributi IDOpera, Titolo e Stile.
+La paternità delle opere è modellata da una relazione molti-a-molti, che collega l'entità OperaArte all'entità Artista, indicando che un'opera può essere frutto di una collaborazione tra più artisti e un artista può essere autore di più opere.
+L'entità Artista è a sua volta definita da IDArtista, Cognome e Nome.
+Le informazioni sulla collocazione sono gestite dalla relazione tra OperaArte e Museo, che include gli attributi SalaEspositiva e AnnoAcquisizione.
+Questa relazione stabilisce un collegamento tra un'opera e il museo che la ospita, specificando che ogni opera è esposta in un singolo museo, mentre un museo può ospitare molte opere.
+Infine, l'entità Museo è caratterizzata da Nome e Città.

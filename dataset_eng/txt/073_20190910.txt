@@ -1,0 +1,7 @@
+• each practice relates to a client and is made up of a certain number of services
+• each patient has a code, surname and name
+• each service (which constitutes a "row" of the relevant practice) has
+– a description, which is a simple text string
+– a person (to whom the payment has been made by the patient) who can be a doctor
+or a company, but we still assume it is a simple text string
+– a date and an amount

@@ -1,0 +1,70 @@
+{
+    "entities": [
+        {
+            "name": "PROFESSOR",
+            "attributes": [
+                {
+                    "name": "pk_professor",
+                    "is_pk": true
+                },
+                {
+                    "name": "course_name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CORSO",
+            "attributes": [
+                {
+                    "name": "pk_course",
+                    "is_pk": true
+                },
+                {
+                    "name": "professor_name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "TUTOR",
+            "attributes": [
+                {
+                    "name": "pk_tutor",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "DEPARTMENT",
+            "attributes": [
+                {
+                    "name": "pk_department",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "CORSO",
+            "entity2": "PROFESSOR",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "TUTOR",
+            "entity2": "PROFESSOR",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "TUTOR",
+            "entity2": "CORSO",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "CORSO",
+            "entity2": "DEPARTMENT",
+            "cardinality": "N:1"
+        }
+    ]
+}

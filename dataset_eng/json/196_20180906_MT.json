@@ -1,0 +1,125 @@
+{
+    "entities": [
+        {
+            "name": "Patient",
+            "attributes": [
+                {
+                    "name": "Tax ID code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "DataNascita",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Hospitalization",
+            "attributes": [
+                {
+                    "name": "Hospitality_ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "Department",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Invoice",
+            "attributes": [
+                {
+                    "name": "InvoiceNumber",
+                    "is_pk": true
+                },
+                {
+                    "name": "DataEmission",
+                    "is_pk": false
+                },
+                {
+                    "name": "Amount",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Payment",
+            "attributes": [
+                {
+                    "name": "Transaction_ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "DataPayment",
+                    "is_pk": false
+                },
+                {
+                    "name": "AmountPaid",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Hospital",
+            "attributes": [
+                {
+                    "name": "HospitalCode",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeStruttura",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "ASL",
+            "attributes": [
+                {
+                    "name": "CodiceASL",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Hospitalization",
+            "entity2": "Patient",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Invoice",
+            "entity2": "Hospitalization",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Hospitalization",
+            "entity2": "Hospital",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Hospital",
+            "entity2": "ASL",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Payment",
+            "entity2": "Invoice",
+            "cardinality": "N:1"
+        }
+    ]
+}

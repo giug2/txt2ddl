@@ -1,0 +1,5 @@
+Lo schema descrive un dominio in cui sono gestite le Case Costruttrici ciascuna identificata univocamente da un Codice e caratterizzata da un Nome e una Nazione 
+Ogni casa costruttrice produce dei Modelli i quali sono definiti da un'associazione con la Casa di appartenenza da un Nome e da una Categoria 
+Il sistema traccia anche le singole Automobili ognuna identificata dalla propria Targa 
+Ogni automobile riconducibile a uno specifico modello attraverso gli attributi Casa e Modello ha un Anno di immatricolazione e un Proprietario 
+Quest'ultimo collegato all'entità Persone dove ogni individuo identificato dal proprio Codice Fiscale e descritto da Cognome e Nome 

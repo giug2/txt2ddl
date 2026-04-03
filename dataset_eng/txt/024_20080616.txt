@@ -1,0 +1,11 @@
+- for each passenger there is a code (identification), surname and name and a telephone number, which is
+optional and is the same in all bookings
+• the From and To columns contain airport codes, for which the name and city are also stored
+(for example, “FCO” is associated with “Fiumicino” as a name and “Rome” as a city)
+• the flight number (for example “AZ024”) is made up of the company code (for which it is relevant
+also the name; for example “AZ” is the code of the company whose name is “Alitalia”) and an integer
+• a flight with a certain FlightNumber always has the same departure and arrival airports (From and To) and the same
+aircraft type, but may have different schedule on different dates; for the aircraft type
+the code (shown in the card, for example "A321") has a name associated with it (in the example it could be
+“Airbus 321”);
+• the Class column contains a code (of the "booking class") which, as can be seen from the data, is specifically associated with the flight and booking; for each value of this code a description is stored.

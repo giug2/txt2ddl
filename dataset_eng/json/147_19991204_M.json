@@ -1,0 +1,135 @@
+{
+    "entities": [
+        {
+            "name": "Casa",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Nation",
+            "attributes": [
+                {
+                    "name": "Acronym Nation",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Model",
+            "attributes": [
+                {
+                    "name": "Name",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_home",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Auto",
+            "attributes": [
+                {
+                    "name": "Targa",
+                    "is_pk": true
+                },
+                {
+                    "name": "Displacement",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Persona",
+            "attributes": [
+                {
+                    "name": "Tax ID code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Version",
+            "attributes": [
+                {
+                    "name": "CodeVersion",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_model",
+                    "is_pk": true
+                },
+                {
+                    "name": "Anno",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Category",
+            "attributes": [
+                {
+                    "name": "CategoryCode",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Casa",
+            "entity2": "Nation",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Casa",
+            "entity2": "Model",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Auto",
+            "entity2": "Persona",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Auto",
+            "entity2": "Version",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Version",
+            "entity2": "Model",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Category",
+            "entity2": "Model",
+            "cardinality": "1:N"
+        }
+    ]
+}

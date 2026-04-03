@@ -1,0 +1,194 @@
+{
+    "entities": [
+        {
+            "name": "FACULTY",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "UNIVERSITY",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CLASSROOM",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "DEPARTMENT",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "ACADEMIC_COURSE",
+            "attributes": [
+                {
+                    "name": "COURSE_CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_department",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "LESSON_DAY",
+            "attributes": [
+                {
+                    "name": "NUMBER",
+                    "is_pk": true
+                },
+                {
+                    "name": "ACTUAL_START",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "TYPE_EQUIPMENT",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "ACTUAL_LESSON",
+            "attributes": [
+                {
+                    "name": "DATA",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_course",
+                    "is_pk": true
+                },
+                {
+                    "name": "DESCRIPTION",
+                    "is_pk": false
+                },
+                {
+                    "name": "ACTUAL_END",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "EQUIPMENT",
+            "attributes": [
+                {
+                    "name": "SERIAL NUMBER",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "UNIVERSITY",
+            "entity2": "FACULTY",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "FACULTY",
+            "entity2": "CLASSROOM",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "CLASSROOM",
+            "entity2": "ACADEMIC_COURSE",
+            "cardinality": "1:N",
+            "attributes": [
+                {
+                    "name": "End_Time",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "ACADEMIC_COURSE",
+            "entity2": "CLASSROOM",
+            "cardinality": "N:1",
+            "attributes": [
+                {
+                    "name": "Start_Time",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "UNIVERSITY",
+            "entity2": "DEPARTMENT",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "DEPARTMENT",
+            "entity2": "ACADEMIC_COURSE",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "TYPE_EQUIPMENT",
+            "entity2": "ACADEMIC_COURSE",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "ACADEMIC_COURSE",
+            "entity2": "LESSON_DAY",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "ACTUAL_LESSON",
+            "entity2": "ACADEMIC_COURSE",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "TYPE_EQUIPMENT",
+            "entity2": "EQUIPMENT",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "EQUIPMENT",
+            "entity2": "ACTUAL_LESSON",
+            "cardinality": "1:N"
+        }
+    ]
+}

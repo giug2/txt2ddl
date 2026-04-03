@@ -1,0 +1,140 @@
+{
+    "entities": [
+        {
+            "name": "Missione",
+            "attributes": [
+                {
+                    "name": "Numero",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Linea",
+            "attributes": [
+                {
+                    "name": "Numero",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_missione",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Coordinatore",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Raccomandazione",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Fonte",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Progetto",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Ministero",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Linea",
+            "entity2": "Missione",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Raccomandazione",
+            "entity2": "Missione",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Linea",
+            "entity2": "Fonte",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Importo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Progetto",
+            "entity2": "Linea",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Progetto",
+            "entity2": "Ministero",
+            "cardinality": "N:1",
+            "attributes": [
+                {
+                    "name": "Budget",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Progetto",
+            "entity2": "Ministero",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Partecipanti",
+                    "is_pk": false
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,4 @@
+• ogni medico afferisce ad una e una sola unità operativa;
+• ogni trattamento è associato a uno e un solo paziente;
+• ogni medico segue zero o più pazienti e potenzialmente partecipa a tutti i trattamenti di quei pazienti (e a nessun altro trattamento);
+• ogni unità operativa ha come pazienti e trattamenti quelli dei propri medici.

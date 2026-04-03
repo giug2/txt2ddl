@@ -1,0 +1,5 @@
+• ogni prodotto ha uno SKU (codice univoco) e un nome, ed appartiene ad una sottocategoria
+• ogni sottocategoria ha un nome, appartiene ad una categoria e ha un codice che la identifica nell’ambito della categoria
+• ogni categoria ha un codice e un nome
+• ogni prodotto è di una marca specifica che a sua volta appartiene ad un produttore; ogni marca ha un nome e un codice che la identifica univocamente
+• ogni produttore ha un codice e un nome

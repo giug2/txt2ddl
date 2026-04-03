@@ -1,0 +1,129 @@
+{
+    "entities": [
+        {
+            "name": "Institution",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "E-mail",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nation",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Author",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Address",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Item",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Title",
+                    "is_pk": false
+                },
+                {
+                    "name": "Subtitle",
+                    "is_pk": false
+                },
+                {
+                    "name": "Text",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Publication",
+            "attributes": [
+                {
+                    "name": "Number",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_volume",
+                    "is_pk": true
+                },
+                {
+                    "name": "Data",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Volume",
+            "attributes": [
+                {
+                    "name": "Anno",
+                    "is_pk": true
+                },
+                {
+                    "name": "Title",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Institution",
+            "entity2": "Author",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Author",
+            "entity2": "Item",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Item",
+            "entity2": "Publication",
+            "cardinality": "N:1",
+            "attributes": [
+                {
+                    "name": "Home page",
+                    "is_pk": false
+                },
+                {
+                    "name": "Page End",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Volume",
+            "entity2": "Publication",
+            "cardinality": "1:N"
+        }
+    ]
+}

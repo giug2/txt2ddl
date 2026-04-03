@@ -1,0 +1,47 @@
+{
+    "entities": [
+        {
+            "name": "Project",
+            "attributes": [
+                {
+                    "name": "ProjectCode",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Employee",
+            "attributes": [
+                {
+                    "name": "Freshman",
+                    "is_pk": true
+                },
+                {
+                    "name": "Role",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Hiring Date",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Employee",
+            "entity2": "Project",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                }
+            ]
+        }
+    ]
+}

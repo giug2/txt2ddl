@@ -1,0 +1,132 @@
+{
+    "entities": [
+        {
+            "name": "Serie",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Convegno",
+            "attributes": [
+                {
+                    "name": "fk_serie",
+                    "is_pk": true
+                },
+                {
+                    "name": "Data",
+                    "is_pk": true
+                },
+                {
+                    "name": "anno",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Sessione",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Titolo",
+                    "is_pk": false
+                },
+                {
+                    "name": "Ora",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Persona con affiliazione",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Persona",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Titolo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Istituzione",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Citt\u00e0",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Convegno",
+            "entity2": "Serie",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Convegno",
+            "entity2": "Citt\u00e0",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Sessione",
+            "entity2": "Convegno",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Sessione",
+            "entity2": "Persona con affiliazione",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Persona con affiliazione",
+            "entity2": "Persona",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Persona con affiliazione",
+            "entity2": "Istituzione",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Istituzione",
+            "entity2": "Citt\u00e0",
+            "cardinality": "N:1"
+        }
+    ]
+}

@@ -1,0 +1,59 @@
+{
+  "entities": [
+    {
+      "name": "Cliente",
+      "attributes": [
+        { "name": "id_cliente", "is_pk": true },
+        { "name": "nome", "is_pk": false },
+        { "name": "cognome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Impiegato",
+      "attributes": [
+        { "name": "id_impiegato", "is_pk": true },
+        { "name": "fk_reparto", "is_pk": true },
+        { "name": "nome", "is_pk": false },
+        { "name": "cognome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Progetto",
+      "attributes": [
+        { "name": "id_progetto", "is_pk": true },
+        { "name": "fk_cliente", "is_pk": true },
+        { "name": "nome_progetto", "is_pk": false },
+        { "name": "data_inizio", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Reparto",
+      "attributes": [
+        { "name": "id_reparto", "is_pk": true },
+        { "name": "nome_reparto", "is_pk": false }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "Impiegato",
+      "entity2": "Reparto",
+      "cardinality": "N:1"
+    },
+    {
+      "entity1": "Cliente",
+      "entity2": "Progetto",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Impiegato",
+      "entity2": "Cliente",
+      "cardinality": "N:N"
+    },
+    {
+      "entity1": "Impiegato",
+      "entity2": "Progetto",
+      "cardinality": "N:N"
+    }
+  ]
+}

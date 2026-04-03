@@ -1,0 +1,8 @@
+Mostrare uno schema concettuale per la base di dati utilizzata da un concessionario di
+automobili per memorizzare le informazioni sulle automobili disponibili, con le seguenti specifiche
+• ogni automobile ha un numero di telaio, un colore, una data di arrivo presso il concessionario, una marca
+(ad esempio FIAT), un modello (ad esempio, Panda) e una versione (ad esempio, 1.2 Easy);
+• ogni modello ha un codice, un nome (ad esempio Panda), una marca (ad esempio FIAT), una lunghezza
+e un numero di posti e appartiene ad un “segmento” di mercato, con codice e descrizione (ad esempio,
+segmento B, “compatte”)
+• ogni versione ha un tipo di alimentazione (con codice e descrizione), una cilindrata e un prezzo.

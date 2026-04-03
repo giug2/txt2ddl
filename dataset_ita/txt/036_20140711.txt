@@ -1,0 +1,7 @@
+Lo schema descrive un sistema organizzato attorno a quattro entità principali 
+La prima il dipartimento identificato in modo univoco dal suo nome o codice Dipartimento e caratterizzato da un Indirizzo 
+A questa entità collegato il professore il quale identificato da un CodiceProf univoco e descritto da un NomeProf 
+Ogni professore appartiene a un dipartimento specifico stabilendo una relazione attraverso l'attributo Dipartimento 
+L'insegnamento rappresentato da due entità correlate edizione e Corso 
+L'entità edizione definisce le caratteristiche generali di un insegnamento associando in modo univoco un CodiceCorso al suo TitoloCorso 
+L'entità Corso invece rappresenta una specifica istanza di quellinsegnamento in un dato periodo essa utilizza lo stesso CodiceCorso per collegarsi all'edizione corrispondente ma ulteriormente specificata dall'Anno in cui viene erogata e dal CodiceProf del docente che la tiene creando cos un legame diretto con l'entità professore

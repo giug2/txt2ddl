@@ -1,0 +1,4 @@
+• each employee works in one and only one team;
+• each team generally has more employees and belongs to one and only one division;
+• each division belongs to one and only one company;
+• each employee works only in the division to which the team he works belongs and only in the company to which the division belongs.

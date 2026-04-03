@@ -1,0 +1,94 @@
+{
+    "entities": [
+        {
+            "name": "Sviluppatore",
+            "attributes": [
+                {
+                    "name": "id_sviluppatore",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_azienda",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_team",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "nome_progetto",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Progetto",
+            "attributes": [
+                {
+                    "name": "id_progetto",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_azienda",
+                    "is_pk": true
+                },
+                {
+                    "name": "cognome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Team",
+            "attributes": [
+                {
+                    "name": "id_team",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome_team",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Azienda",
+            "attributes": [
+                {
+                    "name": "id_azienda",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome_azienda",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Azienda",
+            "entity2": "Progetto",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Azienda",
+            "entity2": "Sviluppatore",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Team",
+            "entity2": "Sviluppatore",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Progetto",
+            "entity2": "Sviluppatore",
+            "cardinality": "N:N"
+        }
+    ]
+}

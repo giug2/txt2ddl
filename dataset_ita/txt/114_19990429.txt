@@ -1,0 +1,7 @@
+- ogni settore ha codice e nome 
+- si vuole distinguere il concetto di materia da quello di
+disciplina; le discipline hanno un nome  e sono identificate dal settore di appartenenza e da un numero univoco
+solo nel settore, mentre le materie sono identificate dalla disciplina e
+da un suffisso 
+- ogni professore afferisce ad uno e un solo settore (ma potrebbe insegnare anche corsi di altri settori); 
+- ogni professore lavora presso uno e un solo dipartimento; i dipartimenti hanno codice e nome

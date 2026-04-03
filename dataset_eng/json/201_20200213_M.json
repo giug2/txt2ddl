@@ -1,0 +1,85 @@
+{
+    "entities": [
+        {
+            "name": "Motorization",
+            "attributes": [
+                {
+                    "name": "engine_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_model",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Model",
+            "attributes": [
+                {
+                    "name": "model_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_brand",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Brand",
+            "attributes": [
+                {
+                    "name": "brand_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_casa_automobilistica",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Automotive Company",
+            "attributes": [
+                {
+                    "name": "automotive_house_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Motorization",
+            "entity2": "Model",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Brand",
+            "entity2": "Model",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Automotive Company",
+            "entity2": "Brand",
+            "cardinality": "N:1"
+        }
+    ]
+}

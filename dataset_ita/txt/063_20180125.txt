@@ -1,0 +1,7 @@
+• ogni convegno ha un codice e un titolo e si tiene una città
+• ogni città ha un nome, si trova in una nazione e ha un codice che la identifica nell’ambito della nazione
+• ogni nazione ha un codice e un nome
+• ogni convegno è relativo ad una materia specifica che a sua volta appartiene
+ad un’area scientifica; ogni materia ha un nome e un codice che la identifica
+univocamente
+• ogni area scientifica ha un codice e un nome

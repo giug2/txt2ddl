@@ -1,0 +1,89 @@
+{
+    "entities": [
+        {
+            "name": "Festival",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "DateInitiation",
+                    "is_pk": false
+                },
+                {
+                    "name": "DataFine",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Performance",
+            "attributes": [
+                {
+                    "name": "fk_festival",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_artista",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Artist",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "GenereMusicale",
+                    "is_pk": false
+                },
+                {
+                    "name": "Training Year",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Stage",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Capacity",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Performance",
+            "entity2": "Festival",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Performance",
+            "entity2": "Artist",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Performance",
+            "entity2": "Stage",
+            "cardinality": "N:1"
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+Show a conceptual diagram for the database used by a library to store information about available books, with the following specifications
+• the literary works are all by the same publisher;
+• each copy in stock has a unique identifier, a state of conservation, an acquisition date, a reference literary work and a specific edition;
+• each literary work has a number of volumes and an average number of pages and belongs to a genre, with its own code and description;
+• each edition has a language (with code and description), a format and a cover price

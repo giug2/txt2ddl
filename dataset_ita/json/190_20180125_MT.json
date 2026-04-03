@@ -1,0 +1,95 @@
+{
+    "entities": [
+        {
+            "name": "Prodotto",
+            "attributes": [
+                {
+                    "name": "SKU",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeProdotto",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Marca",
+            "attributes": [
+                {
+                    "name": "CodiceMarca",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeMarca",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "GruppoIndustriale",
+            "attributes": [
+                {
+                    "name": "CodiceGruppo",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeGruppo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Sottocategoria",
+            "attributes": [
+                {
+                    "name": "CodiceSottocategoria",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_categoria",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeSottocategoria",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Categoria",
+            "attributes": [
+                {
+                    "name": "CodiceCategoria",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeCategoria",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Prodotto",
+            "entity2": "Marca",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Marca",
+            "entity2": "GruppoIndustriale",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Prodotto",
+            "entity2": "Sottocategoria",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Sottocategoria",
+            "entity2": "Categoria",
+            "cardinality": "N:1"
+        }
+    ]
+}

@@ -1,0 +1,123 @@
+{
+    "entities": [
+        {
+            "name": "Festival",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Band",
+            "attributes": [
+                {
+                    "name": "Name",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Performance",
+            "attributes": [
+                {
+                    "name": "FK_BAND_SFIDANTE",
+                    "is_pk": true
+                },
+                {
+                    "name": "FK_BAND_MAIN",
+                    "is_pk": true
+                },
+                {
+                    "name": "Data",
+                    "is_pk": true
+                },
+                {
+                    "name": "Stage",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Musician",
+            "attributes": [
+                {
+                    "name": "FK_BAND",
+                    "is_pk": true
+                },
+                {
+                    "name": "ID_Membro",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Date of birth",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Festival",
+            "entity2": "Band",
+            "cardinality": "1:N",
+            "attributes": [
+                {
+                    "name": "POSITION_RANKING",
+                    "is_pk": false
+                },
+                {
+                    "name": "TOTAL_SCORE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Band",
+            "entity2": "Performance",
+            "cardinality": "1:N",
+            "attributes": [
+                {
+                    "name": "VOTES_RECEIVED",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Band",
+            "entity2": "Performance",
+            "cardinality": "1:N",
+            "attributes": [
+                {
+                    "name": "VOTES_RECEIVED",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Band",
+            "entity2": "Musician",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Performance",
+            "entity2": "Musician",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "ROLE_ON_STAGE",
+                    "is_pk": false
+                }
+            ]
+        }
+    ]
+}

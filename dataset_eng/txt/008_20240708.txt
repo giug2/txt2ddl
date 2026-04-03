@@ -1,0 +1,8 @@
+The system describes a musical universe centered on songs, each identified by a unique code and characterized by a title 
+Each piece associated with an author establishing a direct link with the entity of the composers who are in turn defined by an identification code, a surname and a name 
+The musical pieces are organized within concerts which have their own identification code, title and description 
+The specific structure of each concert is detailed in the Programming report which associates a piece with a specific concert by specifying its position in the execution order via an integer value. A concert takes the form of specific events, each of which represents a single performance on a certain date and at a specific time
+Each event is also characterized by the orchestra that performs it and the theater that hosts it. Theaters are defined by a code and a name while orchestras are uniquely identified by their name and have a headquarters and a director. 
+The orchestras are made up of musicians, each registered with a unique serial number, surname and name
+The membership of a musician to an orchestra and the instrument he plays within it is managed by the Composition relationship which connects a musician to an orchestra and the instrument he uses 
+Finally, musical instruments are an entity in their own right described by an identifying code, a name and a type

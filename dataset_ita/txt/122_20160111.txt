@@ -1,0 +1,4 @@
+• ogni accessorio ha un codice e un nome e può essere disponibile su varie versioni;
+• ci sono accessori disponibili di serie su una versione (e quindi in tal caso non hanno un prezzo associato) e
+accessori disponibili a pagamento, per i quali è previsto un prezzo (che può variare da versione a versione);
+• uno stesso accessorio può essere di serie per alcune versioni e a pagamento per altre.

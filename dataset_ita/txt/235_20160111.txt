@@ -1,0 +1,3 @@
+• ogni funzionalità ha un codice e un nome e può essere disponibile in vari piani di abbonamento;
+• ci sono funzionalità incluse di base in un piano (e quindi in tal caso non hanno un costo mensile associato) e funzionalità opzionali a pagamento, per le quali è previsto un costo mensile (che può variare da piano a piano);
+• una stessa funzionalità può essere inclusa di base in alcuni piani e a pagamento per altri.

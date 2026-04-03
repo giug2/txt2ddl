@@ -1,0 +1,94 @@
+{
+    "entities": [
+        {
+            "name": "Professor",
+            "attributes": [
+                {
+                    "name": "professor_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_school",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_department",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                },
+                {
+                    "name": "school_name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Course of Study",
+            "attributes": [
+                {
+                    "name": "study_course_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_school",
+                    "is_pk": true
+                },
+                {
+                    "name": "course_name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Department",
+            "attributes": [
+                {
+                    "name": "department_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "department_name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "School",
+            "attributes": [
+                {
+                    "name": "school_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "surname",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "School",
+            "entity2": "Course of Study",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "School",
+            "entity2": "Professor",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Professor",
+            "entity2": "Department",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Course of Study",
+            "entity2": "Professor",
+            "cardinality": "N:N"
+        }
+    ]
+}

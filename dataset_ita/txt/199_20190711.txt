@@ -1,0 +1,4 @@
+• ogni pilota, in ogni volo cui è assegnato, è abilitato a pilotare uno o più modelli di aereo (potenzialmente anche modelli diversi in voli diversi)
+• i modelli di aereo sono “standardizzati”, ciascuno con nome e codice (ad esempio il codice 737 corrisponde al Boeing 737, A320 all'Airbus A320 e così via)
+• le licenze di volo rilasciate da una scuola di volo fanno riferimento ciascuna ad uno specifico modello di aereo
+• un pilota è abilitato a pilotare solo modelli di aereo per i quali ha conseguito la licenza di volo

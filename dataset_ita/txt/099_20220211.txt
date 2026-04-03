@@ -1,0 +1,4 @@
+• E di interesse rappresentare possibili itinerari di visita. Ogni itinerario è relativo ad un museo, ha un codice identificativo (unico nell’ambito del museo) ed è costituito da una lista ordinata di opere da vedere.
+• Si vogliono rappresentare anche visite guidate che hanno ciascuna un nome, un orario di inizio, una durata
+e si basano su un certo itinerario. Le visite guidate si ripetono nei vari giorni della settimana con un numero
+massimo di partecipanti diverso.

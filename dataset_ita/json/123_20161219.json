@@ -1,0 +1,74 @@
+{
+  "entities": [
+    {
+      "name": "MUSEO",
+      "attributes": [
+        { "name": "CODICE", "is_pk": true },
+        { "name": "NOME", "is_pk": false }
+      ]
+    },
+    {
+      "name": "CITTA'",
+      "attributes": [
+        { "name": "ID", "is_pk": true },
+        { "name": "NOME", "is_pk": false }
+      ]
+    },
+    {
+      "name": "NAZIONE",
+      "attributes": [
+        { "name": "SIGLA", "is_pk": true },
+        { "name": "NOME", "is_pk": false }
+      ]
+    },
+    {
+      "name": "SALA",
+      "attributes": [
+        { "name": "NOME", "is_pk": true },
+        { "name": "fk_museo", "is_pk": true },
+        { "name": "DIMENSIONE", "is_pk": false }
+      ]
+    },
+    {
+      "name": "OPERA D'ARTE",
+      "attributes": [
+        { "name": "CODICE", "is_pk": true },
+        { "name": "TITOLO", "is_pk": false },
+        { "name": "ANNO ESECUZIONE", "is_pk": false }
+      ]
+    },
+    {
+      "name": "ARTISTA",
+      "attributes": [
+        { "name": "CODICE", "is_pk": true }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "CITTA'",
+      "entity2": "MUSEO",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "NAZIONE",
+      "entity2": "CITTA'",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "MUSEO",
+      "entity2": "SALA",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "SALA",
+      "entity2": "OPERA D'ARTE",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "ARTISTA",
+      "entity2": "OPERA D'ARTE",
+      "cardinality": "1:N"
+    }
+  ]
+}

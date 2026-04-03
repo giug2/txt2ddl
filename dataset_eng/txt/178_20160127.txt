@@ -1,0 +1,6 @@
+The scheme describes three main entities: student, degree course and department.
+The student entity, identified by a unique serial number, is characterized by the StudentName, Address and CourseYear attributes.
+The department entity is defined by a code and the name of the department itself.
+Finally, the degree course entity, identified by the course code and which has a CourseName attribute, is linked to a department. It is important to note that in specific contexts, such as for academic analyzes X and Y, the structure of these entities undergoes variations.
+In these cases, the student, indicated as relationship R0, is described solely by StudentName and Address, thus omitting the CourseYear attribute.
+Similarly, the degree course, indicated as relation R1, is enriched with the "TipoLaurea" attribute, thus being defined by NomeCorso, TipoLaurea and the department code.

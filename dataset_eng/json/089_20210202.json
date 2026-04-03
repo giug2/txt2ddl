@@ -1,0 +1,85 @@
+{
+    "entities": [
+        {
+            "name": "Swab",
+            "attributes": [
+                {
+                    "name": "Data",
+                    "is_pk": false
+                },
+                {
+                    "name": "Outcome",
+                    "is_pk": false
+                },
+                {
+                    "name": "CT",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_patientID",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Patient",
+            "attributes": [
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "CF",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "ASL",
+            "attributes": [
+                {
+                    "name": "Address",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "CodASL",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Region",
+            "attributes": [
+                {
+                    "name": "ID Reg",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Patient",
+            "entity2": "Swab",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "ASL",
+            "entity2": "Patient",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Region",
+            "entity2": "ASL",
+            "cardinality": "1:N"
+        }
+    ]
+}

@@ -1,0 +1,4 @@
+• ogni impiegato lavora in uno e un solo team;
+• ogni team ha in generale più impiegati e afferisce ad una e una sola divisione;
+• ogni divisione appartiene ad una e una sola azienda;
+• ogni impiegato lavora solo presso la divisione cui afferisce il team presso cui opera e solo presso l'azienda cui la divisione appartiene.

@@ -1,0 +1,5 @@
+• each swab is performed on a patient; each swab has a code (CT), unique among the swabs
+that patient, a date and an outcome
+• each patient has a tax code and a name and belongs to an ASL
+• each ASL is located in a region, has a code (CodASL) that uniquely identifies it and has an office
+• each region has an identifier (IDReg) and a name

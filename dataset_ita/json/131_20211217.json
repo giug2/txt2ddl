@@ -1,0 +1,63 @@
+{
+  "entities": [
+    {
+      "name": "Missione",
+      "attributes": [
+        {
+          "name": "Numero",
+          "is_pk": true
+        },
+        {
+          "name": "Nome",
+          "is_pk": false
+        }
+      ]
+    },
+    {
+      "name": "Linea",
+      "attributes": [
+        {
+          "name": "Numero",
+          "is_pk": true
+        },
+        {
+          "name": "fk_missione",
+          "is_pk": true
+        },
+        {
+          "name": "Nome",
+          "is_pk": false
+        },
+        {
+          "name": "Budget",
+          "is_pk": false
+        }
+      ]
+    },
+    {
+      "name": "Raccomandazione",
+      "attributes": [
+        {
+          "name": "Codice",
+          "is_pk": true
+        },
+        {
+          "name": "Nome",
+          "is_pk": false
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "Missione",
+      "entity2": "Linea",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Missione",
+      "entity2": "Raccomandazione",
+      "cardinality": "N:N"
+    }
+  ]
+}

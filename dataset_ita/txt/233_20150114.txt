@@ -1,0 +1,2 @@
+• Ogni scaffale appartiene ad un magazzino ed è identificato da un codice, unico per quel magazzino (quindi esistono gli scaffali “Magazzino Milano A1”, “Magazzino Milano A2” e “Magazzino Roma B1”). Un magazzino ha un codice e un indirizzo.
+• Per ogni inventario (identificato univocamente dalla data), sono di interesse la data stessa e il numero complessivo di articoli contati.

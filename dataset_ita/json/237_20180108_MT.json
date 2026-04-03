@@ -1,0 +1,111 @@
+{
+    "entities": [
+        {
+            "name": "CorsoDiLaurea",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "TipoLaurea",
+                    "is_pk": false
+                },
+                {
+                    "name": "AnnoAttivazione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Dipartimento",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Facolt\u00e0",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Studente",
+            "attributes": [
+                {
+                    "name": "Matricola",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "MediaVoti",
+                    "is_pk": false
+                },
+                {
+                    "name": "CFUAcquisiti",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "StatoStudente",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Descrizione",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "CorsoDiLaurea",
+            "entity2": "Dipartimento",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Studente",
+            "entity2": "CorsoDiLaurea",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Dipartimento",
+            "entity2": "Facolt\u00e0",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Studente",
+            "entity2": "StatoStudente",
+            "cardinality": "N:1"
+        }
+    ]
+}

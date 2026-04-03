@@ -1,0 +1,129 @@
+{
+    "entities": [
+        {
+            "name": "COPIA_LIBRO",
+            "attributes": [
+                {
+                    "name": "ID_COPIA",
+                    "is_pk": true
+                },
+                {
+                    "name": "STATO_CONSERVAZIONE",
+                    "is_pk": false
+                },
+                {
+                    "name": "DATA_ACQUISTO",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "EDIZIONE",
+            "attributes": [
+                {
+                    "name": "ISBN",
+                    "is_pk": true
+                },
+                {
+                    "name": "AUTORE",
+                    "is_pk": false
+                },
+                {
+                    "name": "NUMERO_PAGINE",
+                    "is_pk": false
+                },
+                {
+                    "name": "PREZZO",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "FORMATO",
+            "attributes": [
+                {
+                    "name": "ID_FORMATO",
+                    "is_pk": true
+                },
+                {
+                    "name": "DESCRIZIONE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "LIBRO",
+            "attributes": [
+                {
+                    "name": "ID_LIBRO",
+                    "is_pk": true
+                },
+                {
+                    "name": "TITOLO_ORIGINALE",
+                    "is_pk": false
+                },
+                {
+                    "name": "ANNO_PUBBLICAZIONE",
+                    "is_pk": false
+                },
+                {
+                    "name": "TITOLO",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "GENERE_LETTERARIO",
+            "attributes": [
+                {
+                    "name": "ID_GENERE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME_GENERE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CASA_EDITRICE",
+            "attributes": [
+                {
+                    "name": "ID_EDITORE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME_EDITORE",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "COPIA_LIBRO",
+            "entity2": "EDIZIONE",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "FORMATO",
+            "entity2": "EDIZIONE",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "EDIZIONE",
+            "entity2": "LIBRO",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "LIBRO",
+            "entity2": "GENERE_LETTERARIO",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "CASA_EDITRICE",
+            "entity2": "LIBRO",
+            "cardinality": "1:N"
+        }
+    ]
+}

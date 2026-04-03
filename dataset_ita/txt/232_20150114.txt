@@ -1,0 +1,2 @@
+• Ogni dipartimento appartiene a un ateneo ed è identificato da un codice, unico per l'ateneo (quindi esistono i dipartimenti “ING-POLITO”, “ARC-POLITO” e “ING-UNIBO”). Un ateneo ha un codice e un nome.
+• Ogni studente si immatricola in un corso di laurea: un solo corso di laurea per ogni iscrizione, ma in iscrizioni successive lo studente potrebbe cambiare corso. Un corso di laurea ha un codice e un nome.

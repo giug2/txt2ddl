@@ -1,0 +1,9 @@
+Definire uno schema Entity-Relationship che descriva i dati di interesse per un insieme di orchestre, secondo le
+seguenti specifiche:
+• ogni orchestra ha un nome, una sede (città e nazione, ciascuna con codice e nome) e una data di fondazione
+• i componenti delle orchestre variano di anno in anno ed è importante tenere traccia della composizione in
+ciascun anno (ad esempio, sapere che Mario Rossi partecipa all’orchestra XY nel 2015 e nel 2017, ma non
+nel 2016); una stessa persona può partecipare a più orchestre, anche nello stesso anno
+• ogni musicista (componente di orchestra), ha un codice identificativo, un cognome, un nome e si è
+diplomato presso un conservatorio
+• ogni conservatorio ha un codice e un nome

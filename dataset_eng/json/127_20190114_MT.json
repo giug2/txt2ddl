@@ -1,0 +1,89 @@
+{
+    "entities": [
+        {
+            "name": "University",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Foundation",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "City",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nation",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Professor",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "date of birth",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Qualification",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "University",
+            "entity2": "City",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Professor",
+            "entity2": "University",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Professor",
+            "entity2": "Qualification",
+            "cardinality": "N:1"
+        }
+    ]
+}

@@ -1,0 +1,143 @@
+{
+  "entities": [
+    {
+      "name": "Aeroporto",
+      "attributes": [
+        {
+          "name": "Codice",
+          "is_pk": true
+        },
+        {
+          "name": "Nome",
+          "is_pk": false
+        }
+      ]
+    },
+    {
+      "name": "Località",
+      "attributes": [
+        {
+          "name": "Codice",
+          "is_pk": true
+        },
+        {
+          "name": "Nome",
+          "is_pk": false
+        }
+      ]
+    },
+    {
+      "name": "College",
+      "attributes": [
+        {
+          "name": "Codice",
+          "is_pk": true
+        },
+        {
+          "name": "Nome",
+          "is_pk": false
+        },
+        {
+          "name": "Indirizzo",
+          "is_pk": false
+        },
+        {
+          "name": "Telefono",
+          "is_pk": false
+        }
+      ]
+    },
+    {
+      "name": "Tipo di Riduzione",
+      "attributes": [
+        {
+          "name": "Codice",
+          "is_pk": true
+        },
+        {
+          "name": "Nome",
+          "is_pk": false
+        }
+      ]
+    },
+    {
+      "name": "Città di partenza",
+      "attributes": [
+        {
+          "name": "Codice",
+          "is_pk": true
+        },
+        {
+          "name": "Nome",
+          "is_pk": false
+        }
+      ]
+    },
+    {
+      "name": "Esame",
+      "attributes": [
+        {
+          "name": "Codice",
+          "is_pk": true
+        },
+        {
+          "name": "Nome",
+          "is_pk": false
+        },
+        {
+          "name": "Costo",
+          "is_pk": false
+        }
+      ]
+    },
+    {
+      "name": "Soggiorno",
+      "attributes": [
+        {
+          "name": "Periodo",
+          "is_pk": true
+        },
+        {
+          "name": "Prezzo",
+          "is_pk": false
+        },
+        {
+          "name": "Ore",
+          "is_pk": false
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "Aeroporto",
+      "entity2": "Città di partenza",
+      "cardinality": "N:N"
+    },
+    {
+      "entity1": "Località",
+      "entity2": "Aeroporto",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Località",
+      "entity2": "College",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "College",
+      "entity2": "Tipo di Riduzione",
+      "cardinality": "N:N"
+    },
+    {
+      "entity1": "College",
+      "entity2": "Esame",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "College",
+      "entity2": "Soggiorno",
+      "cardinality": "1:N"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+    "entities": [
+        {
+            "name": "Department",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Site",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Degree Course",
+            "attributes": [
+                {
+                    "name": "CourseCode",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Teaching",
+            "attributes": [
+                {
+                    "name": "MaterialCode",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_corso_laurea",
+                    "is_pk": true
+                },
+                {
+                    "name": "Title",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Professor",
+            "attributes": [
+                {
+                    "name": "Freshman",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "City",
+            "attributes": [
+                {
+                    "name": "CodiceISTAT",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Region",
+            "attributes": [
+                {
+                    "name": "CodeRegion",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Department",
+            "entity2": "Degree Course",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Degree Course",
+            "entity2": "Teaching",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Department",
+            "entity2": "Professor",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "City",
+            "entity2": "Professor",
+            "cardinality": "1:N",
+            "attributes": [
+                {
+                    "name": "Resident",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "City",
+            "entity2": "Professor",
+            "cardinality": "1:N",
+            "attributes": [
+                {
+                    "name": "Birth",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Region",
+            "entity2": "City",
+            "cardinality": "1:N"
+        }
+    ]
+}

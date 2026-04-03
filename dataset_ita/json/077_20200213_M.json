@@ -1,0 +1,94 @@
+{
+    "entities": [
+        {
+            "name": "Professore",
+            "attributes": [
+                {
+                    "name": "id_professore",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_scuola",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_dipartimento",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "nome_scuola",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Corso di Studio",
+            "attributes": [
+                {
+                    "name": "id_corso_di_studio",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_scuola",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome_corso",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Dipartimento",
+            "attributes": [
+                {
+                    "name": "id_dipartimento",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome_dipartimento",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Scuola",
+            "attributes": [
+                {
+                    "name": "id_scuola",
+                    "is_pk": true
+                },
+                {
+                    "name": "cognome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Scuola",
+            "entity2": "CorsoDiStudio",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Scuola",
+            "entity2": "Professore",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Professore",
+            "entity2": "Dipartimento",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "CorsoDiStudio",
+            "entity2": "Professore",
+            "cardinality": "N:N"
+        }
+    ]
+}

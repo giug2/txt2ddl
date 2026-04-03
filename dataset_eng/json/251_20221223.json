@@ -1,0 +1,103 @@
+{
+    "entities": [
+        {
+            "name": "WAREHOUSE",
+            "attributes": [
+                {
+                    "name": "WAREHOUSE_ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "HEADQUARTERS_NAME",
+                    "is_pk": false
+                },
+                {
+                    "name": "YEAR_OPENING",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "COMMON",
+            "attributes": [
+                {
+                    "name": "ISTAT_CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "COMMON_NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "PROVINCE",
+            "attributes": [
+                {
+                    "name": "SIGLA_PROVINCE",
+                    "is_pk": true
+                },
+                {
+                    "name": "PROVINCE_NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "PRODUCT",
+            "attributes": [
+                {
+                    "name": "SKU",
+                    "is_pk": true
+                },
+                {
+                    "name": "PRODUCT_NAME",
+                    "is_pk": false
+                },
+                {
+                    "name": "MARK",
+                    "is_pk": false
+                },
+                {
+                    "name": "LAUNCH_DATE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CATEGORY",
+            "attributes": [
+                {
+                    "name": "ID_CATEGORIA",
+                    "is_pk": true
+                },
+                {
+                    "name": "CATEGORY_NAME",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "WAREHOUSE",
+            "entity2": "COMMON",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "COMMON",
+            "entity2": "PROVINCE",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "WAREHOUSE",
+            "entity2": "PRODUCT",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "PRODUCT",
+            "entity2": "CATEGORY",
+            "cardinality": "N:1"
+        }
+    ]
+}

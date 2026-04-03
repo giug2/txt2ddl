@@ -1,0 +1,5 @@
+• ogni dipendente lavora presso una e una sola divisione;
+• ogni dipendente lavora a tutti e soli i progetti della divisione presso cui è impiegato;
+• ogni progetto afferisce ad una e una sola divisione e ad esso lavorano tutti e soli i dipendenti impiegati presso quella divisione;
+• ogni divisione appartiene ad una e una sola azienda;
+• ogni dipendente opera solo per l'azienda cui appartiene la divisione a cui il dipendente stesso è assegnato.

@@ -1,0 +1,185 @@
+{
+    "entities": [
+        {
+            "name": "Students",
+            "attributes": [
+                {
+                    "name": "Freshman",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Telephone",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Study Plan",
+            "attributes": [
+                {
+                    "name": "Plan_ID",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Course in the Plan",
+            "attributes": [
+                {
+                    "name": "ID_Riga",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_study_plan",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Typology",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Course Session",
+            "attributes": [
+                {
+                    "name": "Hours",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_teaching",
+                    "is_pk": true
+                },
+                {
+                    "name": "Day_Week",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Teaching",
+            "attributes": [
+                {
+                    "name": "Teaching_Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_department",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Department",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Classroom",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Site",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "City",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Study Plan",
+            "entity2": "Students",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Course in the Plan",
+            "entity2": "Study Plan",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Typology",
+            "entity2": "Course in the Plan",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Course Session",
+            "entity2": "Course in the Plan",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Course Session",
+            "entity2": "Teaching",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Department",
+            "entity2": "Teaching",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Classroom",
+            "entity2": "Teaching",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Site",
+            "entity2": "Teaching",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Site",
+            "entity2": "Teaching",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Site",
+            "entity2": "Teaching",
+            "cardinality": "1:N"
+        }
+    ]
+}

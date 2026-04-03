@@ -1,0 +1,4 @@
+• ogni studente è iscritto ad uno e un solo corso di laurea;
+• ogni esame è creato da uno e un solo docente, mentre ogni docente può creare più esami;
+• ogni studente può sostenere zero o più esami (e quindi interagire con tutti e soli i relativi docenti);
+• ogni corso di laurea ha come docenti ed esami quelli associati ai propri studenti.

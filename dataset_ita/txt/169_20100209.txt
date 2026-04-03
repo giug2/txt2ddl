@@ -1,0 +1,4 @@
+ad ogni progetto sono associati uno o più dipendenti; 
+ogni dipendente può lavorare a più progetti e può ricoprire per ciascuno un ruolo diverso, 
+ma con l’osservazione che ogni dipendente ha un ruolo principale in azienda che viene usato
+salvo diversa specificazione di ruolo nel singolo progetto.

@@ -1,0 +1,131 @@
+{
+    "entities": [
+        {
+            "name": "AUTHOR",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "SURNAME",
+                    "is_pk": false
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                },
+                {
+                    "name": "DATE OF BIRTH",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "ORGANIZATION",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "BOOK",
+            "attributes": [
+                {
+                    "name": "ISBN",
+                    "is_pk": true
+                },
+                {
+                    "name": "TITLE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "PUBLISHER",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "COPY",
+            "attributes": [
+                {
+                    "name": "INVENTORY",
+                    "is_pk": true
+                },
+                {
+                    "name": "PURCHASE DATE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "USER",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "SURNAME",
+                    "is_pk": false
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                },
+                {
+                    "name": "TELEPHONE",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "AUTHOR",
+            "entity2": "ORGANIZATION",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "AUTHOR",
+            "entity2": "BOOK",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "BOOK",
+            "entity2": "PUBLISHER",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "BOOK",
+            "entity2": "COPY",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "COPY",
+            "entity2": "USER",
+            "cardinality": "N:1",
+            "attributes": [
+                {
+                    "name": "return date",
+                    "is_pk": false
+                }
+            ]
+        }
+    ]
+}

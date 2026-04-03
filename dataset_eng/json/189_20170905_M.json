@@ -1,0 +1,65 @@
+{
+    "entities": [
+        {
+            "name": "PROJECT",
+            "attributes": [
+                {
+                    "name": "DESCRIPTION",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "EMPLOYEE",
+            "attributes": [
+                {
+                    "name": "SERIAL NUMBER",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "TASK",
+            "attributes": [
+                {
+                    "name": "JOB_CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "PROJECT_CODE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "ASSIGNMENT",
+            "attributes": [
+                {
+                    "name": "fk_dependent",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_progetto",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "ASSIGNMENT",
+            "entity2": "PROJECT",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "ASSIGNMENT",
+            "entity2": "EMPLOYEE",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "TASK",
+            "entity2": "ASSIGNMENT",
+            "cardinality": "1:N"
+        }
+    ]
+}

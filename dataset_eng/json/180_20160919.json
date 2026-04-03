@@ -1,0 +1,75 @@
+{
+    "entities": [
+        {
+            "name": "TRACK",
+            "attributes": [
+                {
+                    "name": "song_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "PERFORMANCE",
+            "attributes": [
+                {
+                    "name": "fk_festival",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_music_genre",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "MUSICAL_GENRE",
+            "attributes": [
+                {
+                    "name": "musical_genre_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "FESTIVAL",
+            "attributes": [
+                {
+                    "name": "id_festival",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "ARTIST",
+            "attributes": [
+                {
+                    "name": "artist_id",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "PERFORMANCE",
+            "entity2": "TRACK",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "PERFORMANCE",
+            "entity2": "MUSICAL_GENRE",
+            "cardinality": "1:1"
+        },
+        {
+            "entity1": "FESTIVAL",
+            "entity2": "PERFORMANCE",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "ARTIST",
+            "entity2": "MUSICAL_GENRE",
+            "cardinality": "1:N"
+        }
+    ]
+}

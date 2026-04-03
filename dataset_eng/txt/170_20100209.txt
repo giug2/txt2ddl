@@ -1,0 +1,7 @@
+the license plate uniquely identifies the vehicle;
+• owner and owner address can be considered as simple character strings, without further modeling;
+• the maintenance records are all related to the life of the vehicle; therefore only one register is produced for each vehicle; the initial mileage is a stored value; the current mileage is the last known value updated after the interventions;
+• for each intervention listed in the register it can be assumed (and it is recommended to do so) that a unique intervention code is stored in the database which identifies it (completely; for example, each of the interventions carried out on the vehicle has a different code);
+• in the list of interventions,
+– the “Type of Intervention” column contains a text that depends on the value contained in the “Type Code” column (note for example that “05” always corresponds to “Oil Change” and “43” to “Brake Replacement”); therefore “Type Code” is a code that identifies the “Type of Intervention;”
+– the “Notes” column instead contains a free text, which is associated with the specific intervention and must be considered independent of the “Type Code” and “Intervention Type.”

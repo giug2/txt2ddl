@@ -1,0 +1,4 @@
+ad ogni conto corrente sono associati uno o più clienti; 
+ogni cliente può avere più conti correnti e può usare per ciascuno un indirizzo diverso, 
+ma con l’osservazione che ogni cliente ha un indirizzo principale che viene usato
+salvo diversa specificazione

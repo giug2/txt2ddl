@@ -1,0 +1,107 @@
+{
+    "entities": [
+        {
+            "name": "COPY_WAREHOUSE",
+            "attributes": [
+                {
+                    "name": "ID_COPY",
+                    "is_pk": true
+                },
+                {
+                    "name": "GENRE_NAME",
+                    "is_pk": false
+                },
+                {
+                    "name": "ACQUISITION_DATE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "EDITION",
+            "attributes": [
+                {
+                    "name": "ISBN",
+                    "is_pk": true
+                },
+                {
+                    "name": "TITLE_EDITION",
+                    "is_pk": false
+                },
+                {
+                    "name": "FORMAT",
+                    "is_pk": false
+                },
+                {
+                    "name": "COVER_PRICE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "LINGUA",
+            "attributes": [
+                {
+                    "name": "ISO_CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "LANGUAGE_NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "LITERARY_WORK",
+            "attributes": [
+                {
+                    "name": "ID_OPERA",
+                    "is_pk": true
+                },
+                {
+                    "name": "AVERAGE_NUMBER_PAGES",
+                    "is_pk": false
+                },
+                {
+                    "name": "NUMBER_VOLUMES",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "TYPE",
+            "attributes": [
+                {
+                    "name": "ID_GENERATE",
+                    "is_pk": true
+                },
+                {
+                    "name": "CONSERVATION_STATUS",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "COPY_WAREHOUSE",
+            "entity2": "EDITION",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "EDITION",
+            "entity2": "LINGUA",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "EDITION",
+            "entity2": "LITERARY_WORK",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "TYPE",
+            "entity2": "LITERARY_WORK",
+            "cardinality": "1:N"
+        }
+    ]
+}

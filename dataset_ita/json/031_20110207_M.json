@@ -1,0 +1,107 @@
+{
+    "entities": [
+        {
+            "name": "Prodotto",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Quantit\u00e0 Disponibile",
+                    "is_pk": false
+                },
+                {
+                    "name": "Stato",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Categoria",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Descrizione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Fornitore",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Ordine",
+            "attributes": [
+                {
+                    "name": "Numero",
+                    "is_pk": true
+                },
+                {
+                    "name": "Data",
+                    "is_pk": false
+                },
+                {
+                    "name": "Prezzo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Cliente",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Indirizzo",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Categoria",
+            "entity2": "Prodotto",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Fornitore",
+            "entity2": "Prodotto",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Ordine",
+            "entity2": "Prodotto",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Cliente",
+            "entity2": "Ordine",
+            "cardinality": "1:N"
+        }
+    ]
+}

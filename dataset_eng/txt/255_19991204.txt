@@ -1,0 +1,8 @@
+The scheme outlines an information system for a library or bookstore in which there are languages, each identified by a Language Code and described by a Name.
+The Publishing Houses are connected to these, defined by an identifying Publisher Code, a Name and the Language they belong to, establishing a referential integrity bond with the Languages ​​entity.
+The Genre entity is introduced, identified by a Genre Code and a Name. Consequently, the Collana entity, while maintaining its identification key composed of CasaEditrice and NomeCollana, now establishes a referential integrity constraint with the new Genre entity.
+The most significant change is the insertion of the Edition entity, which is interposed between the series and the individual physical copies of the books.
+Each Edition, identified by the pair of Collana and CodiceEdizione attributes, has a NumeroPagine attribute and refers to the Collana entity.
+The CopiaFisica entity, uniquely identified by the CodiceInventario and characterized by the AnnoStampa, is no longer linked directly to a series but to a specific Edition via a referential constraint.
+Finally, the loan or possession relationship is made explicit through an associative entity that connects a Physical Copy to a User, establishing referential integrity constraints with the respective entities.
+The latter, the User entity, collects the personal information of individuals, identified by their User Code and described by Surname and Name.

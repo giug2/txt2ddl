@@ -1,0 +1,45 @@
+{
+    "entities": [
+        {
+            "name": "Order",
+            "attributes": [
+                {
+                    "name": "Order ID",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "User",
+            "attributes": [
+                {
+                    "name": "Email",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Registration Date",
+                    "is_pk": false
+                },
+                {
+                    "name": "Shipping Address",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Order",
+            "entity2": "User",
+            "cardinality": "N:1"
+        }
+    ]
+}

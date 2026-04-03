@@ -1,0 +1,89 @@
+{
+    "entities": [
+        {
+            "name": "Festival",
+            "attributes": [
+                {
+                    "name": "ID_Festival",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "YearEdition",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Location",
+            "attributes": [
+                {
+                    "name": "ID_Location",
+                    "is_pk": true
+                },
+                {
+                    "name": "CityName",
+                    "is_pk": false
+                },
+                {
+                    "name": "Village",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Artist",
+            "attributes": [
+                {
+                    "name": "Artist_ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "NameArt",
+                    "is_pk": false
+                },
+                {
+                    "name": "NomeReale",
+                    "is_pk": false
+                },
+                {
+                    "name": "AnnoInizioCareer",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "GenereMusicale",
+            "attributes": [
+                {
+                    "name": "ID_Genere",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Location",
+            "entity2": "Festival",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Festival",
+            "entity2": "Artist",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "GenereMusicale",
+            "entity2": "Artist",
+            "cardinality": "1:N"
+        }
+    ]
+}

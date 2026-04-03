@@ -1,0 +1,144 @@
+{
+    "entities": [
+        {
+            "name": "Catena",
+            "attributes": [
+                {
+                    "name": "Sigla",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Negozio",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_catena",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Prodotto",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Citt\u00e0",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Dipendente",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Indirizzo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Produttore",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Negozio",
+            "entity2": "Catena",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Prodotto",
+            "entity2": "Negozio",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Negozio",
+            "entity2": "Dipendente",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Ruolo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Dipendente",
+            "entity2": "Citt\u00e0",
+            "cardinality": "N:1",
+            "attributes": [
+                {
+                    "name": "Nascita",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Citt\u00e0",
+            "entity2": "Dipendente",
+            "cardinality": "1:N",
+            "attributes": [
+                {
+                    "name": "Residenza",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Produttore",
+            "entity2": "Prodotto",
+            "cardinality": "1:N"
+        }
+    ]
+}

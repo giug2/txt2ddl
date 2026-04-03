@@ -1,0 +1,4 @@
+• each pilot, in each flight to which he is assigned, is authorized to fly one or more aircraft models (potentially even different models in different flights)
+• the aircraft models are "standardised", each with a name and code (for example the code 737 corresponds to the Boeing 737, A320 to the Airbus A320 and so on)
+• the flight licenses issued by a flight school each refer to a specific aircraft model
+• a pilot is authorized to fly only aircraft models for which he has obtained a flight license

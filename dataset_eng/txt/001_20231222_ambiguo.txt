@@ -1,0 +1,9 @@
+So, basically here we're talking about planes, flights and all the stuff that surrounds us. Let's start from the basics: there are NATIONS, each with its own name and a codicil to recognize it, and within each nation you obviously find a few CITIES. In turn, cities can have more than one AIRPORT, and these also have a name and code to avoid confusion.
+
+Then there are the airlines, which are tied to a country, and each of them handles a lot of FLIGHTS. A flight, so to speak, is more than one route, like flight AZ123; in fact, to identify it without making mistakes, its number is not enough, you also need to know which company it belongs to. Each flight is also associated with a certain AIRCRAFT TYPE, which would be the aircraft model they usually use for that route, such as a Boeing 737.
+
+Clearly, a flight departs from one airport and arrives at another. An airport is therefore a starting point for many flights and an arrival point for many others.
+
+To organize everything, we look at the DAYS of the week. When you put a flight and a day together, you get the so-called FLIGHT IN THE DAY, which is basically the weekly schedule. This is where it says that flight X on Monday departs from airport Y and arrives at airport Z.
+
+Finally, there is the actual journey, the ACTUAL FLIGHT. This attaches to a flight scheduled on a certain day and refers to a specific DATE, recording the actual departure and arrival time. And for each actual flight, you know exactly which physical AIRCRAFT was used. Speaking of aircraft, we must distinguish between the model, i.e. the AIRCRAFT TYPE, and the single AIRCRAFT, which is the actual aircraft with its serial number. There are many examples of a certain aircraft model around, and each single example can make a lot of different actual flights.

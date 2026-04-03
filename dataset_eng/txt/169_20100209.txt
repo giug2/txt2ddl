@@ -1,0 +1,4 @@
+one or more employees are associated with each project; 
+each employee can work on multiple projects and can cover a different role for each one, 
+but with the observation that each employee has a main role in the company that is used
+unless a different role is specified in the individual project.

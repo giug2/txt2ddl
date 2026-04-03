@@ -1,0 +1,8 @@
+Mostrare uno schema concettuale per una base di dati che gestisca le informazioni relative ai dipartimenti di un certo ateneo.
+Sono di interesse i seguenti aspetti:
+- i dipartimenti, ognuno con codice (identificante), nome e sede (supporre sia un semplice valore, senza struttura particolare)
+- i corsi di laurea afferenti ai vari dipartimenti (ogni dipartimento gestisce uno o più corsi di laurea e un corso di laurea può essere gestito da più dipartimenti); ogni corso di laurea ha un codice (identificante) e un nome
+- gli insegnamenti, per ognuno dei quali interessano la facoltà di afferenza (una e una sola) e il corso di laurea (uno e uno solo); ogni insegnamento ha un codice, univoco nell'ambito degli insegnamenti di una facoltà, e un nome; ogni insegnamento è offerto da tutti i dipartimenti che gestiscono il relativo corso di laurea
+- le facoltà, ognuna delle quali ha un codice (che la identifica) e un nome
+- i docenti, ognuno dei quali ha una matricola (che lo identifica), cognome e nome e afferisce a zero o più dipartimenti; ogni docente è nato in una città e risiede in una città
+- le città, che hanno codice (che le identifica) e nome

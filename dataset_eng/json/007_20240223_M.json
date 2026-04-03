@@ -1,0 +1,127 @@
+{
+    "entities": [
+        {
+            "name": "REVIEW",
+            "attributes": [
+                {
+                    "name": "DATA",
+                    "is_pk": true
+                },
+                {
+                    "name": "ORA",
+                    "is_pk": false
+                },
+                {
+                    "name": "title",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "ITEM",
+            "attributes": [
+                {
+                    "name": "pk_article",
+                    "is_pk": false
+                },
+                {
+                    "name": "CURATOR",
+                    "is_pk": false
+                },
+                {
+                    "name": "author",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "ORGANIZATION",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "AUTHOR WITH RELATIONSHIP AND ROLE",
+            "attributes": [
+                {
+                    "name": "The f_EN",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_AUTHOR",
+                    "is_pk": true
+                },
+                {
+                    "name": "ROLE",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "NEWSPAPER",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "AUTHOR",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "ITEM",
+            "entity2": "REVIEW",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "NEWSPAPER",
+            "entity2": "ITEM",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Pages",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "AUTHOR WITH RELATIONSHIP AND ROLE",
+            "entity2": "ITEM",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "AUTHOR",
+            "entity2": "AUTHOR WITH RELATIONSHIP AND ROLE",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "ORGANIZATION",
+            "entity2": "AUTHOR WITH RELATIONSHIP AND ROLE",
+            "cardinality": "1:N"
+        }
+    ]
+}

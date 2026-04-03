@@ -1,0 +1,5 @@
+• for each location there can be multiple events, held by the same artist or by different artists
+• each event takes place in one and only one location, has one and only one headline artist and is part of one and only one tour
+• Each artist performs in zero or more events
+• for each tour there can be multiple events in a given location, distinguished with a progressive number indicating the "repeat" (e.g.: Concert in Milan, repeat 1)
+• all events in a given location have the same setlist of songs (one and only one)

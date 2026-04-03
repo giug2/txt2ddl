@@ -1,0 +1,145 @@
+{
+    "entities": [
+        {
+            "name": "Piece",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Title",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Musician",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Concerto",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Title",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Replica",
+            "attributes": [
+                {
+                    "name": "Data",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_concerto",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Sala",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Capacity",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Orchestra",
+            "attributes": [
+                {
+                    "name": "Name",
+                    "is_pk": true
+                },
+                {
+                    "name": "Director",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Orchestral",
+            "attributes": [
+                {
+                    "name": "Freshman",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Musician",
+            "entity2": "Piece",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Piece",
+            "entity2": "Concerto",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Concerto",
+            "entity2": "Replica",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Sala",
+            "entity2": "Concerto",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Orchestra",
+            "entity2": "Concerto",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Orchestra",
+            "entity2": "Orchestral",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Instrument",
+                    "is_pk": false
+                }
+            ]
+        }
+    ]
+}

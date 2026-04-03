@@ -1,0 +1,43 @@
+{
+  "entities": [
+    {
+      "name": "Scrittore",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Cognome", "is_pk": false },
+        { "name": "Nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Libro",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Titolo", "is_pk": false },
+        { "name": "genere", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Editore",
+      "attributes": [
+        { "name": "Nome", "is_pk": true },
+        { "name": "Città", "is_pk": false }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "Scrittore",
+      "entity2": "Libro",
+      "cardinality": "N:N"
+    },
+    {
+      "entity1": "Libro",
+      "entity2": "Editore",
+      "cardinality": "1:N",
+      "attributes": [
+        { "name": "collana", "is_pk": false },
+        { "name": "anno", "is_pk": false }
+      ]
+    }
+  ]
+}

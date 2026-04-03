@@ -1,0 +1,10 @@
+The system manages a registry of the Theatres, each uniquely identified by a Code and described by Name, Address and Telephone 
+At the same time, a catalog of Theatrical Works is maintained, each defined by a Code, Title, Year of composition and a reference to the Author 
+The latter is linked to the Authors entity which collects the personal information of the writers specifying their identification code, surname, name and dates of birth and death. 
+To establish the programming, the OperaInCartellone relationship associates a CodiceTeatro with a CodiceOpera also indicating the period in which the opera is on stage in that specific theater 
+The cast of each production managed through the Actors entity identified by a Surname and Name Code 
+Their participation in a specific show traced in the Interpretations relationship which connects a CodiceAttore to a specific OperaInCartellone through the CodiceTeatro and CodiceOpera pair 
+Commercial management is based on a seating classification defined in TipiPosto where each type has a Code and a Description 
+The cost of tickets established by the Tickets entity which sets a Price for each SeatTypeCode in relation to a specific TheaterCode 
+Finally, the system provides a discount mechanism through the Reduction Types cataloged with Code and Description 
+The actual application of these discounts defined in the Reductions table which assigns a discount percentage to a ReductionTypeCode for a specific TheaterCode thus allowing the same reduction to have different values depending on the theater that applies it

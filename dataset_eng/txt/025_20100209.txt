@@ -1,0 +1,2 @@
+each current account is associated with one and only one customer; 
+each customer can have multiple current accounts and has the same address for all of them;

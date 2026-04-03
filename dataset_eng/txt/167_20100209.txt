@@ -1,0 +1,2 @@
+each order is associated with one and only one user; 
+each user can place multiple orders and has the same default shipping address for everyone;

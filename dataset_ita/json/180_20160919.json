@@ -1,0 +1,75 @@
+{
+    "entities": [
+        {
+            "name": "BRANO",
+            "attributes": [
+                {
+                    "name": "id_brano",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "PERFORMANCE",
+            "attributes": [
+                {
+                    "name": "fk_festival",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_genere_musicale",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "GENERE_MUSICALE",
+            "attributes": [
+                {
+                    "name": "id_genere_musicale",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "FESTIVAL",
+            "attributes": [
+                {
+                    "name": "id_festival",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "ARTISTA",
+            "attributes": [
+                {
+                    "name": "id_artista",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "PERFORMANCE",
+            "entity2": "BRANO",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "PERFORMANCE",
+            "entity2": "GENERE_MUSICALE",
+            "cardinality": "1:1"
+        },
+        {
+            "entity1": "FESTIVAL",
+            "entity2": "PERFORMANCE",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "ARTISTA",
+            "entity2": "GENERE_MUSICALE",
+            "cardinality": "1:N"
+        }
+    ]
+}

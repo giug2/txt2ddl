@@ -1,0 +1,7 @@
+• ogni pratica è relativa ad un assistito ed è composta da un certo numero di prestazioni
+• ogni assistito ha codice, cognome e nome
+• ogni prestazione (che costituisce una “riga” della relativa pratica) ha
+– una descrizione, che è una semplice stringa di testo
+– un soggetto (verso cui è stato effettuato il pagamento da parte dell’assistito) che può essere un medico
+o una azienda, ma assumiamo ancora che sia una semplice stringa di testo
+– una data e un importo

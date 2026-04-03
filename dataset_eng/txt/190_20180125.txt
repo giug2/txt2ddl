@@ -1,0 +1,5 @@
+• each product has a SKU code, a name and is made by a brand
+• each brand has a name, belongs to an industrial group and has a code that uniquely identifies it
+• each industrial group has a code and a name
+• each product belongs to a specific subcategory (for example "Smartphone") which in turn belongs to a product category (for example "Electronics"); each subcategory has a name and a code that identifies it within the category
+• each product category has a code and a name

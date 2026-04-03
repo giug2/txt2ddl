@@ -1,0 +1,69 @@
+{
+    "entities": [
+        {
+            "name": "Employee",
+            "attributes": [
+                {
+                    "name": "employee_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_division",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Division",
+            "attributes": [
+                {
+                    "name": "division_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_company",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Project",
+            "attributes": [
+                {
+                    "name": "project_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_division",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Agency",
+            "attributes": [
+                {
+                    "name": "company_id",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Agency",
+            "entity2": "Division",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Division",
+            "entity2": "Employee",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Division",
+            "entity2": "Project",
+            "cardinality": "1:N"
+        }
+    ]
+}

@@ -1,0 +1,65 @@
+{
+    "entities": [
+        {
+            "name": "Teaching",
+            "attributes": [
+                {
+                    "name": "teacher_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Students",
+            "attributes": [
+                {
+                    "name": "student_matriculation",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_corso_laurea",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Examination",
+            "attributes": [
+                {
+                    "name": "id_exam",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_teacher",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Degree Course",
+            "attributes": [
+                {
+                    "name": "degree_course_id",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Students",
+            "entity2": "Degree Course",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Examination",
+            "entity2": "Teaching",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Students",
+            "entity2": "Examination",
+            "cardinality": "N:N"
+        }
+    ]
+}

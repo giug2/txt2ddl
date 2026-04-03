@@ -1,0 +1,2 @@
+ad ogni progetto sono associati uno o più dipendenti; 
+ogni dipendente può essere assegnato a più progetti e può avere per ciascuno un ruolo diverso;

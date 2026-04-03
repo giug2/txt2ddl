@@ -1,0 +1,45 @@
+{
+    "entities": [
+        {
+            "name": "Ordine",
+            "attributes": [
+                {
+                    "name": "ID Ordine",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Utente",
+            "attributes": [
+                {
+                    "name": "Email",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Data Registrazione",
+                    "is_pk": false
+                },
+                {
+                    "name": "Indirizzo Spedizione",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Ordine",
+            "entity2": "Utente",
+            "cardinality": "N:1"
+        }
+    ]
+}

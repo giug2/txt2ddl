@@ -1,0 +1,186 @@
+{
+    "entities": [
+        {
+            "name": "Modulo",
+            "attributes": [
+                {
+                    "name": "IDModulo",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Sviluppatore",
+            "attributes": [
+                {
+                    "name": "ID_Sviluppatore",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Progetto",
+            "attributes": [
+                {
+                    "name": "IDProgetto",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeProgetto",
+                    "is_pk": false
+                },
+                {
+                    "name": "Descrizione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Release",
+            "attributes": [
+                {
+                    "name": "DataRilascio",
+                    "is_pk": true
+                },
+                {
+                    "name": "Versione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Team",
+            "attributes": [
+                {
+                    "name": "NomeTeam",
+                    "is_pk": true
+                },
+                {
+                    "name": "Metodologia",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Repository",
+            "attributes": [
+                {
+                    "name": "IDRepository",
+                    "is_pk": true
+                },
+                {
+                    "name": "URL",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "AssegnazioneRuolo",
+            "attributes": [
+                {
+                    "name": "IDAssegnazione",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "MembroTeam",
+            "attributes": [
+                {
+                    "name": "IDMembro",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Tecnologia",
+            "attributes": [
+                {
+                    "name": "IDTecnologia",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Categoria",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Modulo",
+            "entity2": "Sviluppatore",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Progetto",
+            "entity2": "Modulo",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Priorita",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Release",
+            "entity2": "Progetto",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Progetto",
+            "entity2": "Team",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Progetto",
+            "entity2": "Repository",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Team",
+            "entity2": "MembroTeam",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "AssegnazioneRuolo",
+            "entity2": "Team",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "AssegnazioneRuolo",
+            "entity2": "MembroTeam",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "AssegnazioneRuolo",
+            "entity2": "Tecnologia",
+            "cardinality": "N:1"
+        }
+    ]
+}

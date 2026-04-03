@@ -1,0 +1,6 @@
+Definire uno schema Entity-Relationship che descriva i dati di interesse in un certo anno accademico per un insieme di studenti e di dipartimenti universitari, secondo le seguenti specifiche:
+• ogni dipartimento ha un codice, un nome, una sede (città e nazione, ciascuna con codice e nome), un anno di fondazione e un colore del logo
+• ogni studente
+– ha una matricola, un cognome, un nome, una città e una nazione di nascita (ciascuna con codice e nome), una data di nascita e una media voti
+– afferisce a uno e un solo dipartimento
+– è iscritto a uno e un solo “corso di laurea” (identificato con codice e nome; esiste un insieme predefinito di corsi di laurea)

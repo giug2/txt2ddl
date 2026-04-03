@@ -1,0 +1,6 @@
+• per ogni prodotto possono esistere più annunci di vendita, pubblicati dallo stesso venditore o da venditori diversi
+• ogni annuncio di vendita è relativo ad uno e un solo prodotto
+• ogni venditore pubblica zero o più annunci di vendita
+• ogni annuncio di vendita ha uno e un solo venditore ed è inserito in una e una sola categoria di prodotto
+• per ogni categoria di prodotto esistono uno o più annunci di vendita di un dato prodotto, distinti con un progressivo che indica il “lotto” (es.: Smartphone X, lotto 1)
+• ogni prodotto può avere una o più recensioni associate, che sono valide per tutti gli annunci di vendita di quel prodotto.

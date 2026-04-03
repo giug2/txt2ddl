@@ -1,0 +1,5 @@
+• Ogni galleria ha un nome, si trova in una città (della quale interessa anche la nazione, con relativa sigla)
+e ha una serie di sale, ognuna delle quali ha un nome e una dimensione.
+• Le gallerie espongono quadri, per ognuno dei quali interessano l’autore (con codice, cognome, nome e
+nazione di nascita), l’anno di esecuzione e la sala nella quale viene esposto (che si assume fissa: ogni
+quadro si trova in una sala di una galleria)

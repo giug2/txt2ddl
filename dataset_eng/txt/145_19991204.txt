@@ -1,0 +1,6 @@
+The schema has a more detailed and normalized structure 
+The Books entity now defined only by Title Code and Genre with the latter acting as a foreign key towards a new specific Genres relationship described by Genre Sigil and Name 
+The relationship between books and writers is managed through an associative table called Authors containing the Book and Writer attributes 
+This table creates an explicit link with referential integrity constraints towards Books and Writers allowing a book to have multiple authors and a writer to be associated with multiple books 
+Even the more structured management of editions, the Editions Book Publisher Series Year relationship not only connects to Books and Publishers but also to a new Series entity defined by Collation Initials and Name 
+The descriptions of the entities Publishers Name City and Writers Code Surname Name remain unchanged compared to the previous scheme

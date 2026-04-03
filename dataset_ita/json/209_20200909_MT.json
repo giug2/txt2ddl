@@ -1,0 +1,190 @@
+{
+    "entities": [
+        {
+            "name": "Docente",
+            "attributes": [
+                {
+                    "name": "Matricola",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Insegnamento Erogato",
+            "attributes": [
+                {
+                    "name": "fk_corso_di_studio_codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_dipartimento_codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Anno Accademico",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Corso di Studio",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Anno Fondazione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Coordinatore",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Data Inizio Incarico",
+                    "is_pk": false
+                },
+                {
+                    "name": "Data Fine Incarico",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Dipartimento",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Sede",
+                    "is_pk": false
+                },
+                {
+                    "name": "Contatto",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Quota Contributo",
+            "attributes": [
+                {
+                    "name": "fk_insegnamento_erogato_corso",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_insegnamento_erogato_dipartimento",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_fascia_reddito_codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Importo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Fascia Reddito",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Descrizione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Tipo Esonero",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Descrizione",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Insegnamento Erogato",
+            "entity2": "Docente",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Insegnamento Erogato",
+            "entity2": "Corso di Studio",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Corso di Studio",
+            "entity2": "Coordinatore",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Insegnamento Erogato",
+            "entity2": "Dipartimento",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Quota Contributo",
+            "entity2": "Dipartimento",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Quota Contributo",
+            "entity2": "Fascia Reddito",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Quota Contributo",
+            "entity2": "Insegnamento Erogato",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Tipo Esonero",
+            "entity2": "Dipartimento",
+            "cardinality": "N:N"
+        }
+    ]
+}

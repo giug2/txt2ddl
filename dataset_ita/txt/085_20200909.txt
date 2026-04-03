@@ -1,0 +1,10 @@
+Il sistema gestisce un'anagrafica dei Teatri ciascuno identificato univocamente da un Codice e descritto da Nome Indirizzo e Telefono 
+Parallelamente viene mantenuto un catalogo delle OpereTeatrali ognuna definita da un Codice Titolo Anno di composizione e un riferimento all'Autore 
+Quest'ultimo vincolato all'entità Autori che raccoglie le informazioni anagrafiche degli scrittori specificandone Codice identificativo Cognome Nome e date di Nascita e Morte 
+Per stabilire la programmazione la relazione OperaInCartellone associa un CodiceTeatro a un CodiceOpera indicando anche il Periodo in cui lopera in scena in quel determinato teatro 
+Il cast di ogni produzione gestito attraverso l'entità Attori identificati da un Codice Cognome e Nome 
+La loro partecipazione a uno spettacolo specifico tracciata nella relazione Interpretazioni che collega un CodiceAttore a una precisa OperaInCartellone tramite la coppia CodiceTeatro e CodiceOpera 
+La gestione commerciale si basa su una classificazione dei posti a sedere definita in TipiPosto dove ogni tipologia ha un Codice e una Descrizione 
+Il costo dei biglietti stabilito dall'entità Biglietti che fissa un Prezzo per ogni CodiceTipoPosto in relazione a un specifico CodiceTeatro 
+Infine il sistema prevede un meccanismo di sconti attraverso i TipiRiduzione catalogati con Codice e Descrizione 
+L'applicazione effettiva di questi sconti definita nella tabella Riduzioni che assegna una Percentuale di sconto a un CodiceTipoRiduzione per un determinato CodiceTeatro permettendo così che la stessa riduzione possa avere valori diversi a seconda del teatro che la applica

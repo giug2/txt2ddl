@@ -1,0 +1,88 @@
+{
+    "entities": [
+        {
+            "name": "Skier",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Speciality",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "City",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Nation",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Skier",
+            "entity2": "City",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Speciality",
+            "entity2": "Skier",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Victories",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "City",
+            "entity2": "Nation",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Skier",
+            "entity2": "Nation",
+            "cardinality": "N:1"
+        }
+    ]
+}

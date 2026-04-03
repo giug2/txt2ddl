@@ -1,0 +1,2 @@
+• Each university has a name, is located in a city (of which the region is also of interest, with its acronym) and has a series of departments, each of which has a name and a number of offices.
+• Universities offer courses, for each of which the professor (with serial number, surname, name and region of affiliation), the academic year of activation and the relevant department are of interest (a course can be provided by multiple departments).

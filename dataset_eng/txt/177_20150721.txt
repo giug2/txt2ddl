@@ -1,0 +1,6 @@
+• for each topic there can be multiple sessions, held by the same speaker or by different speakers
+• each session relates to one and only one topic
+• each speaker holds zero or more sessions
+• each session has one or more speakers and is offered within a single event
+• for each event there are one or more sessions on a given topic, distinguished by an identifier indicating the "room" (e.g.: Artificial Intelligence, room 1)
+• each session has one and only one supporting material (e.g. slides); sessions on a given topic do not necessarily have the same material

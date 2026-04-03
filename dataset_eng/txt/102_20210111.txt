@@ -1,0 +1,8 @@
+Show a conceptual scheme for a database that manages information relating to supermarkets in a chain 
+The following aspects are of interest:
+- supermarkets, each with code (identifier), name and address (assume it is a simple value, without particular structure)
+- the categories of products sold at the various supermarkets (each supermarket sells products from one or more categories and obviously each category is sold by multiple supermarkets); each category has an identifier and name 
+- the products, for each of which the category is relevant (one and only one); each product has a code, unique within the category, and a name; each product is sold by all supermarkets that sell products in the relevant category
+- employees, each of whom has a serial number (which identifies him), surname and name and collaborates with zero or more supermarkets, at each of which he has only one function (which can vary from one supermarket to another; however it is a simple value); each employee was born in a city and resides in a city
+- cities, which have a code (identifying), name and province
+- the provinces, which have an acronym (identifier) and name.

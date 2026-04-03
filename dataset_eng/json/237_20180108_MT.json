@@ -1,0 +1,111 @@
+{
+    "entities": [
+        {
+            "name": "Degree Course",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "TipoLaurea",
+                    "is_pk": false
+                },
+                {
+                    "name": "YearActivation",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Department",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Faculty",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Students",
+            "attributes": [
+                {
+                    "name": "Freshman",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "MediaVoti",
+                    "is_pk": false
+                },
+                {
+                    "name": "CFU Acquired",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "State Student",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Degree Course",
+            "entity2": "Department",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Students",
+            "entity2": "Degree Course",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Department",
+            "entity2": "Faculty",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Students",
+            "entity2": "State Student",
+            "cardinality": "N:1"
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+Define an Entity-Relationship schema that describes a data archive (used for example by a cinema magazine or a television broadcaster to support critical and programming activities) relating to a set of directors with the related film genres, according to the following specifications:
+• each director has a code, surname, name and place of birth (city and country, each with code and name);
+• each film genre has a code and name;
+• for each director, the cinematographic genres in which his films competed and the number of awards won in each of them are of interest.
+
+• concern individual screenings at festivals in which a director has participated with a film, with the relative prize obtained; for example, it is interesting to keep track of the fact that a director won the "Palme d'Or" for the "Drama" genre screened in Cannes on 05/25/2023 and received a "Special Mention" for the same genre in Venice on 09/10/2021;
+• assume that a screening at a festival is identified by date, cinema and film genre, as well as possibly by a code;
+• each cinema in which a screening takes place has a code, name and country;
+• a film can be produced by several nations over time; For each nomination for a festival, it is important to know the production nation with which the film was competing at that time.

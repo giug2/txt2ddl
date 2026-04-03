@@ -1,0 +1,2 @@
+• for each musical genre there can be multiple performances, and an artist can be associated with multiple musical genres.
+• each performance is related to one and only one musical genre and takes place within a single one

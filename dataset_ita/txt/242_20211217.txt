@@ -1,0 +1,5 @@
+Definire uno schema Entity-Relationship che descriva la struttura dell'offerta formativa di un Ateneo secondo le specifiche seguenti, modificate e semplificate rispetto alla realtà:
+• l'offerta formativa è articolata in dipartimenti e corsi di laurea
+• ogni dipartimento ha un codice identificante e un nome; afferisce a zero o più settori scientifici; è responsabile di uno o più corsi di laurea
+• ogni settore scientifico rappresenta un ambito disciplinare riconosciuto a livello ministeriale; per ogni settore interessano solo codice e nome
+• ogni corso di laurea ha un codice progressivo, unico nell’ambito del dipartimento, un nome e un numero di posti disponibili

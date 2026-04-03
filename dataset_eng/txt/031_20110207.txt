@@ -1,0 +1,10 @@
+The system manages a product catalog where each product is identified by a unique code and described by a name, an available quantity and a price.
+Each product belongs to a specific category and associated with a specific supplier 
+The categories are in turn defined by a code and a description while each supplier registered with its own code and name 
+There are constraints that ensure data consistency by ensuring that the category and supplier assigned to a product actually exist in the respective master data 
+The system also tracks customers, each registered with a code, name and address 
+A customer can place orders, each characterized by an identification number, date and progress status 
+Also in this case a constraint ensures that each order is linked to a validly registered customer 
+An order line structure is used to detail the contents of an order 
+Each order line relates an order to a single product and specifies the quantity requested 
+Special constraints guarantee that both the order and the product to which each line refers are present and valid within the system

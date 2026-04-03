@@ -1,0 +1,75 @@
+{
+    "entities": [
+        {
+            "name": "Assistito",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Data",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Pratica",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Prestazione",
+            "attributes": [
+                {
+                    "name": "fk_pratica",
+                    "is_pk": true
+                },
+                {
+                    "name": "Riga",
+                    "is_pk": true
+                },
+                {
+                    "name": "Descrizione",
+                    "is_pk": false
+                },
+                {
+                    "name": "Data",
+                    "is_pk": false
+                },
+                {
+                    "name": "Importo",
+                    "is_pk": false
+                },
+                {
+                    "name": "Soggetto",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Pratica",
+            "entity2": "Assistito",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Prestazione",
+            "entity2": "Pratica",
+            "cardinality": "N:1"
+        }
+    ]
+}

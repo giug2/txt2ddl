@@ -1,0 +1,13 @@
+The model describes an information system for the management of a car rental fleet, starting from the Branch logistics entity, uniquely identified by a Code and characterized by a City and an Address.
+Each branch can manage one or more vehicles.
+The Vehicle entity is defined by an identification code and a series of information attributes such as Model, License Plate, Segment, Number of Seats, Year of Registration and Motorization.
+The configuration of a vehicle is specified by its composition in terms of equipment.
+For this purpose, the Equipment Type entity, identified by a Code and a Description, classifies the different configurations available (e.g. 'Sport', 'Business', 'Comfort').
+The Configuration relationship links a vehicle to a type of trim, specifying the features included in that particular version.
+In addition to the basic setup, a rental can include various options modeled by the Additional Service entity, also equipped with an identification code and a name (e.g. 'GPS', 'Child Seat').
+The pricing system is dynamic and is based on several factors.
+The Period entity, identified by a Code, has a Name and a date range which for simplicity is assumed to be a textual string (e.g. 'High Season', 'Weekdays').
+The heart of the pricing mechanism is the Rental Rate entity, which represents the basic Daily Amount that derives from the intersection between a vehicle, a type of additional service and a specific period.
+Alternatively, as suggested by the notes, this entity could be seen as a ternary relationship between the three entities mentioned.
+Finally, to manage further price adjustments, there is the TipoPromozione entity, identified by a Code and a Description.
+This is linked to a rate through the DiscountApplicato relationship, which applies a change defined by a Percentage attribute.

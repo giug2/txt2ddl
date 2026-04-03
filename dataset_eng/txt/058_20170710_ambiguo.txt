@@ -1,0 +1,7 @@
+So, basically here we have some stuff that revolves around books. There is the author, a person with his identification code, name, surname and when he was born. Sometimes, an author is linked to some type of entity, such as an institution or a group, and many authors can be part of the same entity. Then, of course, the authors write the books. An author can have written a lot of books, and a book can easily be the result of the work of several people, for example when they write together.
+
+Each book has its own ISBN code which makes it unique, and of course a title. These books are published by a publisher, which is a company with its own code and name. A lot of different books can be from the same publisher, but a specific book only comes out with one.
+
+Of the book, then, we not only have the title, but the actual physical copies. Each copy has its own inventory number so as not to confuse it with the others and we know when it was bought. Clearly, there can be many copies of a single book.
+
+Finally, there are the users, the people who borrow this stuff. They also have a code, name, surname and a telephone number to track them. The interesting connection is that a specific copy of a book can be given to a user. When this happens, you write down somewhere the date you should bring it back. And, well, a user can have several copies on loan at the same time.

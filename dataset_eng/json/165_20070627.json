@@ -1,0 +1,129 @@
+{
+    "entities": [
+        {
+            "name": "Record Label",
+            "attributes": [
+                {
+                    "name": "Label_ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Sit Legally",
+                    "is_pk": false
+                },
+                {
+                    "name": "Village",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Artist",
+            "attributes": [
+                {
+                    "name": "Artist_ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "NameArt",
+                    "is_pk": false
+                },
+                {
+                    "name": "EmailContact",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Song",
+            "attributes": [
+                {
+                    "name": "Track_ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "Title",
+                    "is_pk": false
+                },
+                {
+                    "name": "Featuring",
+                    "is_pk": false
+                },
+                {
+                    "name": "Text",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Album",
+            "attributes": [
+                {
+                    "name": "Catalog Number",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_series",
+                    "is_pk": true
+                },
+                {
+                    "name": "DataUscita",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Serie",
+            "attributes": [
+                {
+                    "name": "AnnoInizio",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeSerie",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Artist",
+            "entity2": "Record Label",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Song",
+            "entity2": "Artist",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Song",
+            "entity2": "Album",
+            "cardinality": "N:1",
+            "attributes": [
+                {
+                    "name": "TrackNumber",
+                    "is_pk": false
+                },
+                {
+                    "name": "term",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Album",
+            "entity2": "Serie",
+            "cardinality": "N:1"
+        }
+    ]
+}

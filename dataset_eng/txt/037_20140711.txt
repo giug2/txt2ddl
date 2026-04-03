@@ -1,0 +1,13 @@
+Show the conceptual framework for a concert program database, second
+the following specifications.
+• Each concert has a code, a title and a description, and is made up of a sequence of musical pieces
+different (order affects)
+• Each piece has a code, a title and an author (with code and name); the same piece can be
+represented in several concerts.
+• Each concert is performed by an orchestra; each orchestra has a name (which identifies it), a year of
+foundation and a group of orchestral musicians.
+• Each orchestra member has a serial number (unique within the database), name and surname, and can participate
+to multiple orchestras, in each of which he plays one and only one instrument, but he can play in different orchestras
+different tools.
+• Each instrument has a code and a name
+• Each concert is held several times, on different days and at times that may vary

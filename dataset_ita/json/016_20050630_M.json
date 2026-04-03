@@ -1,0 +1,169 @@
+{
+    "entities": [
+        {
+            "name": "Opera in cartellone",
+            "attributes": [
+                {
+                    "name": "id_opera_in_cartellone",
+                    "is_pk": true
+                },
+                {
+                    "name": "Data finale",
+                    "is_pk": false
+                },
+                {
+                    "name": "Data iniziale",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Opera teatrale",
+            "attributes": [
+                {
+                    "name": "id_opera_teatrale",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "anno creazione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Autore",
+            "attributes": [
+                {
+                    "name": "id_autore",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Titolo",
+                    "is_pk": false
+                },
+                {
+                    "name": "Data di nascita",
+                    "is_pk": false
+                },
+                {
+                    "name": "Data di morte",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Teatro",
+            "attributes": [
+                {
+                    "name": "id_teatro",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "indirizzo",
+                    "is_pk": false
+                },
+                {
+                    "name": "telefono",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Tipo Riduzione",
+            "attributes": [
+                {
+                    "name": "id_tipo_riduzione",
+                    "is_pk": true
+                },
+                {
+                    "name": "descrizione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Prezzo",
+            "attributes": [
+                {
+                    "name": "id_prezzo",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Categoria spettacolo",
+            "attributes": [
+                {
+                    "name": "id_categoria_spettacolo",
+                    "is_pk": true
+                },
+                {
+                    "name": "Descrizione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Tipo posto",
+            "attributes": [
+                {
+                    "name": "id_tipo_posto",
+                    "is_pk": true
+                },
+                {
+                    "name": "Descrizione",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Opera in cartellone",
+            "entity2": "Opera teatrale",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Opera teatrale",
+            "entity2": "Autore",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Opera in cartellone",
+            "entity2": "Teatro",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Tipo Riduzione",
+            "entity2": "Teatro",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Teatro",
+            "entity2": "Prezzo",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Prezzo",
+            "entity2": "Categoria spettacolo",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Tipo posto",
+            "entity2": "Prezzo",
+            "cardinality": "1:N"
+        }
+    ]
+}

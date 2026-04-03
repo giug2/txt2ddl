@@ -1,0 +1,5 @@
+• each product has a SKU (unique code) and a name, and belongs to a subcategory
+• each subcategory has a name, belongs to a category and has a code that identifies it within the category
+• each category has a code and a name
+• each product is of a specific brand which in turn belongs to a manufacturer; each brand has a name and code that uniquely identifies it
+• each manufacturer has a code and a name

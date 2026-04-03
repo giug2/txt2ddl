@@ -1,0 +1,10 @@
+Il sistema gestisce un catalogo di libri, dove ogni libro è identificato da un codice ISBN univoco e descritto da un titolo, dal numero di copie disponibili e dal suo anno di pubblicazione.
+Ciascun libro appartiene a uno specifico genere letterario ed è associato a un determinato editore.
+I generi sono a loro volta definiti da un ID e dal nome del genere, mentre ogni editore è registrato con un proprio ID e nome.
+Esistono vincoli che garantiscono la coerenza dei dati, assicurando che il genere e l'editore assegnati a un libro esistano effettivamente nelle rispettive anagrafiche.
+Il sistema traccia anche gli utenti della biblioteca, ognuno registrato con un numero di tessera, un nome completo e un indirizzo.
+Un utente può effettuare dei prestiti, ciascuno caratterizzato da un ID identificativo, una data e uno stato (es. 'attivo', 'restituito').
+Anche in questo caso, un vincolo assicura che ogni prestito sia collegato a un utente validamente registrato.
+Per dettagliare il contenuto di un prestito si utilizza una struttura di dettaglio del prestito.
+Ogni dettaglio mette in relazione un prestito con un singolo libro, specificando quale volume è stato preso.
+Appositi vincoli garantiscono che sia il prestito sia il libro a cui ogni dettaglio fa riferimento siano presenti e validi all'interno del sistema.

@@ -1,0 +1,190 @@
+{
+    "entities": [
+        {
+            "name": "Teaching",
+            "attributes": [
+                {
+                    "name": "Freshman",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Teaching Provided",
+            "attributes": [
+                {
+                    "name": "fk_course_of_study_code",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_department_code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Academic Year",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Course of Study",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Foundation Year",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Coordinator",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Assignment Start Date",
+                    "is_pk": false
+                },
+                {
+                    "name": "End Date of Assignment",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Department",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Site",
+                    "is_pk": false
+                },
+                {
+                    "name": "Contact",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Contribution fee",
+            "attributes": [
+                {
+                    "name": "fk_segnamento_erogato_corso",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_teaching_provided_department",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_income_band_code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Amount",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Income range",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Exemption type",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Teaching Provided",
+            "entity2": "Teaching",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Teaching Provided",
+            "entity2": "Course of Study",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Course of Study",
+            "entity2": "Coordinator",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Teaching Provided",
+            "entity2": "Department",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Contribution fee",
+            "entity2": "Department",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Contribution fee",
+            "entity2": "Income range",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Contribution fee",
+            "entity2": "Teaching Provided",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Exemption type",
+            "entity2": "Department",
+            "cardinality": "N:N"
+        }
+    ]
+}

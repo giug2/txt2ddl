@@ -1,0 +1,138 @@
+{
+    "entities": [
+        {
+            "name": "Supermarket",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Category",
+            "attributes": [
+                {
+                    "name": "Sail",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Product",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_categoria",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Employee",
+            "attributes": [
+                {
+                    "name": "Freshman",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Address",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "City",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Province",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Category",
+            "entity2": "Supermarket",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Product",
+            "entity2": "Category",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Employee",
+            "entity2": "Supermarket",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Employee",
+            "entity2": "City",
+            "cardinality": "N:1",
+            "attributes": [
+                {
+                    "name": "Resident",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "City",
+            "entity2": "Employee",
+            "cardinality": "1:N",
+            "attributes": [
+                {
+                    "name": "Birth",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "City",
+            "entity2": "Province",
+            "cardinality": "N:1"
+        }
+    ]
+}

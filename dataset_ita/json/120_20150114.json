@@ -1,0 +1,52 @@
+{
+  "entities": [
+    {
+      "name": "Collegio",
+      "attributes": [
+        {
+          "name": "Numero",
+          "is_pk": true
+        }
+      ]
+    },
+    {
+      "name": "Regione",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Eletto",
+      "attributes": [{ "name": "Codice", "is_pk": true }]
+    },
+    {
+      "name": "Elezione",
+      "attributes": [
+        {
+          "name": "Anno",
+          "is_pk": true
+        },
+        { "name": "elettori", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Persona",
+      "attributes": [
+        { "name": "Codice", "is_pk": true }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "Collegio",
+      "entity2": "Regione",
+      "cardinality": "N:1"    
+    },
+    {
+      "entity1": "Collegio",
+      "entity2": "Elezione",
+      "cardinality": "N:N"
+    }
+  ]
+}

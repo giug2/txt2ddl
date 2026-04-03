@@ -1,0 +1,6 @@
+Show the conceptual scheme of a music festival database, according to the following specifications.
+• The various festivals have a code and a name.
+• Each festival is made up of a certain number of bands and a ranking that assigns a total score to each band.
+• Bands participate in only one festival and have one name and lineup of musicians for whom we record a member ID, name and date of birth.
+• Performances take place between two bands from the same festival, on a certain date, on a certain stage and have a final evaluation.
+• We want to record the musicians who play in the various performances and the role played on stage (which is the same in one performance but can vary in different performances).

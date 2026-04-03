@@ -1,0 +1,10 @@
+Show a conceptual scheme for describing a press review, which is a collection of newspaper articles published on the same day. 
+Consider the following specifications
+• each article has a numerical identifier, a title, an author and is published in one or more newspapers (this specification relates to a not very common, but possible case); 
+each article appears on a page of a newspaper (which may be different for the various newspapers in which it is published, if there are more than one)
+• each newspaper has a code and a name
+• each author has a code and a name and a body of affiliation (for example, the author named Mario Rossi could belong to the company XXX SpA)
+• each organization has a code and a name which affects the press review not only for one day, but on several days
+• for each day the time in which the exhibition is produced and the name of the curator, i.e. the person who produced it, must be reported.
+• each article appears in the press review of one day only
+• for each article the author has an affiliation and a role, but can, for different articles, have different affiliations or different roles (for example, Mario Rossi wrote an article as DG of XXX SpA, another as President of YYY Srl and yet another as President of XXX SpA)

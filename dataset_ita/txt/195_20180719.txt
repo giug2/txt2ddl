@@ -1,0 +1,2 @@
+• Ogni magazzino ha un nome, si trova in una città (della quale interessa anche il paese, con relativa sigla) e ha una serie di scaffali, ognuno dei quali ha un codice e una capienza.
+• I magazzini stoccano prodotti, per ognuno dei quali interessano il fornitore (con ID, ragione sociale, partita IVA e paese di origine), l'anno di produzione e lo scaffale nel quale viene collocato (che si assume fisso: ogni prodotto si trova in uno scaffale di un magazzino).

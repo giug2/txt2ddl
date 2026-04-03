@@ -1,0 +1,98 @@
+{
+    "entities": [
+        {
+            "name": "CollanaEditoriale",
+            "attributes": [
+                {
+                    "name": "TitoloCollana",
+                    "is_pk": true
+                },
+                {
+                    "name": "Genere",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Volume",
+            "attributes": [
+                {
+                    "name": "FK_COLLANA",
+                    "is_pk": true
+                },
+                {
+                    "name": "NumeroVolume",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Articolo",
+            "attributes": [
+                {
+                    "name": "FK_VOLUME",
+                    "is_pk": true
+                },
+                {
+                    "name": "NumeroCapitolo",
+                    "is_pk": true
+                },
+                {
+                    "name": "NumeroPagine",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Collaboratore",
+            "attributes": [
+                {
+                    "name": "ID_Collaboratore",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "CollanaEditoriale",
+            "entity2": "Volume",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Volume",
+            "entity2": "Articolo",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Articolo",
+            "entity2": "Collaboratore",
+            "cardinality": "1:N",
+            "attributes": [
+                {
+                    "name": "autore",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Articolo",
+            "entity2": "Collaboratore",
+            "cardinality": "1:N",
+            "attributes": [
+                {
+                    "name": "revisore",
+                    "is_pk": false
+                }
+            ]
+        }
+    ]
+}

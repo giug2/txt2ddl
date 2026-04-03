@@ -1,0 +1,157 @@
+{
+    "entities": [
+        {
+            "name": "Mostra",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Titolo",
+                    "is_pk": false
+                },
+                {
+                    "name": "DataInizio",
+                    "is_pk": false
+                },
+                {
+                    "name": "DataFine",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Itinerario",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Esposizione",
+            "attributes": [
+                {
+                    "name": "fk_mostra",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_quadro",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Quadro",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Autore",
+                    "is_pk": false
+                },
+                {
+                    "name": "Anno",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Sala",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Dimensione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "TipoVisita",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Ora",
+                    "is_pk": false
+                },
+                {
+                    "name": "Durata",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Visita",
+            "attributes": [
+                {
+                    "name": "Data",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_tipo_visita",
+                    "is_pk": true
+                },
+                {
+                    "name": "Numero Partecipanti",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Esposizione",
+            "entity2": "Mostra",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Esposizione",
+            "entity2": "Itinerario",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Numero Ordine",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Esposizione",
+            "entity2": "Sala",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Esposizione",
+            "entity2": "Quadro",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "TipoVisita",
+            "entity2": "Itinerario",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Visita",
+            "entity2": "TipoVisita",
+            "cardinality": "N:1"
+        }
+    ]
+}

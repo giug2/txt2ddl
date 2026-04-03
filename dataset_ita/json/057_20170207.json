@@ -1,0 +1,65 @@
+{
+  "entities": [
+    {
+      "name": "Committente",
+      "attributes": [
+        {
+          "name": "id_committente",
+          "is_pk": true
+        }
+      ]
+    },
+    {
+      "name": "Impiegato",
+      "attributes": [
+        {
+          "name": "id_impiegato",
+          "is_pk": true
+        },
+        {
+          "name": "fk_dipartimento",
+          "is_pk": true
+        }
+      ]
+    },
+    {
+      "name": "Progetto",
+      "attributes": [
+        {
+          "name": "id_progetto",
+          "is_pk": true
+        },
+        {
+          "name": "fk_committente",
+          "is_pk": true
+        }
+      ]
+    },
+    {
+      "name": "Dipartimento",
+      "attributes": [
+        {
+          "name": "id_dipartimento",
+          "is_pk": true
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "Impiegato",
+      "entity2": "Dipartimento",
+      "cardinality": "N:1" 
+    },
+    {
+      "entity1": "Progetto",
+      "entity2": "Committente",
+      "cardinality": "N:1" 
+    },
+    {
+      "entity1": "Impiegato",
+      "entity2": "Progetto",
+      "cardinality": "N:N" 
+    }
+  ]
+}

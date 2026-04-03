@@ -1,0 +1,202 @@
+{
+    "entities": [
+        {
+            "name": "SedeOperativa",
+            "attributes": [
+                {
+                    "name": "CodiceSede",
+                    "is_pk": true
+                },
+                {
+                    "name": "Via",
+                    "is_pk": false
+                },
+                {
+                    "name": "NumCivico",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Citta",
+            "attributes": [
+                {
+                    "name": "CodiceISTAT",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeCitta",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Regione",
+            "attributes": [
+                {
+                    "name": "CodiceRegione",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeRegione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Progetto",
+            "attributes": [
+                {
+                    "name": "CodiceProgetto",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeProgetto",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Task",
+            "attributes": [
+                {
+                    "name": "CodiceTask",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeTask",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Risorsa",
+            "attributes": [
+                {
+                    "name": "CodiceRisorsa",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeRisorsa",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Rischio",
+            "attributes": [
+                {
+                    "name": "CodiceRischio",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeRischio",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "MembroTeam",
+            "attributes": [
+                {
+                    "name": "Matricola",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "RelazioneGerarchica",
+            "attributes": [
+                {
+                    "name": "fk_membro_superiore",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_membro_inferiore",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "TipoRelazione",
+            "attributes": [
+                {
+                    "name": "CodiceTipoRelazione",
+                    "is_pk": true
+                },
+                {
+                    "name": "Descrizione",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Progetto",
+            "entity2": "SedeOperativa",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Citta",
+            "entity2": "SedeOperativa",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Regione",
+            "entity2": "Citta",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Progetto",
+            "entity2": "MembroTeam",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Allocazione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Progetto",
+            "entity2": "Task",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "BudgetStimato",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Task",
+            "entity2": "Risorsa",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Risorsa",
+            "entity2": "Rischio",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "MembroTeam",
+            "entity2": "RelazioneGerarchica",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "MembroTeam",
+            "entity2": "RelazioneGerarchica",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "TipoRelazione",
+            "entity2": "RelazioneGerarchica",
+            "cardinality": "1:N"
+        }
+    ]
+}

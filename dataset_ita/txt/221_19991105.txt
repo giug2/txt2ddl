@@ -1,0 +1,6 @@
+- per ogni tipo di task possono esistere più task, assegnati allo stesso dipendente o a dipendenti diversi
+- ogni task è relativo ad uno e un solo tipo di task
+- ogni dipendente è assegnato a zero o più task
+- ogni task ha uno o più dipendenti assegnati e appartiene ad uno e un solo progetto
+- per ogni progetto esiste al più un task di un dato tipo
+- ogni task ha uno e un solo documento di riferimento; i task di un dato tipo non hanno necessariamente lo stesso documento di riferimento

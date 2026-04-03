@@ -1,0 +1,7 @@
+Allora, in pratica abbiamo un po' di roba per gestire l'università. Ci sono i Dipartimenti, ognuno identificato dal suo nome e con un Direttore a capo. Ogni dipartimento, ovviamente, si occupa di diversi Corsi di Laurea. Un corso di laurea, che ha un suo codice e un nome che lo identificano insieme, più qualche riga di descrizione, fa sempre capo a un solo dipartimento.
+
+Poi ci sono i Docenti, con la loro matricola e il nome e cognome. La cosa si fa interessante perché un docente può lavorare per più dipartimenti e, viceversa, un dipartimento è pieno di docenti. Quando un prof è collegato a un dipartimento, si segna anche che Materia insegna lì.
+
+Ogni corso di laurea è composto da tanti Moduli Didattici, che sono praticamente le materie. Questi moduli hanno un codice e un titolo. Lo stesso modulo può essere riciclato in più corsi di laurea, quindi c'è un bel miscuglio. A proposito, ogni modulo ha un suo Autore, una persona con un suo codice e nome, e un autore può aver scritto un sacco di moduli diversi.
+
+Per la logistica, ogni corso di laurea è collegato a delle Aule. Un'aula, che ha un codice, un nome e una capienza, può essere usata da più corsi, ma ogni corso sembra avere la sua aula di riferimento. Infine, per gli esami, ci sono le Sessioni d'Esame. Ogni sessione è semplicemente una data, e quella data è legata in modo specifico a un singolo corso di laurea, quindi non ci si può sbagliare.

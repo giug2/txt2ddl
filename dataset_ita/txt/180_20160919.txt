@@ -1,0 +1,2 @@
+• per ogni genere musicale possono esistere più performance, e un artista può essere associato a più generi musicali.
+• ogni performance è relativa ad uno e un solo genere musicale e si svolge all'interno di un unico

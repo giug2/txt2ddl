@@ -1,0 +1,4 @@
+• each engine can be mounted on multiple models;
+• each model can have multiple engines and belongs to one and only one brand;
+• each brand belongs to one and only one car manufacturer;
+• each engine is available only for the brand to which the model on which it is mounted belongs and only for the car manufacturer to which the brand belongs.

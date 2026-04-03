@@ -1,0 +1,125 @@
+{
+    "entities": [
+        {
+            "name": "Studente",
+            "attributes": [
+                {
+                    "name": "Matricola",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "NomeDipartimento",
+                    "is_pk": false
+                },
+                {
+                    "name": "Data di nascita",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "IscrizioneCorso",
+            "attributes": [
+                {
+                    "name": "ID_Iscrizione",
+                    "is_pk": true
+                },
+                {
+                    "name": "AnnoAccademico",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Tassa",
+            "attributes": [
+                {
+                    "name": "ID_Tassa",
+                    "is_pk": true
+                },
+                {
+                    "name": "DataEmissione",
+                    "is_pk": false
+                },
+                {
+                    "name": "Importo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Pagamento",
+            "attributes": [
+                {
+                    "name": "ID_Pagamento",
+                    "is_pk": true
+                },
+                {
+                    "name": "DataPagamento",
+                    "is_pk": false
+                },
+                {
+                    "name": "Importo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CorsoDiLaurea",
+            "attributes": [
+                {
+                    "name": "CodiceCorso",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeCorso",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Dipartimento",
+            "attributes": [
+                {
+                    "name": "CodiceDipartimento",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "IscrizioneCorso",
+            "entity2": "Studente",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "IscrizioneCorso",
+            "entity2": "Tassa",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Pagamento",
+            "entity2": "IscrizioneCorso",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "CorsoDiLaurea",
+            "entity2": "IscrizioneCorso",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "CorsoDiLaurea",
+            "entity2": "Dipartimento",
+            "cardinality": "N:1"
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+• ogni docente lavora presso uno e un solo dipartimento;
+• ogni docente insegna presso tutti e soli i corsi di studio del dipartimento presso cui lavora;
+• ogni corso di studio afferisce ad uno e un solo dipartimento e presso di esso insegnano tutti e
+soli i docenti che lavorano presso il dipartimento;
+• ogni dipartimento appartiene ad una e una sola facoltà;
+• ogni docente collabora solo con la facoltà cui appartiene il dipartimento a cui il docente stesso
+afferisce.

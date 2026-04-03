@@ -1,0 +1,63 @@
+{
+    "entities": [
+        {
+            "name": "Negozio",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome Categoria",
+                    "is_pk": false
+                },
+                {
+                    "name": "Piano",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Marca",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome Marca",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Categoria",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Indirizzo",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Negozio",
+            "entity2": "Marca",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Marca",
+            "entity2": "Categoria",
+            "cardinality": "N:1"
+        }
+    ]
+}

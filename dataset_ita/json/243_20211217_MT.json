@@ -1,0 +1,140 @@
+{
+    "entities": [
+        {
+            "name": "Facolta",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CorsoDiLaurea",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_facolta",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "CostoAnnuale",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "DirettivaMinisteriale",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Titolo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "BorsaDiStudio",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Insegnamento",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Dipartimento",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "CorsoDiLaurea",
+            "entity2": "Facolta",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "DirettivaMinisteriale",
+            "entity2": "Facolta",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "BorsaDiStudio",
+            "entity2": "CorsoDiLaurea",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Contributo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Insegnamento",
+            "entity2": "CorsoDiLaurea",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Insegnamento",
+            "entity2": "Dipartimento",
+            "cardinality": "N:1",
+            "attributes": [
+                {
+                    "name": "Responsabile",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Dipartimento",
+            "entity2": "Insegnamento",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Collaboratori",
+                    "is_pk": false
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,90 @@
+{
+    "entities": [
+        {
+            "name": "Artist",
+            "attributes": [
+                {
+                    "name": "artist_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_record_label",
+                    "is_pk": true
+                },
+                {
+                    "name": "album_title",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Album",
+            "attributes": [
+                {
+                    "name": "id_album",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_artista",
+                    "is_pk": true
+                },
+                {
+                    "name": "art_name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Record Label",
+            "attributes": [
+                {
+                    "name": "record_label_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "label_name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Producer",
+            "attributes": [
+                {
+                    "name": "manufacturer_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_record_label",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Record Label",
+            "entity2": "Producer",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Album",
+            "entity2": "Artist",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Record Label",
+            "entity2": "Artist",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Album",
+            "entity2": "Producer",
+            "cardinality": "N:N"
+        }
+    ]
+}

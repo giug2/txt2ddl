@@ -1,0 +1,140 @@
+{
+    "entities": [
+        {
+            "name": "Insegnamento",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CorsoDiLaurea",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Dipartimento",
+            "attributes": [
+                {
+                    "name": "Sigla",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Lezione",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeCognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Durata",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "MaterialeDidattico",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeFile",
+                    "is_pk": false
+                },
+                {
+                    "name": "DataCaricamento",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Docente",
+            "attributes": [
+                {
+                    "name": "Matricola",
+                    "is_pk": true
+                },
+                {
+                    "name": "Titolo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Formato",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "Estensione",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Insegnamento",
+            "entity2": "CorsoDiLaurea",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Lezione",
+            "entity2": "Insegnamento",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Dipartimento",
+            "entity2": "CorsoDiLaurea",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Docente",
+            "entity2": "Dipartimento",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Lezione",
+            "entity2": "MaterialeDidattico",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "MaterialeDidattico",
+            "entity2": "Docente",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Formato",
+            "entity2": "MaterialeDidattico",
+            "cardinality": "1:N"
+        }
+    ]
+}

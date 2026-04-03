@@ -1,0 +1,5 @@
+• ogni professore appartiene a uno e un solo dipartimento e ha uno o più tutor
+• ogni dipartimento ha uno o più professori e ad esso afferiscono tutti e soli i tutor che collaborano con tali professori
+• ogni tutor collabora con uno e un solo professore e il suo dipartimento di riferimento è quello di tale professore
+• ogni tutor e ogni professore hanno ciascuno uno e un solo campus di afferenza, ma il campus di un tutor non coincide necessariamente con quello del relativo professore; per ogni campus ci possono essere più tutor e più professori
+• si noti che il concetto di dipartimento è logico/organizzativo e non si parla di campus di un dipartimento

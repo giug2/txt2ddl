@@ -1,0 +1,85 @@
+{
+    "entities": [
+        {
+            "name": "Esame",
+            "attributes": [
+                {
+                    "name": "Data",
+                    "is_pk": false
+                },
+                {
+                    "name": "Voto",
+                    "is_pk": false
+                },
+                {
+                    "name": "IDVerbalizzazione",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_MatricolaStudente",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Studente",
+            "attributes": [
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Matricola",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "CorsoDiLaurea",
+            "attributes": [
+                {
+                    "name": "SedeDidattica",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "CodiceCorso",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Dipartimento",
+            "attributes": [
+                {
+                    "name": "CodiceDipartimento",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Studente",
+            "entity2": "Esame",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "CorsoDiLaurea",
+            "entity2": "Studente",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Dipartimento",
+            "entity2": "CorsoDiLaurea",
+            "cardinality": "1:N"
+        }
+    ]
+}

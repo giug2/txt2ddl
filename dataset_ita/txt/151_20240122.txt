@@ -1,0 +1,6 @@
+- ogni professore insegna in uno o più corsi e collabora con uno o più tutor,
+• se un professore X collabora con un tutor Y per un corso Z e con un altro tutor V per un altro corso W, allora X collabora con Y anche per il corso W e collabora con V per il corso Z
+• in ogni corso insegnano uno o più professori e ad esso sono assegnati i tutor che collaborano con tali professori
+• ogni tutor collabora con uno o più professori ed è assegnato ai corsi in cui tali professori insegnano
+• ogni corso appartiene a uno e un solo dipartimento e ogni dipartimento offre più corsi
+• professori e tutor hanno legami con i dipartimenti solo attraverso i corsi

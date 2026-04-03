@@ -1,0 +1,9 @@
+Define an Entity-Relationship schema that describes the data of interest in a certain year for a set of
+players and professional basketball clubs, according to the following specifications:
+• each company has a code, a name, a headquarters (city and country, each with code and name), a date of
+foundation and a mesh color
+• every player
+– has an identification code, a surname, a name, a height and a healthy weight
+– plays for one and only one club
+– has one and only one “role” (identified with code and name; there is a somewhat predefined set
+of roles)

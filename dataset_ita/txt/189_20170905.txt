@@ -1,0 +1,2 @@
+• ogni dipendente, in ogni progetto a cui viene assegnato (in modo anche variabile da un progetto all’altro), ricopre una o più mansioni
+• le mansioni sono “standardizzate”, ciascuna con una descrizione e un codice (ad esempio il codice PM corrisponde al Project Manager, il codice DEV al programmatore, etc.)

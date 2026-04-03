@@ -1,0 +1,13 @@
+Il modello descrive un sistema informativo per la gestione alberghiera partendo dall'entità geografica Frazione identificata univocamente da un Codice e caratterizzata da un Nome e un'Altitudine 
+Ogni frazione può ospitare una o più strutture ricettive 
+L'entità Albergo definita da un Codice identificativo e da una serie di attributi informativi quali Nome Indirizzo Categoria il numero di Totale Letti Telefono e Fax 
+La struttura interna di un albergo specificata dalla sua composizione in termini di camere 
+A questo scopo l'entità TipoCamera identificata da un Codice e una Descrizione classifica le diverse tipologie di stanze 
+La relazione di Composizione R1 collega un albergo a un tipo di camera specificando nell'attributo Quantità il numero di camere di quella particolare tipologia presenti nella struttura 
+Oltre alle camere un albergo può offrire diverse prestazioni modellate dall'entità Servizio anch'essa dotata di un Codice identificativo e di una Descrizione 
+Il sistema di prezzi dinamico e si basa su diversi fattori 
+L'entità Stagione identificata da un Codice e possiede una Descrizione e un attributo Periodi che per semplicità si assume essere una stringa testuale 
+Il cuore del meccanismo di tariffazione l'entità Tariffa la quale non avendo un identificatore proprio ma uno esterno rappresenta l'Importo di base che deriva dall'incrocio tra un albergo un tipo di camera e una specifica stagione 
+In alternativa come suggerito dalle note questa entità potrebbe essere vista come una relazione ternaria tra le tre entità menzionate 
+Infine per gestire ulteriori aggiustamenti di prezzo presente l'entità TipoVariantePrezzo identificata da un Codice e una Descrizione 
+Questa si lega a una tariffa attraverso la relazione VariazionePrezzo R2 che applica una modifica definita dallattributo Percentuale

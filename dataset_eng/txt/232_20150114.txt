@@ -1,0 +1,2 @@
+• Each department belongs to a university and is identified by a code, unique for the university (therefore there are the departments “ING-POLITO”, “ARC-POLITO” and “ING-UNIBO”). A university has a code and a name.
+• Each student enrolls in a degree course: only one degree course for each enrolment, but in subsequent enrolments the student could change course. A degree course has a code and a name.

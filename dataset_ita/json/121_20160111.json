@@ -1,0 +1,65 @@
+{
+  "entities": [
+    {
+      "name": "AUTOMOBILE",
+      "attributes": [
+        { "name": "TELAIO", "is_pk": true },
+        { "name": "COLORE", "is_pk": false },
+        { "name": "DATA", "is_pk": false }
+      ]
+    },
+    {
+      "name": "VERSIONE",
+      "attributes": [
+        { "name": "CODICE", "is_pk": true },
+        { "name": "NOME", "is_pk": false },
+        { "name": "CILindrata", "is_pk": false },
+        { "name": "PREZZO", "is_pk": false }
+      ]
+    },
+    {
+      "name": "TIPO ALIMENTAZIONE",
+      "attributes": [
+        { "name": "CODICE", "is_pk": true },
+        { "name": "DESCRIZIONE", "is_pk": false }
+      ]
+    },
+    {
+      "name": "MODELLO",
+      "attributes": [
+        { "name": "CODICE", "is_pk": true },
+        { "name": "LUNGHEZZA", "is_pk": false },
+        { "name": "NUMERO POSTI", "is_pk": false }
+      ]
+    },
+    {
+      "name": "SEGMENTO MERCATO",
+      "attributes": [
+        { "name": "CODICE", "is_pk": true },
+        { "name": "DESCRIZIONE", "is_pk": false }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "VERSIONE",
+      "entity2": "AUTOMOBILE",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "TIPO ALIMENTAZIONE",
+      "entity2": "VERSIONE",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "MODELLO",
+      "entity2": "VERSIONE",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "SEGMENTO MERCATO",
+      "entity2": "MODELLO",
+      "cardinality": "1:N"
+    }
+  ]
+}

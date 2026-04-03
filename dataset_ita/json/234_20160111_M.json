@@ -1,0 +1,107 @@
+{
+    "entities": [
+        {
+            "name": "COPIA_MAGAZZINO",
+            "attributes": [
+                {
+                    "name": "ID_COPIA",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME_GENERE",
+                    "is_pk": false
+                },
+                {
+                    "name": "DATA_ACQUISIZIONE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "EDIZIONE",
+            "attributes": [
+                {
+                    "name": "ISBN",
+                    "is_pk": true
+                },
+                {
+                    "name": "TITOLO_EDIZIONE",
+                    "is_pk": false
+                },
+                {
+                    "name": "FORMATO",
+                    "is_pk": false
+                },
+                {
+                    "name": "PREZZO_COPERTINA",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "LINGUA",
+            "attributes": [
+                {
+                    "name": "CODICE_ISO",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME_LINGUA",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "OPERA_LETTERARIA",
+            "attributes": [
+                {
+                    "name": "ID_OPERA",
+                    "is_pk": true
+                },
+                {
+                    "name": "NUMERO_PAGINE_MEDIO",
+                    "is_pk": false
+                },
+                {
+                    "name": "NUMERO_VOLUMI",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "GENERE",
+            "attributes": [
+                {
+                    "name": "ID_GENERE",
+                    "is_pk": true
+                },
+                {
+                    "name": "STATO_CONSERVAZIONE",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "COPIA_MAGAZZINO",
+            "entity2": "EDIZIONE",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "EDIZIONE",
+            "entity2": "LINGUA",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "EDIZIONE",
+            "entity2": "OPERA_LETTERARIA",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "GENERE",
+            "entity2": "OPERA_LETTERARIA",
+            "cardinality": "1:N"
+        }
+    ]
+}

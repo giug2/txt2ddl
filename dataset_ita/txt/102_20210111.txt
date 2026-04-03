@@ -1,0 +1,8 @@
+Mostrare uno schema concettuale per una base di dati che gestisca le informazioni relative ai supermercati di una catena 
+Sono di interesse i seguenti aspetti:
+- i supermercati, ognuno con codice (identificante), nome e indirizzo (supporre sia un semplice valore, senza struttura particolare)
+- le categorie di prodotti venduti presso i vari supermercati (ogni supermercato vende prodotti di una o più categorie e ovviamente ogni categoria è venduta da più supermercati); ogni categoria ha identificativo e nome 
+- i prodotti, per ognuno dei quali interessa la categoria (una e una sola); ogni prodotto ha un codice, univoco nell'ambito della categoria, e un nome; ogni prodotto è venduto da tutti i supermercati che vendono prodotti della relativa categoria
+- i dipendenti, ognuno dei quali ha matricola (che lo identifica), cognome e nome e collabora con zero o più supermercati, presso ognuno dei quali ha una sola funzione (che può variare da un supermercato all'altro; comunque si tratta di un semplice valore); ogni dipendente è nato in una città e risiede in una città
+- le città, che hanno codice (identificante), nome e provincia
+- le province, che hanno sigla (identificante) e nome.

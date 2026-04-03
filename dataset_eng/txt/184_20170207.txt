@@ -1,0 +1,6 @@
+The system describes the management of orders placed by customers of an online store.
+At the center of the model is the customer, uniquely identified by his customer code and characterized by a name and shipping address.
+Each customer is associated with one or more orders; each order, identified by its own ID, reports a total amount and refers to the code of the customer who placed it.
+Furthermore, the order is linked to a specific courier, identified by its code, through which the shipment takes place.
+The structure of each order is detailed by a series of detail lines, each with its own unique ID, a specific price for that item and the date of entry.
+Basically, each detail line is linked to a specific product via the product code, thus creating a direct link with the product entity, which associates this code with its description.

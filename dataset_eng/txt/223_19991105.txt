@@ -1,0 +1,4 @@
+- each course is taught by one and only one teacher
+- each course has zero or more students enrolled
+- each student can be enrolled in zero or more courses
+- each course belongs to only one department

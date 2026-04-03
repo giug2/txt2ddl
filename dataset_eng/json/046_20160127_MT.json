@@ -1,0 +1,63 @@
+{
+    "entities": [
+        {
+            "name": "Shop",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Address",
+                    "is_pk": false
+                },
+                {
+                    "name": "Piano",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Mark",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Brand Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Category",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Category Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Shop",
+            "entity2": "Mark",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Mark",
+            "entity2": "Category",
+            "cardinality": "N:1"
+        }
+    ]
+}

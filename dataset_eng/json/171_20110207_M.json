@@ -1,0 +1,107 @@
+{
+    "entities": [
+        {
+            "name": "Book",
+            "attributes": [
+                {
+                    "name": "ISBN",
+                    "is_pk": true
+                },
+                {
+                    "name": "Title",
+                    "is_pk": false
+                },
+                {
+                    "name": "Copies Available",
+                    "is_pk": false
+                },
+                {
+                    "name": "YearPublication",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Type",
+            "attributes": [
+                {
+                    "name": "IDGenere",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeGenerate",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Publisher",
+            "attributes": [
+                {
+                    "name": "IDEpublisher",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeEditor",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Loan",
+            "attributes": [
+                {
+                    "name": "LoanID",
+                    "is_pk": true
+                },
+                {
+                    "name": "DataPrestito",
+                    "is_pk": false
+                },
+                {
+                    "name": "Address",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "User",
+            "attributes": [
+                {
+                    "name": "Card",
+                    "is_pk": true
+                },
+                {
+                    "name": "FullName",
+                    "is_pk": false
+                },
+                {
+                    "name": "State",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Type",
+            "entity2": "Book",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Publisher",
+            "entity2": "Book",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Loan",
+            "entity2": "Book",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Loan",
+            "entity2": "User",
+            "cardinality": "N:1"
+        }
+    ]
+}

@@ -1,0 +1,98 @@
+{
+    "entities": [
+        {
+            "name": "Editorial Series",
+            "attributes": [
+                {
+                    "name": "TitleCollana",
+                    "is_pk": true
+                },
+                {
+                    "name": "Type",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Volume",
+            "attributes": [
+                {
+                    "name": "FK_NECKLACE",
+                    "is_pk": true
+                },
+                {
+                    "name": "VolumeNumber",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Item",
+            "attributes": [
+                {
+                    "name": "FK_VOLUME",
+                    "is_pk": true
+                },
+                {
+                    "name": "ChapterNumber",
+                    "is_pk": true
+                },
+                {
+                    "name": "Page Number",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Collaborator",
+            "attributes": [
+                {
+                    "name": "Collaborator_ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Editorial Series",
+            "entity2": "Volume",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Volume",
+            "entity2": "Item",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Item",
+            "entity2": "Collaborator",
+            "cardinality": "1:N",
+            "attributes": [
+                {
+                    "name": "author",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Item",
+            "entity2": "Collaborator",
+            "cardinality": "1:N",
+            "attributes": [
+                {
+                    "name": "reviewer",
+                    "is_pk": false
+                }
+            ]
+        }
+    ]
+}

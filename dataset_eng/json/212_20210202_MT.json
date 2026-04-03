@@ -1,0 +1,202 @@
+{
+    "entities": [
+        {
+            "name": "Operational Headquarters",
+            "attributes": [
+                {
+                    "name": "Location Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Via",
+                    "is_pk": false
+                },
+                {
+                    "name": "NumCivico",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Citta",
+            "attributes": [
+                {
+                    "name": "CodiceISTAT",
+                    "is_pk": true
+                },
+                {
+                    "name": "CityName",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Region",
+            "attributes": [
+                {
+                    "name": "CodeRegion",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeRegion",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Project",
+            "attributes": [
+                {
+                    "name": "ProjectCode",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeProgetto",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Task",
+            "attributes": [
+                {
+                    "name": "CodiceTask",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeTask",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Resource",
+            "attributes": [
+                {
+                    "name": "ResourceCode",
+                    "is_pk": true
+                },
+                {
+                    "name": "NameResource",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Risk",
+            "attributes": [
+                {
+                    "name": "RiskCode",
+                    "is_pk": true
+                },
+                {
+                    "name": "RiskName",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Team Member",
+            "attributes": [
+                {
+                    "name": "Freshman",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Hierarchical Relationship",
+            "attributes": [
+                {
+                    "name": "fk_superior_member",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_lower_member",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "RelationType",
+            "attributes": [
+                {
+                    "name": "RelationTypeCode",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Operational Headquarters",
+            "entity2": "Project",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Operational Headquarters",
+            "entity2": "Citta",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Citta",
+            "entity2": "Region",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Team Member",
+            "entity2": "Project",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Allocation",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Task",
+            "entity2": "Project",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Budget Stimato",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Resource",
+            "entity2": "Task",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Risk",
+            "entity2": "Resource",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Hierarchical Relationship",
+            "entity2": "Team Member",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Hierarchical Relationship",
+            "entity2": "Team Member",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Hierarchical Relationship",
+            "entity2": "RelationType",
+            "cardinality": "N:1"
+        }
+    ]
+}

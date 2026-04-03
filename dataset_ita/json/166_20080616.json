@@ -1,0 +1,185 @@
+{
+    "entities": [
+        {
+            "name": "Studente",
+            "attributes": [
+                {
+                    "name": "Matricola",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Telefono",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Piano di Studi",
+            "attributes": [
+                {
+                    "name": "ID_Piano",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Corso nel Piano",
+            "attributes": [
+                {
+                    "name": "ID_Riga",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_piano_di_studi",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Tipologia",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Descrizione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Sessione di Corso",
+            "attributes": [
+                {
+                    "name": "Orario",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_insegnamento",
+                    "is_pk": true
+                },
+                {
+                    "name": "Giorno_Settimana",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Insegnamento",
+            "attributes": [
+                {
+                    "name": "Codice_Insegnamento",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_dipartimento",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Dipartimento",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Aula",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Sede",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Città",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Studente",
+            "entity2": "Piano di Studi",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Piano di Studi",
+            "entity2": "Corso nel Piano",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Corso nel Piano",
+            "entity2": "Tipologia",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Corso nel Piano",
+            "entity2": "Sessione di Corso",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Insegnamento",
+            "entity2": "Sessione di Corso",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Insegnamento",
+            "entity2": "Dipartimento",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Insegnamento",
+            "entity2": "Aula",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Insegnamento",
+            "entity2": "Sede",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Insegnamento",
+            "entity2": "Sede",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Insegnamento",
+            "entity2": "Sede",
+            "cardinality": "N:1"
+        }
+    ]
+}

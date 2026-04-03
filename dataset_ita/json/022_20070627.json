@@ -1,0 +1,72 @@
+{
+  "entities": [
+    {
+      "name": "Istituzione",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Nome", "is_pk": false },
+        { "name": "Indirizzo", "is_pk": false },
+        { "name": "Nazione", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Autore",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Cognome", "is_pk": false },
+        { "name": "Nome", "is_pk": false },
+        { "name": "E-mail", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Articolo",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Titolo", "is_pk": false },
+        { "name": "Sottotitolo", "is_pk": false },
+        { "name": "Testo", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Pubblicazione",
+      "attributes": [
+        { "name": "Numero", "is_pk": true },
+        { "name": "fk_volume", "is_pk": true },
+        { "name": "Data", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Volume",
+      "attributes": [
+        { "name": "Anno", "is_pk": true },
+        { "name": "Titolo", "is_pk": false }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "Autore",
+      "entity2": "Istituzione",
+      "cardinality": "N:1"
+    },
+    {
+      "entity1": "Articolo",
+      "entity2": "Autore",
+      "cardinality": "N:N"
+    },
+    {
+      "entity1": "Articolo",
+      "entity2": "Pubblicazione",
+      "cardinality": "N:1",
+      "attributes": [
+        { "name": "Pagina Inizio", "is_pk": false },
+        { "name": "Pagina Fine", "is_pk": false }
+      ]
+    },
+    {
+      "entity1": "Pubblicazione",
+      "entity2": "Volume",
+      "cardinality": "N:1"
+    }
+  ]
+}

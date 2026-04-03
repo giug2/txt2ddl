@@ -1,0 +1,10 @@
+The system describes the management of a Theater uniquely identified by a Code and characterized by attributes such as Name, Address and Telephone.
+Within the theatrical programming, each Theatrical Work is defined by a unique Code, Title and Year of creation 
+Each work is associated with at least one Author, also identified by a Code and described by Surname, Name, BirthDate and a DeathDate, the latter being optional 
+The staging of an opera in a specific theater managed through the OperaInBillboard entity which has an external identifier and specifies the performance period through an Initial Date and an End Date. 
+The price structure determined by different components.
+There are different TipoPostos each with their own Code and Description and different CategoryShows also identified by a Code and Description.
+The Price entity with an external identifier establishes the actual Amount based on the combination of a seat type and a show category.
+Finally, the system provides the possibility of applying discounts.
+Each Reduction Type identified by a Code and a Description, for example for students or elderly people.
+The relationship R1 called Reduction associates a specific Discount Percentage with each type of reduction

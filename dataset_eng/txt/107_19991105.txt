@@ -1,0 +1,3 @@
+- every film has one and only one director
+- every movie has zero or more actors 
+- each film is programmed at one or more cinemas

@@ -1,0 +1,126 @@
+{
+    "entities": [
+        {
+            "name": "MAGAZZINO",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CITTA",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "PAESE",
+            "attributes": [
+                {
+                    "name": "SIGLA",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "FORNITORE",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "RAGIONE_SOCIALE",
+                    "is_pk": false
+                },
+                {
+                    "name": "PARTITA_IVA",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "PRODOTTO",
+            "attributes": [
+                {
+                    "name": "SKU",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME_PRODOTTO",
+                    "is_pk": false
+                },
+                {
+                    "name": "ANNO_PRODUZIONE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "SCAFFALE",
+            "attributes": [
+                {
+                    "name": "CODICE_SCAFFALE",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_magazzino",
+                    "is_pk": true
+                },
+                {
+                    "name": "CAPIENZA",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "CITTA",
+            "entity2": "MAGAZZINO",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "MAGAZZINO",
+            "entity2": "SCAFFALE",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "SCAFFALE",
+            "entity2": "PRODOTTO",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "FORNITORE",
+            "entity2": "PRODOTTO",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "PAESE",
+            "entity2": "FORNITORE",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "PAESE",
+            "entity2": "CITTA",
+            "cardinality": "1:N"
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+Show the conceptual scheme of a database for a set of museums, according to the following specifications.
+• Each museum has a name, is located in a city (of which the country is also of interest, with acronym and name) and
+it has a series of rooms, each of which has a name and size.
+• Museums exhibit works of art, for each of which they are interested in (i) the title, (ii) the author (with code,
+surname, name, date of birth and death and country of birth, with initials and name), (iii) the year of execution,
+(iv) the room in which it is exhibited (which is assumed to be fixed: each work is located in a room of a museum) e
+(v) the type of work, for example "painting" or "sculpture" (with code and name)

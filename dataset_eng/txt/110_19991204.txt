@@ -1,0 +1,5 @@
+The scheme describes a domain in which the manufacturers are managed, each uniquely identified by a code and characterized by a name and a country. 
+Each manufacturer produces Models which are defined by an association with the company they belong to by a Name and a Category 
+The system also tracks individual cars, each identified by its own license plate 
+Each car that can be traced back to a specific model through the House and Model attributes has a Year of registration and an Owner 
+The latter connected to the People entity where each individual is identified by their Tax Code and described by Surname and Name

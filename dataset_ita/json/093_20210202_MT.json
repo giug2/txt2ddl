@@ -1,0 +1,202 @@
+{
+    "entities": [
+        {
+            "name": "Indirizzo",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Via",
+                    "is_pk": false
+                },
+                {
+                    "name": "NumCivico",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Comune",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Provincia",
+            "attributes": [
+                {
+                    "name": "Sigla",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Ristorante",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Piatto",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Ingredienti",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Intolleranze/Allergie",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Persona",
+            "attributes": [
+                {
+                    "name": "CF",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Parentela",
+            "attributes": [
+                {
+                    "name": "fk_persona1",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_persona2",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Tipo Parentela",
+            "attributes": [
+                {
+                    "name": "CodTipo",
+                    "is_pk": true
+                },
+                {
+                    "name": "Descrizione",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Indirizzo",
+            "entity2": "Ristorante",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Indirizzo",
+            "entity2": "Comune",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Comune",
+            "entity2": "Provincia",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Persona",
+            "entity2": "Ristorante",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Quota",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Piatto",
+            "entity2": "Ristorante",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Costo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Ingredienti",
+            "entity2": "Piatto",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Intolleranze/Allergie",
+            "entity2": "Ingredienti",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Parentela",
+            "entity2": "Persona",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Parentela",
+            "entity2": "Persona",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Parentela",
+            "entity2": "Tipo Parentela",
+            "cardinality": "N:1"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+Define an Entity-Relationship scheme that describes the structure of the PNRR (National Recovery Plan and
+Resilience) according to the following specifications, modified and simplified compared to reality:
+• the plan is divided into missions and lines of action
+• each mission has an identifying number and a name; refers to zero or more recommendations; it is
+composed of one or more lines of action
+• each recommendation is an indication provided
+to Italy by the European Commission; for each recommendation only code and name are of interest
+• each line of action has a progressive number, unique within the mission, a name and a budget.
+• the resources available for the lines of action of the PNRR missions come from various sources
+financial (e.g. the PNRR itself, the React-EU fund, the so-called complementary fund, and others)
+• for each line of action we want to keep track of the amount financed by each source; for example, yes
+must memorize the fact that action line 2 of mission 1 is financed for 1 million by the PNRR,
+for 700 thousand Euros from REACT-EU and 300 thousand Euros from the complementary fund
+• each line of action is in turn divided into projects, each of which has a code, a name, a
+Reference ministry (which coordinates it) and zero or more other participating ministries
+• for each Ministry, code and name are of interest

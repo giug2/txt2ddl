@@ -1,0 +1,123 @@
+{
+    "entities": [
+        {
+            "name": "SettoreCliente",
+            "attributes": [
+                {
+                    "name": "CSett",
+                    "is_pk": true
+                },
+                {
+                    "name": "Descrizione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Cliente",
+            "attributes": [
+                {
+                    "name": "CCliente",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "StatoProgetto",
+            "attributes": [
+                {
+                    "name": "CStato",
+                    "is_pk": true
+                },
+                {
+                    "name": "Descrizione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Progetto",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Reparto",
+            "attributes": [
+                {
+                    "name": "CRep",
+                    "is_pk": true
+                },
+                {
+                    "name": "Descrizione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Task",
+            "attributes": [
+                {
+                    "name": "NTask",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_progetto",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Priorit\u00e0",
+            "attributes": [
+                {
+                    "name": "CPrio",
+                    "is_pk": true
+                },
+                {
+                    "name": "Descrizione",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Cliente",
+            "entity2": "SettoreCliente",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Cliente",
+            "entity2": "Progetto",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Progetto",
+            "entity2": "StatoProgetto",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Progetto",
+            "entity2": "Reparto",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Task",
+            "entity2": "Progetto",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Priorita",
+            "entity2": "Task",
+            "cardinality": "1:N"
+        }
+    ]
+}

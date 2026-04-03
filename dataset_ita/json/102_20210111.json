@@ -1,0 +1,87 @@
+{
+  "entities": [
+    {
+      "name": "Supermercato",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Nome", "is_pk": false },
+        { "name": "Indirizzo", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Categoria",
+      "attributes": [
+        { "name": "Sigla", "is_pk": true },
+        { "name": "Nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Prodotto",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "fk_categoria", "is_pk": true },
+        { "name": "Nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Dipendente",
+      "attributes": [
+        { "name": "Matricola", "is_pk": true },
+        { "name": "Nome", "is_pk": false },
+        { "name": "Cognome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Città",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Provincia",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Nome", "is_pk": false }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "Supermercato",
+      "entity2": "Categoria",
+      "cardinality": "N:N"
+    },
+    {
+      "entity1": "Categoria",
+      "entity2": "Prodotto",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Supermercato",
+      "entity2": "Dipendente",
+      "cardinality": "N:N"
+    },
+    {
+      "entity1": "Città",
+      "entity2": "Dipendente",
+      "cardinality": "1:N",
+      "attributes": [
+        { "name": "Residente", "is_pk": false }
+      ]
+    },
+    {
+      "entity1": "Città",
+      "entity2": "Dipendente",
+      "cardinality": "1:N",
+      "attributes": [
+        { "name": "Nascita", "is_pk": false }
+      ]
+    },
+    {
+      "entity1": "Provincia",
+      "entity2": "Città",
+      "cardinality": "1:N"
+    }
+  ]
+}

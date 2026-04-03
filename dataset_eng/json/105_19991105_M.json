@@ -1,0 +1,83 @@
+{
+    "entities": [
+        {
+            "name": "Professor",
+            "attributes": [
+                {
+                    "name": "professor_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Corso",
+            "attributes": [
+                {
+                    "name": "course_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_materia",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_professor",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_corsodistudio",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Course of Study",
+            "attributes": [
+                {
+                    "name": "study_course_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Materia",
+            "attributes": [
+                {
+                    "name": "text_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Text",
+            "attributes": [
+                {
+                    "name": "id_materia",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Corso",
+            "entity2": "Materia",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Corso",
+            "entity2": "Professor",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Course of Study",
+            "entity2": "Corso",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Materia",
+            "entity2": "Text",
+            "cardinality": "N:1"
+        }
+    ]
+}

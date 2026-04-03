@@ -1,0 +1,11 @@
+Il sistema si articola attorno al concetto di Magazzino, ciascuno identificato univocamente da un IDMagazzino e caratterizzato da un NomeSede.
+Ad ogni magazzino sono associati un Fornitore specifico e un Corriere di riferimento.
+L'entità Fornitore è a sua volta definita da un IDFornitore, una RagioneSociale e un CostoMedioFornitura,
+mentre i Corrieri sono descritti da un IDCorriere e un NomeCompagnia.
+La logistica delle spedizioni è gestita attraverso le Tratte, che collegano una AreaGeografica, identificata da un IDArea, a un Corriere, tramite IDCorriere, specificando per ciascuna tratta una Tariffa.
+Naturalmente, ogni AreaGeografica è definita da un proprio IDArea e NomeArea.
+In ogni Magazzino è possibile trovare uno o più Prodotti, ciascuno registrato con uno SKU univoco, un NomeProdotto, una Descrizione, un ContattoSupporto e la sua Disponibilità.
+Associata a ogni prodotto vi è la possibilità di una VarianteProdotto, definita dallo SKU del prodotto di riferimento, da un CodiceVariante e da un PrezzoVendita specifico.
+Infine, il sistema prevede un meccanismo di offerte.
+Esistono diverse tipologie di vantaggio catalogate nell'entità Promozione tramite un IDPromozione e un NomePromozione.
+La Promozione effettiva viene applicata collegando un tipo di promozione (IDPromozione) a un determinato prodotto (SKU), stabilendo così uno sconto valido per quello specifico articolo.

@@ -1,0 +1,42 @@
+{
+  "entities": [
+    {
+      "name": "Conto corrente",
+      "attributes": [
+        { "name": "Numero", "is_pk": true },
+        { "name": "Titolare", "is_pk": false },
+        { "name": "Indirizzo", "is_pk": false },
+        { "name": "Saldo iniziale", "is_pk": false },
+        { "name": "Saldo finale", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Movimento",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Data", "is_pk": false },
+        { "name": "Dettaglio", "is_pk": false },
+        { "name": "Importo", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Tipo Movimento",
+      "attributes": [
+        { "name": "Id", "is_pk": true },
+        { "name": "Descrizione", "is_pk": false }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "Conto corrente",
+      "entity2": "Movimento",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Tipo Movimento",
+      "entity2": "Movimento",
+      "cardinality": "1:N"
+    }
+  ]
+}

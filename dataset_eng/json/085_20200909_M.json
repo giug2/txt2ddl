@@ -1,0 +1,190 @@
+{
+    "entities": [
+        {
+            "name": "Actor",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Opera on the billboard",
+            "attributes": [
+                {
+                    "name": "fk_opera_teatrale_code",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_teatro_code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Period",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Play",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Anno",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Author",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                },
+                {
+                    "name": "date of birth",
+                    "is_pk": false
+                },
+                {
+                    "name": "date of death",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Theater",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Title",
+                    "is_pk": false
+                },
+                {
+                    "name": "Address",
+                    "is_pk": false
+                },
+                {
+                    "name": "Telephone",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Ticket",
+            "attributes": [
+                {
+                    "name": "fk_opera_in_billboard_opera",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_opera_in_billboard_teatro",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_type_place_code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Prezzo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Place type",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Reduction type",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Opera on the billboard",
+            "entity2": "Actor",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Play",
+            "entity2": "Opera on the billboard",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Play",
+            "entity2": "Author",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Opera on the billboard",
+            "entity2": "Theater",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Ticket",
+            "entity2": "Theater",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Place type",
+            "entity2": "Ticket",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Ticket",
+            "entity2": "Opera on the billboard",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Reduction type",
+            "entity2": "Theater",
+            "cardinality": "N:N"
+        }
+    ]
+}

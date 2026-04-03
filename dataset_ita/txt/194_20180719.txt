@@ -1,0 +1,2 @@
+• Ogni università ha un nome, si trova in una città (della quale interessa anche la regione, con relativa sigla) e ha una serie di dipartimenti, ognuno dei quali ha un nome e un numero di uffici.
+• Le università offrono corsi, per ognuno dei quali interessano il professore titolare (con matricola, cognome, nome e regione di affiliazione), l'anno accademico di attivazione e il dipartimento di afferenza (un corso può essere erogato da più dipartimenti).

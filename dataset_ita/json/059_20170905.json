@@ -1,0 +1,75 @@
+{
+  "entities": [
+    {
+      "name": "ORCHESTRA",
+      "attributes": [
+        { "name": "ID_orchestra", "is_pk": true },
+        { "name": "NOME", "is_pk": false },
+        { "name": "DATA", "is_pk": false }
+      ]
+    },
+    {
+      "name": "CITTA",
+      "attributes": [
+        { "name": "id_citta", "is_pk": true },
+        { "name": "nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "NAZIONE",
+      "attributes": [
+        { "name": "id_nazione", "is_pk": true },
+        { "name": "nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "COMPOSIZIONE ORCHESTRA",
+      "attributes": [
+        { "name": "ANNO", "is_pk": true },
+        { "name": "fk_orchestra", "is_pk": true }
+      ]
+    },
+    {
+      "name": "MUSICISTA",
+      "attributes": [
+        { "name": "id_musicista", "is_pk": true },
+        { "name": "nome", "is_pk": false },
+        { "name": "cognome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "CONSERVATORIO",
+      "attributes": [
+        { "name": "id_conservatorio", "is_pk": true },
+        { "name": "nome", "is_pk": false }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "CITTA",
+      "entity2": "ORCHESTRA",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "NAZIONE",
+      "entity2": "CITTA",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "ORCHESTRA",
+      "entity2": "COMPOSIZIONE ORCHESTRA",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "COMPOSIZIONE ORCHESTRA",
+      "entity2": "MUSICISTA",
+      "cardinality": "N:N"
+    },
+    {
+      "entity1": "CONSERVATORIO",
+      "entity2": "MUSICISTA",
+      "cardinality": "1:N"
+    }
+  ]
+}

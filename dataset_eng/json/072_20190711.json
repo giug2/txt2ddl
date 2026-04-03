@@ -1,0 +1,93 @@
+{
+    "entities": [
+        {
+            "name": "ORCHESTRA IN THE YEAR",
+            "attributes": [
+                {
+                    "name": "id_orchestra_year",
+                    "is_pk": true
+                },
+                {
+                    "name": "anno",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "INSTRUMENT MUSICIAN",
+            "attributes": [
+                {
+                    "name": "fk_musician",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_tool",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "INSTRUMENT",
+            "attributes": [
+                {
+                    "name": "instrument_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "MUSICIAN",
+            "attributes": [
+                {
+                    "name": "musician_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "DIPLOMA",
+            "attributes": [
+                {
+                    "name": "id_diploma",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "CONSERVATORY",
+            "attributes": [
+                {
+                    "name": "conservatory_id",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "ORCHESTRA IN THE YEAR",
+            "entity2": "INSTRUMENT MUSICIAN",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "INSTRUMENT",
+            "entity2": "INSTRUMENT MUSICIAN",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "MUSICIAN",
+            "entity2": "INSTRUMENT MUSICIAN",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "INSTRUMENT MUSICIAN",
+            "entity2": "DIPLOMA",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "CONSERVATORY",
+            "entity2": "DIPLOMA",
+            "cardinality": "1:N"
+        }
+    ]
+}

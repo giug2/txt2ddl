@@ -1,0 +1,94 @@
+{
+    "entities": [
+        {
+            "name": "Docente",
+            "attributes": [
+                {
+                    "name": "id_docente",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_id_dipartimento",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "nome_dipartimento",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Dipartimento",
+            "attributes": [
+                {
+                    "name": "id_dipartimento",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_id_facolta",
+                    "is_pk": true
+                },
+                {
+                    "name": "cognome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Corso di Studio",
+            "attributes": [
+                {
+                    "name": "id_corso_studio",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_id_dipartimento",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome_corso",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Facolt\u00e0",
+            "attributes": [
+                {
+                    "name": "id_facolta",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome_facolta",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Facolt\u00e0",
+            "entity2": "Dipartimento",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Dipartimento",
+            "entity2": "Docente",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "CorsoDiStudio",
+            "entity2": "Dipartimento",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "CorsoDiStudio",
+            "entity2": "Docente",
+            "cardinality": "N:N"
+        }
+    ]
+}

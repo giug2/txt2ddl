@@ -1,0 +1,83 @@
+{
+    "entities": [
+        {
+            "name": "Venditore",
+            "attributes": [
+                {
+                    "name": "id_venditore",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Offerta",
+            "attributes": [
+                {
+                    "name": "id_offerta",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_prodotto",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_venditore",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_catalogo",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Catalogo",
+            "attributes": [
+                {
+                    "name": "id_catalogo",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Prodotto",
+            "attributes": [
+                {
+                    "name": "id_prodotto",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Fornitore",
+            "attributes": [
+                {
+                    "name": "id_fornitore",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Offerta",
+            "entity2": "Prodotto",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Offerta",
+            "entity2": "Venditore",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Catalogo",
+            "entity2": "Offerta",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Fornitore",
+            "entity2": "Prodotto",
+            "cardinality": "1:N"
+        }
+    ]
+}

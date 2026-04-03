@@ -1,0 +1,9 @@
+• ogni dirigente opera presso uno o più uffici e con uno o più assistenti, ed è importante poter dire che
+collabora con un assistente presso un ufficio e con un altro assistente (o altri o anche con lo stesso) presso
+un altro ufficio
+• è possibile che un dirigente X collabori con un assistente Y presso un ufficio Z e con un altro assistente V
+presso un altro ufficio W senza che X collabori con Y presso ufficio W
+• con ogni ufficio collaborano uno o più dirigenti e uno o più assistenti
+• ogni assistente collabora con uno o più uffici e con uno o più dirigenti
+• ogni ufficio ha una e una sola sede e ogni sede ha più uffici
+• dirigenti e assistenti hanno legami con le sedi solo attraverso uffici

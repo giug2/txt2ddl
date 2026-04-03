@@ -1,0 +1,127 @@
+{
+    "entities": [
+        {
+            "name": "Product",
+            "attributes": [
+                {
+                    "name": "SKU",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_sottocategoria",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Lotto",
+            "attributes": [
+                {
+                    "name": "CodeLotto",
+                    "is_pk": true
+                },
+                {
+                    "name": "Amount",
+                    "is_pk": false
+                },
+                {
+                    "name": "Production Data",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Supplier",
+            "attributes": [
+                {
+                    "name": "VAT number",
+                    "is_pk": true
+                },
+                {
+                    "name": "Company Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Warehouse",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Address",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Subcategory",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_categoria",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Category",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Product",
+            "entity2": "Product",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Lotto",
+            "entity2": "Product",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Supplier",
+            "entity2": "Lotto",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Subcategory",
+            "entity2": "Product",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Warehouse",
+            "entity2": "Supplier",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Category",
+            "entity2": "Subcategory",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Supplier",
+            "entity2": "Category",
+            "cardinality": "N:1"
+        }
+    ]
+}

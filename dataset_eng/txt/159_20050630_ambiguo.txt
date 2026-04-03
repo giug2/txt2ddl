@@ -1,0 +1,7 @@
+In practice, everything related to online courses is managed here. We have a list of **Courses**, each with its own title and the year it was created, things like that. Each course is connected to a **Teacher**, whose name, surname, date of birth we keep track of and maybe even when he stops teaching. One professor, of course, can be responsible for multiple courses.
+
+These courses are not always active, but are organized into **Sessions**, each with its own start and end date. All this material runs on an **E-learning Platform**, which is essentially the website where everything is done; We know the name, URL and a support contact for this site. Of course, a single platform can host a lot of different course sessions.
+
+Then there's the money part. The platform has various **Fees**, which are a kind of price tag. To understand what a tariff is, you need to look at what it is connected to: on the one hand there is the **Membership Type**, which tells you whether it is a monthly, annual or other subscription, and on the other the **Access Level**, which defines what you can actually see or do, such as whether you have basic or premium access. Both a membership type and an access level can be used to create different rates, so you have more options.
+
+Finally, there are also discounts. There are various **Types of Discount**, each with its own description, such as "student discount" or "special offer". This is flexible, because one platform can offer many discounts, and the same type of discount can be applied on multiple different platforms.

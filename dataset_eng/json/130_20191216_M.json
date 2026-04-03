@@ -1,0 +1,153 @@
+{
+    "entities": [
+        {
+            "name": "Skier",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "City",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Nation",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Participation",
+            "attributes": [
+                {
+                    "name": "Data",
+                    "is_pk": false
+                },
+                {
+                    "name": "fk_gara",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_skier",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "We are",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_speciality",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_sede",
+                    "is_pk": true
+                },
+                {
+                    "name": "Position",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Speciality",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Site",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "City",
+            "entity2": "Skier",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "City",
+            "entity2": "Nation",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Participation",
+            "entity2": "Skier",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Participation",
+            "entity2": "We are",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Nation",
+            "entity2": "Participation",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "We are",
+            "entity2": "Speciality",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Site",
+            "entity2": "We are",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Site",
+            "entity2": "Nation",
+            "cardinality": "N:1"
+        }
+    ]
+}

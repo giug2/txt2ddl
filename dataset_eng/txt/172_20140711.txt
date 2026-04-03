@@ -1,0 +1,7 @@
+The scheme describes a logistics management system organized around four main entities.
+The first is the Warehouse, uniquely identified by its Warehouse Code and characterized by an Address.
+The Employee is connected to this entity, who is identified by a unique Serial Number and described by a Name.
+Each Employee is assigned to a specific Warehouse, thus establishing a one-to-many relationship.
+Goods are represented by two related entities: Product and Lot.
+The Product entity defines the general characteristics of an item, uniquely associating a SKU with its ProductName.
+The Lot entity, however, represents a specific production batch of that item; each lot has its own Lot Code, is characterized by a Production Date, refers to a single Product and is managed by a single Personnel, thus creating a direct link with the other entities.

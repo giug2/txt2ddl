@@ -1,0 +1,3 @@
+• ogni animale è assegnato ad una e una sola area clinica;
+• ogni animale segue un solo piano di cura (che non è necessariamente legato a un'area clinica, cioè animali di aree diverse possono seguire il medesimo piano di cura);
+• ogni piano di cura è associato ad un solo proprietario e ogni animale è legato unicamente al proprietario associato al suo piano di cura.

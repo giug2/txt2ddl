@@ -1,0 +1,121 @@
+{
+    "entities": [
+        {
+            "name": "Scrittore",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Libro",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Titolo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Genere",
+            "attributes": [
+                {
+                    "name": "SiglaGenere",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Edizione",
+            "attributes": [
+                {
+                    "name": "fk_libro",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_editore",
+                    "is_pk": true
+                },
+                {
+                    "name": "Anno",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Collana",
+            "attributes": [
+                {
+                    "name": "SiglaCollana",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Editore",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Citt\u00e0",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Libro",
+            "entity2": "Scrittore",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Libro",
+            "entity2": "Genere",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Edizione",
+            "entity2": "Libro",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Edizione",
+            "entity2": "Collana",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Edizione",
+            "entity2": "Editore",
+            "cardinality": "N:1"
+        }
+    ]
+}

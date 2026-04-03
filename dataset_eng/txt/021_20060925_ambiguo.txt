@@ -1,0 +1,7 @@
+So, basically we have a system that manages art exhibitions. There's this thing we call the "Show," which is the main event, identified by a code, with a title and start and end dates. Each exhibition, obviously, is made up of paintings. The "Paintings" are registered with their own code, the author and the year in which they were made. These paintings are placed in "Rooms", which in turn have a code, a name and a size, just to clarify.
+
+The fulcrum of everything is a kind of register called "Exposition", which acts as a glue. In practice, this ties a specific exhibition to a specific painting and the room in which it is located. So, a single exhibition is made up of a lot of these "exhibitions", and the same painting can be part of multiple "exhibitions", perhaps in different exhibitions or in different rooms over time.
+
+To visit all this, there are "Itineraries", predefined routes, each with its own code. The interesting thing is that an itinerary is connected to a set of "exhibitions" and also has an order number, to say "first see this painting, then that one". So an itinerary is really a sequence of works to see.
+
+Different "Types of Visits" are associated with each itinerary. Think of "guided tour", "school visit", things like that. Each type has a name, time and duration. Finally, there are the actual "Visits", which are concrete events. For each date, we record what type of visit took place and keep track of the number of people who participated. So, a certain type of visit, such as a guided one, can take place on a lot of different dates.

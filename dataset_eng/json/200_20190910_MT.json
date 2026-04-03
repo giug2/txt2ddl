@@ -1,0 +1,75 @@
+{
+    "entities": [
+        {
+            "name": "Customer",
+            "attributes": [
+                {
+                    "name": "Customer Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Order",
+            "attributes": [
+                {
+                    "name": "OrderID",
+                    "is_pk": true
+                },
+                {
+                    "name": "DataOrdine",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "RigaOrdine",
+            "attributes": [
+                {
+                    "name": "fk_order",
+                    "is_pk": true
+                },
+                {
+                    "name": "RowNumber",
+                    "is_pk": true
+                },
+                {
+                    "name": "Product Description",
+                    "is_pk": false
+                },
+                {
+                    "name": "Delivery Date",
+                    "is_pk": false
+                },
+                {
+                    "name": "Prezzo",
+                    "is_pk": false
+                },
+                {
+                    "name": "Supplier",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Order",
+            "entity2": "Customer",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "RigaOrdine",
+            "entity2": "Order",
+            "cardinality": "N:1"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+Show the conceptual scheme for a database for the program
+concerts of a season at a theater, according to the following specifications.
+• Each concert has a code, a title and a description, and is made up of a set of
+musical pieces.
+• Each piece has a code, a title and an author (with code and name); the same piece can
+be represented in several concerts.
+• Each concert is performed by an orchestra; every orchestra has a name, a director (del
+which only interest the first and last name) and a group of orchestral musicians.
+• Each orchestra member has a serial number, name and
+surname, and can participate in multiple orchestras, in each of which he plays only one instrument,
+the same in all the orchestras in which he participates
+• Each concert is held several times, on different days, not necessarily always in the
+same room.
+• Each room has a code, a name and a capacity.

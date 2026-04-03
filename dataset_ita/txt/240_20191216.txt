@@ -1,0 +1,4 @@
+Definire uno schema Entity-Relationship che descriva la carriera accademica degli studenti (utilizzato ad esempio da una segreteria universitaria per la gestione amministrativa) relativa agli studenti di un ateneo e agli esami da loro sostenuti, secondo le specifiche seguenti:
+• ogni studente è identificato da matricola, cognome, nome, corso di laurea di iscrizione (con il relativo dipartimento, ciascuno con codice e nome) e un dipartimento di afferenza principale (che può essere diverso da quello del corso di laurea);
+• ogni insegnamento ha un codice e un nome;
+• per ogni studente interessano gli insegnamenti per cui ha sostenuto l'esame, con il voto conseguito in ciascuno di essi.

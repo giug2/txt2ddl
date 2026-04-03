@@ -1,0 +1,123 @@
+{
+    "entities": [
+        {
+            "name": "Tournament",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Squad",
+            "attributes": [
+                {
+                    "name": "Name",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Match",
+            "attributes": [
+                {
+                    "name": "FK_TEAM_AWAY",
+                    "is_pk": true
+                },
+                {
+                    "name": "FK_TEAM_HOME",
+                    "is_pk": true
+                },
+                {
+                    "name": "Data",
+                    "is_pk": true
+                },
+                {
+                    "name": "Stadio",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Player",
+            "attributes": [
+                {
+                    "name": "FK_TEAM",
+                    "is_pk": true
+                },
+                {
+                    "name": "Sweater",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Date of birth",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Tournament",
+            "entity2": "Squad",
+            "cardinality": "1:N",
+            "attributes": [
+                {
+                    "name": "POSITION",
+                    "is_pk": false
+                },
+                {
+                    "name": "POINTS",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Squad",
+            "entity2": "Match",
+            "cardinality": "1:N",
+            "attributes": [
+                {
+                    "name": "RARELY",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Squad",
+            "entity2": "Match",
+            "cardinality": "1:N",
+            "attributes": [
+                {
+                    "name": "RARELY",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Squad",
+            "entity2": "Player",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Match",
+            "entity2": "Player",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "ROLE",
+                    "is_pk": false
+                }
+            ]
+        }
+    ]
+}

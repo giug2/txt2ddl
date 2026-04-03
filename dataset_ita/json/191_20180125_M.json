@@ -1,0 +1,136 @@
+{
+    "entities": [
+        {
+            "name": "Tour",
+            "attributes": [
+                {
+                    "name": "CodiceTour",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeArte",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Concerto",
+            "attributes": [
+                {
+                    "name": "CodiceConcerto",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_tour",
+                    "is_pk": true
+                },
+                {
+                    "name": "Data",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Performance",
+            "attributes": [
+                {
+                    "name": "CodicePerformance",
+                    "is_pk": true
+                },
+                {
+                    "name": "DescrizioneSet",
+                    "is_pk": false
+                },
+                {
+                    "name": "OrarioInizio",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "PartecipazioneArtista",
+            "attributes": [
+                {
+                    "name": "CodicePartecipazione",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Artista",
+            "attributes": [
+                {
+                    "name": "CodiceArtista",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeTour",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Band",
+            "attributes": [
+                {
+                    "name": "CodiceBand",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeBand",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Citt\u00e0",
+            "attributes": [
+                {
+                    "name": "CodiceCitta",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeCitta",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Concerto",
+            "entity2": "Tour",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Citt\u00e0",
+            "entity2": "Concerto",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Concerto",
+            "entity2": "Performance",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "PartecipazioneArtista",
+            "entity2": "Performance",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Artista",
+            "entity2": "PartecipazioneArtista",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "PartecipazioneArtista",
+            "entity2": "Band",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Citt\u00e0",
+            "entity2": "Band",
+            "cardinality": "1:N"
+        }
+    ]
+}

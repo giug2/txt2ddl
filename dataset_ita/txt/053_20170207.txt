@@ -1,0 +1,5 @@
+• ogni impiegato afferisce ad uno e un solo reparto;
+• ogni progetto ha uno e un solo cliente
+• ogni impiegato lavora per zero o più clienti e potenzialmente per tutti i progetti di quei clienti
+(e per nessun altro progetto)
+• ogni reparto ha come clienti e progetti quelli dei propri impiegati

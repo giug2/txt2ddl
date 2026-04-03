@@ -1,0 +1,9 @@
+The system describes the management of an E-learning Platform, uniquely identified by a Code and characterized by attributes such as Name, site URL and support contact.
+Within the training catalogue, each Course is defined by a unique Code, a Title and the Year of publication.
+Each course is associated with at least one teacher, also identified by a code and described by surname, name, date of birth and a withdrawal date, the latter optional.
+The delivery of a course on a specific platform is managed through the Course Session entity, which has its own identifier and specifies the period of use through a Start Date and an End Date.
+The fee structure is determined by several components.
+There are different Types of Membership, each with its own Code and Description, and different Access Levels, also identified by a Code and Description.
+The Fee entity, which has its own identifier, establishes the actual Amount based on the combination of a membership type and an access level.
+Finally, the system provides the possibility of applying promotions.
+Each Discount Type is identified by a Code and a Description, for example for students or for early registrations. The relationship between Platform and Discount Type allows you to define the applicable promotions.

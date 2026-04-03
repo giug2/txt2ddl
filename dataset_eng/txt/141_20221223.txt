@@ -1,0 +1,8 @@
+Define an Entity-Relationship schema that describes the data of interest at a certain time for a set of scientific institutes and for the researchers working at them, according to the following
+specifications:
+• each scientific institute has a code, a name, a headquarters (city, with code, name and nation; the nation has
+also code and name) and a year of foundation
+• every researcher
+– has an identification code, a surname, a name and a date of birth;
+– works for one and only one scientific institute;
+– has one and only one “qualification” (with identification code and name)

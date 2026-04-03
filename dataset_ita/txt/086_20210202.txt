@@ -1,0 +1,6 @@
+• ogni tampone viene eseguito su un paziente; ogni tampone ha un codice (CT), univoco, una data e un
+esito
+• ogni paziente ha un codice fiscale e un nome e appartiene ad una ASL
+• ogni ASL si trova in una regione, ha un codice (CodASL) che la identifica nell’ambito della regione e ha
+una sede
+• ogni regione ha un identificatore (IDReg) e un nome

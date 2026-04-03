@@ -1,0 +1,11 @@
+The system is structured around the concept of Warehouse, each uniquely identified by a Warehouse ID and characterized by a Location Name.
+Each warehouse is associated with a specific Supplier and a reference Courier.
+The Supplier entity is in turn defined by a SupplierID, a Company Name and an AverageSupplyCost,
+while the Couriers are described by a CourierID and a CompanyName.
+The logistics of shipments is managed through Routes, which connect a Geographical Area, identified by an AreaID, to a Courier, via CorriereID, specifying a Rate for each route.
+Naturally, each Geographic Area is defined by its own AreaID and AreaName.
+In each Warehouse it is possible to find one or more Products, each registered with a unique SKU, a Product Name, a Description, a Support Contact and its Availability.
+Associated with each product there is the possibility of a Product Variant, defined by the SKU of the reference product, a Variant Code and a specific Sales Price.
+Finally, the system includes a bidding mechanism.
+There are different types of benefits cataloged in the Promotion entity through a PromotionID and a PromotionName.
+The Effective Promotion is applied by linking a promotion type (PromotionID) to a specific product (SKU), thus establishing a valid discount for that specific item.

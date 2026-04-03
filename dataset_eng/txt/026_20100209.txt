@@ -1,0 +1,2 @@
+one or more customers are associated with each current account; 
+each customer can have multiple current accounts and can use a different address for each one;

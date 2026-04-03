@@ -1,0 +1,3 @@
+Show the conceptual scheme of a database for the management of university teaching, according to the following specifications.
+• Each course has a name, belongs to a degree course (of which the department is also of interest, with acronym and name) and has a series of lessons, each of which has a title and duration.
+• The courses provide teaching material, for each of which the following are of interest: (i) the name of the file, (ii) the teacher who created it (with student number, name and surname, and department, with acronym and name), (iii) the upload date, (iv) the lesson to which it is associated (it is assumed that each material belongs to a single lesson of a course) and (v) the format of the material, for example "PDF" or "Video" (with ID and extension).

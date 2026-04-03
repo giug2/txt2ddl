@@ -1,0 +1,5 @@
+• Each gallery has a name and is located in a city (of which the country is also of interest, with its acronym)
+and has a series of rooms, each of which has a name and size.
+• The galleries exhibit paintings, for each of which the author is interested (with code, surname, name and
+country of birth), the year of execution and the room in which it is exhibited (which is assumed to be fixed: every
+painting is located in a gallery room)

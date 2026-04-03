@@ -1,0 +1,6 @@
+- each professor teaches one or more courses and interacts with one or more students,
+• if a professor X teaches a student Y in course Z and another student V in course W, then X also teaches Y in course W and teaches V in course Z
+• one or more professors teach each course and the students who follow the lessons of these professors are enrolled in it
+• each student is supervised by one or more professors and is enrolled in the courses in which these professors teach
+• each course belongs to one and only one faculty and each faculty offers multiple courses
+• professors and students have links with faculties only through courses

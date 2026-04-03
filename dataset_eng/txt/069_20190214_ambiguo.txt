@@ -1,0 +1,7 @@
+So, basically there is a whole system for keeping track of shipments. The highlight is the Shipment, which has its own identification number, an ID and that's it, so as not to confuse it with the others.
+
+Each shipment, obviously, must have a Sender, which is a person or company with its own code (CM) and a name. One shipper can make a lot of shipments, but one shipment only ever comes from one shipper. These senders are then grouped into a sort of Category, which has its own acronym (CCM) and a description, just to classify them. Each sender fits into only one category, but a category can contain quite a few senders.
+
+Then, a shipment also has a Type, type to say whether it is standard or express, which is defined by a code (CT) and a description. Each shipment has only one type, but the same type can apply to a bunch of different shipments. And, of course, each shipment is directed towards a Destination, which has its own code (CDes) and description. A lot of shipments can go to the same destination, but a shipment has only one destination.
+
+Inside each shipment there are one or more packages. A package cannot exist alone, it is always linked to one and only one shipment. In fact, to identify it, its number (NP) is not enough, but you also need the ID of the shipment to which it belongs. Finally, each package has its own Size, which is a separate thing with a code (CDim) and a description such as "small" or "large". Clearly, many packages can have the same size.

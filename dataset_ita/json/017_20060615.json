@@ -1,0 +1,95 @@
+{
+  "entities": [
+    {
+      "name": "Torneo",
+      "attributes": [
+        {
+          "name": "Codice", "is_pk": true
+        },
+        { "name": "Nome", "is_pk": false}
+      ]
+    },
+    {
+      "name": "Squadra",
+      "attributes": [
+        {
+          "name": "Nome",
+          "is_pk": true
+        }
+      ]
+    },
+    {
+      "name": "Partita",
+      "attributes": [
+        { "name": "FK_SQUADRA_TRASFERTA", "is_pk": true},
+        { "name": "FK_SQUADRA_CASA", "is_pk": true},
+        {
+          "name": "Data",
+          "is_pk": true
+        },
+        {
+          "name": "Stadio",
+          "is_pk": false
+        }
+      ]
+    },
+    {
+      "name": "Giocatore",
+      "attributes": [
+        { "name": "FK_SQUADRA", "is_pk": true},
+        {
+          "name": "Maglia",
+          "is_pk": true
+        },
+        {
+          "name": "Nome",
+          "is_pk": false
+        },
+        {
+          "name": "Data di Nascita",
+          "is_pk": false
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "Torneo",
+      "entity2": "Squadra",
+      "cardinality": "1:N",
+      "attributes": [
+        { "name": "POSIZIONE", "is_pk": false},
+        { "name": "PUNTI", "is_pk": false}
+      ]
+    },
+    {
+      "entity1": "Squadra",
+      "entity2": "Partita",
+      "cardinality": "1:N",
+      "attributes": [
+        { "name": "RETI", "is_pk": false}
+      ]
+    },
+    {
+      "entity1": "Squadra",
+      "entity2": "Partita",
+      "cardinality": "1:N",
+      "attributes": [
+        { "name": "RETI", "is_pk": false}
+      ]
+    },
+    {
+      "entity1": "Squadra",
+      "entity2": "Giocatore",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Partita",
+      "entity2": "Giocatore",
+      "cardinality": "N:N",
+      "attributes": [
+        { "name": "RUOLO", "is_pk": false}
+      ]
+    }
+  ]
+}

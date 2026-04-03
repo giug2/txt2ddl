@@ -1,0 +1,140 @@
+{
+    "entities": [
+        {
+            "name": "Mission",
+            "attributes": [
+                {
+                    "name": "Number",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Line",
+            "attributes": [
+                {
+                    "name": "Number",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_mission",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Budget",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Recommendation",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Source",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Project",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Ministry",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Mission",
+            "entity2": "Line",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Mission",
+            "entity2": "Recommendation",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Line",
+            "entity2": "Source",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Amount",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Line",
+            "entity2": "Project",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Ministry",
+            "entity2": "Project",
+            "cardinality": "1:N",
+            "attributes": [
+                {
+                    "name": "Coordinator",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Project",
+            "entity2": "Ministry",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Participants",
+                    "is_pk": false
+                }
+            ]
+        }
+    ]
+}

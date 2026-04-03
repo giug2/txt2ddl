@@ -1,0 +1,185 @@
+{
+    "entities": [
+        {
+            "name": "Funzionalita",
+            "attributes": [
+                {
+                    "name": "ID_Feature",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Cliente",
+            "attributes": [
+                {
+                    "name": "ID_Cliente",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Progetto",
+            "attributes": [
+                {
+                    "name": "ID_Progetto",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Categoria",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Sprint",
+            "attributes": [
+                {
+                    "name": "Data_Fine",
+                    "is_pk": true
+                },
+                {
+                    "name": "Durata",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Team",
+            "attributes": [
+                {
+                    "name": "Nome",
+                    "is_pk": true
+                },
+                {
+                    "name": "Ufficio",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Piattaforma",
+            "attributes": [
+                {
+                    "name": "ID_Piattaforma",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Sviluppatore",
+            "attributes": [
+                {
+                    "name": "Matricola",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Tecnologia",
+            "attributes": [
+                {
+                    "name": "ID_Tecnologia",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Descrizione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Assegnazione",
+            "attributes": [
+                {
+                    "name": "ID_Assegnazione",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Cliente",
+            "entity2": "Funzionalita",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Progetto",
+            "entity2": "Funzionalita",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Sprint",
+            "entity2": "Progetto",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Piattaforma",
+            "entity2": "Progetto",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Team",
+            "entity2": "Progetto",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Sviluppatore",
+            "entity2": "Team",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Team",
+            "entity2": "Assegnazione",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Sviluppatore",
+            "entity2": "Assegnazione",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Tecnologia",
+            "entity2": "Assegnazione",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Assegnazione",
+            "entity2": "Assegnazione",
+            "cardinality": "1:N"
+        }
+    ]
+}

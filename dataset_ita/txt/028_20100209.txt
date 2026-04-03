@@ -1,0 +1,14 @@
+il numero identifica univocamente il conto corrente;
+• titolare e indirizzo possono essere considerati come semplici stringhe di caratteri, senza modellazione ulteriore;
+• gli estratti conto sono tutti relativi ad un certo periodo, che non interessa; quindi viene prodotto un solo estratto
+conto per ciascun conto corrente; il saldo iniziale è un valore memorizzato; il saldo finale è ottenuto come somma
+del saldo iniziale e dei movimenti;
+• per ogni movimento elencato nella lista si può assumere (e si consiglia di farlo) che sia memorizzato nella base di
+dati un codice univoco che lo identifica (in modo completo; ad esempio, ciascuno degli otto movimenti mostrati
+in figura ha un codice diverso);
+• nella lista dei movimenti,
+– la colonna “Tipo Movimento” contiene un testo che dipende dal valore contenuto nella colonna “IdT” (si
+noti ad esempio che “05” corrisponde sempre a “Prel. Bancomat” e “43” a “Pagamento POS”); quindi
+“IdT” è un codice che identifica “Tipo Movimento;”
+– la colonna “Dettaglio” contiene invece un testo libero, che è associato allo specifico movimento e va
+considerato indipendente da “IdT” e “Tipo Movimento.”

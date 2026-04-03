@@ -1,0 +1,9 @@
+Define an Entity-Relationship schema that describes the data of interest at a certain point in time (for example,
+now) for a set of universities and for the teachers who work at them, according to the following specifications:
+• each university has a code, a name, a location (city, with code, name and nation; the nation is a simple
+string) and a year of foundation
+• every teacher
+– has an identification code, a surname, a name and a date of birth;
+– works for one and only one university;
+– has one and only one “qualification” (with identification code and name; a set exists in some way
+default qualifications).

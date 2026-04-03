@@ -1,0 +1,6 @@
+Definire uno schema Entity-Relationship che descriva i dati di una applicazione per la gestione editoriale di una casa editrice, secondo le seguenti specifiche.
+Ogni collana editoriale ha un titolo (che la identifica) e un genere di riferimento e comprende un insieme di articoli raggruppati per "volumi".
+Ogni volume è identificato da un numero e dalla collana di appartenenza.
+Ogni articolo è identificato, nella rispettiva collana, dal volume e da un numero (il "capitolo").
+Ad ogni articolo sono associati il numero di pagine e un autore ed un revisore (che possono coincidere), ciascuno con un proprio ID, cognome e nome.
+Indicare le cardinalità delle relazioni e un identificatore per ciascuna entità.

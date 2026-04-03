@@ -1,0 +1,143 @@
+{
+    "entities": [
+        {
+            "name": "Film",
+            "attributes": [
+                {
+                    "name": "CodiceFilm",
+                    "is_pk": true
+                },
+                {
+                    "name": "RuoloPrincipale",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Regista",
+            "attributes": [
+                {
+                    "name": "CodiceRegista",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Evento",
+            "attributes": [
+                {
+                    "name": "CodiceEvento",
+                    "is_pk": true
+                },
+                {
+                    "name": "Titolo",
+                    "is_pk": false
+                },
+                {
+                    "name": "Descrizione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Proiezione",
+            "attributes": [
+                {
+                    "name": "DataOra",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_evento",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "CasaProduzione",
+            "attributes": [
+                {
+                    "name": "Nome",
+                    "is_pk": true
+                },
+                {
+                    "name": "ProduttoreCapo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Attore",
+            "attributes": [
+                {
+                    "name": "CodiceAttore",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Titolo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "SalaCinema",
+            "attributes": [
+                {
+                    "name": "CodiceSala",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "PostiASedere",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Regista",
+            "entity2": "Film",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Evento",
+            "entity2": "Film",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Proiezione",
+            "entity2": "Evento",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Evento",
+            "entity2": "CasaProduzione",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "SalaCinema",
+            "entity2": "Proiezione",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Attore",
+            "entity2": "CasaProduzione",
+            "cardinality": "N:N"
+        }
+    ]
+}

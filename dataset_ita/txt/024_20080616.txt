@@ -1,0 +1,11 @@
+- per ogni passeggero esistono codice (identificativo), cognome e nome e un numero di telefono, che è
+opzionale ed è lo stesso in tutte le prenotazioni
+• le colonne Da e A contengono codici di aeroporti, per i quali sono memorizzati anche il nome e la città
+(ad esempio, a “FCO” sono associati “Fiumicino” come nome e “Roma” come città)
+• il numero del volo (ad esempio “AZ024”) è costituito dal codice della compagnia (per la quale interessa
+anche il nome; ad esempio “AZ” è il codice della compagnia il cui nome è “Alitalia”) e da un intero
+• un volo con un certo NumeroVolo ha sempre gli stessi aeroporti di partenza e arrivo (Da e A) e lo stesso
+tipo di aeromobile , ma può avere orario diverso in date diverse; per il tipo di aeromobile
+al codice (mostrato nella scheda, ad esempio “A321”) è associato un nome (nell’esempio potrebbe essere
+“Airbus 321”);
+• la colonna Classe contiene un codice (della “classe di prenotazione”) che, come si vede dai dati, è specificamente associato a volo e prenotazione; per ogni valore di tale codice è memorizzata una descrizione.

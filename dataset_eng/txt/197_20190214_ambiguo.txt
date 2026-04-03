@@ -1,0 +1,7 @@
+So, basically here we have a system that handles some course related stuff. Each course has its own identification code, just to avoid confusion. These courses, then, are not all the same, they have a certain level of difficulty, basic or advanced type, which has its own code and explanation. Of course, the same level can be associated with a lot of different courses.
+
+Then there are the teachers, each with their own name and a code to recognize them. Each teacher has a role attached to it, which also has its own code and description to understand what it is about, and clearly more teachers can have the same role. A teacher, in turn, can teach quite a few courses, but it seems that each course is linked to only one professor.
+
+The courses belong to departments, each with its own code and description. A department, as is obvious, has a lot of courses under it.
+
+Going into detail, each course is made up of many lessons. A lesson is identified by a number, but this number only makes sense within its course, so it is a kind of "lesson number - course code" pair that makes it unique. Finally, each lesson is held somewhere, in a classroom, which has its own code and perhaps a description. The same classroom, of course, can be used for a bunch of different lessons.

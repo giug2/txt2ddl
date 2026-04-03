@@ -1,0 +1,6 @@
+- each manager works in one or more departments and collaborates with one or more assistants,
+• if a manager X collaborates with an assistant Y at a department Z and with another assistant V at another department W, then
+• one or more managers work in each department and the assistants who collaborate with these managers report to them
+• each assistant collaborates with one or more managers and belongs to the departments in which these managers work
+• each department has one and only one location and each location has multiple departments
+• Managers and assistants have links to headquarters only through departments

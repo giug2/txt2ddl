@@ -1,0 +1,123 @@
+{
+    "entities": [
+        {
+            "name": "Materia",
+            "attributes": [
+                {
+                    "name": "Suffisso",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_disciplina",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Corso",
+            "attributes": [
+                {
+                    "name": "CS",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_materia",
+                    "is_pk": true
+                },
+                {
+                    "name": "Semestre",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Disciplina",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Settore",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Docente",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Dipartimento",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Materia",
+            "entity2": "Corso",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Materia",
+            "entity2": "Materia",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Materia",
+            "entity2": "Disciplina",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Disciplina",
+            "entity2": "Settore",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Corso",
+            "entity2": "Docente",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Docente",
+            "entity2": "Dipartimento",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Settore",
+            "entity2": "Docente",
+            "cardinality": "N:1"
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+- ogni manager opera presso uno o più dipartimenti e collabora con uno o più assistenti,
+• se un manager X collabora con un assistente Y presso un dipartimento Z e con un altro assistente V presso un altro dipartimento W, allora X collabora con Y anche presso W e collabora con V presso Z
+• presso ogni dipartimento operano uno o più manager e ad esso afferiscono gli assistenti che collaborano con tali manager
+• ogni assistente collabora con uno o più manager e afferisce ai dipartimenti presso cui tali manager operano
+• ogni dipartimento ha una e una sola sede e ogni sede ha più dipartimenti
+• manager e assistenti hanno legami con le sedi solo attraverso i dipartimenti

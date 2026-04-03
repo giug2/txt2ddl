@@ -1,0 +1,2 @@
+• each employee, in each project to which they are assigned (also variable from one project to another), covers one or more tasks
+• the tasks are "standardised", each with a description and a code (for example the PM code corresponds to the Project Manager, the DEV code to the programmer, etc.)

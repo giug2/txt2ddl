@@ -1,0 +1,74 @@
+{
+    "entities": [
+        {
+            "name": "Department",
+            "attributes": [
+                {
+                    "name": "Department Code",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Ateneo",
+            "attributes": [
+                {
+                    "name": "CodiceAteneo",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Registration",
+            "attributes": [
+                {
+                    "name": "Academic Year",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Degree Course",
+            "attributes": [
+                {
+                    "name": "CourseCode",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Students",
+            "attributes": [
+                {
+                    "name": "Freshman",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Ateneo",
+            "entity2": "Department",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Department",
+            "entity2": "StudenteImmatricolato",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Degree Course",
+            "entity2": "StudenteImmatricolato",
+            "cardinality": "1:N"
+        }
+    ]
+}

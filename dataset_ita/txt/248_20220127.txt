@@ -1,0 +1,4 @@
+• ogni professore può insegnare in uno o più dipartimenti; gli studenti di un professore sono quelli iscritti ai dipartimenti in cui egli insegna.
+• ogni dipartimento ha sede in un unico campus, può avere più professori associati e ad esso sono iscritti uno o più studenti.
+• in un campus possono essere presenti più dipartimenti.
+• ogni studente è iscritto ad uno e un solo dipartimento e afferisce al campus a cui il proprio dipartimento appartiene.

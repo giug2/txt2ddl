@@ -1,0 +1,5 @@
+Define an Entity-Relationship scheme that describes the structure of a University's educational offer according to the following specifications, modified and simplified compared to reality:
+• the training offer is divided into departments and degree courses
+• each department has an identifying code and a name; pertains to zero or more scientific sectors; is responsible for one or more degree courses
+• each scientific sector represents a disciplinary area recognized at ministerial level; for each sector only code and name are of interest
+• each degree course has a progressive code, unique within the department, a name and a number of places available

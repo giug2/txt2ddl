@@ -1,0 +1,95 @@
+{
+    "entities": [
+        {
+            "name": "Product",
+            "attributes": [
+                {
+                    "name": "SKU",
+                    "is_pk": true
+                },
+                {
+                    "name": "ProductName",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Mark",
+            "attributes": [
+                {
+                    "name": "CodeBrand",
+                    "is_pk": true
+                },
+                {
+                    "name": "NameBrand",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Industrial Group",
+            "attributes": [
+                {
+                    "name": "GroupCode",
+                    "is_pk": true
+                },
+                {
+                    "name": "GroupName",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Subcategory",
+            "attributes": [
+                {
+                    "name": "CodiceSottocategoria",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_categoria",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeSottocategoria",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Category",
+            "attributes": [
+                {
+                    "name": "CategoryCode",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeCategoria",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Mark",
+            "entity2": "Product",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Industrial Group",
+            "entity2": "Mark",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Subcategory",
+            "entity2": "Product",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Category",
+            "entity2": "Subcategory",
+            "cardinality": "1:N"
+        }
+    ]
+}

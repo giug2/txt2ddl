@@ -1,0 +1,112 @@
+{
+    "entities": [
+        {
+            "name": "University",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nation",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "City",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Foundation",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Professor",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Afference",
+            "attributes": [
+                {
+                    "name": "START Date",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_professor",
+                    "is_pk": true
+                },
+                {
+                    "name": "Data fine",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Qualification",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "City",
+            "entity2": "University",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Afference",
+            "entity2": "University",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "University",
+            "entity2": "Professor",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Professor",
+            "entity2": "Afference",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Afference",
+            "entity2": "Qualification",
+            "cardinality": "N:1"
+        }
+    ]
+}

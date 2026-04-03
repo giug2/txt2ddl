@@ -1,0 +1,145 @@
+{
+  "entities": [
+    {
+      "name": "CITTÀ",
+      "attributes": [
+        { "name": "CODICE", "is_pk": true },
+        { "name": "NOME", "is_pk": false }
+      ]
+    },
+    {
+      "name": "NAZIONE",
+      "attributes": [
+        { "name": "CODICE", "is_pk": true },
+        { "name": "NOME", "is_pk": false }
+      ]
+    },
+    {
+      "name": "AEROPORTO",
+      "attributes": [
+        { "name": "CODICE", "is_pk": true },
+        { "name": "NOME", "is_pk": false }
+      ]
+    },
+    {
+      "name": "COMPAGNIA",
+      "attributes": [
+        { "name": "CODICE", "is_pk": true },
+        { "name": "NOME", "is_pk": false }
+      ]
+    },
+    {
+      "name": "VOLO",
+      "attributes": [
+        { "name": "NUMERO", "is_pk": true },
+        { "name": "fk_compagnia", "is_pk": true }
+      ]
+    },
+    {
+      "name": "TIPO AEROMOBILE",
+      "attributes": [
+        { "name": "CODICE", "is_pk": true },
+        { "name": "NOME", "is_pk": false }
+      ]
+    },
+    {
+      "name": "GIORNO",
+      "attributes": [
+        { "name": "NUMERO", "is_pk": true },
+        { "name": "DESCRIZIONE", "is_pk": false }
+      ]
+    },
+    {
+      "name": "VOLO NEL GIORNO",
+      "attributes": [
+        { "name": "AEROPORTO ARRIVO", "is_pk": false },
+        { "name": "AEROPORTO PARTENZA", "is_pk": false },
+        { "name": "fk_giorno", "is_pk": true },
+        { "name": "fk_volo", "is_pk": true }
+      ]
+    },
+    {
+      "name": "VOLO EFFETTIVO",
+      "attributes": [
+        { "name": "DATA", "is_pk": true },
+        { "name": "fk_volo_del_giorno", "is_pk": true },
+        { "name": "PARTENZA EFFETTIVA", "is_pk": false },
+        { "name": "ARRIVO EFFETTIVA", "is_pk": false }
+      ]
+    },
+    {
+      "name": "AEROMOBILE",
+      "attributes": [
+        { "name": "CODICE", "is_pk": true }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "NAZIONE",
+      "entity2": "CITTÀ",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "CITTÀ",
+      "entity2": "AEROPORTO",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "AEROPORTO",
+      "entity2": "VOLO",
+      "cardinality": "1:N",
+      "attributes": [
+        { "name": "Arrivo", "is_pk": false }
+      ]
+    },
+    {
+      "entity1": "AEROPORTO",
+      "entity2": "VOLO",
+      "cardinality": "1:N",
+      "attributes": [
+        { "name": "Partenza", "is_pk": false }
+      ]
+    },
+    {
+      "entity1": "NAZIONE",
+      "entity2": "COMPAGNIA",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "COMPAGNIA",
+      "entity2": "VOLO",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "TIPO AEROMOBILE",
+      "entity2": "VOLO",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "VOLO",
+      "entity2": "VOLO NEL GIORNO",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "GIORNO",
+      "entity2": "VOLO NEL GIORNO",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "VOLO NEL GIORNO",
+      "entity2": "VOLO EFFETTIVO",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "TIPO AEROMOBILE",
+      "entity2": "AEROMobile",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "AEROMOBILE",
+      "entity2": "VOLO EFFETTIVO",
+      "cardinality": "1:N"
+    }
+  ]
+}

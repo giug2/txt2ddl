@@ -1,0 +1,15 @@
+Definire uno schema Entity-Relationship che descriva i dati di interesse in un certo momento (ad esempio,
+adesso) per un insieme di atenei e per i docenti che lavorano presso di essi, secondo le seguenti specifiche:
+• ogni ateneo ha un codice, un nome, una sede (città, con codice, nome e nazione; la nazione è una semplice
+stringa) e un anno di fondazione
+• ogni docente
+– ha un codice identificativo, un cognome, un nome e una data di nascita;
+– lavora per uno e un solo ateneo;
+– ha una e una sola “qualifica” (con codice identificativo e nome; esiste un insieme in qualche modo
+predefinito di qualifiche).
+• un docente può cambiare ateneo, ed è importante tenere traccia delle afferenze; ad esempio, il docente
+Mario Rossi può avere lavorato dal 1/1/2010 al 31/7/2012 e poi anche dal 1/1/2016 ad oggi per l’ateneo
+XY, e invece dal 1/8/2012 al 31/12/2015 per l’ateneo WZ;
+• un docente può cambiare qualifica nel tempo;
+• ogni docente ha conseguito il dottorato presso un ateneo (del quale interessano le stesse informazioni
+indicate per gli atenei alla domanda precedente).

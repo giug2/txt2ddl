@@ -1,0 +1,69 @@
+{
+    "entities": [
+        {
+            "name": "Rack",
+            "attributes": [
+                {
+                    "name": "ShelfCode",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Warehouse",
+            "attributes": [
+                {
+                    "name": "Warehouse Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "address",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Product",
+            "attributes": [
+                {
+                    "name": "SKU",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Inventory",
+            "attributes": [
+                {
+                    "name": "DataInventario",
+                    "is_pk": true
+                },
+                {
+                    "name": "counted_items",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Operator",
+            "attributes": [
+                {
+                    "name": "Freshman",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Rack",
+            "entity2": "Warehouse",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Rack",
+            "entity2": "Inventory",
+            "cardinality": "N:N"
+        }
+    ]
+}

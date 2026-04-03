@@ -1,0 +1,79 @@
+{
+    "entities": [
+        {
+            "name": "Speaker",
+            "attributes": [
+                {
+                    "name": "id_speaker",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Material",
+            "attributes": [
+                {
+                    "name": "material_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Session",
+            "attributes": [
+                {
+                    "name": "Sala",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_argument",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_evento",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Subject",
+            "attributes": [
+                {
+                    "name": "topic_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Event",
+            "attributes": [
+                {
+                    "name": "id_eventor",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Speaker",
+            "entity2": "Session",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Session",
+            "entity2": "Material",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Subject",
+            "entity2": "Session",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Event",
+            "entity2": "Session",
+            "cardinality": "1:N"
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+• ogni impiegato afferisce ad uno e un solo dipartimento;
+• ogni progetto ha uno e un solo committente e ogni committente uno o più progetti
+• ogni dipartimento ha zero o più committenti e segue tutti e soli i relativi progetti; ogni committente
+interagisce con uno e un solo dipartimento
+• ogni impiegato lavora per tutti e soli i progetti dei committenti del proprio dipartimento

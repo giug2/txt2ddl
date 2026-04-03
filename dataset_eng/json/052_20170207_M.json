@@ -1,0 +1,73 @@
+{
+    "entities": [
+        {
+            "name": "Customer",
+            "attributes": [
+                {
+                    "name": "client_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "department_name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Employee",
+            "attributes": [
+                {
+                    "name": "employee_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "employee_name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Project",
+            "attributes": [
+                {
+                    "name": "project_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "project_name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Department",
+            "attributes": [
+                {
+                    "name": "department_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "customer_name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Department",
+            "entity2": "Employee",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Project",
+            "entity2": "Employee",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Customer",
+            "entity2": "Project",
+            "cardinality": "1:N"
+        }
+    ]
+}

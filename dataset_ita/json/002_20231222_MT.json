@@ -1,0 +1,194 @@
+{
+    "entities": [
+        {
+            "name": "CITTA",
+            "attributes": [
+                {
+                    "name": "CODICE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "NAZIONE",
+            "attributes": [
+                {
+                    "name": "CODICE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "AEROPORTO",
+            "attributes": [
+                {
+                    "name": "CODICE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "COMPAGNIA",
+            "attributes": [
+                {
+                    "name": "CODICE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "VOLO",
+            "attributes": [
+                {
+                    "name": "NUMERO",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_compagnia",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "GIORNO",
+            "attributes": [
+                {
+                    "name": "NUMERO",
+                    "is_pk": true
+                },
+                {
+                    "name": "DESCRIZIONE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "TIPO_AEROMOBILE",
+            "attributes": [
+                {
+                    "name": "CODICE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "VOLO_EFFETTIVO",
+            "attributes": [
+                {
+                    "name": "DATA",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_volo",
+                    "is_pk": true
+                },
+                {
+                    "name": "PARTENZA EFFETTIVA",
+                    "is_pk": false
+                },
+                {
+                    "name": "ARRIVO EFFETTIVO",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "AEROMOBILE",
+            "attributes": [
+                {
+                    "name": "CODICE",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "NAZIONE",
+            "entity2": "CITTA",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "CITTA",
+            "entity2": "AEROPORTO",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "VOLO",
+            "entity2": "AEROPORTO",
+            "cardinality": "N:1",
+            "attributes": [
+                {
+                    "name": "Arrivo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "VOLO",
+            "entity2": "AEROPORTO",
+            "cardinality": "N:1",
+            "attributes": [
+                {
+                    "name": "Partenza",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "NAZIONE",
+            "entity2": "COMPAGNIA",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "VOLO",
+            "entity2": "COMPAGNIA",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "TIPO_AEROMOBILE",
+            "entity2": "VOLO",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "VOLO",
+            "entity2": "GIORNO",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "VOLO_EFFETTIVO",
+            "entity2": "VOLO",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "AEROMOBILE",
+            "entity2": "TIPO_AEROMOBILE",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "AEROMOBILE",
+            "entity2": "VOLO_EFFETTIVO",
+            "cardinality": "1:N"
+        }
+    ]
+}

@@ -1,0 +1,139 @@
+{
+    "entities": [
+        {
+            "name": "Students",
+            "attributes": [
+                {
+                    "name": "Freshman",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Registration for exam",
+            "attributes": [
+                {
+                    "name": "Registration Date",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_exam_session",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "SessioneEsame",
+            "attributes": [
+                {
+                    "name": "Session ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "Academic Year",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Teaching",
+            "attributes": [
+                {
+                    "name": "TeachingCode",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_corso_laurea",
+                    "is_pk": true
+                },
+                {
+                    "name": "CFU",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Degree Course",
+            "attributes": [
+                {
+                    "name": "CourseName",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_department",
+                    "is_pk": true
+                },
+                {
+                    "name": "TipoLaurea",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Department",
+            "attributes": [
+                {
+                    "name": "Department Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "DepartmentName",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Campus",
+            "attributes": [
+                {
+                    "name": "CodiceCampus",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeCampus",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Students",
+            "entity2": "Registration for exam",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Registration for exam",
+            "entity2": "SessioneEsame",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "SessioneEsame",
+            "entity2": "Teaching",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Teaching",
+            "entity2": "Degree Course",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Department",
+            "entity2": "Degree Course",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Department",
+            "entity2": "Campus",
+            "cardinality": "1:N"
+        }
+    ]
+}

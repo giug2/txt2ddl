@@ -1,0 +1,98 @@
+{
+    "entities": [
+        {
+            "name": "Paziente",
+            "attributes": [
+                {
+                    "name": "id_paziente",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "cognome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Medico",
+            "attributes": [
+                {
+                    "name": "id_medico",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_unita_operativa",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "cognome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Trattamento",
+            "attributes": [
+                {
+                    "name": "id_trattamento",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_paziente",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome_trattamento",
+                    "is_pk": false
+                },
+                {
+                    "name": "data_inizio",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "UnitaOperativa",
+            "attributes": [
+                {
+                    "name": "id_unita_operativa",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome_unita",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Medico",
+            "entity2": "UnitaOperativa",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Paziente",
+            "entity2": "Trattamento",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Medico",
+            "entity2": "Paziente",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Medico",
+            "entity2": "Trattamento",
+            "cardinality": "N:N"
+        }
+    ]
+}

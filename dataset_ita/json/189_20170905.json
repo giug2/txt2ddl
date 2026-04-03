@@ -1,0 +1,65 @@
+{
+    "entities": [
+        {
+            "name": "PROGETTO",
+            "attributes": [
+                {
+                    "name": "CODICE_PROGETTO",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "DIPENDENTE",
+            "attributes": [
+                {
+                    "name": "MATRICOLA",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "MANSIONE",
+            "attributes": [
+                {
+                    "name": "CODICE_MANSIONE",
+                    "is_pk": true
+                },
+                {
+                    "name": "DESCRIZIONE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "ASSEGNAZIONE",
+            "attributes": [
+                {
+                    "name": "fk_dipendente",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_progetto",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "PROGETTO",
+            "entity2": "ASSEGNAZIONE",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "DIPENDENTE",
+            "entity2": "ASSEGNAZIONE",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "MANSIONE",
+            "entity2": "ASSEGNAZIONE",
+            "cardinality": "1:N"
+        }
+    ]
+}

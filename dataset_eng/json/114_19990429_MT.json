@@ -1,0 +1,127 @@
+{
+    "entities": [
+        {
+            "name": "Materia",
+            "attributes": [
+                {
+                    "name": "Suffix",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_disciplina",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Corso",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "CS",
+                    "is_pk": false
+                },
+                {
+                    "name": "Semester",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Professor",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Department",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Discipline",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_sector",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Sector",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Materia",
+            "entity2": "Materia",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Corso",
+            "entity2": "Materia",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Professor",
+            "entity2": "Corso",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Discipline",
+            "entity2": "Materia",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Departure",
+            "entity2": "Professor",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Sector",
+            "entity2": "Discipline",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Professor",
+            "entity2": "Sector",
+            "cardinality": "N:1"
+        }
+    ]
+}

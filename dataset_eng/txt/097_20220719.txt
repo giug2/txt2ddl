@@ -1,0 +1,12 @@
+The system describes the organization of musical events whose fulcrum is represented by the Concerts entity 
+Each concert identified by a Code and has a Title a Description and associated with a specific Orchestra that performs it and a Theater in which it takes place. A single musical program intended as a concert can be replicated on multiple occasions. The Events entity manages this information by linking each Concert to a specific Date and Time 
+The program of each concert consists of a sequence of musical pieces 
+The Programming relationship establishes this link by associating a Piece with a Concerto and specifying its Position in the playing order via an integer value 
+Each Piece in turn identified by a Code and described by a Title and its Author 
+The author is a Composers entity registered with Surname and Name Code 
+The Orchestras are defined by their Name, the Headquarters and a Director 
+Similarly, Theaters are characterized by a Code and a Name 
+The world of performers managed by the Musicians entity where each individual identified by a Serial Number and registered with Surname and Name 
+A musician can hold the role of conductor of an orchestra 
+The actual composition of an orchestra defined by the Composition relationship that associates a Musician with an Orchestra and specifies the Instrument he plays within it 
+Finally, the Instruments entity catalogs the musical instruments, each with its own Code, Name and Type of belonging

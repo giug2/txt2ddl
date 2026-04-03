@@ -1,0 +1,140 @@
+{
+    "entities": [
+        {
+            "name": "Museo",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "City",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Nation",
+            "attributes": [
+                {
+                    "name": "Sail",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Sala",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Size",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Opera",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Title",
+                    "is_pk": false
+                },
+                {
+                    "name": "Anno",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Author",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Type",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "City",
+            "entity2": "Museo",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Museo",
+            "entity2": "Sala",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Nation",
+            "entity2": "City",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Nation",
+            "entity2": "Author",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Sala",
+            "entity2": "Opera",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Author",
+            "entity2": "Opera",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Type",
+            "entity2": "Opera",
+            "cardinality": "1:N"
+        }
+    ]
+}

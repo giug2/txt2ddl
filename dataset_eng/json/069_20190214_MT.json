@@ -1,0 +1,123 @@
+{
+    "entities": [
+        {
+            "name": "Shipping",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Type",
+            "attributes": [
+                {
+                    "name": "CT",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Category",
+            "attributes": [
+                {
+                    "name": "CCM",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Sender",
+            "attributes": [
+                {
+                    "name": "CM",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Destination",
+            "attributes": [
+                {
+                    "name": "CDs",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Package",
+            "attributes": [
+                {
+                    "name": "NP",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_shipping",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Size",
+            "attributes": [
+                {
+                    "name": "CDim",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Shipping",
+            "entity2": "Type",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Sender",
+            "entity2": "Category",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Shipping",
+            "entity2": "Sender",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Shipping",
+            "entity2": "Destination",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Package",
+            "entity2": "Shipping",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Package",
+            "entity2": "Size",
+            "cardinality": "N:1"
+        }
+    ]
+}

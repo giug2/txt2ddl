@@ -1,0 +1,75 @@
+{
+    "entities": [
+        {
+            "name": "Assisted",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Data",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Practice",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Performance",
+            "attributes": [
+                {
+                    "name": "fk_practice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Riga",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                },
+                {
+                    "name": "Data",
+                    "is_pk": false
+                },
+                {
+                    "name": "Amount",
+                    "is_pk": false
+                },
+                {
+                    "name": "Subject",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Practice",
+            "entity2": "Assisted",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Performance",
+            "entity2": "Practice",
+            "cardinality": "N:1"
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+Lo schema delinea un sistema informativo per una biblioteca o libreria in cui sono presenti delle Lingue, ciascuna identificata da un CodiceLingua e descritta da un Nome.
+A queste sono collegate le CaseEditrici, definite da un CodiceEditore identificativo, un Nome e la Lingua di appartenenza, stabilendo un vincolo di integrità referenziale con l'entità Lingue.
+Viene introdotta l'entità Genere, identificata da un CodiceGenere e un Nome. Di conseguenza, l'entità Collana, pur mantenendo la sua chiave identificativa composta da CasaEditrice e NomeCollana, ora stabilisce un vincolo di integrità referenziale con la nuova entità Genere.
+La modifica più significativa è l'inserimento dell'entità Edizione, che si interpone tra le collane e le singole copie fisiche dei libri.
+Ogni Edizione, identificata dalla coppia di attributi Collana e CodiceEdizione, possiede un attributo NumeroPagine e fa riferimento all'entità Collana.
+L'entità CopiaFisica, identificata univocamente dal CodiceInventario e caratterizzata dall'AnnoStampa, non è più legata direttamente a una collana ma a una specifica Edizione tramite un vincolo referenziale.
+Infine, la relazione di prestito o possesso viene esplicitata attraverso un'entità associativa che collega una CopiaFisica a un Utente, stabilendo vincoli di integrità referenziale con le rispettive entità.
+Quest'ultima, l'entità Utente, raccoglie le informazioni anagrafiche degli individui, identificati dal loro CodiceUtente e descritti da Cognome e Nome.

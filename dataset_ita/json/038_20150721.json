@@ -1,0 +1,77 @@
+{
+  "entities": [
+    {
+      "name": "Persona",
+      "attributes": [
+        { "name": "CF", "is_pk": true },
+        { "name": "Cognome", "is_pk": false },
+        { "name": "Nome", "is_pk": false },
+        { "name": "Data di nascita", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Utenza",
+      "attributes": [
+        { "name": "Numero", "is_pk": true },
+        { "name": "Indirizzo", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Bolletta",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Data", "is_pk": false },
+        { "name": "Importo", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Pagamento",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Data", "is_pk": false },
+        { "name": "Importo", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Distretto",
+      "attributes": [
+        { "name": "Prefisso", "is_pk": true },
+        { "name": "Nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Provincia",
+      "attributes": [
+        { "name": "Sigla", "is_pk": true },
+        { "name": "Nome", "is_pk": false }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "Persona",
+      "entity2": "Utenza",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Utenza",
+      "entity2": "Bolletta",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Utenza",
+      "entity2": "Pagamento",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Distretto",
+      "entity2": "Utenza",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Provincia",
+      "entity2": "Distretto",
+      "cardinality": "1:N"
+    }
+  ]
+}

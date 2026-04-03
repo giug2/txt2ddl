@@ -1,0 +1,69 @@
+{
+    "entities": [
+        {
+            "name": "Scaffale",
+            "attributes": [
+                {
+                    "name": "CodiceScaffale",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Magazzino",
+            "attributes": [
+                {
+                    "name": "CodiceMagazzino",
+                    "is_pk": true
+                },
+                {
+                    "name": "indirizzo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Prodotto",
+            "attributes": [
+                {
+                    "name": "SKU",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Inventario",
+            "attributes": [
+                {
+                    "name": "DataInventario",
+                    "is_pk": true
+                },
+                {
+                    "name": "articoli_contati",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Operatore",
+            "attributes": [
+                {
+                    "name": "Matricola",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Scaffale",
+            "entity2": "Magazzino",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Scaffale",
+            "entity2": "Inventario",
+            "cardinality": "N:N"
+        }
+    ]
+}

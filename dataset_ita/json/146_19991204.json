@@ -1,0 +1,88 @@
+{
+  "entities": [
+    {
+      "name": "Persona",
+      "attributes": [
+        { "name": "CodiceFiscale", "is_pk": true },
+        { "name": "Cognome", "is_pk": false },
+        { "name": "Nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Acquisto",
+      "attributes": [
+        { "name": "Data", "is_pk": true },
+        { "name": "fk_auto", "is_pk": true }
+      ]
+    },
+    {
+      "name": "Auto",
+      "attributes": [
+        { "name": "Targa", "is_pk": true },
+        { "name": "Anno", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Versione",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "fk_modello", "is_pk": true },
+        { "name": "cilindrata", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Modello",
+      "attributes": [
+        { "name": "Nome", "is_pk": true },
+        { "name": "fk_casa", "is_pk": true },
+        { "name": "Categoria", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Casa",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Nazione",
+      "attributes": [
+        { "name": "SiglaNazione", "is_pk": true },
+        { "name": "Nome", "is_pk": false }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "Persona",
+      "entity2": "Acquisto",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Acquisto",
+      "entity2": "Auto",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Auto",
+      "entity2": "Versione",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Versione",
+      "entity2": "Modello",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Casa",
+      "entity2": "Modello",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Casa",
+      "entity2": "Nazione",
+      "cardinality": "1:N"
+    }
+  ]
+}

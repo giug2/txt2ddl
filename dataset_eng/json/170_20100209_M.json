@@ -1,0 +1,75 @@
+{
+    "entities": [
+        {
+            "name": "Vehicle",
+            "attributes": [
+                {
+                    "name": "Targa",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                },
+                {
+                    "name": "Owner Address",
+                    "is_pk": false
+                },
+                {
+                    "name": "Initial Mileage",
+                    "is_pk": false
+                },
+                {
+                    "name": "Current Mileage",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Intervention",
+            "attributes": [
+                {
+                    "name": "Intervention Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surgery Date",
+                    "is_pk": false
+                },
+                {
+                    "name": "Note",
+                    "is_pk": false
+                },
+                {
+                    "name": "Cost",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Type of Intervention",
+            "attributes": [
+                {
+                    "name": "Type Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Owner",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Intervention",
+            "entity2": "Vehicle",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Intervention",
+            "entity2": "Type of Intervention",
+            "cardinality": "N:1"
+        }
+    ]
+}

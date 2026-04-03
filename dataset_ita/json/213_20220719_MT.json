@@ -1,0 +1,94 @@
+{
+    "entities": [
+        {
+            "name": "Impiegato",
+            "attributes": [
+                {
+                    "name": "id_impiegato",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_id_divisione",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "cognome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Divisione",
+            "attributes": [
+                {
+                    "name": "id_divisione",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_id_azienda",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome_divisione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Progetto",
+            "attributes": [
+                {
+                    "name": "id_progetto",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_id_divisione",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome_progetto",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Azienda",
+            "attributes": [
+                {
+                    "name": "id_azienda",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome_azienda",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Azienda",
+            "entity2": "Divisione",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Divisione",
+            "entity2": "Impiegato",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Divisione",
+            "entity2": "Progetto",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Progetto",
+            "entity2": "Impiegato",
+            "cardinality": "N:N"
+        }
+    ]
+}

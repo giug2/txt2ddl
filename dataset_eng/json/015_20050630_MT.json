@@ -1,0 +1,147 @@
+{
+    "entities": [
+        {
+            "name": "Hamlet",
+            "attributes": [
+                {
+                    "name": "pk_fraction",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Inn",
+            "attributes": [
+                {
+                    "name": "pk_albergo",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                },
+                {
+                    "name": "address",
+                    "is_pk": false
+                },
+                {
+                    "name": "category",
+                    "is_pk": false
+                },
+                {
+                    "name": "Total Number of Beds",
+                    "is_pk": false
+                },
+                {
+                    "name": "telephone",
+                    "is_pk": false
+                },
+                {
+                    "name": "fax",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Room type",
+            "attributes": [
+                {
+                    "name": "pk_camera_type",
+                    "is_pk": true
+                },
+                {
+                    "name": "description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "TipoVariantePrezzo",
+            "attributes": [
+                {
+                    "name": "pk_type_variant_price",
+                    "is_pk": true
+                },
+                {
+                    "name": "description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Rate",
+            "attributes": [
+                {
+                    "name": "pk_tariffa",
+                    "is_pk": true
+                },
+                {
+                    "name": "prezzo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Service",
+            "attributes": [
+                {
+                    "name": "pk_service",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Season",
+            "attributes": [
+                {
+                    "name": "pk_season",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Inn",
+            "entity2": "Hamlet",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Room type",
+            "entity2": "Inn",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "TipoVariantePrezzo",
+            "entity2": "Inn",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Rate",
+            "entity2": "Inn",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Rate",
+            "entity2": "Season",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Rate",
+            "entity2": "Service",
+            "cardinality": "N:1"
+        }
+    ]
+}

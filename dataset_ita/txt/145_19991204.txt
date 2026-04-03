@@ -1,0 +1,6 @@
+Lo schema presenta una struttura più dettagliata e normalizzata 
+L'entità Libri ora definita solo da Codice Titolo e Genere con quest'ultimo che funge da chiave esterna verso una nuova relazione specifica Generi descritta da SiglaGenere e Nome 
+La relazione tra libri e scrittori gestita tramite una tabella associativa chiamata Autori contenente gli attributi Libro e Scrittore 
+Questa tabella crea un collegamento esplicito con vincoli di integrità referenziale verso Libri e Scrittori permettendo a un libro di avere più autori e a uno scrittore di essere associato a più libri 
+Anche la gestione delle edizioni più strutturata la relazione Edizioni Libro Editore Collana Anno non solo si collega a Libri ed Editori ma anche a una nuova entità Collane definita da SiglaCollana e Nome 
+Le descrizioni delle entit Editori Nome Città e Scrittori Codice Cognome Nome rimangono invece invariate rispetto allo schema precedente

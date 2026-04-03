@@ -1,0 +1,153 @@
+{
+  "entities": [
+    {
+      "name": "Sciatore",
+      "attributes": [
+        {
+          "name": "Codice",
+          "is_pk": true
+        },
+        {
+          "name": "Cognome",
+          "is_pk": false
+        },
+        {
+          "name": "Nome",
+          "is_pk": false
+        }
+      ]
+    },
+    {
+      "name": "Città",
+      "attributes": [
+        {
+          "name": "Codice",
+          "is_pk": true
+        },
+        {
+          "name": "Nome",
+          "is_pk": false
+        }
+      ]
+    },
+    {
+      "name": "Nazione",
+      "attributes": [
+        {
+          "name": "Codice",
+          "is_pk": true
+        },
+        {
+          "name": "Nome",
+          "is_pk": false
+        }
+      ]
+    },
+    {
+      "name": "Partecipazione",
+      "attributes": [
+        {
+          "name": "Posizione",
+          "is_pk": false
+        },
+        {
+          "name": "fk_gara",
+          "is_pk": true
+        },
+        {
+          "name": "fk_sciatore",
+          "is_pk": true
+        }
+      ]
+    },
+    {
+      "name": "Gara",
+      "attributes": [
+        {
+          "name": "Codice",
+          "is_pk": true
+        },
+        {
+          "name": "fk_specialita",
+          "is_pk": true
+        },
+        {
+          "name": "fk_sede",
+          "is_pk": true
+        },
+        {
+          "name": "Data",
+          "is_pk": false
+        }
+      ]
+    },
+    {
+      "name": "Specialità",
+      "attributes": [
+        {
+          "name": "Codice",
+          "is_pk": true
+        },
+        {
+          "name": "Nome",
+          "is_pk": false
+        }
+      ]
+    },
+    {
+      "name": "Sede",
+      "attributes": [
+        {
+          "name": "Codice",
+          "is_pk": true
+        },
+        {
+          "name": "Nome",
+          "is_pk": false
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "Sciatore",
+      "entity2": "Città",
+      "cardinality": "N:1"
+    },
+    {
+      "entity1": "Città",
+      "entity2": "Nazione",
+      "cardinality": "N:1"
+    },
+    {
+      "entity1": "Sciatore",
+      "entity2": "Partecipazione",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Gara",
+      "entity2": "Partecipazione",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Partecipazione",
+      "entity2": "Nazione",
+      "cardinality": "N:1"
+    },
+    {
+      "entity1": "Gara",
+      "entity2": "Specialità",
+      "cardinality": "N:1"
+    },
+    {
+      "entity1": "Gara",
+      "entity2": "Sede",
+      "cardinality": "N:1"
+    },
+    {
+      "entity1": "Sede",
+      "entity2": "Nazione",
+      "cardinality": "N:1"
+    }
+  ]
+}

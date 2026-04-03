@@ -1,0 +1,12 @@
+Show the conceptual scheme of a database for painting exhibitions in an art gallery, according to the following 
+specifications. 
+• The gallery has a series of rooms, each of which has a name and size. 
+• An exhibition has a title, a start date and an end date. 
+• In each exhibition several paintings are exhibited and the same painting can appear in multiple exhibitions. 
+• For each painting, the author, the year, and the room in which it is exhibited are represented (which can change in exhibitions 
+different)
+It is of interest to represent possible itineraries of an exhibition, each with a code and made up of a list 
+order of rooms to visit and, for each room, an ordered list of paintings to see. 
+• We also want to represent guided visits to the exhibitions which each have a name, a starting time, a 
+duration and are based on a certain itinerary. The guided tours are repeated on the various days of the exhibition with a number of 
+different participants

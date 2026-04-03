@@ -1,0 +1,13 @@
+The data structure describes a logistics and shipping domain starting from the fundamental territorial entities.
+Each Region is identified by a unique code and has a name.
+In turn, the Provinces are characterized by an acronym, a name and are associated with a specific Region to which they belong.
+Continuing along this line, each warehouse, identified by its own code and address, is located in a specific province.
+The model includes the Couriers, each defined by an ID and a company name, and for each of them the Region of the registered office is of interest.
+At the same time, the vehicle types are managed, defined by a Code and a Description.
+In addition to the typology, the individual physical Vehicles are also of interest, each identified by a unique license plate and associated with a specific Vehicle Type.
+The heart of the system is represented by the Standard Routes, uniquely identified by the pair of values ​​formed by the Courier that operates them and by a Route Code.
+For each route, the departure and arrival warehouse are specified, and the Vehicle Type required to carry it out, thus establishing relationships with the Couriers, Warehouses and Vehicle Types entities. It is important to note that the same route, for example the MI-RM-01, can be traveled on different days of the week, generating a Planned Service with specific scheduled departure and arrival times for that day, such as Monday at 08:00 and Wednesday at 09:00.
+When a service scheduled on a route is actually performed on a specific date, an instance of Actual Dispatch is generated.
+This entity is linked to the reference scheduled service and records the exact date on which the shipment takes place, together with the actual departure and arrival time.
+Furthermore, each Actual Shipment is associated with a single and specific Vehicle that carries it out.
+There is a fundamental constraint: the vehicle used, such as the one with the AB123CD license plate, must necessarily be of the type specified for that route, such as a 'Refrigerated Van'.

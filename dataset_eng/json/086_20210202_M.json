@@ -1,0 +1,85 @@
+{
+    "entities": [
+        {
+            "name": "Swab",
+            "attributes": [
+                {
+                    "name": "CT",
+                    "is_pk": true
+                },
+                {
+                    "name": "Data",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Patient",
+            "attributes": [
+                {
+                    "name": "CF",
+                    "is_pk": true
+                },
+                {
+                    "name": "Outcome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "ASL",
+            "attributes": [
+                {
+                    "name": "CodASL",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_regione",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Address",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Region",
+            "attributes": [
+                {
+                    "name": "RegionID",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Swab",
+            "entity2": "Patient",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Patient",
+            "entity2": "ASL",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "ASL",
+            "entity2": "Region",
+            "cardinality": "N:1"
+        }
+    ]
+}

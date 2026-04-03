@@ -1,0 +1,4 @@
+• each doctor belongs to one and only one operational unit;
+• each treatment is associated with one and only one patient;
+• each doctor follows zero or more patients and potentially participates in all of those patients' treatments (and no other treatments);
+• each operational unit has its own doctors as patients and treatments.

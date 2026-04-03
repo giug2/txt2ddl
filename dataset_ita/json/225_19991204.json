@@ -1,0 +1,85 @@
+{
+    "entities": [
+        {
+            "name": "Cliente",
+            "attributes": [
+                {
+                    "name": "CodiceCliente",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Articolo",
+            "attributes": [
+                {
+                    "name": "NumeroSerie",
+                    "is_pk": true
+                },
+                {
+                    "name": "AnnoProduzione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Prodotto",
+            "attributes": [
+                {
+                    "name": "NomeProdotto",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_marchio",
+                    "is_pk": true
+                },
+                {
+                    "name": "Tipologia",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Marchio",
+            "attributes": [
+                {
+                    "name": "CodiceMarchio",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "PaeseOrigine",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Cliente",
+            "entity2": "Articolo",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Prodotto",
+            "entity2": "Articolo",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Marchio",
+            "entity2": "Prodotto",
+            "cardinality": "1:N"
+        }
+    ]
+}

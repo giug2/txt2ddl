@@ -1,0 +1,7 @@
+Vengono presentati due distinti schemi logici per la gestione di informazioni bibliografiche 
+L'entità centrale Libri descritta dagli attributi Codice Titolo Genere e Autore 
+In questa configurazione ogni libro associato a un singolo autore tramite un vincolo di integrità referenziale che collega l'attributo Autore alla relazione Scrittori 
+L'entità Scrittori a sua volta definita da Codice Cognome e Nome 
+Le informazioni sulla pubblicazione sono gestite dalla relazione Edizioni che include gli attributi Libro Editore Collana e Anno 
+Questa tabella stabilisce un collegamento sia con la relazione Libri tramite l'attributo Libro sia con la relazione Editori tramite l'attributo Editore 
+Infine l'entità Editori caratterizzata semplicemente da Nome e Città 

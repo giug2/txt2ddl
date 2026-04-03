@@ -1,0 +1,3 @@
+Mostrare lo schema concettuale di una base di dati per un insieme di università, secondo le seguenti specifiche.
+• Ogni università ha un nome, si trova in una regione (della quale interessa anche lo stato, con relativa sigla) e ha una serie di dipartimenti, ognuno dei quali ha un nome e un numero di aule.
+• Le università offrono corsi di laurea, per ognuno dei quali interessano il docente responsabile (con matricola, cognome, nome, data di assunzione), l'anno di istituzione e il dipartimento al quale afferisce (che si assume fisso: ogni corso di laurea appartiene a un dipartimento di un'università).

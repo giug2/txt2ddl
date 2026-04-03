@@ -1,0 +1,6 @@
+Lo schema descrive tre entità principali negozio marca e categoria 
+L'entità negozio identificata da un codice univoco e caratterizzata dagli attributi Nome Indirizzo e Piano 
+L'entità categoria definita da un codice e dal nome della Categoria stessa 
+Infine l'entità marca identificata dal codice e possiede un attributo Marca essa inoltre collegata a una categoria tramite il codice CC importante notare che in contesti specifici come i compiti B e D la struttura di queste entità subisce delle variazioni 
+In questi casi il negozio indicato come relazione R0 viene descritto unicamente da Nome e Indirizzo omettendo quindi l'attributo Piano 
+Allo stesso modo la marca indicata come relazione R1 viene arricchita con l'attributo Nazione risultando così definita da Marca Nazione e dal codice di categoria

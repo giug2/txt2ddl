@@ -1,0 +1,8 @@
+Il sistema descrive un universo musicale centrato sui brani ciascuno identificato da un codice univoco e caratterizzato da un titolo 
+Ogni brano associato a un autore stabilendo un legame diretto con l'entità dei compositori i quali sono a loro volta definiti da un codice identificativo un cognome e un nome 
+I brani musicali vengono organizzati all'intero di concerti che possiedono un proprio codice identificativo un titolo e una descrizione 
+La struttura specifica di ogni concerto dettagliata nella relazione Programmazione la quale associa un brano a un determinato concerto specificando la sua posizione nellordine di esecuzione tramite un valore intero Un concerto si concretizza in eventi specifici ognuno dei quali rappresenta una singola esecuzione in una certa data e a una precisa ora
+Ogni evento inoltre caratterizzato dallorchestra che lo esegue e dal teatro che lo ospita I teatri sono definiti da un codice e un nome mentre le orchestre sono identificate univocamente dal loro nome e possiedono una sede e un direttore 
+Le orchestre sono formate da musicisti ciascuno registrato con una matricola univoca un cognome e un nome
+L'appartenenza di un musicista a un'orchestra e lo strumento che suona al suo interno gestita dalla relazione Composizione che collega un musicista a unorchestra e allo strumento da lui utilizzato 
+Infine gli strumenti musicali sono un'entità a sé stante descritta da un codice identificativo un nome e un tipo

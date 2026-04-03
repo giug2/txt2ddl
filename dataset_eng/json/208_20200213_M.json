@@ -1,0 +1,177 @@
+{
+    "entities": [
+        {
+            "name": "Scene",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Title",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Screenwriter",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Film",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Title",
+                    "is_pk": false
+                },
+                {
+                    "name": "Director",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Projection",
+            "attributes": [
+                {
+                    "name": "Data",
+                    "is_pk": true
+                },
+                {
+                    "name": "Ora",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "HomeProduction",
+            "attributes": [
+                {
+                    "name": "Name",
+                    "is_pk": true
+                },
+                {
+                    "name": "Site",
+                    "is_pk": false
+                },
+                {
+                    "name": "Plot",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Cinema",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Participation",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Actor",
+            "attributes": [
+                {
+                    "name": "Freshman",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Role",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Screenwriter",
+            "entity2": "Scene",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Film",
+            "entity2": "Scene",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "ORDER",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Film",
+            "entity2": "Projection",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "HomeProduction",
+            "entity2": "Film",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Projection",
+            "entity2": "Cinema",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Participation",
+            "entity2": "HomeProduction",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Actor",
+            "entity2": "Participation",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Role",
+            "entity2": "Participation",
+            "cardinality": "1:N"
+        }
+    ]
+}

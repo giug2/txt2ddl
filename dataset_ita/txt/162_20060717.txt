@@ -1,0 +1,10 @@
+Il sistema descrive la gestione di una catena di ristoranti.
+Il fulcro del modello è rappresentato dai ristoranti, ciascuno identificato da un codice univoco e caratterizzato da un nome, un indirizzo e un numero di telefono.
+Ogni ristorante è situato in una specifica città e offre una selezione di piatti.
+Le città sono definite da un codice, un nome e il centro logistico di riferimento, mentre i centri logistici sono a loro volta entità con un proprio codice e nome.
+Per quanto riguarda l'offerta culinaria, ogni piatto è descritto da un codice, un nome e un prezzo associato.
+Collegato a ogni ristorante è possibile definire un menu speciale, specificandone il periodo di validità, il costo e il numero di portate previste.
+La logistica delle forniture è gestita attraverso le consegne, le quali collegano un fornitore, identificato da codice e nome, a un determinato centro logistico di destinazione.
+Infine, il modello prevede un sistema di offerte.
+Esistono diverse tipologie di promozione, ciascuna con un proprio codice e una descrizione.
+Una promozione effettiva viene applicata associando un tipo di promozione a un determinato ristorante, stabilendo per questa combinazione una precisa percentuale di sconto.

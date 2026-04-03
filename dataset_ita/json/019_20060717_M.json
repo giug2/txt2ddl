@@ -1,0 +1,143 @@
+{
+    "entities": [
+        {
+            "name": "Aeroporto",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Localit\u00e0",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "College",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Prezzo",
+                    "is_pk": false
+                },
+                {
+                    "name": "Telefono",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Tipo di Riduzione",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Citt\u00e0 di partenza",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Esame",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Costo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Soggiorno",
+            "attributes": [
+                {
+                    "name": "Periodo",
+                    "is_pk": true
+                },
+                {
+                    "name": "Indirizzo",
+                    "is_pk": false
+                },
+                {
+                    "name": "Ore",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Citt\u00e0 di partenza",
+            "entity2": "Aeroporto",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Aeroporto",
+            "entity2": "Localit\u00e0",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "College",
+            "entity2": "Localit\u00e0",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Tipo di Riduzione",
+            "entity2": "College",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "College",
+            "entity2": "Esame",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Soggiorno",
+            "entity2": "College",
+            "cardinality": "N:1"
+        }
+    ]
+}

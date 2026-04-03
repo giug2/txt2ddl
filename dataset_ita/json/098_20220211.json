@@ -1,0 +1,92 @@
+{
+  "entities": [
+    {
+      "name": "Museo",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Città",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Nazione",
+      "attributes": [
+        { "name": "Sigla", "is_pk": true },
+        { "name": "Nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Sala",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Nome", "is_pk": false },
+        { "name": "Dimensione", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Opera",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Titolo", "is_pk": false },
+        { "name": "Anno", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Autore",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Tipo",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Nome", "is_pk": false }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "Città",
+      "entity2": "Museo",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Museo",
+      "entity2": "Sala",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Nazione",
+      "entity2": "Città",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Nazione",
+      "entity2": "Autore",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Sala",
+      "entity2": "Opera",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Autore",
+      "entity2": "Opera",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Tipo",
+      "entity2": "Opera",
+      "cardinality": "1:N"
+    }
+  ]
+}

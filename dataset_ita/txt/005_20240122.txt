@@ -1,0 +1,6 @@
+- ogni manager opera presso uno e un solo dipartimento e collabora con uno o più assistenti
+• presso ogni dipartimento operano uno o più manager e ad esso afferiscono tutti e soli gli assistenti che collaborano con tali manager
+• ogni assistente collabora con uno e un solo manager e afferisce al dipartimento presso cui opera tale manager
+• ogni assistente e ogni manager hanno ciascuno una e una sola sede, ma la sede di un assistente non coincide necessariamente con quella del relativo manager;
+-per ogni sede ci possono essere più assistenti e più manager
+• si noti che il concetto di dipartimento è virtuale e non si parla di sede di un dipartimento

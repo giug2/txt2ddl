@@ -1,0 +1,4 @@
+• ogni motorizzazione può essere montata su più modelli;
+• ogni modello può avere più motorizzazioni e afferisce ad uno e un solo marchio;
+• ogni marchio appartiene ad una e una sola casa automobilistica;
+• ogni motorizzazione è disponibile solo per il marchio cui afferisce il modello su cui è montata e solo per la casa automobilistica cui il marchio appartiene.

@@ -1,0 +1,4 @@
+• Ogni collegio appartiene ad una regione ed è identificato da un numero, unico per la regione (quindi
+esistono i collegi “Lazio 1”, “Lazio 2” e “Lombardia 1”). Una regione ha un codice e un nome.
+• Ogni deputato viene eletto nelle liste di un partito: un solo partito in ogni elezione, ma in elezioni
+diverse i partiti potrebbero essere diversi. Un partito ha codice e nome.

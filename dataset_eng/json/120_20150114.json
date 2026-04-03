@@ -1,0 +1,69 @@
+{
+    "entities": [
+        {
+            "name": "College",
+            "attributes": [
+                {
+                    "name": "Number",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Region",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Elected",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Election",
+            "attributes": [
+                {
+                    "name": "Anno",
+                    "is_pk": true
+                },
+                {
+                    "name": "voters",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Persona",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "College",
+            "entity2": "Region",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "College",
+            "entity2": "Election",
+            "cardinality": "N:N"
+        }
+    ]
+}

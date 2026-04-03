@@ -1,0 +1,144 @@
+{
+    "entities": [
+        {
+            "name": "Universita",
+            "attributes": [
+                {
+                    "name": "Acronimo",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeCompleto",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Dipartimento",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_universita",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Sede",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CorsoDiLaurea",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Comune",
+            "attributes": [
+                {
+                    "name": "CodiceIstat",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Docente",
+            "attributes": [
+                {
+                    "name": "Matricola",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Facolta",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Dipartimento",
+            "entity2": "Universita",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "CorsoDiLaurea",
+            "entity2": "Dipartimento",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Docente",
+            "entity2": "Dipartimento",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Inquadramento",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Docente",
+            "entity2": "Comune",
+            "cardinality": "N:1",
+            "attributes": [
+                {
+                    "name": "Nascita",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Docente",
+            "entity2": "Comune",
+            "cardinality": "N:1",
+            "attributes": [
+                {
+                    "name": "Residenza",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Facolta",
+            "entity2": "CorsoDiLaurea",
+            "cardinality": "1:N"
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+Il sistema descrive la gestione della produzione di film e delle entità ad essa correlate.
+Ogni scena è identificata da un codice ed è caratterizzata da un titolo e da un autore.
+L'autore di una scena è un riferimento diretto a uno sceneggiatore, le cui informazioni come codice e nome sono gestite nell'entità Sceneggiatori.
+I film sono definiti da un codice, un titolo, una trama e sono prodotti da una specifica casa di produzione.
+Le case di produzione, a loro volta, sono identificate dal nome e possiedono attributi come la sede e il nome del regista, quest'ultimo rappresentato come una stringa.
+La relazione tra le scene e i film definisce quali scene compongono un film, specificando anche la loro posizione nell'ordine di apparizione tramite l'attributo ORDINE.
+Un film si concretizza in una o più proiezioni.
+L'entità Proiezioni collega infatti un film a un cinema specifico in una data e un'ora precise.
+I cinema sono registrati con un codice identificativo e un nome.
+Il cast artistico è rappresentato dall'entità Attori, dove ogni attore è identificato da una matricola e registrato con cognome e nome.
+La partecipazione di un attore a una produzione e il ruolo che interpreta sono definiti nell'entità Partecipazione, che associa un attore a una casa di produzione e a un ruolo specifico.
+Infine, i ruoli sono catalogati con un codice e un nome.

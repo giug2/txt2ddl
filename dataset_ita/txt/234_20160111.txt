@@ -1,0 +1,5 @@
+Mostrare uno schema concettuale per la base di dati utilizzata da una libreria per memorizzare le informazioni sui libri disponibili, con le seguenti specifiche
+• le opere letterarie sono tutte dello stesso editore;
+• ogni copia a magazzino ha un identificativo univoco, uno stato di conservazione, una data di acquisizione, un'opera letteraria di riferimento e una specifica edizione;
+• ogni opera letteraria ha un numero di volumi e un numero medio di pagine e appartiene a un genere, con un proprio codice e una descrizione;
+• ogni edizione ha una lingua (con codice e descrizione), un formato e un prezzo di copertina

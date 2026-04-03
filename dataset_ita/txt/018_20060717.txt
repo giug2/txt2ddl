@@ -1,0 +1,11 @@
+Il sistema si articola attorno al concetto di Località ciascuna identificata univocamente da un Codice e caratterizzata da un Nome .
+Ad ogni località sono associati un Esame specifico e un Aeroporto di riferimento .
+L'entità Esame a sua volta definita da un Codice un Nome e un Costo proprio,
+mentre gli Aeroporti sono descritti da un Codice e un Nome 
+La logistica dei trasporti gestita attraverso i Voli che collegano una CittDiPartenza identificata da CodiceCittDiPartenza a un Aeroporto di destinazione tramite CodiceAeroporto specificando per ciascuna tratta un Costo .
+Naturalmente ogni CittDiPartenza definita da un proprio Codice e Nome 
+In ogni Località possibile trovare uno o più College ciascuno registrato con un Codice univoco un Nome un Indirizzo, un recapito telefonico e un orario di attività Ore .
+Associato a ogni college vi la possibilità di un Soggiorno definito dal codice del college di riferimento CodiceCollege da un Periodo di permanenza e da un Costo specifico .
+Infine il sistema prevede un meccanismo di sconti .
+Esistono diverse tipologie di agevolazione catalogate nell'entità TipoDiRiduzione tramite un Codice e una Descrizione 
+La Riduzione effettiva viene applicata collegando un tipo di riduzione CodiceTipo a un determinato college CodiceCollege stabilendo così una Percentuale di sconto valida per quella specifica struttura

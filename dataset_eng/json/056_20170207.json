@@ -1,0 +1,90 @@
+{
+    "entities": [
+        {
+            "name": "Client",
+            "attributes": [
+                {
+                    "name": "client_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_department",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Project",
+            "attributes": [
+                {
+                    "name": "project_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_client",
+                    "is_pk": true
+                },
+                {
+                    "name": "project_name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Department",
+            "attributes": [
+                {
+                    "name": "department_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "department_name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Employee",
+            "attributes": [
+                {
+                    "name": "employee_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_department",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Employee",
+            "entity2": "Department",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Client",
+            "entity2": "Project",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Client",
+            "entity2": "Department",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Employee",
+            "entity2": "Project",
+            "cardinality": "N:N"
+        }
+    ]
+}

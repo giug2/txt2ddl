@@ -1,0 +1,13 @@
+The model describes an information system for hotel management starting from the geographical entity Fraction uniquely identified by a Code and characterized by a Name and an Altitude 
+Each hamlet can host one or more accommodation facilities 
+The Hotel entity defined by an identification code and a series of information attributes such as Name Address Category the number of Total Beds Telephone and Fax 
+The internal structure of a hotel specified by its composition in terms of rooms 
+For this purpose, the TipoCamera entity identified by a Code and a Description classifies the different types of rooms 
+The Composition relationship R1 connects a hotel to a room type by specifying in the Quantity attribute the number of rooms of that particular type present in the structure 
+In addition to the rooms, a hotel can offer various services modeled by the Service entity, which is also equipped with an identification code and a description. 
+The pricing system is dynamic and based on several factors 
+The Season entity identified by a Code and has a Description and a Periods attribute which for simplicity is assumed to be a textual string 
+The heart of the pricing mechanism is the Rate entity which, not having its own identifier but an external one, represents the basic amount that derives from the intersection between a hotel, a room type and a specific season 
+Alternatively, as suggested by the notes, this entity could be seen as a ternary relationship between the three entities mentioned 
+Finally, to manage further price adjustments, the TipoVariantePrezzo entity is present, identified by a Code and a Description 
+This is linked to a tariff through the VariazionePrezzo R2 relationship which applies a modification defined by the Percentage attribute

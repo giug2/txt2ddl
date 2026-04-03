@@ -1,0 +1,5 @@
+• per ogni location possono esistere più eventi, tenuti dallo stesso artista o da artisti diversi
+• ogni evento si svolge in una e una sola location, ha uno e un solo artista principale ed è parte di uno e un solo tour
+• ogni artista si esibisce in zero o più eventi
+• per ogni tour possono esistere più eventi in una data location, distinti con un progressivo che indica la “replica” (es.: Concerto a Milano, replica 1)
+• tutti gli eventi in una data location hanno la stessa scaletta di canzoni (una e una sola)

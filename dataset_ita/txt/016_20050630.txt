@@ -1,0 +1,10 @@
+Il sistema descrive la gestione di un Teatro identificato in modo univoco da un Codice e caratterizzato da attributi quali Nome Indirizzo e Telefono.
+All'interno della programmazione teatrale ogni OperaTeatrale definita da un Codice univoco un Titolo e lAnno di creazione 
+A ciascuna opera associato almeno un Autore anch'esso identificato da un Codice e descritto tramite Cognome Nome DataNascita e una DataMorte questultima opzionale 
+La messa in scena di un'opera in un specifico teatro gestita tramite l'entità OperaInCartellone che possiede un identificatore esterno e specifica il periodo di rappresentazione attraverso una DataIniziale e una DataFinale. 
+La struttura dei prezzi determinata da diverse componenti .
+Esistono differenti TipoPosto ciascuno con un proprio Codice e una Descrizione e diverse CategoriaSpettacolo anch'esse identificate da un Codice e una Descrizione.
+L'entità Prezzo dotata di un identificatore esterno stabilisce l'effettivo Importo basandosi sulla combinazione di un tipo di posto e una categoria di spettacolo.
+Infine il sistema prevede la possibilità di applicare sconti.
+Ogni TipoRiduzione identificato da un Codice e una Descrizione ad esempio per studenti o anziani.
+La relazione R1 denominata Riduzione associa a ciascun tipo di riduzione una specifica Percentuale di sconto

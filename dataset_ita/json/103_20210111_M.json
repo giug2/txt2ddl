@@ -1,0 +1,138 @@
+{
+    "entities": [
+        {
+            "name": "Negozio",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Tipo",
+            "attributes": [
+                {
+                    "name": "Sigla",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Prodotto",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_produttore",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Dipendente",
+            "attributes": [
+                {
+                    "name": "Matricola",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Indirizzo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Citt\u00e0",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Produttore",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Tipo",
+            "entity2": "Negozio",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Dipendente",
+            "entity2": "Negozio",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Prodotto",
+            "entity2": "Tipo",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Citt\u00e0",
+            "entity2": "Dipendente",
+            "cardinality": "1:N",
+            "attributes": [
+                {
+                    "name": "Nascita",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Dipendente",
+            "entity2": "Citt\u00e0",
+            "cardinality": "N:1",
+            "attributes": [
+                {
+                    "name": "Residente",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Prodotto",
+            "entity2": "Produttore",
+            "cardinality": "N:1"
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+- each main artist is associated with one and only one musical genre and collaborates with one or more supporting musicians
+• each musical genre is associated with one or more main artists and all and only the support musicians who collaborate with these artists belong to it
+• each support musician collaborates with one and only one main artist and belongs to the musical genre to which that artist is associated
+• each supporting musician and each main artist each have one and only one recording studio, but a supporting musician's studio does not necessarily coincide with that of its main artist;
+- for each recording studio there can be multiple support musicians and multiple main artists
+• note that the concept of musical genre is a classification and we are not talking about a recording studio of a musical genre

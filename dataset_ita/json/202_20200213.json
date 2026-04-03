@@ -1,0 +1,74 @@
+{
+    "entities": [
+        {
+            "name": "Attore",
+            "attributes": [
+                {
+                    "name": "id_attore",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_franchise",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Franchise",
+            "attributes": [
+                {
+                    "name": "id_franchise",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_casa_produzione",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Film",
+            "attributes": [
+                {
+                    "name": "id_film",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_franchise",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "CasaProduzione",
+            "attributes": [
+                {
+                    "name": "id_casa_produzione",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Franchise",
+            "entity2": "Attore",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Franchise",
+            "entity2": "Film",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "CasaProduzione",
+            "entity2": "Franchise",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Attore",
+            "entity2": "Film",
+            "cardinality": "N:N"
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+Define an Entity-Relationship schema that describes the data of interest in a certain academic year for a set of students and degree courses of a university, according to the following specifications:
+• each degree course has a code, a name, a affiliation (department and faculty, each with code and name), a year of activation and a type of degree (e.g. three-year)
+• every student
+– has an identifying number, a surname, a name, an average grade and a number of credits acquired
+– is enrolled in one and only one degree course
+– has one and only one “state” (identified with code and description; there is a predefined set of states, e.g. 'in progress', 'out of progress')

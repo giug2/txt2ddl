@@ -1,0 +1,9 @@
+Definire uno schema Entity-Relationship che descriva l'offerta formativa di un Ateneo secondo le specifiche seguenti, modificate e semplificate rispetto alla realtà:
+• l'offerta è articolata in facoltà e corsi di laurea
+• ogni facoltà ha un codice identificante e un nome; si conforma a zero o più direttive ministeriali; è composta da uno o più corsi di laurea
+• ogni direttiva ministeriale è un'indicazione fornita dal Ministero dell'Istruzione; per ogni direttiva interessano codice e titolo
+• ogni corso di laurea ha un ID progressivo, unico nell'ambito della facoltà, un nome e un costo annuale.
+• le agevolazioni economiche per i corsi di laurea provengono da diverse borse di studio (ad esempio borse di merito, per reddito, etc.)
+• per ogni corso di laurea si vuole tenere traccia del contributo economico offerto da ciascuna borsa di studio; ad esempio, si deve memorizzare il fatto che il corso di laurea in Ingegneria Informatica è agevolato per 3000 Euro dalla borsa di merito e per 2000 Euro dalla borsa regionale
+• ogni corso di laurea è a sua volta articolato in insegnamenti, ognuno dei quali ha un codice, un nome, un Dipartimento di riferimento (che lo coordina) e zero o più altri Dipartimenti che partecipano
+• per ogni Dipartimento sono di interesse codice e nome

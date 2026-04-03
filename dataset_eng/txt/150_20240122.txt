@@ -1,0 +1,5 @@
+- each professor teaches in one and only one department and is followed by one or more students;
+- the students followed by a professor are all and only those enrolled in the specific department in which the professor teaches;
+- each department is based on a single campus, one or more professors teach in a department and one or more students are enrolled in it;
+- there can be multiple departments on a campus;
+- each student is enrolled in one and only one department and their reference campus is that of their own department.

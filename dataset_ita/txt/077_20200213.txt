@@ -1,0 +1,8 @@
+• ogni corso di studio afferisce ad una e una sola scuola e presso di esso insegnano zero o più
+professori;
+• ogni professore appartiene ad una e una sola scuola, lavora presso uno e un solo dipartimento e
+insegna in zero o più corsi di studio (anche appartenenti a scuole diverse);
+• un dipartimento interagisce con tutte e sole le scuole cui appartengono i professori che lavorano
+presso di esso;
+• un dipartimento interagisce con tutti e soli i corsi di studio in cui insegnano i professori che
+lavorano presso di esso;

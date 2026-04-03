@@ -1,0 +1,169 @@
+{
+    "entities": [
+        {
+            "name": "Opera on the billboard",
+            "attributes": [
+                {
+                    "name": "id_opera_in_billboard",
+                    "is_pk": true
+                },
+                {
+                    "name": "Final date",
+                    "is_pk": false
+                },
+                {
+                    "name": "Initial date",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Play",
+            "attributes": [
+                {
+                    "name": "id_opera_theatrical",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "year of creation",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Author",
+            "attributes": [
+                {
+                    "name": "author_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Title",
+                    "is_pk": false
+                },
+                {
+                    "name": "Date of birth",
+                    "is_pk": false
+                },
+                {
+                    "name": "Date of death",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Theater",
+            "attributes": [
+                {
+                    "name": "theatre_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                },
+                {
+                    "name": "address",
+                    "is_pk": false
+                },
+                {
+                    "name": "telephone",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Reduction type",
+            "attributes": [
+                {
+                    "name": "reduction_type_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Prezzo",
+            "attributes": [
+                {
+                    "name": "price_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Entertainment category",
+            "attributes": [
+                {
+                    "name": "show_category_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Place type",
+            "attributes": [
+                {
+                    "name": "seat_type_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Opera on the billboard",
+            "entity2": "Play",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Play",
+            "entity2": "Author",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Opera on the billboard",
+            "entity2": "Theater",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Reduction type",
+            "entity2": "Theater",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Theater",
+            "entity2": "Prezzo",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Prezzo",
+            "entity2": "Entertainment category",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Place type",
+            "entity2": "Prezzo",
+            "cardinality": "1:N"
+        }
+    ]
+}

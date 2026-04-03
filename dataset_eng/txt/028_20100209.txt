@@ -1,0 +1,14 @@
+the number uniquely identifies the current account;
+• owner and address can be considered as simple character strings, without further modeling;
+• the account statements all relate to a certain period, which is of no interest; therefore only one extract is produced
+account for each current account; the initial balance is a stored value; the final balance is obtained as a sum
+of the initial balance and movements;
+• for each movement listed in the list it can be assumed (and it is recommended to do so) that it is stored in the base of
+given a unique code that identifies it (completely; for example, each of the eight movements shown
+in the figure it has a different code);
+• in the list of movements,
+– the “Movement Type” column contains a text that depends on the value contained in the “IdT” column (yes
+note for example that “05” always corresponds to “ATM withdrawal” and “43” to “POS payment”); so
+“IdT” is a code that identifies “Movement Type;”
+– the “Detail” column instead contains free text, which is associated with the specific movement and goes
+considered independent from “IdT” and “Tipo Movimento.”

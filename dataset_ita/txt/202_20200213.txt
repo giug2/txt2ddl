@@ -1,0 +1,5 @@
+• ogni attore è legato a uno e un solo franchise;
+• ogni attore recita in tutti e soli i film del franchise a cui è legato;
+• ogni film appartiene a uno e un solo franchise e in esso recitano tutti e soli gli attori legati a quel franchise;
+• ogni franchise appartiene a una e una sola casa di produzione;
+• ogni attore lavora esclusivamente per la casa di produzione a cui appartiene il franchise di cui fa parte.

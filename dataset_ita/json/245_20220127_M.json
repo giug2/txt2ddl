@@ -1,0 +1,89 @@
+{
+    "entities": [
+        {
+            "name": "INFERMIERE",
+            "attributes": [
+                {
+                    "name": "id_infermiere",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "cognome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "DOTTORE",
+            "attributes": [
+                {
+                    "name": "id_dottore",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "cognome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "OSPEDALE",
+            "attributes": [
+                {
+                    "name": "id_ospedale",
+                    "is_pk": true
+                },
+                {
+                    "name": "piano",
+                    "is_pk": false
+                },
+                {
+                    "name": "citta",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "REPARTO",
+            "attributes": [
+                {
+                    "name": "id_reparto",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_ospedale",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome_reparto",
+                    "is_pk": false
+                },
+                {
+                    "name": "indirizzo",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Ospedale",
+            "entity2": "Reparto",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Reparto",
+            "entity2": "Infermire",
+            "entity3": "Dottore",
+            "cardinality": "N:N:N"
+        }
+    ]
+}

@@ -1,0 +1,177 @@
+{
+    "entities": [
+        {
+            "name": "Scena",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Titolo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Sceneggiatore",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Film",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Titolo",
+                    "is_pk": false
+                },
+                {
+                    "name": "Trama",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Proiezione",
+            "attributes": [
+                {
+                    "name": "Data",
+                    "is_pk": true
+                },
+                {
+                    "name": "Ora",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CasaProduzione",
+            "attributes": [
+                {
+                    "name": "Nome",
+                    "is_pk": true
+                },
+                {
+                    "name": "Sede",
+                    "is_pk": false
+                },
+                {
+                    "name": "Regista",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Cinema",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Partecipazione",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Attore",
+            "attributes": [
+                {
+                    "name": "Matricola",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Ruolo",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Sceneggiatore",
+            "entity2": "Scena",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Film",
+            "entity2": "Scena",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "ORDINE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Proiezione",
+            "entity2": "Film",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "CasaProduzione",
+            "entity2": "Film",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Cinema",
+            "entity2": "Proiezione",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Partecipazione",
+            "entity2": "CasaProduzione",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Partecipazione",
+            "entity2": "Attore",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Ruolo",
+            "entity2": "Partecipazione",
+            "cardinality": "1:N"
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+Define an Entity-Relationship schema that describes the data of an application relating to the archive of a condominium administrator, according to the following specifications.
+Each condominium has a name (which identifies it) and an address and includes a set of apartments grouped by "stairs".
+Each staircase is identified by a code and the condominium it belongs to. 
+Each apartment is identified, in the respective condominium, by the scale and by a number (the "internal").
+Each apartment is associated with "thousandths" (which indicate the fraction of the condominium it is
+owned by the owner of the apartment) and an owner and a tenant (who can
+coincide), each with scale code, surname and name.
+Indicate the cardinalities of the relationships and an identifier for each entity.

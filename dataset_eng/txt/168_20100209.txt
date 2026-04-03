@@ -1,0 +1,2 @@
+one or more employees are associated with each project; 
+each employee can be assigned to multiple projects and can have a different role for each;

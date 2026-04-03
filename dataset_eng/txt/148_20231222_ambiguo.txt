@@ -1,0 +1,9 @@
+So, basically everything here is organized on a geographical level, let's say. There are regions, each with its own code and name, and within each region you will find a few provinces, identified by an acronym. Scattered throughout these provinces are our warehouses, each with its own address and code to avoid confusion. These warehouses are fundamental, because they are the places from which the goods depart and where they arrive, in short, each route connects two of these points.
+
+The couriers take care of moving the stuff, each with its own company name and ID. Usually, a courier works in a certain region and handles quite a few routes; each route, in fact, is linked to a specific courier, it's not like anyone can do it. Each path has its own code to be recognized.
+
+Then there are the means. We have different categories of vehicles, such as "van" or "truck", and for each category we have the list of actual vehicles, each with its license plate. For each route, the use of a certain type of vehicle is usually expected.
+
+Planning works more or less like this: we take the days of the week, which are numbered and have a name, and for each route and for each day you work, there is a scheduled service. This service is nothing more than a program that tells you what time you should leave and what time you should arrive. Therefore, the Milan-Rome route on Monday is one service, that on Tuesday is another, and so on.
+
+In the end, however, what matters is what really happens. For each service we have scheduled, we keep track of the actual shipments that occur on a specific date. So, for the Monday service, we will have the shipment on the 10th, then the one on the 17th, and so on. For each of these real expeditions, we note down the actual departure and arrival times, which may not be the expected ones, and obviously we also note which specific vehicle, with its license plate, made the trip.

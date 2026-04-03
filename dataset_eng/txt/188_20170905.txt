@@ -1,0 +1,5 @@
+Define an Entity-Relationship schema that describes the data of interest for a set of sports teams, according to the following specifications:
+• each team has a name, a location (city and country, each with code and name) and a date of foundation
+• the members of the teams (the squad) vary from season to season and it is important to keep track of the squad for each season (for example, knowing that Mario Rossi plays for team XY in the 2015/16 and 2017/18 seasons, but not in 2016/17); the same player can play in multiple teams, even in the same season
+• each player (member of a team) has an identification code, a surname, a name and comes from a youth club
+• every youth club has a code and a name

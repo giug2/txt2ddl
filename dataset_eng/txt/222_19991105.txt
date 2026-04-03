@@ -1,0 +1,3 @@
+- each course has one and only one lecturer
+- each course is attended by zero or more students
+- each course is held in one or more classrooms

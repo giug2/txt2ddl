@@ -1,0 +1,2 @@
+• Each shelf belongs to a warehouse and is identified by a code, unique to that warehouse (therefore there are the shelves “Magazzino Milano A1”, “Magazzino Milano A2” and “Magazzino Roma B1”). A warehouse has a code and an address.
+• For each inventory (uniquely identified by the date), the date itself and the total number of items counted are of interest.

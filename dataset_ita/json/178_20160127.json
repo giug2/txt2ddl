@@ -1,0 +1,63 @@
+{
+    "entities": [
+        {
+            "name": "Studente",
+            "attributes": [
+                {
+                    "name": "Matricola",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeStudente",
+                    "is_pk": false
+                },
+                {
+                    "name": "Indirizzo",
+                    "is_pk": false
+                },
+                {
+                    "name": "AnnoDiCorso",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CorsoDiLaurea",
+            "attributes": [
+                {
+                    "name": "CodiceCorso",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeCorso",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Dipartimento",
+            "attributes": [
+                {
+                    "name": "CodiceDipartimento",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeDipartimento",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "CorsoDiLaurea",
+            "entity2": "Studente",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Dipartimento",
+            "entity2": "CorsoDiLaurea",
+            "cardinality": "1:N"
+        }
+    ]
+}

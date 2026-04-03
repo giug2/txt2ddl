@@ -1,0 +1,121 @@
+{
+    "entities": [
+        {
+            "name": "Writer",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Book",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Title",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Type",
+            "attributes": [
+                {
+                    "name": "SiglaGenere",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Edition",
+            "attributes": [
+                {
+                    "name": "fk_book",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_editor",
+                    "is_pk": true
+                },
+                {
+                    "name": "Anno",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Necklace",
+            "attributes": [
+                {
+                    "name": "SiglaCollana",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Publisher",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "City",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Writer",
+            "entity2": "Book",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Type",
+            "entity2": "Book",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Book",
+            "entity2": "Edition",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Necklace",
+            "entity2": "Edition",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Publisher",
+            "entity2": "Edition",
+            "cardinality": "1:N"
+        }
+    ]
+}

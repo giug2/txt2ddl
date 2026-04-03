@@ -1,0 +1,157 @@
+{
+    "entities": [
+        {
+            "name": "Pezzo",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Ora",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Musicista",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Concerto",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Titolo",
+                    "is_pk": false
+                },
+                {
+                    "name": "Descrizione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Replica",
+            "attributes": [
+                {
+                    "name": "Data",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_concerto",
+                    "is_pk": true
+                },
+                {
+                    "name": "Titolo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Orchestra",
+            "attributes": [
+                {
+                    "name": "Nome",
+                    "is_pk": true
+                },
+                {
+                    "name": "Anno di Fondazione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Partecipazione",
+            "attributes": [
+                {
+                    "name": "fk_orchestrale",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_orchestra",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Orchestrale",
+            "attributes": [
+                {
+                    "name": "Matricola",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Strumento",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Pezzo",
+            "entity2": "Musicista",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Concerto",
+            "entity2": "Pezzo",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Concerto",
+            "entity2": "Replica",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Concerto",
+            "entity2": "Orchestra",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Orchestra",
+            "entity2": "Partecipazione",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Partecipazione",
+            "entity2": "Orchestrale",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Partecipazione",
+            "entity2": "Strumento",
+            "cardinality": "N:1"
+        }
+    ]
+}

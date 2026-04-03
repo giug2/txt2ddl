@@ -1,0 +1,131 @@
+{
+    "entities": [
+        {
+            "name": "ARTIST",
+            "attributes": [
+                {
+                    "name": "ARTIST_ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "SURNAME",
+                    "is_pk": false
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                },
+                {
+                    "name": "BIRTH_DATE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "STUDIO_PRODUCTION",
+            "attributes": [
+                {
+                    "name": "ID_STUDIO",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "FILM",
+            "attributes": [
+                {
+                    "name": "ISAN",
+                    "is_pk": true
+                },
+                {
+                    "name": "TITLE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "DISTRIBUTOR",
+            "attributes": [
+                {
+                    "name": "DISTRIBUTOR_ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "PHYSICAL_SUPPORT",
+            "attributes": [
+                {
+                    "name": "COPY_CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "ENTRY_DATE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CUSTOMER",
+            "attributes": [
+                {
+                    "name": "CUSTOMER_ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "SURNAME",
+                    "is_pk": false
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                },
+                {
+                    "name": "TELEPHONE",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "STUDIO_PRODUCTION",
+            "entity2": "ARTIST",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "FILM",
+            "entity2": "ARTIST",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "DISTRIBUTOR",
+            "entity2": "FILM",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "PHYSICAL_SUPPORT",
+            "entity2": "FILM",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "CUSTOMER",
+            "entity2": "PHYSICAL_SUPPORT",
+            "cardinality": "1:N",
+            "attributes": [
+                {
+                    "name": "RENTAL_EXPIRY_DATE",
+                    "is_pk": false
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,143 @@
+{
+    "entities": [
+        {
+            "name": "Courier",
+            "attributes": [
+                {
+                    "name": "IDCorriere",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeCompagnia",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Geographic Area",
+            "attributes": [
+                {
+                    "name": "Idar",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeArea",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Warehouse",
+            "attributes": [
+                {
+                    "name": "WarehouseID",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeSede",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Supplier",
+            "attributes": [
+                {
+                    "name": "SupplierID",
+                    "is_pk": true
+                },
+                {
+                    "name": "Company Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "CostoMedioFornitura",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Product",
+            "attributes": [
+                {
+                    "name": "SKU",
+                    "is_pk": true
+                },
+                {
+                    "name": "ProductName",
+                    "is_pk": false
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                },
+                {
+                    "name": "ContactSupport",
+                    "is_pk": false
+                },
+                {
+                    "name": "Availability",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "VarianteProdotto",
+            "attributes": [
+                {
+                    "name": "VariantCode",
+                    "is_pk": true
+                },
+                {
+                    "name": "PriceSale",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Promotion",
+            "attributes": [
+                {
+                    "name": "PromotionID",
+                    "is_pk": true
+                },
+                {
+                    "name": "PromotionName",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Courier",
+            "entity2": "Geographic Area",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Courier",
+            "entity2": "Warehouse",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Warehouse",
+            "entity2": "Supplier",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Warehouse",
+            "entity2": "Product",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Product",
+            "entity2": "VarianteProdotto",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Product",
+            "entity2": "Promotion",
+            "cardinality": "N:N"
+        }
+    ]
+}

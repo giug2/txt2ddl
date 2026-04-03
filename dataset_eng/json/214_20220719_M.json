@@ -1,0 +1,185 @@
+{
+    "entities": [
+        {
+            "name": "Functionality",
+            "attributes": [
+                {
+                    "name": "ID_Feature",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Customer",
+            "attributes": [
+                {
+                    "name": "Customer_ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Project",
+            "attributes": [
+                {
+                    "name": "Project_ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Category",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Sprint",
+            "attributes": [
+                {
+                    "name": "Data_Fine",
+                    "is_pk": true
+                },
+                {
+                    "name": "term",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Team",
+            "attributes": [
+                {
+                    "name": "Name",
+                    "is_pk": true
+                },
+                {
+                    "name": "Office",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Platform",
+            "attributes": [
+                {
+                    "name": "Platform_ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Developer",
+            "attributes": [
+                {
+                    "name": "Freshman",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Technology",
+            "attributes": [
+                {
+                    "name": "ID_Technology",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Assignment",
+            "attributes": [
+                {
+                    "name": "Assignment_ID",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Customer",
+            "entity2": "Functionality",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Project",
+            "entity2": "Functionality",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Sprint",
+            "entity2": "Project",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Platform",
+            "entity2": "Project",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Team",
+            "entity2": "Project",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Developer",
+            "entity2": "Team",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Team",
+            "entity2": "Assignment",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Developer",
+            "entity2": "Assignment",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Technology",
+            "entity2": "Assignment",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Assignment",
+            "entity2": "Assignment",
+            "cardinality": "1:N"
+        }
+    ]
+}

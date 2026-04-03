@@ -1,0 +1,10 @@
+The system manages a catalog of books, where each book is identified by a unique ISBN code and described by a title, the number of copies available and its year of publication.
+Each book belongs to a specific literary genre and is associated with a specific publisher.
+Genres are in turn defined by an ID and genre name, while each publisher is registered with its own ID and name.
+There are constraints that guarantee data consistency, ensuring that the genre and publisher assigned to a book actually exist in the respective records.
+The system also tracks library users, each registered with a membership number, full name and address.
+A user can make loans, each characterized by an identifying ID, a date and a status (e.g. 'active', 'repaid').
+Again, a constraint ensures that each loan is linked to a validly registered user.
+A loan detail structure is used to detail the contents of a loan.
+Each detail relates a loan to a single book, specifying which volume was taken.
+Special constraints guarantee that both the loan and the book to which each detail refers are present and valid within the system.

@@ -1,0 +1,5 @@
+Le entità Modelli e Persone rimangono concettualmente identiche al primo schema 
+Tuttavia le Case Costruttrici sono collegate a una nuova entità Nazioni che associa una SiglaNazione a un Nome esteso 
+Viene inoltre introdotta l'entità Versioni per dettagliare ulteriormente i modelli ogni versione legata a una coppia CasaModello identificata da un proprio CodiceVersione e ha una specifica Cilindrata 
+Di conseguenza l'entità Automobili sempre identificata dalla Targa e con un Anno di produzione non si collega più direttamente al modello ma a una sua specifica variante tramite un riferimento composito a Casa Modello e Versione 
+Infine la relazione di proprietà viene modellata in modo più esplicito attraverso l'entità Acquisto che collega un'Auto tramite riferimento all'entità Automobili a un Acquirente con riferimento all'entità Persone registrando anche la Data della transazione

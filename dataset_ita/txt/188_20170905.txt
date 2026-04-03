@@ -1,0 +1,5 @@
+Definire uno schema Entity-Relationship che descriva i dati di interesse per un insieme di squadre sportive, secondo le seguenti specifiche:
+• ogni squadra ha un nome, una sede (città e nazione, ciascuna con codice e nome) e una data di fondazione
+• i componenti delle squadre (la rosa) variano di stagione in stagione ed è importante tenere traccia della rosa per ciascuna stagione (ad esempio, sapere che Mario Rossi gioca per la squadra XY nella stagione 2015/16 e 2017/18, ma non nel 2016/17); uno stesso giocatore può militare in più squadre, anche nella stessa stagione
+• ogni giocatore (componente di una squadra), ha un codice identificativo, un cognome, un nome e proviene da una società giovanile
+• ogni società giovanile ha un codice e un nome

@@ -1,0 +1,45 @@
+{
+  "entities": [
+    {
+      "name": "Conto corrente",
+      "attributes": [
+        {
+          "name": "Numero",
+          "is_pk": true
+        }
+      ]
+    },
+    {
+      "name": "Cliente",
+      "attributes": [
+        {
+          "name": "C.F.",
+          "is_pk": true
+        },
+        {
+          "name": "Cognome",
+          "is_pk": false
+        },
+        {
+          "name": "Nome",
+          "is_pk": false
+        },
+        {
+          "name": "Data Nascita",
+          "is_pk": false
+        },
+        {
+          "name": "Indirizzo",
+          "is_pk": false
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "Cliente",
+      "entity2": "Conto corrente",
+      "cardinality": "1:N"
+    }
+  ]
+}

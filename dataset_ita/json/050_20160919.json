@@ -1,0 +1,99 @@
+{
+  "entities": [
+    {
+      "name": "PROFESSORE",
+      "attributes": [
+        {
+          "name": "id_profESSORE",
+          "is_pk": true
+        },
+        {
+          "name": "dati anagrafici",
+          "is_pk": false
+        }
+      ]
+    },
+    {
+      "name": "CORSO",
+      "attributes": [
+        {
+          "name": "canale",
+          "is_pk": true
+        },
+        {
+          "name": "fk_corso_di_studio",
+          "is_pk": true
+        },
+        {
+          "name": "fk_materia",
+          "is_pk": true
+        },
+        {
+          "name": "nome_corso",
+          "is_pk": false
+        }
+      ]
+    },
+    {
+      "name": "CORSO DI STUDIO",
+      "attributes": [
+        {
+          "name": "id_corso_di_studio",
+          "is_pk": true
+        },
+        {
+          "name": "nome_corso_di_studio",
+          "is_pk": false
+        }
+      ]
+    },
+    {
+      "name": "MATERIA",
+      "attributes": [
+        {
+          "name": "id_materia",
+          "is_pk": true
+        },
+        {
+          "name": "nome_materia",
+          "is_pk": false
+        }
+      ]
+    },
+    {
+      "name": "TESTO",
+      "attributes": [
+        {
+          "name": "id_testo",
+          "is_pk": true
+        },
+        {
+          "name": "titolo",
+          "is_pk": false
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "PROFESSORE",
+      "entity2": "CORSO",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "CORSO DI STUDIO",
+      "entity2": "CORSO",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "MATERIA",
+      "entity2": "CORSO",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "MATERIA",
+      "entity2": "TESTO",
+      "cardinality": "1:N"
+    }
+  ]
+}

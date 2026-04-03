@@ -1,0 +1,147 @@
+{
+    "entities": [
+        {
+            "name": "Filiale",
+            "attributes": [
+                {
+                    "name": "pk_filiale",
+                    "is_pk": true
+                },
+                {
+                    "name": "citta",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Veicolo",
+            "attributes": [
+                {
+                    "name": "pk_veicolo",
+                    "is_pk": true
+                },
+                {
+                    "name": "modello",
+                    "is_pk": false
+                },
+                {
+                    "name": "targa",
+                    "is_pk": false
+                },
+                {
+                    "name": "segmento",
+                    "is_pk": false
+                },
+                {
+                    "name": "Numero Posti",
+                    "is_pk": false
+                },
+                {
+                    "name": "anno_immatricolazione",
+                    "is_pk": false
+                },
+                {
+                    "name": "motorizzazione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Tipo Allestimento",
+            "attributes": [
+                {
+                    "name": "pk_tipo_allestimento",
+                    "is_pk": true
+                },
+                {
+                    "name": "descrizione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "TipoPromozione",
+            "attributes": [
+                {
+                    "name": "pk_tipo_promozione",
+                    "is_pk": true
+                },
+                {
+                    "name": "descrizione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "TariffaNoleggio",
+            "attributes": [
+                {
+                    "name": "pk_tariffa_noleggio",
+                    "is_pk": true
+                },
+                {
+                    "name": "importo_giornaliero",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "ServizioAggiuntivo",
+            "attributes": [
+                {
+                    "name": "pk_servizio_aggiuntivo",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Periodo",
+            "attributes": [
+                {
+                    "name": "pk_periodo",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Filiale",
+            "entity2": "Veicolo",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Veicolo",
+            "entity2": "Tipo Allestimento",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Veicolo",
+            "entity2": "TipoPromozione",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Veicolo",
+            "entity2": "TariffaNoleggio",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Periodo",
+            "entity2": "TariffaNoleggio",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "ServizioAggiuntivo",
+            "entity2": "TariffaNoleggio",
+            "cardinality": "1:N"
+        }
+    ]
+}

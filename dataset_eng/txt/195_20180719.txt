@@ -1,0 +1,2 @@
+• Each warehouse has a name, is located in a city (of which the country is also of interest, with its acronym) and has a series of shelves, each of which has a code and a capacity.
+• The warehouses store products, for each of which the supplier is of interest (with ID, company name, VAT number and country of origin), the year of production and the shelf in which it is placed (which is assumed to be fixed: each product is located on a shelf in a warehouse).

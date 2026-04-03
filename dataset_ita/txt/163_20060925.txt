@@ -1,0 +1,5 @@
+Mostrare lo schema concettuale di una base di dati per l'organizzazione di festival musicali, secondo le seguenti specifiche.
+• L'organizzazione gestisce una serie di palchi, ognuno dei quali ha un nome e una capacità.
+• Un festival ha un nome, una data di inizio e una data di fine.
+• In ogni festival si esibiscono diversi artisti e uno stesso artista può partecipare a più festival.
+• Per ogni artista si rappresenta il genere musicale, l'anno di formazione, e il palco sul quale si esibisce (che può cambiare in festival diversi).

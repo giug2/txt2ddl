@@ -1,0 +1,4 @@
+• Ogni collegio appartiene ad una regione ed è identificato da un numero, unico per la regione (quindi
+esistono i collegi “Lazio 1”, “Lazio 2” e “Lombardia 1”). Una regione ha un codice e un nome.
+• Per ogni elezione (al massimo una all’anno, come detto sopra), sono di interesse la data e il numero
+complessivo di votanti.

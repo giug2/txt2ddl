@@ -1,0 +1,113 @@
+{
+    "entities": [
+        {
+            "name": "UNIVERSITA",
+            "attributes": [
+                {
+                    "name": "CODICE_ATENEO",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "REGIONE",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "STATO",
+            "attributes": [
+                {
+                    "name": "SIGLA",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "DIPARTIMENTO",
+            "attributes": [
+                {
+                    "name": "NOME",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_universita",
+                    "is_pk": true
+                },
+                {
+                    "name": "NUMERO_AULE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CORSO DI LAUREA",
+            "attributes": [
+                {
+                    "name": "CODICE_CORSO",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME_CORSO",
+                    "is_pk": false
+                },
+                {
+                    "name": "ANNO_ISTITUZIONE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "DOCENTE",
+            "attributes": [
+                {
+                    "name": "MATRICOLA",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "REGIONE",
+            "entity2": "UNIVERSITA",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "STATO",
+            "entity2": "REGIONE",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "UNIVERSITA",
+            "entity2": "DIPARTIMENTO",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "DIPARTIMENTO",
+            "entity2": "CORSO DI LAUREA",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "DOCENTE",
+            "entity2": "CORSO DI LAUREA",
+            "cardinality": "1:N"
+        }
+    ]
+}

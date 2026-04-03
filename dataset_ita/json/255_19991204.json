@@ -1,0 +1,135 @@
+{
+    "entities": [
+        {
+            "name": "CasaEditrice",
+            "attributes": [
+                {
+                    "name": "CodiceEditore",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Lingua",
+            "attributes": [
+                {
+                    "name": "CodiceLingua",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Collana",
+            "attributes": [
+                {
+                    "name": "NomeCollana",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_editore",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "CopiaFisica",
+            "attributes": [
+                {
+                    "name": "CodiceInventario",
+                    "is_pk": true
+                },
+                {
+                    "name": "AnnoStampa",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Utente",
+            "attributes": [
+                {
+                    "name": "CodiceUtente",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Edizione",
+            "attributes": [
+                {
+                    "name": "CodiceEdizione",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_collana",
+                    "is_pk": true
+                },
+                {
+                    "name": "NumeroPagine",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Genere",
+            "attributes": [
+                {
+                    "name": "CodiceGenere",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Lingua",
+            "entity2": "CasaEditrice",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "CasaEditrice",
+            "entity2": "Collana",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Utente",
+            "entity2": "CopiaFisica",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Edizione",
+            "entity2": "CopiaFisica",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Collana",
+            "entity2": "Edizione",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Genere",
+            "entity2": "Collana",
+            "cardinality": "1:N"
+        }
+    ]
+}

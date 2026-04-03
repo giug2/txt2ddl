@@ -1,0 +1,111 @@
+{
+    "entities": [
+        {
+            "name": "Faculty",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Degree Course",
+            "attributes": [
+                {
+                    "name": "Sail",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_idfacolta",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Lesson",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Hours",
+                    "is_pk": false
+                },
+                {
+                    "name": "term",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Materia",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "DayOfTheWeek",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Title",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Degree Course",
+            "entity2": "Faculty",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Materia",
+            "entity2": "Degree Course",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "CourseYear",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Degree Course",
+            "entity2": "Lesson",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "DayOfTheWeek",
+            "entity2": "Lesson",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Classroom capacity",
+                    "is_pk": false
+                }
+            ]
+        }
+    ]
+}

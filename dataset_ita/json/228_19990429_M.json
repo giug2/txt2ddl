@@ -1,0 +1,127 @@
+{
+    "entities": [
+        {
+            "name": "Prodotto",
+            "attributes": [
+                {
+                    "name": "SKU",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_sottocategoria",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Lotto",
+            "attributes": [
+                {
+                    "name": "CodiceLotto",
+                    "is_pk": true
+                },
+                {
+                    "name": "Quantita",
+                    "is_pk": false
+                },
+                {
+                    "name": "DataProduzione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Fornitore",
+            "attributes": [
+                {
+                    "name": "PartitaIVA",
+                    "is_pk": true
+                },
+                {
+                    "name": "Indirizzo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Magazzino",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "RagioneSociale",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Sottocategoria",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_categoria",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Categoria",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Prodotto",
+            "entity2": "Prodotto",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Lotto",
+            "entity2": "Prodotto",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Fornitore",
+            "entity2": "Lotto",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Sottocategoria",
+            "entity2": "Prodotto",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Magazzino",
+            "entity2": "Fornitore",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Sottocategoria",
+            "entity2": "Categoria",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Fornitore",
+            "entity2": "Categoria",
+            "cardinality": "N:1"
+        }
+    ]
+}

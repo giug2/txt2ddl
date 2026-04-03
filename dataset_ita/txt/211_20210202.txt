@@ -1,0 +1,4 @@
+• ogni esame viene sostenuto da uno studente; ogni esame ha un codice di verbalizzazione (IDVerbalizzazione), univoco fra gli esami di quello studente, una data e un voto
+• ogni studente ha una matricola e un nome ed è iscritto ad un Corso di Laurea
+• ogni Corso di Laurea appartiene ad un Dipartimento, ha un codice (CodiceCorso) che lo identifica in modo univoco e ha una sede didattica
+• ogni Dipartimento ha un identificatore (CodiceDipartimento) e un nome

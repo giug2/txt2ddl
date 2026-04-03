@@ -1,0 +1,169 @@
+{
+    "entities": [
+        {
+            "name": "Sessione Corso",
+            "attributes": [
+                {
+                    "name": "id_sessione_corso",
+                    "is_pk": true
+                },
+                {
+                    "name": "Data fine",
+                    "is_pk": false
+                },
+                {
+                    "name": "Data inizio",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Corso",
+            "attributes": [
+                {
+                    "name": "id_corso",
+                    "is_pk": true
+                },
+                {
+                    "name": "Titolo",
+                    "is_pk": false
+                },
+                {
+                    "name": "anno_pubblicazione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Docente",
+            "attributes": [
+                {
+                    "name": "id_docente",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Data di nascita",
+                    "is_pk": false
+                },
+                {
+                    "name": "Data di ritiro",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Piattaforma E-learning",
+            "attributes": [
+                {
+                    "name": "id_piattaforma",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "url_sito",
+                    "is_pk": false
+                },
+                {
+                    "name": "contatto_supporto",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Tipo Sconto",
+            "attributes": [
+                {
+                    "name": "id_tipo_sconto",
+                    "is_pk": true
+                },
+                {
+                    "name": "descrizione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Tariffa",
+            "attributes": [
+                {
+                    "name": "id_tariffa",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Livello Accesso",
+            "attributes": [
+                {
+                    "name": "id_livello_accesso",
+                    "is_pk": true
+                },
+                {
+                    "name": "Descrizione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Tipo Iscrizione",
+            "attributes": [
+                {
+                    "name": "id_tipo_iscrizione",
+                    "is_pk": true
+                },
+                {
+                    "name": "Descrizione",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Corso",
+            "entity2": "Sessione Corso",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Docente",
+            "entity2": "Corso",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Piattaforma E-learning",
+            "entity2": "Sessione Corso",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Piattaforma E-learning",
+            "entity2": "Tipo Sconto",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Piattaforma E-learning",
+            "entity2": "Tariffa",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Livello Accesso",
+            "entity2": "Tariffa",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Tipo Iscrizione",
+            "entity2": "Tariffa",
+            "cardinality": "1:N"
+        }
+    ]
+}

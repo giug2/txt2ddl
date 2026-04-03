@@ -1,0 +1,65 @@
+{
+    "entities": [
+        {
+            "name": "MANAGER",
+            "attributes": [
+                {
+                    "name": "id_manager",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "DEPARTMENT",
+            "attributes": [
+                {
+                    "name": "department_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_sede",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "ASSISTANT",
+            "attributes": [
+                {
+                    "name": "assistant_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_department",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "SITE",
+            "attributes": [
+                {
+                    "name": "id_sede",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Department",
+            "entity2": "Site",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Assistant",
+            "entity2": "Department",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Department",
+            "entity2": "Manager",
+            "cardinality": "N:N"
+        }
+    ]
+}

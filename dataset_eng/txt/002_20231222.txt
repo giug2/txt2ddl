@@ -1,0 +1,12 @@
+The system describes an air traffic domain organized around several interconnected entities 
+The fundamental entities are the Nations, each uniquely identified by a code and characterized by a name 
+The airlines are connected to these, each defined by its own code, a name and a direct reference to the country to which it belongs 
+The geographical context further detailed by the cities also identified by a code and a name and for each of which the nation to which they belong is of interest 
+The cities host the Airports, each specified by an identification code, a name and a link with the city in which it is located 
+The heart of the model is represented by Flights understood as scheduled air routes 
+A flight uniquely identified by the pair of attributes formed by the company operating it and its flight number 
+For each flight, the departure and arrival airport are recorded, the scheduled times for departure and arrival and the type of aircraft designated for that route. It is important to note that the same flight number can be offered on different days of the week even with different times.
+To manage the technical specifications of aircraft there is a TipiAeromobile entity which lists the various existing models using a code and a name 
+In addition to the types, the individual physical aircraft are also of interest, each identified by a unique code, the acronym painted on the tail and associated with a specific type of aircraft 
+Finally, to track real operations, Actual Flights are recorded 
+Each actual flight represents a specific instance of a scheduled flight which occurred on a specific date identified by the company by the flight number and date and records the actual departure and arrival times. A fundamental constraint establishes that each actual flight must be carried out by a specific aircraft which must necessarily be of the type associated with the corresponding scheduled flight

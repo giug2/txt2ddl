@@ -1,0 +1,98 @@
+{
+    "entities": [
+        {
+            "name": "Condominio",
+            "attributes": [
+                {
+                    "name": "Nome",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Scala",
+            "attributes": [
+                {
+                    "name": "FK_CONDOMINIO",
+                    "is_pk": true
+                },
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Appartamento",
+            "attributes": [
+                {
+                    "name": "FK_SCALA",
+                    "is_pk": true
+                },
+                {
+                    "name": "Interno",
+                    "is_pk": true
+                },
+                {
+                    "name": "Millesimi",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Persona",
+            "attributes": [
+                {
+                    "name": "Codice Fiscale",
+                    "is_pk": true
+                },
+                {
+                    "name": "Indirizzo",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Scala",
+            "entity2": "Condominio",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Appartamento",
+            "entity2": "Scala",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Persona",
+            "entity2": "Appartamento",
+            "cardinality": "N:1",
+            "attributes": [
+                {
+                    "name": "proprietario",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Appartamento",
+            "entity2": "Persona",
+            "cardinality": "1:N",
+            "attributes": [
+                {
+                    "name": "inquilino",
+                    "is_pk": false
+                }
+            ]
+        }
+    ]
+}

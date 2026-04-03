@@ -1,0 +1,93 @@
+{
+    "entities": [
+        {
+            "name": "ORCHESTRA NELL'ANNO",
+            "attributes": [
+                {
+                    "name": "id_orchestra_anno",
+                    "is_pk": true
+                },
+                {
+                    "name": "anno",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "MUSICISTA STRUMENTO",
+            "attributes": [
+                {
+                    "name": "fk_musicista",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_strumento",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "STRUMENTO",
+            "attributes": [
+                {
+                    "name": "id_strumento",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "MUSICISTA",
+            "attributes": [
+                {
+                    "name": "id_musicista",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "DIPLOMA",
+            "attributes": [
+                {
+                    "name": "id_diploma",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "CONSERVATORIO",
+            "attributes": [
+                {
+                    "name": "id_conservatorio",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "MUSICISTA STRUMENTO",
+            "entity2": "ORCHESTRA NELL'ANNO",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "MUSICISTA STRUMENTO",
+            "entity2": "STRUMENTO",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "MUSICISTA STRUMENTO",
+            "entity2": "MUSICISTA",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "DIPLOMA",
+            "entity2": "MUSICISTA STRUMENTO",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "DIPLOMA",
+            "entity2": "CONSERVATORIO",
+            "cardinality": "N:1"
+        }
+    ]
+}

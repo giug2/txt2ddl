@@ -1,0 +1,4 @@
+Mostrare uno schema concettuale per la base di dati utilizzata da una libreria per memorizzare le informazioni sui libri disponibili, con le seguenti specifiche:
+• ogni copia fisica di un libro ha un ID univoco, uno stato di conservazione, una data di acquisto presso la libreria, una casa editrice (ad esempio Mondadori), un libro di riferimento (ad esempio, Il Nome della Rosa) e una specifica edizione (ad esempio, Bompiani 2020);
+• ogni libro ha un codice, un titolo originale (ad esempio, Il Nome della Rosa), una casa editrice (ad esempio Bompiani), un anno di pubblicazione e un autore e appartiene ad un genere letterario, con codice e nome (ad esempio, Giallo Storico);
+• ogni edizione ha un formato (con un codice e una descrizione, es. 'Tascabile'), un numero di pagine e un prezzo.

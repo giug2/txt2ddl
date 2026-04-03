@@ -1,0 +1,13 @@
+La struttura dei dati descrive un dominio aeronautico partendo dalle entità geografiche fondamentali.
+Ogni Nazione identificata da un codice univoco e possiede un nome.
+A loro volta le Città sono caratterizzate da un codice un nome e sono associate a una specifica Nazione di appartenenza.
+Proseguendo su questa linea ogni Aeroporto identificato da un proprio codice e nome situato in una determinata Città.
+Il modello include le Compagnie aeree ciascuna definita da un codice e un nome e per ognuna di esse di interesse la Nazione di origine.
+Parallelamente vengono gestite le tipologie di aeromobile definite da un Codice e un Nome.
+Oltre alla tipologia sono di interesse anche i singoli Aeromobili fisici ognuno identificato da un codice univoco che corrisponde alla sigla dipinta sulla coda e associato a un preciso TipoAeromobile.
+Il cuore del sistema rappresentato dai Voli di linea identificati univocamente dalla coppia di valori formata dalla Compagnia che li opera e da un Numero di volo.
+Per ogni volo sono specificati l'aeroporto di partenza e quello di arrivo l'orario di partenza e di arrivo previsti e il TipoAeromobile richiesto per effettuarlo stabilendo così relazioni con le entità Compagnie Aeroporti e TipiAeromobile, importante notare che un medesimo numero di volo ad esempio l'AK212 può essere offerto in giorni diversi della settimana potenzialmente con orari differenti per ogni giorno come il lunedì alle 12:00 e il sabato alle 13:00.
+Quando un volo di linea viene effettivamente eseguito in una data specifica si genera unistanza di VoloEffettivo.
+Questa entità legata al volo di linea di riferimento tramite la coppia Compagnia e Numero e registra la data esatta in cui il volo ha luogo insieme allora di partenza e di arrivo effettive.
+Inoltre ogni VoloEffettivo associato a un singolo e specifico Aeromobile che lo opera.
+Esiste un vincolo fondamentale laeromobile utilizzato come ad esempio il GNGRF deve obbligatoriamente essere del tipo specificato per quel volo di linea come l'A321A

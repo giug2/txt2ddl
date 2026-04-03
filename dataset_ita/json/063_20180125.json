@@ -1,0 +1,62 @@
+{
+  "entities": [
+    {
+      "name": "Convegno",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Titolo", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Città",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "fk_nazione", "is_pk": true },
+        { "name": "nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Nazione",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Materia",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Area",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "nome", "is_pk": false }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "Città",
+      "entity2": "Convegno",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Materia",
+      "entity2": "Convegno",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Nazione",
+      "entity2": "Città",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Area",
+      "entity2": "Materia",
+      "cardinality": "1:N"
+    }
+  ]
+}

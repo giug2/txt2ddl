@@ -1,0 +1,6 @@
+- ogni professore insegna in uno o più corsi ed interagisce con uno o più studenti,
+• se un professore X insegna a uno studente Y nel corso Z e a un altro studente V nel corso W, allora X insegna a Y anche nel corso W e insegna a V nel corso Z
+• in ogni corso insegnano uno o più professori e ad esso sono iscritti gli studenti che seguono le lezioni di tali professori
+• ogni studente è seguito da uno o più professori ed è iscritto ai corsi in cui tali professori insegnano
+• ogni corso appartiene a una e una sola facoltà e ogni facoltà offre più corsi
+• professori e studenti hanno legami con le facoltà solo attraverso i corsi

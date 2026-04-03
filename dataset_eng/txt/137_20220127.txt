@@ -1,0 +1,6 @@
+• each manager has one or more assistants; A manager's assistants are all and only those they belong to
+a specific department (only one);
+• each department has one and only one location, supports one or more managers and one or more belong to it
+assistants
+• at one location there can be multiple departments
+• each assistant belongs to one and only one department and has a location which is that of his own department

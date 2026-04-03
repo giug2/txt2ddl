@@ -1,0 +1,69 @@
+{
+    "entities": [
+        {
+            "name": "Actor",
+            "attributes": [
+                {
+                    "name": "actor_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "full_name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Film",
+            "attributes": [
+                {
+                    "name": "id_film",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_director",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Director",
+            "attributes": [
+                {
+                    "name": "director_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "full_name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Cinema",
+            "attributes": [
+                {
+                    "name": "id_cinema",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Film",
+            "entity2": "Director",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Film",
+            "entity2": "Actor",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Film",
+            "entity2": "Cinema",
+            "cardinality": "N:N"
+        }
+    ]
+}

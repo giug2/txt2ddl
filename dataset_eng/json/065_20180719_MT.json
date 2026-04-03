@@ -1,0 +1,126 @@
+{
+    "entities": [
+        {
+            "name": "MUSEO",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CITTA'",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "NATION",
+            "attributes": [
+                {
+                    "name": "SAILING",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "SALA",
+            "attributes": [
+                {
+                    "name": "NAME",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_museo",
+                    "is_pk": true
+                },
+                {
+                    "name": "SIZE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "ARTE OPERA",
+            "attributes": [
+                {
+                    "name": "COD",
+                    "is_pk": true
+                },
+                {
+                    "name": "TITLE",
+                    "is_pk": false
+                },
+                {
+                    "name": "ANNO",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "ARTIST",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                },
+                {
+                    "name": "SURNAME",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "MUSEO",
+            "entity2": "CITTA'",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "CITTA'",
+            "entity2": "NATION",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "SALA",
+            "entity2": "MUSEO",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "ARTIST",
+            "entity2": "NATION",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "ARTE OPERA",
+            "entity2": "ARTIST",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "ARTE OPERA",
+            "entity2": "SALA",
+            "cardinality": "N:N"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+Mostrare uno schema concettuale per la descrizione di una rassegna stampa, che è una raccolta di articoli di giornale pubblicati in uno stesso giorno. 
+Si considerino le specifiche seguenti
+• ogni articolo ha un identificatore numerico, un titolo, un autore ed è pubblicato in uno o più giornali (questa specifica è relativa ad un caso non molto comune, ma possibile); 
+ogni articolo compare in una pagina di un giornale (che può essere diversa per i vari giornali in cui esso è pubblicato, se sono più di uno)
+• ogni giornale ha un codice e un nome
+• ogni autore ha un codice e un nome e  un ente di afferenza (ad esempio, l’autore di nome Mario Rossi potrebbe afferire all’azienda XXX SpA)
+• ogni ente ha un codice e un nome interessa la rassegna stampa non solo per un giorno, ma in più giorni
+• per ogni giorno deve essere riportato l’orario in cui la rassegna viene prodotta e il nome del curatore, cioè della persona che la ha prodotta.
+• ogni articolo compare nella rassegna stampa di un solo giorno
+• per ogni articolo l’autore ha un’afferenza e un ruolo, ma può, per articoli diversi, avere afferenze diverse o ruoli diversi (ad esempio, Mario Rossi ha scritto un articolo come DG di XXX SpA, un altro come Presidente di YYY Srl e un altro ancora come Presidente di XXX SpA)

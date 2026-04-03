@@ -1,0 +1,95 @@
+{
+    "entities": [
+        {
+            "name": "Prodotto",
+            "attributes": [
+                {
+                    "name": "SKU",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Sottocategoria",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_categoria",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Categoria",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Marca",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Produttore",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Sottocategoria",
+            "entity2": "Prodotto",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Marca",
+            "entity2": "Prodotto",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Categoria",
+            "entity2": "Sottocategoria",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Produttore",
+            "entity2": "Marca",
+            "cardinality": "1:N"
+        }
+    ]
+}

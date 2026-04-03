@@ -1,0 +1,4 @@
+• It is of interest to represent possible visit itineraries. Each itinerary relates to a museum, has an identification code (unique within the museum) and is made up of an ordered list of works to see.
+• We also want to represent guided tours which each have a name, a starting time, a duration
+and are based on a certain itinerary. The guided tours are repeated on various days of the week with a number
+different maximum number of participants.

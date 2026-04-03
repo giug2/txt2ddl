@@ -1,0 +1,5 @@
+- each manager works in one and only one department and collaborates with one or more assistants; 
+- the assistants who collaborate with a manager are all and only those who belong to the specific department in which the manager works;
+• each department has one and only one location, one or more managers work in a department and one or more assistants report to it
+• at one location there can be multiple departments
+• each assistant belongs to one and only one department and has a location which is that of his own department

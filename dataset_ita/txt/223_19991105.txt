@@ -1,0 +1,4 @@
+- ogni corso è tenuto da uno e un solo docente
+- ogni corso ha zero o più studenti iscritti
+- ogni studente può essere iscritto a zero o più corsi
+- ogni corso afferisce a un solo dipartimento

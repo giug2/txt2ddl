@@ -1,0 +1,10 @@
+The system describes the management of a restaurant chain.
+The core of the model is represented by the restaurants, each identified by a unique code and characterized by a name, an address and a telephone number.
+Each restaurant is located in a specific city and offers a selection of dishes.
+The cities are defined by a code, a name and the reference logistics center, while the logistics centers are in turn entities with their own code and name.
+As for the culinary offer, each dish is described by a code, a name and an associated price.
+Connected to each restaurant it is possible to define a special menu, specifying the period of validity, the cost and the number of courses provided.
+Supply logistics is managed through deliveries, which connect a supplier, identified by code and name, to a specific destination logistics centre.
+Finally, the model includes an offering system.
+There are different types of promotion, each with its own code and description.
+An effective promotion is applied by associating a type of promotion with a specific restaurant, establishing a precise discount percentage for this combination.

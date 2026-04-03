@@ -1,0 +1,6 @@
+• ogni manager ha uno o più assistenti; gli assistenti di un manager sono tutti e soli quelli afferiscono ad
+uno specifico reparto (uno solo);
+• ogni reparto ha una e una sola sede, supporta uno o più manager e ad esso appartengono uno o più
+assistenti
+• presso una sede ci possono essere più reparti
+• ogni assistente appartiene ad uno e un solo reparto e ha una sede che è quella del proprio reparto

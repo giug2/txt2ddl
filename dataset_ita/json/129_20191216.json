@@ -1,0 +1,58 @@
+{
+  "entities": [
+    {
+      "name": "Sciatore",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Cognome", "is_pk": false },
+        { "name": "Nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Specialità",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Città",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Nazione",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Nome", "is_pk": false }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "Città",
+      "entity2": "Sciatore",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Sciatore",
+      "entity2": "Specialità",
+      "cardinality": "N:N",
+      "attributes": [
+        { "name": "VIttorie", "is_pk": false }
+      ]
+    },
+    {
+      "entity1": "Nazione",
+      "entity2": "Città",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Nazione",
+      "entity2": "Sciatore",
+      "cardinality": "1:N"
+    }
+  ]
+}

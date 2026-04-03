@@ -1,0 +1,89 @@
+{
+    "entities": [
+        {
+            "name": "Festival",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "DataInizio",
+                    "is_pk": false
+                },
+                {
+                    "name": "DataFine",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Esibizione",
+            "attributes": [
+                {
+                    "name": "fk_festival",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_artista",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Artista",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "GenereMusicale",
+                    "is_pk": false
+                },
+                {
+                    "name": "AnnoFormazione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Palco",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Capacita",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Festival",
+            "entity2": "Esibizione",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Artista",
+            "entity2": "Esibizione",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Palco",
+            "entity2": "Esibizione",
+            "cardinality": "1:N"
+        }
+    ]
+}

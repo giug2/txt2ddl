@@ -1,0 +1,5 @@
+- for each student there is a serial number (identification), surname and name and a telephone number, which is optional and is the same for each study plan.
+• the locations of a course (for example, location of lessons and location of exams) are identified by a code, for which the name and city are also stored (for example, "RM01" is associated with "Sede Centrale" as the name and "Rome" as the city).
+• the course code (for example “ING-INF/05”) consists of the department code (for which the name is also of interest; for example “ING-INF” is the code of the department whose name is “Computer Engineering”) and a specific identifier.
+• a course with a certain code always has the same reference location and the same standard classroom, but can have different times on different days; for the classroom, the code (shown in the plan, for example “AULA-T1”) is associated with a name (in the example it could be “Aula Magna Tullio”).
+• the Type column contains a code (of the "course type") which, as can be seen from the data, is specifically associated with the teaching and study plan; for each value of this code a description is stored (e.g. 'Required', 'Optional').

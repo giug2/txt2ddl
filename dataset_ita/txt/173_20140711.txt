@@ -1,0 +1,7 @@
+Mostrare lo schema concettuale per una base di dati per la gestione di progetti software, secondo le seguenti specifiche.
+• Ogni progetto ha un codice, un nome e una descrizione, ed è costituito da una sequenza di moduli software diversi (interessa l'ordine di integrazione).
+• Ogni modulo ha un ID, un nome e uno sviluppatore principale (con ID e nome); uno stesso modulo può essere riutilizzato in diversi progetti.
+• Ogni progetto è sviluppato da un team; ogni team ha un nome (che lo identifica), una data di creazione e un insieme di membri.
+• Ogni membro del team ha una matricola (univoca nell'ambito della base di dati), nome e cognome, può partecipare a più team, in ciascuno dei quali utilizza una e una sola tecnologia principale, ma in team diversi può utilizzare tecnologie diverse.
+• Ogni tecnologia ha un ID e un nome.
+• Ogni progetto è suddiviso in più sprint, che terminano in giorni diversi e possono avere versioni di rilascio che possono variare.

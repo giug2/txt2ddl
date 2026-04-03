@@ -1,0 +1,85 @@
+{
+    "entities": [
+        {
+            "name": "Persona",
+            "attributes": [
+                {
+                    "name": "Tax ID code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Auto",
+            "attributes": [
+                {
+                    "name": "Targa",
+                    "is_pk": true
+                },
+                {
+                    "name": "Anno",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Model",
+            "attributes": [
+                {
+                    "name": "Name",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_home",
+                    "is_pk": true
+                },
+                {
+                    "name": "Category",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Casa",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "nation",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Persona",
+            "entity2": "Auto",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Model",
+            "entity2": "Auto",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Casa",
+            "entity2": "Model",
+            "cardinality": "1:N"
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+The system describes a musical universe centered on concerts 
+Each concert identified by a unique code and has a title, a description and is associated with a specific orchestra that performs it and a theater in which it takes place 
+Theaters are in turn entities defined by a code and a name 
+The content of each concert consists of a sequence of musical pieces 
+Each piece defined by a code, a title and its author who is necessarily a composer present in a specific registry 
+Composers are registered with an identification code, surname and name 
+The relationship that links the pieces to the concerts is the programming which not only associates a piece with a concert but also establishes the order of execution through an integer numeric attribute called position 
+The orchestras are characterized by a name, a seat and a director 
+The latter in turn is a musician entity that groups together all the professional figures involved, each identified by a serial number, surname and name 
+The relationship between musicians and orchestras is further detailed through the composition of the orchestra itself. This association specifies which musician plays which instrument within a given orchestra. 
+The instruments are in turn cataloged with a code, name and type 
+Finally, to manage individual performances, the Events entity associates each concert with a specific date and time of performance, thus allowing you to plan multiple repeats of the same program

@@ -1,0 +1,93 @@
+{
+    "entities": [
+        {
+            "name": "VOLO_DEL_GIORNO",
+            "attributes": [
+                {
+                    "name": "id_volo_giorno",
+                    "is_pk": true
+                },
+                {
+                    "name": "data_volo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "PILOTA_ABILITAZIONE_AEREO",
+            "attributes": [
+                {
+                    "name": "fk_pilota",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_modello_aereo",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "MODELLO_AEREO",
+            "attributes": [
+                {
+                    "name": "id_modello_aereo",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "PILOTA",
+            "attributes": [
+                {
+                    "name": "id_pilota",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "LICENZA_DI_VOLO",
+            "attributes": [
+                {
+                    "name": "id_licenza",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "SCUOLA_DI_VOLO",
+            "attributes": [
+                {
+                    "name": "id_scuola_volo",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "VOLO_DEL_GIORNO",
+            "entity2": "PILOTA_ABILITAZIONE_AEREO",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "MODELLO_AEREO",
+            "entity2": "PILOTA_ABILITAZIONE_AEREO",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "PILOTA",
+            "entity2": "PILOTA_ABILITAZIONE_AEREO",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "PILOTA_ABILITAZIONE_AEREO",
+            "entity2": "LICENZA_DI_VOLO",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "SCUOLA_DI_VOLO",
+            "entity2": "LICENZA_DI_VOLO",
+            "cardinality": "1:N"
+        }
+    ]
+}

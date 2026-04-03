@@ -1,0 +1,129 @@
+{
+    "entities": [
+        {
+            "name": "COPY_BOOK",
+            "attributes": [
+                {
+                    "name": "ID_COPY",
+                    "is_pk": true
+                },
+                {
+                    "name": "CONSERVATION_STATUS",
+                    "is_pk": false
+                },
+                {
+                    "name": "PURCHASE_DATE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "EDITION",
+            "attributes": [
+                {
+                    "name": "ISBN",
+                    "is_pk": true
+                },
+                {
+                    "name": "AUTHOR",
+                    "is_pk": false
+                },
+                {
+                    "name": "NUMBER_PAGES",
+                    "is_pk": false
+                },
+                {
+                    "name": "PREZZO",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "FORMAT",
+            "attributes": [
+                {
+                    "name": "FORMAT_ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "DESCRIPTION",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "BOOK",
+            "attributes": [
+                {
+                    "name": "BOOK_ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "ORIGINAL_TITLE",
+                    "is_pk": false
+                },
+                {
+                    "name": "PUBLICATION_YEAR",
+                    "is_pk": false
+                },
+                {
+                    "name": "TITLE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "LITERARY_GENRE",
+            "attributes": [
+                {
+                    "name": "ID_GENERATE",
+                    "is_pk": true
+                },
+                {
+                    "name": "GENRE_NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "PUBLISHING HOUSE",
+            "attributes": [
+                {
+                    "name": "PUBLISHER_ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "PUBLISHER_NAME",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "COPY_BOOK",
+            "entity2": "EDITION",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "FORMAT",
+            "entity2": "EDITION",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "EDITION",
+            "entity2": "BOOK",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "BOOK",
+            "entity2": "LITERARY_GENRE",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "PUBLISHING HOUSE",
+            "entity2": "BOOK",
+            "cardinality": "1:N"
+        }
+    ]
+}

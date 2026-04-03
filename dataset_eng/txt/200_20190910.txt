@@ -1,0 +1,6 @@
+• each order relates to a customer and is made up of a certain number of order lines
+• each customer has a customer code, surname and name
+• each order line (which constitutes a “line” of the relevant order) has
+– a product description, which is a simple text string
+– a supplier (where the product comes from) which can be a manufacturer or a distributor, but we still assume it is a simple text string
+– a delivery date and a price

@@ -1,0 +1,7 @@
+Two distinct logical schemes for managing bibliographic information are presented 
+The central Books entity described by the Code Title Genre and Author attributes 
+In this configuration each book is associated with a single author via a referential integrity constraint that links the Author attribute to the Writers relationship 
+The Writers entity in turn defined by Code, Surname and Name 
+Publication information is managed by the Editions relationship which includes Book Publisher Series and Year attributes 
+This table establishes a link to both the Books relationship via the Book attribute and the Publishers relationship via the Publisher attribute 
+Finally, the Publishers entity is characterized simply by Name and City

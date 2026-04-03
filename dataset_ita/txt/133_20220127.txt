@@ -1,0 +1,5 @@
+• ogni dirigente ha uno o più assistenti; gli assistenti di un dirigente sono tutti e soli quelli afferiscono ad
+uno specifico ufficio (uno solo);
+• ogni ufficio ha una e una sola sede, supporta uno o più dirigenti e ad esso appartengono uno o più assistenti
+• presso una sede ci possono essere più uffici
+• ogni assistente appartiene ad uno e un solo ufficio e ha una sede che è quella del proprio ufficio

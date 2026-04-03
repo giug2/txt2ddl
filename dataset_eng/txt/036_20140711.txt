@@ -1,0 +1,7 @@
+The scheme describes a system organized around four main entities 
+The first is the department uniquely identified by its name or Department code and characterized by an Address 
+Connected to this entity is the professor who is identified by a unique ProfCode and described by a ProfName 
+Each professor belongs to a specific department by establishing a relationship through the Department attribute 
+The teaching represented by two related entities: edition and course 
+The edition entity defines the general characteristics of a course by uniquely associating a Course Code with its Course Title 
+The Course entity, on the other hand, represents a specific instance of that teaching in a given period and uses the same CourseCode to connect to the corresponding edition but further specified by the Year in which it is delivered and by theProfCode of the teacher who holds it, thus creating a direct link with the professor entity

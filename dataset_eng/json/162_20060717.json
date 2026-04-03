@@ -1,0 +1,143 @@
+{
+    "entities": [
+        {
+            "name": "Logistics Center",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "City",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Ristorante",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Address",
+                    "is_pk": false
+                },
+                {
+                    "name": "Telephone",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Type of Promotion",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Supplier",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Dish",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Prezzo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Menu Special",
+            "attributes": [
+                {
+                    "name": "Validity Period",
+                    "is_pk": true
+                },
+                {
+                    "name": "Prezzo",
+                    "is_pk": false
+                },
+                {
+                    "name": "Number of Courses",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Logistics Center",
+            "entity2": "Supplier",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "City",
+            "entity2": "Logistics Center",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "City",
+            "entity2": "Ristorante",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Ristorante",
+            "entity2": "Type of Promotion",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Ristorante",
+            "entity2": "Dish",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Ristorante",
+            "entity2": "Menu Special",
+            "cardinality": "1:N"
+        }
+    ]
+}

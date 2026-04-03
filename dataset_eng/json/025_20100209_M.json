@@ -1,0 +1,45 @@
+{
+    "entities": [
+        {
+            "name": "Current tale",
+            "attributes": [
+                {
+                    "name": "Number",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Customer",
+            "attributes": [
+                {
+                    "name": "C.F.",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Date of Birth",
+                    "is_pk": false
+                },
+                {
+                    "name": "Address",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Current tale",
+            "entity2": "Customer",
+            "cardinality": "N:1"
+        }
+    ]
+}

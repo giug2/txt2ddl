@@ -1,0 +1,6 @@
+• each musician, in each orchestra in which he participates, plays one or more instruments (potentially also instruments
+different in different years)
+• the instruments are "standardised", each with a name and code (for example the code V code corresponds
+on the violin, T on the trumpet and so on)
+• the conservatory diplomas each refer to an instrument
+• a musician only plays instruments for which he has obtained a diploma

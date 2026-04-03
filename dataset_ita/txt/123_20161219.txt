@@ -1,0 +1,6 @@
+Mostrare lo schema concettuale di una base di dati per un insieme di musei, secondo le seguenti specifiche.
+• Ogni museo ha un nome, si trova in una città (della quale interessa anche la nazione, con relativa sigla) e
+ha una serie di sale, ognuna delle quali ha un nome e una dimensione.
+• I musei espongono opere d’arte, per ognuna delle quali interessano l’autore (con codice, cognome, nome,
+data di nascita e di morte), l’anno di esecuzione e la sala nella quale viene esposta (che si assume fissa:
+ogni opera si trova in una sala di un museo)

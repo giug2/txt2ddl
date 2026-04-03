@@ -1,0 +1,9 @@
+Allora, in pratica qui abbiamo un sistema per tenere traccia di un po' di cose. Ci sono i **Dipendenti**, che sono le persone, ognuno con il suo codice identificativo. Poi ci sono i **Progetti**, che sono tipo i grossi contenitori per il lavoro da fare, e anche questi hanno un loro ID univoco.
+
+Il cuore di tutto sono i **Task**, cioè le singole attività. Ogni task è un po' particolare, perché per identificarlo non basta un solo codice, ma serve una combinazione del suo ID, del tipo di task che è e del progetto a cui appartiene. Questo significa che ogni task è per forza legato a un unico progetto, non può esistere da solo.
+
+Per capire che tipo di attività è, c'è una lista di **TipoTask**. Pensa a cose come "analisi", "sviluppo", "test", eccetera. Ogni task deve rientrare in una di queste categorie, ma ovviamente una stessa categoria può essere usata per un sacco di task diversi.
+
+Il collegamento tra persone e lavoro è abbastanza flessibile: un dipendente può lavorare su più task contemporaneamente, e allo stesso modo un singolo task può essere assegnato a un'intera squadra di persone. È un bel groviglio, insomma.
+
+Infine, ci sono i **Documenti**. Ogni documento ha il suo codice, e la cosa strana è che un sacco di task diversi possono fare riferimento tutti allo stesso, identico documento. È come se ci fosse un manuale di istruzioni e tante piccole attività diverse lo usassero come guida.

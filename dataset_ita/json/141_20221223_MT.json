@@ -1,0 +1,103 @@
+{
+    "entities": [
+        {
+            "name": "ISTITUTO",
+            "attributes": [
+                {
+                    "name": "CODICE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                },
+                {
+                    "name": "ANNO FONDAZIONE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CITTA'",
+            "attributes": [
+                {
+                    "name": "CODICE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "NAZIONE",
+            "attributes": [
+                {
+                    "name": "CODICE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "RICERCATORE",
+            "attributes": [
+                {
+                    "name": "CODICE",
+                    "is_pk": true
+                },
+                {
+                    "name": "COGNOME",
+                    "is_pk": false
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                },
+                {
+                    "name": "DATA NASCITA",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "QUALIFICA",
+            "attributes": [
+                {
+                    "name": "CODICE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "CITTA'",
+            "entity2": "ISTITUTO",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "NAZIONE",
+            "entity2": "CITTA'",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "RICERCATORE",
+            "entity2": "ISTITUTO",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "QUALIFICA",
+            "entity2": "RICERCATORE",
+            "cardinality": "1:N"
+        }
+    ]
+}

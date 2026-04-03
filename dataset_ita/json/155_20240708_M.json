@@ -1,0 +1,179 @@
+{
+    "entities": [
+        {
+            "name": "Materia",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Dipartimento",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CorsoDiLaurea",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "ProfessoreOrdinario",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "SessioneEsame",
+            "attributes": [
+                {
+                    "name": "Data",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_corso_di_laurea",
+                    "is_pk": true
+                },
+                {
+                    "name": "Ora",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Cattedra",
+            "attributes": [
+                {
+                    "name": "Nome",
+                    "is_pk": true
+                },
+                {
+                    "name": "Ufficio",
+                    "is_pk": false
+                },
+                {
+                    "name": "Descrizione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Aula",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "IncaricoDidattico",
+            "attributes": [
+                {
+                    "name": "fk_cattedra",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_docente",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Docente",
+            "attributes": [
+                {
+                    "name": "Matricola",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "RuoloAccademico",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Dipartimento",
+            "entity2": "Materia",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "CorsoDiLaurea",
+            "entity2": "Materia",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "SessioneEsame",
+            "entity2": "CorsoDiLaurea",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Cattedra",
+            "entity2": "CorsoDiLaurea",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "SessioneEsame",
+            "entity2": "Aula",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "IncaricoDidattico",
+            "entity2": "Cattedra",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Docente",
+            "entity2": "IncaricoDidattico",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "RuoloAccademico",
+            "entity2": "IncaricoDidattico",
+            "cardinality": "1:N"
+        }
+    ]
+}

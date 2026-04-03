@@ -1,0 +1,220 @@
+{
+    "entities": [
+        {
+            "name": "CITY",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "NATION",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "AIRPORT",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "COMPANY",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "VOLO",
+            "attributes": [
+                {
+                    "name": "NUMBER",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_company",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "AIRCRAFT TYPE",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "DAY",
+            "attributes": [
+                {
+                    "name": "NUMBER",
+                    "is_pk": true
+                },
+                {
+                    "name": "DESCRIPTION",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "FLIGHT IN THE DAY",
+            "attributes": [
+                {
+                    "name": "AIRPORT ARRIVAL",
+                    "is_pk": false
+                },
+                {
+                    "name": "DEPARTURE AIRPORT",
+                    "is_pk": false
+                },
+                {
+                    "name": "fk_day",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_volo",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "ACTUAL FLIGHT",
+            "attributes": [
+                {
+                    "name": "DATA",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_flight_of_the_day",
+                    "is_pk": true
+                },
+                {
+                    "name": "ACTUAL DEPARTURE",
+                    "is_pk": false
+                },
+                {
+                    "name": "ACTUAL ARRIVAL",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "AIRCRAFT",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "NATION",
+            "entity2": "CITY",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "CITY",
+            "entity2": "AIRPORT",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "AIRPORT",
+            "entity2": "VOLO",
+            "cardinality": "1:N",
+            "attributes": [
+                {
+                    "name": "I arrive",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "AIRPORT",
+            "entity2": "VOLO",
+            "cardinality": "1:N",
+            "attributes": [
+                {
+                    "name": "Departure",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "NATION",
+            "entity2": "COMPANY",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "COMPANY",
+            "entity2": "VOLO",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "AIRCRAFT TYPE",
+            "entity2": "VOLO",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "VOLO",
+            "entity2": "FLIGHT IN THE DAY",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "DAY",
+            "entity2": "FLIGHT IN THE DAY",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "FLIGHT IN THE DAY",
+            "entity2": "ACTUAL FLIGHT",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "AIRCRAFT TYPE",
+            "entity2": "Aircraft",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "AIRCRAFT",
+            "entity2": "ACTUAL FLIGHT",
+            "cardinality": "1:N"
+        }
+    ]
+}

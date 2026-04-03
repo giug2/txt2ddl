@@ -1,0 +1,123 @@
+{
+    "entities": [
+        {
+            "name": "CustomerSector",
+            "attributes": [
+                {
+                    "name": "CSett",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Customer",
+            "attributes": [
+                {
+                    "name": "CCustomer",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "ProjectStatus",
+            "attributes": [
+                {
+                    "name": "CState",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Project",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Department",
+            "attributes": [
+                {
+                    "name": "Rep",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Task",
+            "attributes": [
+                {
+                    "name": "NTask",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_progetto",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Priority",
+            "attributes": [
+                {
+                    "name": "CPrio",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Customer",
+            "entity2": "CustomerSector",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Project",
+            "entity2": "Customer",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Project",
+            "entity2": "ProjectStatus",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Project",
+            "entity2": "Department",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Task",
+            "entity2": "Project",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Task",
+            "entity2": "Priority",
+            "cardinality": "N:1"
+        }
+    ]
+}

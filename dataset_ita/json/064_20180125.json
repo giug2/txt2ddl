@@ -1,0 +1,90 @@
+{
+  "entities": [
+    {
+      "name": "Serie",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Titolo", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Convegno",
+      "attributes": [
+        { "name": "fk_serie", "is_pk": true },
+        { "name": "Data", "is_pk": true },
+        { "name": "anno", "is_pk": true }
+      ]
+    },
+    {
+      "name": "Sessione",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Titolo", "is_pk": false },
+        { "name": "Ora", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Persona con affiliazione",
+      "attributes": [
+        { "name": "Codice", "is_pk": true }
+      ]
+    },
+    {
+      "name": "Persona",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Istituzione",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Città",
+      "attributes": [
+        { "name": "Codice", "is_pk": true }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "Serie",
+      "entity2": "Convegno",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Convegno",
+      "entity2": "Città",
+      "cardinality": "N:1"
+    },
+    {
+      "entity1": "Convegno",
+      "entity2": "Sessione",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Sessione",
+      "entity2": "Persona con affiliazione",
+      "cardinality": "N:N"
+    },
+    {
+      "entity1": "Persona",
+      "entity2": "Persona con affiliazione",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Persona con affiliazione",
+      "entity2": "Istituzione",
+      "cardinality": "N:1"
+    },
+    {
+      "entity1": "Città",
+      "entity2": "Istituzione",
+      "cardinality": "1:N"
+    }
+  ]
+}

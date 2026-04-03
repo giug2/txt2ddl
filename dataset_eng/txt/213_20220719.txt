@@ -1,0 +1,5 @@
+• each employee works in one and only one division;
+• each employee works on all and only the projects of the division to which he is assigned;
+• each project belongs to one and only one division and all and only the employees assigned to that division work on it;
+• each division belongs to one and only one company;
+• each employee collaborates only with the company to which the division to which the employee is assigned belongs.

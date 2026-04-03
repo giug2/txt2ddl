@@ -1,0 +1,5 @@
+• ogni professore insegna in uno e un solo corso di studio;
+• ogni corso di studio ha in generale più professori e afferisce ad uno e un solo dipartimento;
+• ogni dipartimento appartiene ad una e una sola scuola;
+• ogni professore lavora solo presso il dipartimento cui afferisce il corso di studio presso cui opera
+e solo presso la scuola cui il dipartimento appartiene.

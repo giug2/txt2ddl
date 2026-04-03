@@ -1,0 +1,99 @@
+{
+    "entities": [
+        {
+            "name": "Marca",
+            "attributes": [
+                {
+                    "name": "IDMarca",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeMarca",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CategoriaMerceologica",
+            "attributes": [
+                {
+                    "name": "CodiceCategoria",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeCategoria",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Prodotto",
+            "attributes": [
+                {
+                    "name": "NomeProdotto",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_marca",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Articolo",
+            "attributes": [
+                {
+                    "name": "Seriale",
+                    "is_pk": true
+                },
+                {
+                    "name": "DataProduzione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Cliente",
+            "attributes": [
+                {
+                    "name": "IDCliente",
+                    "is_pk": true
+                },
+                {
+                    "name": "Tipologia",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Marca",
+            "entity2": "CategoriaMerceologica",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Prodotto",
+            "entity2": "Marca",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Prodotto",
+            "entity2": "Articolo",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Articolo",
+            "entity2": "Cliente",
+            "cardinality": "N:1"
+        }
+    ]
+}

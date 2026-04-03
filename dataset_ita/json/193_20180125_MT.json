@@ -1,0 +1,132 @@
+{
+    "entities": [
+        {
+            "name": "CircuitoFestival",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "EdizioneFestival",
+            "attributes": [
+                {
+                    "name": "fk_circuito",
+                    "is_pk": true
+                },
+                {
+                    "name": "DataInizio",
+                    "is_pk": true
+                },
+                {
+                    "name": "Anno",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Esibizione",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomePalco",
+                    "is_pk": false
+                },
+                {
+                    "name": "Orario",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "ArtistaInCartellone",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Artista",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeArte",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Band",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Citt\u00e0",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "EdizioneFestival",
+            "entity2": "CircuitoFestival",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Citt\u00e0",
+            "entity2": "EdizioneFestival",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Esibizione",
+            "entity2": "EdizioneFestival",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "ArtistaInCartellone",
+            "entity2": "Esibizione",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "ArtistaInCartellone",
+            "entity2": "Artista",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Band",
+            "entity2": "ArtistaInCartellone",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Band",
+            "entity2": "Citt\u00e0",
+            "cardinality": "N:1"
+        }
+    ]
+}

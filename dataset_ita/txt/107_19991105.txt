@@ -1,0 +1,3 @@
+- ogni film ha uno e un solo regista
+- ogni film ha zero o più attori 
+- ogni film è programmato presso uno o più cinema

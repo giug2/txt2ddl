@@ -1,0 +1,135 @@
+{
+    "entities": [
+        {
+            "name": "Casa",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Nazione",
+            "attributes": [
+                {
+                    "name": "SiglaNazione",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Modello",
+            "attributes": [
+                {
+                    "name": "Nome",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_casa",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Auto",
+            "attributes": [
+                {
+                    "name": "Targa",
+                    "is_pk": true
+                },
+                {
+                    "name": "Anno",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Persona",
+            "attributes": [
+                {
+                    "name": "CodiceFiscale",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Versione",
+            "attributes": [
+                {
+                    "name": "CodiceVersione",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_modello",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cilindrata",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Categoria",
+            "attributes": [
+                {
+                    "name": "CodiceCategoria",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Casa",
+            "entity2": "Nazione",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Modello",
+            "entity2": "Casa",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Auto",
+            "entity2": "Persona",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Auto",
+            "entity2": "Versione",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Versione",
+            "entity2": "Modello",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Modello",
+            "entity2": "Categoria",
+            "cardinality": "N:1"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+Il sistema descritto gestisce le informazioni anagrafiche delle persone memorizzando per ciascuna il codice fiscale il cognome il nome e la data di nascita 
+Ogni persona può essere titolare di una o più utenze telefoniche le quali sono identificate univocamente dalla coppia di attributi prefisso e numero e sono associate a un indirizzo specifico 
+Esiste un vincolo diretto tra un'utenza e il suo titolare poiché il campo Titolare deve fare riferimento a un codice fiscale valido presente nell'anagrafica delle persone 
+La componente geografica strutturata su più livelli ogni utenza appartiene a un distretto identificato dal suo prefisso 
+I distretti sono a loro volta caratterizzati da un nome e da una provincia di appartenenza 
+Questa provincia collegata tramite la sua sigla a un'entità che descrive le province italiane ciascuna definita dalla propria sigla e dal nome per esteso 
+Per ogni utenza vengono periodicamente emesse delle bollette ciascuna identificata da un codice univoco e contenente la data di emissione e l'importo 
+Ogni bolletta inequivocabilmente associata a una singola utenza attraverso la coppia prefisso e numero garantendo così che ogni fattura sia correttamente collegata al servizio a cui si riferisce 
+Infine il sistema traccia i pagamenti effettuati per saldare le bollette 
+Ogni pagamento registrato con un proprio codice la data e l'importo ed strettamente vincolato a una specifica bolletta esistente assicurando l'integrità e la tracciabilità delle transazioni finanziarie

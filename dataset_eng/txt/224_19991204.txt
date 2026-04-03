@@ -1,0 +1,7 @@
+A logical scheme for managing museum collections of works of art is presented.
+The central entity is OperaArte, described by the attributes OperaID, Title and Style.
+The authorship of the works is modeled by a many-to-many relationship, which connects the OperaArte entity to the Artist entity, indicating that a work can be the result of a collaboration between multiple artists and an artist can be the author of multiple works.
+The Artist entity is in turn defined by ArtistID, Surname and Name.
+Location information is managed by the relationship between OperaArte and Museum, which includes the SalaEspositiva and AnnoAcquisizione attributes.
+This relationship establishes a connection between a work and the museum that hosts it, specifying that each work is exhibited in a single museum, while a museum can host many works.
+Finally, the Museum entity is characterized by Name and City.

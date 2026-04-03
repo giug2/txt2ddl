@@ -1,0 +1,83 @@
+{
+    "entities": [
+        {
+            "name": "BRANO",
+            "attributes": [
+                {
+                    "name": "id_brano",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome_reale_artista",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "PERFORMANCE",
+            "attributes": [
+                {
+                    "name": "fk_festival",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_genere_musicale",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "GENERE_MUSICALE",
+            "attributes": [
+                {
+                    "name": "id_genere_musicale",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "FESTIVAL",
+            "attributes": [
+                {
+                    "name": "id_festival",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "ARTISTA",
+            "attributes": [
+                {
+                    "name": "id_artista",
+                    "is_pk": true
+                },
+                {
+                    "name": "titolo_brano",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "BRANO",
+            "entity2": "PERFORMANCE",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "GENERE_MUSICALE",
+            "entity2": "PERFORMANCE",
+            "cardinality": "1:1"
+        },
+        {
+            "entity1": "PERFORMANCE",
+            "entity2": "FESTIVAL",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "ARTISTA",
+            "entity2": "GENERE_MUSICALE",
+            "cardinality": "1:N"
+        }
+    ]
+}

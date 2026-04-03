@@ -1,0 +1,6 @@
+The scheme outlines an information system in which there are Nations, each identified by a Nation Abbreviation and described by a Name 
+The Manufacturers defined by an identification code, a name and the country to which they belong are connected to these, establishing a referential integrity bond with the Nations entity. 
+Each manufacturer in turn produces Models which are identified by the pair of attributes Home and Name and characterized by a Category. The Home attribute creates a referential link with the respective Manufacturer 
+The individual cars are registered using a unique license plate and can be traced back to a specific model through the House and Model attributes which together form a reference to the Models entity 
+Each car is also described by a Year of production and associated with an Owner whose code refers to the People entity 
+The latter collects the personal information of individuals identified by their Tax Code and described by Surname and Name

@@ -1,0 +1,8 @@
+Mostrare lo schema concettuale di una base di dati per la gestione di articoli di una rivista scientifica, secondo le seguenti specifiche.
+• Gli articoli hanno titolo, sottotitolo, uno o più autori e un testo (una stringa molto grande, ma comunque gestibile)
+• Gli autori hanno nome, cognome, email e affiliazione (l’istituzione per la quale lavorano)
+• Per ogni istituzione (degli autori) sono di interesse il nome, l’indirizzo, e la nazione
+• La rivista viene pubblicata un certo numero di volte in un anno. Le pubblicazioni di un anno vengono
+raccolte in un volume (a cui viene dato un titolo complessivo). Ogni pubblicazione ha un numero, unico nel
+rispettivo volume, una data di pubblicazione e una serie di articoli, per ognuno dei quali viene registrata
+la pagina di inizio e quella di fine

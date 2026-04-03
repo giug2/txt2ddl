@@ -1,0 +1,85 @@
+{
+    "entities": [
+        {
+            "name": "Customer",
+            "attributes": [
+                {
+                    "name": "Customer Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Item",
+            "attributes": [
+                {
+                    "name": "SeriesNumber",
+                    "is_pk": true
+                },
+                {
+                    "name": "YearProduction",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Product",
+            "attributes": [
+                {
+                    "name": "ProductName",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_brand",
+                    "is_pk": true
+                },
+                {
+                    "name": "Typology",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Brand",
+            "attributes": [
+                {
+                    "name": "Brand Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "CountryOrigin",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Customer",
+            "entity2": "Item",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Product",
+            "entity2": "Item",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Brand",
+            "entity2": "Product",
+            "cardinality": "1:N"
+        }
+    ]
+}

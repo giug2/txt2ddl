@@ -1,0 +1,7 @@
+- for each subject there can be multiple courses, held by the same professor or by different professors 
+- each course is related to one and only one subject
+- each professor teaches zero or more courses 
+- each course has one or more professors and is certainly one and only one study course
+- for each course of study there is at most one course in a given subject
+- each course has one and only one textbook; courses in a given subject do not necessarily have
+the same textbook

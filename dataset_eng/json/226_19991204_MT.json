@@ -1,0 +1,99 @@
+{
+    "entities": [
+        {
+            "name": "Mark",
+            "attributes": [
+                {
+                    "name": "IDMarca",
+                    "is_pk": true
+                },
+                {
+                    "name": "NameBrand",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Product Category",
+            "attributes": [
+                {
+                    "name": "CategoryCode",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeCategoria",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Product",
+            "attributes": [
+                {
+                    "name": "ProductName",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_marca",
+                    "is_pk": true
+                },
+                {
+                    "name": "Typology",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Item",
+            "attributes": [
+                {
+                    "name": "Series",
+                    "is_pk": true
+                },
+                {
+                    "name": "Production Data",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Customer",
+            "attributes": [
+                {
+                    "name": "IDClient",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Mark",
+            "entity2": "Product Category",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Product",
+            "entity2": "Mark",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Item",
+            "entity2": "Product",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Item",
+            "entity2": "Customer",
+            "cardinality": "N:1"
+        }
+    ]
+}

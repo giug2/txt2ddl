@@ -1,0 +1,11 @@
+Show a conceptual scheme for managing an event, which is a series of interventions (talks) scheduled for a specific date.
+Consider the following specifications:
+• each intervention has a numerical identifier, a title, a speaker and is scheduled in one or more thematic sessions (this specification relates to a case that is not very common, but possible);
+each intervention takes place in a specific time slot within a session (which may be different for the various sessions in which it is scheduled, if there are more than one)
+• each session has a code and a name
+• each speaker has a code, a name and a company they belong to (for example, the speaker named Mario Rossi could belong to the company XXX SpA)
+• each company has a code and a name
+• affects management not only for a single event, but for multiple events that take place on different dates
+• for each event (identified by the date) the start time and the name of the organizer, i.e. the person who produced it, must be reported.
+• each intervention is part of a single event (day)
+• for each speech the speaker has a company to which he belongs and a specific role, but can, for different speeches, have different companies or roles (for example, Mario Rossi gave a speech as CEO of XXX SpA, another as CTO of YYY Srl and yet another as CTO of XXX SpA)

@@ -1,0 +1,3 @@
+Show the conceptual scheme of a database for a set of universities, according to the following specifications.
+• Each university has a name, is located in a region (of which the state is also of interest, with its acronym) and has a series of departments, each of which has a name and a number of classrooms.
+• Universities offer degree courses, for each of which they are interested in the responsible teacher (with serial number, surname, name, date of hire), the year of establishment and the department to which it belongs (which is assumed to be fixed: each degree course belongs to a department of a university).

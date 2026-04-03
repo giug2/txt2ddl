@@ -1,0 +1,11 @@
+Mostrare uno schema concettuale per la gestione di un evento, che è una serie di interventi (talk) programmati per una specifica data.
+Si considerino le specifiche seguenti:
+• ogni intervento ha un identificatore numerico, un titolo, un relatore ed è programmato in una o più sessioni tematiche (questa specifica è relativa ad un caso non molto comune, ma possibile);
+ogni intervento si svolge in uno specifico slot orario all'interno di una sessione (che può essere diverso per le varie sessioni in cui esso è programmato, se sono più di una)
+• ogni sessione ha un codice e un nome
+• ogni relatore ha un codice, un nome e un'azienda di appartenenza (ad esempio, il relatore di nome Mario Rossi potrebbe appartenere all'azienda XXX SpA)
+• ogni azienda ha un codice e un nome
+• interessa la gestione non solo per un singolo evento, ma per più eventi che si svolgono in date diverse
+• per ogni evento (identificato dalla data) deve essere riportato l’orario di inizio e il nome dell'organizzatore, cioè della persona che lo ha prodotto.
+• ogni intervento è parte di un solo evento (giornata)
+• per ogni intervento il relatore ha un'azienda di appartenenza e un ruolo specifico, ma può, per interventi diversi, avere aziende o ruoli diversi (ad esempio, Mario Rossi ha tenuto un intervento come CEO di XXX SpA, un altro come CTO di YYY Srl e un altro ancora come CTO di XXX SpA)

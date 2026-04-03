@@ -1,0 +1,107 @@
+{
+    "entities": [
+        {
+            "name": "Libro",
+            "attributes": [
+                {
+                    "name": "ISBN",
+                    "is_pk": true
+                },
+                {
+                    "name": "Titolo",
+                    "is_pk": false
+                },
+                {
+                    "name": "CopieDisponibili",
+                    "is_pk": false
+                },
+                {
+                    "name": "AnnoPubblicazione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Genere",
+            "attributes": [
+                {
+                    "name": "IDGenere",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeGenere",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Editore",
+            "attributes": [
+                {
+                    "name": "IDEditore",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeEditore",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Prestito",
+            "attributes": [
+                {
+                    "name": "IDPrestito",
+                    "is_pk": true
+                },
+                {
+                    "name": "DataPrestito",
+                    "is_pk": false
+                },
+                {
+                    "name": "Indirizzo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Utente",
+            "attributes": [
+                {
+                    "name": "Tessera",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeCompleto",
+                    "is_pk": false
+                },
+                {
+                    "name": "Stato",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Genere",
+            "entity2": "Libro",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Editore",
+            "entity2": "Libro",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Prestito",
+            "entity2": "Libro",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Prestito",
+            "entity2": "Utente",
+            "cardinality": "N:1"
+        }
+    ]
+}

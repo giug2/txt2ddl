@@ -1,0 +1,5 @@
+- ogni dirigente opera presso uno e un solo reparto e collabora con uno o più assistenti; 
+- gli assistenti che collaborano con un dirigente sono tutti e soli quelli che afferiscono allo specifico reparto presso cui il dirigente opera;
+• ogni reparto ha una e una sola sede, presso un reparto operano uno o più dirigenti e ad esso afferiscono uno o più assistenti
+• presso una sede ci possono essere più reparti
+• ogni assistente afferisce ad uno e un solo reparto e ha una sede che è quella del proprio reparto

@@ -1,0 +1,66 @@
+{
+  "entities": [
+    {
+      "name": "Società",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Nome", "is_pk": false },
+        { "name": "Colore", "is_pk": false },
+        { "name": "Fondazione", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Città",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Nazione",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Giocatore",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Cognome", "is_pk": false },
+        { "name": "Nome", "is_pk": false },
+        { "name": "Altezza", "is_pk": false },
+        { "name": "Peso", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Ruolo",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Nome", "is_pk": false }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "Città",
+      "entity2": "Società",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Società",
+      "entity2": "Giocatore",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Nazione",
+      "entity2": "Città",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Ruolo",
+      "entity2": "Giocatore",
+      "cardinality": "1:N"
+    }
+  ]
+}

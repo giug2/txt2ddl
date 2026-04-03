@@ -1,0 +1,12 @@
+Definire uno schema Entity-Relationship che descriva i dati di interesse per una videoteca, secondo le seguenti
+specifiche:
+• oggetto dei noleggi sono i supporti fisici (DVD, Blu-ray) dei film, identificati attraverso un codice copia; ognuno ha una data di ingresso in catalogo;
+• ogni film
+– può essere presente in più supporti fisici
+– ha un codice identificativo (chiamato ISAN),
+– un titolo
+– uno o più artisti (attori, registi)
+– è distribuito da una società di distribuzione
+• ogni società di distribuzione ha un nome e un codice;
+• ogni artista ha un codice, un cognome, un nome, una data di nascita e un'affiliazione con uno studio di produzione (con codice e nome)
+• per ogni noleggio in corso (quelli conclusi non interessano), sono rilevanti la data di scadenza del noleggio e il cliente (che può avere più supporti fisici a noleggio contemporaneamente), con codice identificativo, nome, cognome e recapito telefonico.

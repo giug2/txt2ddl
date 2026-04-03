@@ -1,0 +1,12 @@
+• interessano convegni svolti anche in anni diversi
+• ogni convegno appartiene ad una serie, e per ogni serie (ad esempio, la serie VLDB) esiste al più un
+convegno all’anno (quindi ad esempio esiste il VLDB 2017); ogni serie ha un codice e un titolo ed è
+relativa ad una materia (che ha codice, nome e area scientifica con gli stessi dettagli della domanda
+precedente)
+• ogni convegno si svolge in una città (che ha codice, nome e nazione con gli stessi dettagli della domanda
+precedente), in una certa data 
+• ogni convegno è composto di una serie di sessioni, ognuna con codice (univoco nella base di dati), orario
+e un insieme di partecipanti, ognuno dei quali presenta una relazione con un titolo (semplice stringa di
+testo) e ha una istituzione, ad esempio una università o una azienda; si noti che
+l’affiliazione di una stessa persona può variare da un convegno all’altro
+• ogni istituzione ha un codice un nome e una città in cui ha sede

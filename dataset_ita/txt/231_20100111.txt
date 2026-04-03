@@ -1,0 +1,12 @@
+Mostrare lo schema concettuale per una base di dati per l'offerta formativa dei corsi di un anno accademico presso un'università, secondo le seguenti specifiche.
+• Ogni corso ha un codice, un titolo e una descrizione, ed è costituito da un insieme di moduli didattici.
+• Ogni modulo didattico ha un codice, un titolo e un autore del materiale di riferimento (con codice e nome); uno stesso modulo può essere parte di diversi corsi.
+• Ogni corso è offerto da un dipartimento; ogni dipartimento ha un nome, un direttore (del quale interessano nome e cognome) e un insieme di docenti afferenti.
+• Ogni docente ha una matricola (univoca nell’ambito della base di dati), nome e cognome, e può afferire a più dipartimenti, in ciascuno dei quali ha una specifica affiliazione.
+• Ogni corso si svolge in più lezioni, in date e orari diversi, non necessariamente sempre nella stessa aula.
+• Ogni aula ha un codice, un nome e un numero di posti.
+• interessa l'offerta formativa dell'università per vari anni accademici (ad esempio quelli degli ultimi tre anni); per ogni anno accademico sono rilevanti un codice e l’anno.
+• Per ogni corso, interessa anche l'ordine dei moduli didattici ed è anche possibile che un modulo venga ripreso più volte nello stesso corso.
+• I direttori di dipartimento (che dirigono ciascuno al massimo un dipartimento) possono essere anche docenti (nello stesso dipartimento che dirigono o in altri).
+• Ogni docente ha una sola cattedra principale in un dipartimento, ma in dipartimenti diversi può avere afferenze diverse.
+• Ogni corso si svolge in più lezioni, in giorni diversi, ma sempre nella stessa aula.

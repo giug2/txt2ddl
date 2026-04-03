@@ -1,0 +1,220 @@
+{
+    "entities": [
+        {
+            "name": "PROVINCIA",
+            "attributes": [
+                {
+                    "name": "SIGLA",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "REGIONE",
+            "attributes": [
+                {
+                    "name": "CODICE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "MAGAZZINO",
+            "attributes": [
+                {
+                    "name": "CODICE",
+                    "is_pk": true
+                },
+                {
+                    "name": "DESCRIZIONE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CORRIERE",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "RAGIONE_SOCIALE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "TRATTA",
+            "attributes": [
+                {
+                    "name": "CODICE",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_corriere",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "TIPO VEICOLO",
+            "attributes": [
+                {
+                    "name": "CODICE",
+                    "is_pk": true
+                },
+                {
+                    "name": "INDIRIZZO",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "GIORNO OPERATIVO",
+            "attributes": [
+                {
+                    "name": "NUMERO",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "SERVIZIO PIANIFICATO",
+            "attributes": [
+                {
+                    "name": "ORARIO_ARRIVO_PREVISTO",
+                    "is_pk": false
+                },
+                {
+                    "name": "ORARIO_PARTENZA_PREVISTO",
+                    "is_pk": false
+                },
+                {
+                    "name": "fk_giorno_operativo",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_tratta",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "SPEDIZIONE EFFETTIVA",
+            "attributes": [
+                {
+                    "name": "DATA",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_servizio_pianificato",
+                    "is_pk": true
+                },
+                {
+                    "name": "PARTENZA_REALE",
+                    "is_pk": false
+                },
+                {
+                    "name": "ARRIVO_REALE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "VEICOLO",
+            "attributes": [
+                {
+                    "name": "TARGA",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "PROVINCIA",
+            "entity2": "REGIONE",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "MAGAZZINO",
+            "entity2": "PROVINCIA",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "MAGAZZINO",
+            "entity2": "TRATTA",
+            "cardinality": "1:N",
+            "attributes": [
+                {
+                    "name": "Arrivo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "TRATTA",
+            "entity2": "MAGAZZINO",
+            "cardinality": "N:1",
+            "attributes": [
+                {
+                    "name": "Partenza",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "CORRIERE",
+            "entity2": "REGIONE",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "TRATTA",
+            "entity2": "CORRIERE",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "TRATTA",
+            "entity2": "TIPO VEICOLO",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "SERVIZIO PIANIFICATO",
+            "entity2": "TRATTA",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "SERVIZIO PIANIFICATO",
+            "entity2": "GIORNO OPERATIVO",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "SERVIZIO PIANIFICATO",
+            "entity2": "SPEDIZIONE EFFETTIVA",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "VEICOLO",
+            "entity2": "TIPO VEICOLO",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "VEICOLO",
+            "entity2": "SPEDIZIONE EFFETTIVA",
+            "cardinality": "1:N"
+        }
+    ]
+}

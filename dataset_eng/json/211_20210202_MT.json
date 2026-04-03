@@ -1,0 +1,85 @@
+{
+    "entities": [
+        {
+            "name": "Examination",
+            "attributes": [
+                {
+                    "name": "Data",
+                    "is_pk": false
+                },
+                {
+                    "name": "Vote",
+                    "is_pk": false
+                },
+                {
+                    "name": "Verbalization ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_MatricolaStudente",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Students",
+            "attributes": [
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Freshman",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Degree Course",
+            "attributes": [
+                {
+                    "name": "Educational Headquarters",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "CourseCode",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Department",
+            "attributes": [
+                {
+                    "name": "Department Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Examination",
+            "entity2": "Students",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Students",
+            "entity2": "Degree Course",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Degree Course",
+            "entity2": "Department",
+            "cardinality": "N:1"
+        }
+    ]
+}

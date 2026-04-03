@@ -1,0 +1,12 @@
+Il sistema descrive un universo musicale incentrato sui concerti 
+Ogni concerto identificato da un codice univoco e possiede un titolo una descrizione ed associato a una specifica orchestra che lo esegue e a un teatro in cui si svolge 
+I teatri sono a loro volta entità definite da un codice e un nome 
+Il contenuto di ogni concerto costituito da una sequenza di pezzi musicali 
+Ciascun pezzo definito da un codice un titolo e il suo autore il quale necessariamente un compositore presente in un'apposita anagrafica 
+I compositori sono registrati con un codice identificativo cognome e nome 
+La relazione che lega i pezzi ai concerti la programmazione la quale non solo associa un pezzo a un concerto ma ne stabilisce anche l'ordine di esecuzione tramite un attributo numerico intero chiamato posizione 
+Le orchestre sono caratterizzate da un nome una sede e un direttore 
+Quest'ultimo a sua volta un musicista entità che raggruppa tutte le figure professionali coinvolte ciascuna identificata da una matricola cognome e nome 
+La relazione tra i musicisti e le orchestre ulteriormente dettagliata attraverso la composizione dell'orchestra stessa questa associazione specifica quale musicista suona un determinato strumento all'interno di una data orchestra 
+Gli strumenti sono a loro volta catalogati con un codice un nome e un tipo 
+Infine per gestire le singole rappresentazioni l'entità Eventi associa ogni concerto a una specifica data e ora di svolgimento permettendo cos di pianificare più repliche dello stesso programma

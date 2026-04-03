@@ -1,0 +1,4 @@
+- we want to distinguish the concept of model (for example iPhone 15 Pro) from that of product type; Product types have a code that identifies them, while models are identified by the product type and a variant (for example "Pro" or even an empty variant, as happens for the basic model).
+- you want to represent the category concept with code and name (for example ELC and Electronics or CLO and Clothing); each type of product belongs to one and only one category.
+- each brand belongs to one and only one main category (but could also have products in other categories).
+- suppliers have an ID and a company name.

@@ -1,0 +1,7 @@
+So, basically we have some stuff to run the university. There are Departments, each identified by its name and with a Director at the head. Each department, obviously, deals with different degree courses. A degree course, which has its own code and name that identify it together, plus a few lines of description, always belongs to a single department.
+
+Then there are the teachers, with their serial number and name and surname. This gets interesting because a teacher can work for multiple departments and, vice versa, a department is full of teachers. When a professor is connected to a department, it is also noted that Materia teaches there.
+
+Each degree course is made up of many Teaching Modules, which are practically the subjects. These modules have a code and a title. The same module can be recycled across multiple degree courses, so there's a nice mix. By the way, each module has its own Author, a person with his own code and name, and an author can have written a lot of different modules.
+
+For logistics, each degree course is connected to classrooms. A room, which has a code, a name and a capacity, can be used by multiple courses, but each course seems to have its own reference room. Finally, for exams, there are the Exam Sessions. Each session is simply a date, and that date is tied specifically to a single degree program, so you can't go wrong.

@@ -1,0 +1,4 @@
+• each review is written for a product; each review has a unique code (ReviewID), a date and a rating
+• each product has a SKU code and a name and belongs to a subcategory
+• each subcategory belongs to a category, has a code (SubcategoryCode) that identifies it within the category and has a description
+• each category has an identifier (CategoryID) and a name

@@ -1,0 +1,9 @@
+Define an Entity-Relationship scheme that describes the educational offer of a University according to the following specifications, modified and simplified compared to reality:
+• the offer is divided into faculties and degree courses
+• each faculty has an identifying code and a name; complies with zero or more ministerial directives; is made up of one or more degree courses
+• each ministerial directive is an indication provided by the Ministry of Education; for each directive the code and title are relevant
+• each degree course has a progressive ID, unique within the faculty, a name and an annual cost.
+• financial aid for degree courses comes from various scholarships (for example merit scholarships, income-based scholarships, etc.)
+• for each degree course we want to keep track of the economic contribution offered by each scholarship; for example, one must remember the fact that the degree course in Computer Engineering is supported by 3000 Euros from the merit scholarship and 2000 Euros from the regional scholarship
+• each degree course is in turn divided into courses, each of which has a code, a name, a reference Department (which coordinates it) and zero or more other participating Departments
+• for each Department the code and name are of interest

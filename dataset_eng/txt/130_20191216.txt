@@ -1,0 +1,15 @@
+Define an Entity-Relationship schema that describes a set of statistical data (used for example by a
+sports newspaper or by a television network to support journalistic activities) relating to a group of skiers
+with the relevant specialties, according to the following specifications:
+• each skier has a code, surname, name, place of birth (city and country, each with code and name) and
+citizenship (nation which may be different from that of the place of birth);
+• each specialty has a code and name;
+• for each skier the specialties practiced are of interest with the number of victories achieved in each of them.
+
+• they concern the individual races in which a skier participated, with the relative position; for example, interests
+keep track of the fact that Alberto Tomba came first in the special slalom held in Wengen on
+01/26/1992 and third in the one played at Sestriere on 02/15/1997;
+• assume that a competition is identified by date, venue and specialty as well as possibly by a code;
+• each competition venue has a code, name and country;
+• a skier can change nationality and it is important, for each race, to know the nationality he had at the time
+moment.

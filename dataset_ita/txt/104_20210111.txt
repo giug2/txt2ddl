@@ -1,0 +1,8 @@
+Mostrare uno schema concettuale per una base di dati che gestisca le informazioni relative ad alcune catene di negozi 
+Sono di interesse i seguenti aspetti:
+- le catene, ognuna con sigla e nome
+- i negozi, ognuno dei quali appartiene a una e una sola catena e ha codice (univoco nell'ambito della catena), nome e indirizzo (supporre sia un semplice valore, senza struttura particolare)
+- i prodotti, ognuno dei quali è venduto presso zero o più negozi, ha un codice univoco e un nome ed è prodotto da uno e un solo produttore
+- i produttori, ognuni dei quali ha codice (identificante) e nome
+- i dipendenti, ognuno dei quali ha codice (identificante), cognome e nome e collabora con zero o più negozi, presso ognuno dei quali ha un ruolo (un semplice valore, che può essere diverso da un negozio all'altro); ogni dipendente è nato in una città e risiede in una città
+- le città, che hanno codice (identificante) e nome

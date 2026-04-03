@@ -1,0 +1,6 @@
+Definire uno schema Entity-Relationship che descriva i dati di interesse per la gestione di un insieme di magazzini e dei prodotti stoccati in essi, secondo le seguenti specifiche:
+• ogni magazzino ha un ID, un nome della sede, una ubicazione (comune, con codice ISTAT, nome e provincia; la provincia ha una sigla e un nome) e un anno di apertura
+• ogni prodotto
+– ha un codice SKU, un nome, una marca e una data di lancio sul mercato;
+– è stoccato in uno e un solo magazzino;
+– appartiene a una e una sola “categoria” (con un ID e un nome)

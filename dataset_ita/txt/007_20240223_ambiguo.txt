@@ -1,0 +1,7 @@
+In pratica, abbiamo un sistema che tiene traccia di un po' di roba scritta. C'è una specie di raccolta, la RASSEGNA, che è identificata da una DATA precisa e di cui sappiamo anche l'ORA e chi se n'è occupato, il CURATORE. Ogni rassegna di queste, ovviamente, contiene un sacco di ARTICOLI.
+
+Un ARTICOLO è definito da un titolo, un autore e ha pure un suo codice identificativo, anche se non sembra essere la cosa più importante. La cosa interessante è che lo stesso articolo può finire su più GIORNALI diversi, e un giornale può pubblicare tanti articoli. Quando un articolo viene pubblicato su un giornale, ci segniamo anche a che pagina si trova. Ogni GIORNALE, a sua volta, ha un suo codice e un nome per riconoscerlo.
+
+Poi c'è tutta la parte su chi scrive. Abbiamo una lista di AUTORI, ciascuno col suo nome e un codice, e una lista di ENTI, tipo aziende o università, anche loro con un codice e un nome. Il punto di incontro è una specie di scheda, chiamata "AUTORE CON AFFERENZA E RUOLO", che in pratica lega un autore a un ente e specifica che RUOLO ha in quel contesto. Questa combinazione di autore, ente e ruolo è ciò che la rende unica. Un singolo autore può avere un sacco di questi legami, magari lavora per più enti con ruoli diversi, e ovviamente un ente ha al suo interno tante persone con vari ruoli.
+
+Alla fine, tutto si ricollega all'ARTICOLO: ogni pezzo scritto è collegato a una o più di queste "schede". Questo vuol dire che per un articolo sappiamo esattamente chi ci ha lavorato, per quale ente e con quale ruolo specifico in quel momento.

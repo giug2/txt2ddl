@@ -1,0 +1,123 @@
+{
+    "entities": [
+        {
+            "name": "Model",
+            "attributes": [
+                {
+                    "name": "variant",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_product_type",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Item",
+            "attributes": [
+                {
+                    "name": "SKU",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_model",
+                    "is_pk": true
+                },
+                {
+                    "name": "State",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "ProductType",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Category",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Brand",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Supplier",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "Company Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Item",
+            "entity2": "Model",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Model",
+            "entity2": "Model",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "ProductType",
+            "entity2": "Model",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Category",
+            "entity2": "ProductType",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Brand",
+            "entity2": "Item",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Supplier",
+            "entity2": "Brand",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Brand",
+            "entity2": "Category",
+            "cardinality": "1:N"
+        }
+    ]
+}

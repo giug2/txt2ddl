@@ -1,0 +1,69 @@
+{
+    "entities": [
+        {
+            "name": "Students",
+            "attributes": [
+                {
+                    "name": "id_students",
+                    "is_pk": true
+                },
+                {
+                    "name": "full_name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Corso",
+            "attributes": [
+                {
+                    "name": "course_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_teacher",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Teaching",
+            "attributes": [
+                {
+                    "name": "teacher_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "full_name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Classroom",
+            "attributes": [
+                {
+                    "name": "id_lobby",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Teaching",
+            "entity2": "Corso",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Students",
+            "entity2": "Corso",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Classroom",
+            "entity2": "Corso",
+            "cardinality": "N:N"
+        }
+    ]
+}

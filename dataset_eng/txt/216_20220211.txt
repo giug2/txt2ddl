@@ -1,0 +1,2 @@
+• It is of interest to represent the possible study plans. Each Degree Course is related to a Faculty, has an identifying code (unique within the Faculty) and is made up of an ordered list of subjects to follow.
+• We also want to represent the lessons, which each have a title, a starting time, a duration and are based on a certain degree course. The lessons are repeated on various days of the week with a different maximum classroom capacity.

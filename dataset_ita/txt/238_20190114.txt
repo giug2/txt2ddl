@@ -1,0 +1,6 @@
+Definire uno schema Entity-Relationship che descriva i dati di interesse in un certo momento (ad esempio, adesso) per un insieme di festival musicali e per gli artisti che si esibiscono in essi, secondo le seguenti specifiche:
+• ogni festival ha un ID univoco, un nome, una location (città, con ID, nome e paese; il paese è una semplice stringa) e un anno di edizione;
+• ogni artista
+– ha un codice identificativo, un nome d'arte, un nome reale e l'anno di inizio della carriera;
+– si esibisce in uno e un solo festival;
+– appartiene a uno e un solo “genere musicale” (con un ID identificativo e un nome; esiste un insieme in qualche modo predefinito di generi).

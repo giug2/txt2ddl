@@ -1,0 +1,4 @@
+• ogni produttore è sotto contratto con una e una sola etichetta discografica;
+• ogni album appartiene a un solo artista e ogni artista può avere uno o più album;
+• ogni etichetta discografica ha zero o più artisti sotto contratto e gestisce tutti e soli i relativi album; ogni artista è scritturato da una e una sola etichetta discografica;
+• ogni produttore lavora a tutti e soli gli album degli artisti della propria etichetta discografica.

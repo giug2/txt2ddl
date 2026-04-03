@@ -1,0 +1,99 @@
+{
+    "entities": [
+        {
+            "name": "ARTISTA",
+            "attributes": [
+                {
+                    "name": "id_artista",
+                    "is_pk": true
+                },
+                {
+                    "name": "dati_artista",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "EVENTO",
+            "attributes": [
+                {
+                    "name": "replica",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_tour",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_location",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome_evento",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "TOUR",
+            "attributes": [
+                {
+                    "name": "id_tour",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome_tour",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "LOCATION",
+            "attributes": [
+                {
+                    "name": "id_location",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome_location",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "SCALETTA",
+            "attributes": [
+                {
+                    "name": "id_scaletta",
+                    "is_pk": true
+                },
+                {
+                    "name": "titolo_canzone",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "ARTISTA",
+            "entity2": "EVENTO",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "TOUR",
+            "entity2": "EVENTO",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "LOCATION",
+            "entity2": "EVENTO",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "LOCATION",
+            "entity2": "SCALETTA",
+            "cardinality": "1:N"
+        }
+    ]
+}

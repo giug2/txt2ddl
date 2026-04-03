@@ -1,0 +1,67 @@
+{
+    "entities": [
+        {
+            "name": "ARTISTA_PRINCIPALE",
+            "attributes": [
+                {
+                    "name": "pk_artista_principale",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "GENERE_MUSICALE",
+            "attributes": [
+                {
+                    "name": "pk_genere_musicale",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "MUSICISTA_SUPPORTO",
+            "attributes": [
+                {
+                    "name": "pk_musicista_supporto",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "STUDIO_REGISTRAZIONE",
+            "attributes": [
+                {
+                    "name": "pk_studio_registrazione",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "ARTISTA_PRINCIPALE",
+            "entity2": "GENERE_MUSICALE",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "ARTISTA_PRINCIPALE",
+            "entity2": "MUSICISTA_SUPPORTO",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "MUSICISTA_SUPPORTO",
+            "entity2": "GENERE_MUSICALE",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "ARTISTA_PRINCIPALE",
+            "entity2": "STUDIO_REGISTRAZIONE",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "MUSICISTA_SUPPORTO",
+            "entity2": "STUDIO_REGISTRAZIONE",
+            "cardinality": "N:1"
+        }
+    ]
+}

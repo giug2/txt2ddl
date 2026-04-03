@@ -1,0 +1,99 @@
+{
+    "entities": [
+        {
+            "name": "Cliente",
+            "attributes": [
+                {
+                    "name": "CodiceCliente",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Indirizzo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Ordine",
+            "attributes": [
+                {
+                    "name": "ID_Ordine",
+                    "is_pk": true
+                },
+                {
+                    "name": "ImportoTotale",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Corriere",
+            "attributes": [
+                {
+                    "name": "CodiceCorriere",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeCorriere",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "DettaglioOrdine",
+            "attributes": [
+                {
+                    "name": "ID_Riga",
+                    "is_pk": true
+                },
+                {
+                    "name": "Prezzo",
+                    "is_pk": false
+                },
+                {
+                    "name": "DataInserimento",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Prodotto",
+            "attributes": [
+                {
+                    "name": "CodiceProdotto",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeProdotto",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Cliente",
+            "entity2": "Ordine",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Corriere",
+            "entity2": "Ordine",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Ordine",
+            "entity2": "DettaglioOrdine",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Prodotto",
+            "entity2": "DettaglioOrdine",
+            "cardinality": "1:N"
+        }
+    ]
+}

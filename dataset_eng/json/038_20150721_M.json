@@ -1,0 +1,125 @@
+{
+    "entities": [
+        {
+            "name": "Persona",
+            "attributes": [
+                {
+                    "name": "CF",
+                    "is_pk": true
+                },
+                {
+                    "name": "Address",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Date of birth",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "User",
+            "attributes": [
+                {
+                    "name": "Number",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Bill",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Data",
+                    "is_pk": false
+                },
+                {
+                    "name": "Amount",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Payment",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Data",
+                    "is_pk": false
+                },
+                {
+                    "name": "Amount",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "District",
+            "attributes": [
+                {
+                    "name": "Prefix",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Province",
+            "attributes": [
+                {
+                    "name": "Sail",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "User",
+            "entity2": "Persona",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Bill",
+            "entity2": "User",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "User",
+            "entity2": "Payment",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "User",
+            "entity2": "District",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Province",
+            "entity2": "District",
+            "cardinality": "1:N"
+        }
+    ]
+}

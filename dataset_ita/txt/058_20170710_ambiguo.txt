@@ -1,0 +1,7 @@
+Allora, in pratica qui abbiamo un po' di roba che gira intorno ai libri. C'è l'autore, una persona con un suo codice identificativo, nome, cognome e quando è nato. A volte, un autore è legato a un qualche tipo di ente, tipo un'istituzione o un gruppo, e tanti autori possono far parte dello stesso ente. Poi, ovviamente, gli autori scrivono i libri. Un autore può aver scritto un sacco di libri, e un libro può tranquillamente essere il frutto del lavoro di più persone, tipo quando scrivono insieme.
+
+Ogni libro ha il suo codice ISBN che lo rende unico, e naturalmente un titolo. Questi libri sono pubblicati da un editore, che è un'azienda con un suo codice e un nome. Un sacco di libri diversi possono essere dello stesso editore, ma un libro specifico esce solo con uno.
+
+Del libro, poi, non abbiamo solo il titolo, ma le copie fisiche vere e proprie. Ogni copia ha un suo numero d'inventario per non confonderla con le altre e sappiamo quando è stata comprata. Chiaramente, di un singolo libro possono esistere tante copie.
+
+Infine, ci sono gli utenti, le persone che prendono 'sta roba in prestito. Anche loro hanno un codice, nome, cognome e un numero di telefono per rintracciarli. Il collegamento interessante è che una copia specifica di un libro può essere data a un utente. Quando succede, ci si segna da qualche parte la data in cui dovrebbe riportarla indietro. E, beh, un utente può avere in prestito diverse copie allo stesso tempo.

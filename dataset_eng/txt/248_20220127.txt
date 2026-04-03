@@ -1,0 +1,4 @@
+• each professor can teach in one or more departments; A professor's students are those enrolled in the departments in which he teaches.
+• each department is based on a single campus, can have multiple associate professors and one or more students are enrolled in it.
+• There may be multiple departments on a campus.
+• each student is enrolled in one and only one department and belongs to the campus to which their department belongs.

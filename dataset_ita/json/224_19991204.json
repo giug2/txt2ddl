@@ -1,0 +1,73 @@
+{
+    "entities": [
+        {
+            "name": "Artista",
+            "attributes": [
+                {
+                    "name": "IDArtista",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "OperaArte",
+            "attributes": [
+                {
+                    "name": "IDOpera",
+                    "is_pk": true
+                },
+                {
+                    "name": "Titolo",
+                    "is_pk": false
+                },
+                {
+                    "name": "Stile",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Museo",
+            "attributes": [
+                {
+                    "name": "Nome",
+                    "is_pk": true
+                },
+                {
+                    "name": "Citt\u00e0",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Artista",
+            "entity2": "OperaArte",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "OperaArte",
+            "entity2": "Museo",
+            "cardinality": "1:N",
+            "attributes": [
+                {
+                    "name": "SalaEspositiva",
+                    "is_pk": false
+                },
+                {
+                    "name": "AnnoAcquisizione",
+                    "is_pk": false
+                }
+            ]
+        }
+    ]
+}

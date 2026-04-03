@@ -1,0 +1,63 @@
+{
+    "entities": [
+        {
+            "name": "Mission",
+            "attributes": [
+                {
+                    "name": "Number",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Line",
+            "attributes": [
+                {
+                    "name": "Number",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_mission",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Budget",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Recommendation",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Line",
+            "entity2": "Mission",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Recommendation",
+            "entity2": "Mission",
+            "cardinality": "N:N"
+        }
+    ]
+}

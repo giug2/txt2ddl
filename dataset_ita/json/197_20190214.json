@@ -1,0 +1,123 @@
+{
+    "entities": [
+        {
+            "name": "Corso",
+            "attributes": [
+                {
+                    "name": "ID_Corso",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Livello",
+            "attributes": [
+                {
+                    "name": "Cod_Livello",
+                    "is_pk": true
+                },
+                {
+                    "name": "Descrizione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Ruolo",
+            "attributes": [
+                {
+                    "name": "Cod_Ruolo",
+                    "is_pk": true
+                },
+                {
+                    "name": "Descrizione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Docente",
+            "attributes": [
+                {
+                    "name": "ID_Docente",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Dipartimento",
+            "attributes": [
+                {
+                    "name": "Cod_Dip",
+                    "is_pk": true
+                },
+                {
+                    "name": "Descrizione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Lezione",
+            "attributes": [
+                {
+                    "name": "Num_Lezione",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_corso",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Aula",
+            "attributes": [
+                {
+                    "name": "Cod_Aula",
+                    "is_pk": true
+                },
+                {
+                    "name": "Descrizione",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Livello",
+            "entity2": "Corso",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Ruolo",
+            "entity2": "Docente",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Docente",
+            "entity2": "Corso",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Dipartimento",
+            "entity2": "Corso",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Corso",
+            "entity2": "Lezione",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Aula",
+            "entity2": "Lezione",
+            "cardinality": "1:N"
+        }
+    ]
+}

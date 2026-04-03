@@ -1,0 +1,5 @@
+Show the conceptual scheme of a database for the organization of music festivals, according to the following specifications.
+• The organization operates a series of stages, each of which has a name and capacity.
+• A festival has a name, a start date and an end date.
+• Different artists perform in each festival and the same artist can participate in multiple festivals.
+• For each artist, the musical genre, the year of formation, and the stage on which they perform are represented (which can change at different festivals).

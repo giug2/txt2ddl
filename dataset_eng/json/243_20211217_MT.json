@@ -1,0 +1,140 @@
+{
+    "entities": [
+        {
+            "name": "Faculty",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Degree Course",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_facolta",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Annual cost",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Ministerial Directive",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Title",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "BorsaDiStudio",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Teaching",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Department",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Degree Course",
+            "entity2": "Faculty",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Ministerial Directive",
+            "entity2": "Faculty",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "BorsaDiStudio",
+            "entity2": "Degree Course",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Contribution",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Teaching",
+            "entity2": "Degree Course",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Teaching",
+            "entity2": "Department",
+            "cardinality": "N:1",
+            "attributes": [
+                {
+                    "name": "Responsible",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Department",
+            "entity2": "Teaching",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Collaborators",
+                    "is_pk": false
+                }
+            ]
+        }
+    ]
+}

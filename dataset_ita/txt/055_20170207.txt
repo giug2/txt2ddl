@@ -1,0 +1,6 @@
+Il sistema descrive la gestione di moduli di pagamento compilati da contribuenti 
+Al centro del modello si trova il contribuente identificato univocamente dal suo codice fiscale e caratterizzato da un nome Contribuente e dalla Città di residenza 
+Ogni contribuente associato a uno o più moduli di versamento ciascuno dei quali identificato da un proprio ID riporta un importo Totale e fa riferimento al codice fiscale del contribuente a cui appartiene 
+Inoltre il modulo collegato a una specifica banca identificata tramite il codice attraverso la quale avviene il pagamento 
+La struttura di ogni modulo dettagliata da una serie di righe ognuna con un proprio ID univoco una descrizione Riga un Importo specifico per quella voce e l'Anno di riferimento 
+Fondamentalmente ogni riga legata a una precisa tipologia di tributo tramite il codice tassa creando così un collegamento diretto con l'entità tassa la quale associa tale codice alla sua descrizione

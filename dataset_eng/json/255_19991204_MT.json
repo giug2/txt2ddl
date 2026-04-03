@@ -1,0 +1,135 @@
+{
+    "entities": [
+        {
+            "name": "Publishing House",
+            "attributes": [
+                {
+                    "name": "EditorCode",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Lingua",
+            "attributes": [
+                {
+                    "name": "LanguageCode",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Necklace",
+            "attributes": [
+                {
+                    "name": "NomeCollana",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_editor",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "CopyPhysics",
+            "attributes": [
+                {
+                    "name": "Inventory Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "AnnoStampa",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "User",
+            "attributes": [
+                {
+                    "name": "UserCode",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Edition",
+            "attributes": [
+                {
+                    "name": "CodiceEdizione",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_necklace",
+                    "is_pk": true
+                },
+                {
+                    "name": "Page number",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Type",
+            "attributes": [
+                {
+                    "name": "CodiceGenere",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Publishing House",
+            "entity2": "Lingua",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Necklace",
+            "entity2": "Publishing House",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "CopyPhysics",
+            "entity2": "User",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "CopyPhysics",
+            "entity2": "Edition",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Edition",
+            "entity2": "Necklace",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Necklace",
+            "entity2": "Type",
+            "cardinality": "N:1"
+        }
+    ]
+}

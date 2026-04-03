@@ -1,0 +1,90 @@
+{
+    "entities": [
+        {
+            "name": "Artista",
+            "attributes": [
+                {
+                    "name": "id_artista",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_etichetta_discografica",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome_arte",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Album",
+            "attributes": [
+                {
+                    "name": "id_album",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_artista",
+                    "is_pk": true
+                },
+                {
+                    "name": "titolo_album",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "EtichettaDiscografica",
+            "attributes": [
+                {
+                    "name": "id_etichetta_discografica",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome_etichetta",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Produttore",
+            "attributes": [
+                {
+                    "name": "id_produttore",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_etichetta_discografica",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "EtichettaDiscografica",
+            "entity2": "Produttore",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Album",
+            "entity2": "Artista",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "EtichettaDiscografica",
+            "entity2": "Artista",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Album",
+            "entity2": "Produttore",
+            "cardinality": "N:N"
+        }
+    ]
+}

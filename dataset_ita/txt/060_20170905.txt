@@ -1,0 +1,4 @@
+• ogni musicista, in ogni orchestra cui partecipa (in modo anche variabile da un anno all’altro), ha uno o
+più ruoli
+• i ruoli sono “standardizzati”, ciascuno con nome e codice (ad esempio il codice D corrisponde al direttore,
+il codice V1 al primo violino, etc.)

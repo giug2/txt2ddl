@@ -1,0 +1,126 @@
+{
+    "entities": [
+        {
+            "name": "UNIVERSITY",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CITTA",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "REGION",
+            "attributes": [
+                {
+                    "name": "SAILING",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "DEPARTMENT",
+            "attributes": [
+                {
+                    "name": "NAME",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_universita",
+                    "is_pk": true
+                },
+                {
+                    "name": "NUMBER_OFFICES",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CORSO",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "COURSE_NAME",
+                    "is_pk": false
+                },
+                {
+                    "name": "ACADEMIC_YEAR",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "PROFESSOR",
+            "attributes": [
+                {
+                    "name": "SERIAL NUMBER",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                },
+                {
+                    "name": "SURNAME",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "UNIVERSITY",
+            "entity2": "CITTA",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "CITTA",
+            "entity2": "REGION",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "DEPARTMENT",
+            "entity2": "UNIVERSITY",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "PROFESSOR",
+            "entity2": "REGION",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "CORSO",
+            "entity2": "PROFESSOR",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "CORSO",
+            "entity2": "DEPARTMENT",
+            "cardinality": "N:N"
+        }
+    ]
+}

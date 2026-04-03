@@ -1,0 +1,84 @@
+{
+  "entities": [
+    {
+      "name": "Categoria",
+      "attributes": [
+        { "name": "CCD", "is_pk": true },
+        { "name": "Descrizione", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Destinazione",
+      "attributes": [
+        { "name": "CDes", "is_pk": true },
+        { "name": "Descrizione", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Tipo",
+      "attributes": [
+        { "name": "CT", "is_pk": true },
+        { "name": "Descrizione", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Spedizione",
+      "attributes": [
+        { "name": "ID", "is_pk": true }
+      ]
+    },
+    {
+      "name": "Mittente",
+      "attributes": [
+        { "name": "CM", "is_pk": true },
+        { "name": "Nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Pacco",
+      "attributes": [
+        { "name": "NP", "is_pk": true },
+        { "name": "fk_spedizione", "is_pk": true }
+      ]
+    },
+    {
+      "name": "Dimensione",
+      "attributes": [
+        { "name": "CDim", "is_pk": true },
+        { "name": "Descrizione", "is_pk": false }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "Categoria",
+      "entity2": "Destinazione",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Destinazione",
+      "entity2": "Spedizione",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Tipo",
+      "entity2": "Spedizione",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Mittente",
+      "entity2": "Spedizione",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Spedizione",
+      "entity2": "Pacco",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Dimensione",
+      "entity2": "Pacco",
+      "cardinality": "1:N"
+    }
+  ]
+}

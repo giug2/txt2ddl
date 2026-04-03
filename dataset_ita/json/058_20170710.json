@@ -1,0 +1,80 @@
+{
+  "entities": [
+    {
+      "name": "AUTORE",
+      "attributes": [
+        { "name": "CODICE", "is_pk": true },
+        { "name": "COGNOME", "is_pk": false },
+        { "name": "NOME", "is_pk": false },
+        { "name": "DATA NASCITA", "is_pk": false }
+      ]
+    },
+    {
+      "name": "ENTE",
+      "attributes": [
+        { "name": "CODICE", "is_pk": true },
+        { "name": "NOME", "is_pk": false }
+      ]
+    },
+    {
+      "name": "LIBRO",
+      "attributes": [
+        { "name": "ISBN", "is_pk": true },
+        { "name": "TITOLO", "is_pk": false }
+      ]
+    },
+    {
+      "name": "EDITORE",
+      "attributes": [
+        { "name": "CODICE", "is_pk": true },
+        { "name": "NOME", "is_pk": false }
+      ]
+    },
+    {
+      "name": "COPIA",
+      "attributes": [
+        { "name": "INVENTARIO", "is_pk": true },
+        { "name": "DATA ACQUISTO", "is_pk": false }
+      ]
+    },
+    {
+      "name": "UTENTE",
+      "attributes": [
+        { "name": "CODICE", "is_pk": true },
+        { "name": "COGNOME", "is_pk": false },
+        { "name": "NOME", "is_pk": false },
+        { "name": "TELEFONO", "is_pk": false }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "AUTORE",
+      "entity2": "ENTE",
+      "cardinality": "N:1"
+    },
+    {
+      "entity1": "AUTORE",
+      "entity2": "LIBRO",
+      "cardinality": "N:N"
+    },
+    {
+      "entity1": "LIBRO",
+      "entity2": "EDITORE",
+      "cardinality": "N:1"
+    },
+    {
+      "entity1": "LIBRO",
+      "entity2": "COPIA",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "COPIA",
+      "entity2": "UTENTE",
+      "cardinality": "N:1",
+      "attributes": [
+        { "name": "data restituzione", "is_pk": false }
+      ]
+    }
+  ]
+}

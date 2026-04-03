@@ -1,0 +1,75 @@
+{
+    "entities": [
+        {
+            "name": "Chef",
+            "attributes": [
+                {
+                    "name": "chef_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Dish",
+            "attributes": [
+                {
+                    "name": "fk_menu",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_dish_type",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Menu",
+            "attributes": [
+                {
+                    "name": "id_menu",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "TypePlate",
+            "attributes": [
+                {
+                    "name": "dish_type_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Recipe",
+            "attributes": [
+                {
+                    "name": "id_recipe",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Dish",
+            "entity2": "Chef",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Dish",
+            "entity2": "Menu",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Dish",
+            "entity2": "TypePlate",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Recipe",
+            "entity2": "TypePlate",
+            "cardinality": "N:1"
+        }
+    ]
+}

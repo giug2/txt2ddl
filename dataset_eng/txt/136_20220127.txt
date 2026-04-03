@@ -1,0 +1,9 @@
+• each manager works in one or more departments and with one or more assistants, and it is important to be able to say that
+collaborates with an assistant at a department and with another assistant (or others or even with the same one) at
+another department
+• it is possible for a manager X to collaborate with an assistant Y in a department Z and with another assistant
+V at another department W without X collaborating with Y at department W
+• one or more managers and one or more assistants collaborate with each department
+• each assistant collaborates with one or more departments and with one or more managers
+• each department has one and only one location and each location has multiple departments
+• managers and assistants have links to headquarters only through departments

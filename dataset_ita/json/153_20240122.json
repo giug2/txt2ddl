@@ -1,0 +1,62 @@
+{
+    "entities": [
+        {
+            "name": "CORSO",
+            "attributes": [
+                {
+                    "name": "pk_corso",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "PROFESSORE",
+            "attributes": [
+                {
+                    "name": "pk_professore",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "STUDENTE",
+            "attributes": [
+                {
+                    "name": "pk_studente",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "FACOLTA",
+            "attributes": [
+                {
+                    "name": "pk_facolta",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "PROFESSORE",
+            "entity2": "CORSO",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "PROFESSORE",
+            "entity2": "STUDENTE",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "STUDENTE",
+            "entity2": "CORSO",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "FACOLTA",
+            "entity2": "CORSO",
+            "cardinality": "1:N"
+        }
+    ]
+}

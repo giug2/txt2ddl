@@ -1,0 +1,12 @@
+The system describes a project-focused software development environment.
+Each project is identified by a unique code, has a name, a description and is associated with a specific team that develops it and a repository that hosts it.
+Repositories are themselves entities defined by an ID and a URL.
+The content of each project consists of a set of software modules.
+Each module is defined by an ID, a name and its author, who is necessarily a developer present in a specific registry.
+Developers are registered with an identifying ID, last name and first name.
+The relationship that links modules to projects is integration, which not only associates a module with a project but also establishes its level of urgency via a numerical attribute called priority.
+The teams are characterized by a name and a working methodology.
+The professionals involved are the members of the team, an entity that groups together all the professional figures, each identified by an ID, surname and name.
+The relationship between members and teams is further detailed through role assignment: this association specifies which team member uses which technology within a given team.
+The technologies are in turn cataloged with an ID, a name and a category.
+Finally, to manage individual releases, the Release entity associates each project with a specific date and version, thus allowing you to plan multiple distributions of the same software.

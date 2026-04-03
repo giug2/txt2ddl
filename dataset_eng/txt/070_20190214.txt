@@ -1,0 +1,8 @@
+• each shipment has a code (ID), a sender, a destination and a type
+• each sender has a code (CM), a name (Sender attribute)
+• each destination has a code (CDes) and a description (Destination attribute) and a category, with
+code (CCD) and description (Category)
+• each type of shipment has a code (CT) and a description (Type attribute)
+• each shipment includes one or more packages
+• each package has a progressive number (NP) that identifies it within the shipment and has a size,
+with code (CDim) and description (Dimens. attribute)

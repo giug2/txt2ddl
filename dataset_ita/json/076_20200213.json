@@ -1,0 +1,74 @@
+{
+  "entities": [
+    {
+      "name": "Professore",
+      "attributes": [
+        {
+          "name": "id_professore",
+          "is_pk": true
+        },
+        {
+          "name": "fk_dipartimento",
+          "is_pk": true
+        }
+      ]
+    },
+    {
+      "name": "Dipartimento",
+      "attributes": [
+        {
+          "name": "id_dipartimento",
+          "is_pk": true
+        },
+        {
+          "name": "fk_scuola",
+          "is_pk": true
+        }
+      ]
+    },
+    {
+      "name": "Corso di Studio",
+      "attributes": [
+        {
+          "name": "id_corso_di_studio",
+          "is_pk": true
+        },
+        {
+          "name": "fk_dipartimento",
+          "is_pk": true
+        }
+      ]
+    },
+    {
+      "name": "Scuola",
+      "attributes": [
+        {
+          "name": "id_scuola",
+          "is_pk": true
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "Dipartimento",
+      "entity2": "Professore",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Dipartimento",
+      "entity2": "Corso di Studio",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Scuola",
+      "entity2": "Dipartimento",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Professore",
+      "entity2": "CorsoDiStudio",
+      "cardinality": "N:N"
+    }
+  ]
+}

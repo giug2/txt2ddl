@@ -1,0 +1,79 @@
+{
+    "entities": [
+        {
+            "name": "Salesperson",
+            "attributes": [
+                {
+                    "name": "seller_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "AnnouncementSale",
+            "attributes": [
+                {
+                    "name": "fk_product_category",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_product",
+                    "is_pk": true
+                },
+                {
+                    "name": "Lotto",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "CategoriaProdotto",
+            "attributes": [
+                {
+                    "name": "product_category_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Product",
+            "attributes": [
+                {
+                    "name": "product_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Review",
+            "attributes": [
+                {
+                    "name": "review_id",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Salesperson",
+            "entity2": "AnnouncementSale",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "CategoriaProdotto",
+            "entity2": "AnnouncementSale",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Product",
+            "entity2": "AnnouncementSale",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Product",
+            "entity2": "Review",
+            "cardinality": "1:N"
+        }
+    ]
+}

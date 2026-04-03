@@ -1,0 +1,7 @@
+• each teacher works in one and only one department;
+• each teacher teaches all and only the study courses of the department in which he works;
+• each course of study belongs to one and only one department and they all teach there
+only teachers who work in the department;
+• each department belongs to one and only one faculty;
+• each teacher collaborates only with the faculty to which the department to which the teacher belongs
+affers.

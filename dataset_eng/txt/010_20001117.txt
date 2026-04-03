@@ -1,0 +1,8 @@
+Define an Entity-Relationship schema that describes the data of an application relating to the price lists of a set of car manufacturers. They are of interest: 
+The manufacturing companies, with name (identifier) and address. 
+The models (for example the Punto or the Golf), with name, year of launch and market segment (coded with a letter and a short description: for example, the "A" segment corresponds to the description "utility"). 
+The name uniquely identifies the manufacturer. 
+The versions of the models, identified by the name of the manufacturer, the model and a specific name (for example the Fiat Punto 75S). For each version the price, the engine, the
+displacement, power, number of doors and maximum speed. Each model version has one and only one engine. 
+The engines (for example the Fire 1000 engine), identified through a code and with the following properties: displacement, number of cylinders and power. There may be engines (currently) not used in any model.
+Indicate the cardinalities of the relationships and an identifier for each entity.

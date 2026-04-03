@@ -1,0 +1,5 @@
+• each employee belongs to one and only one department;
+• each project has one and only one client and each client one or more projects
+• each department has zero or more clients and follows all and only the related projects; every client
+interacts with one and only one department
+• each employee works for all and only the projects of the clients in his own department

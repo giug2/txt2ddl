@@ -1,0 +1,74 @@
+{
+    "entities": [
+        {
+            "name": "Collegio",
+            "attributes": [
+                {
+                    "name": "Numero",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Regione",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Eletto",
+            "attributes": [
+                {
+                    "name": "Anno",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Partito",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Persona",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Regione",
+            "entity2": "Collegio",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Collegio",
+            "entity2": "Deputato",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Partito",
+            "entity2": "Deputato",
+            "cardinality": "1:N"
+        }
+    ]
+}

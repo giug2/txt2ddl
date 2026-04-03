@@ -1,0 +1,4 @@
+- ogni romanzo ha uno e un solo autore 
+- ogni romanzo ha zero o più personaggi 
+- ogni personaggio appare in zero o più romanzi 
+- ogni romanzo ha una o più edizioni, ciascuna con editore diverso

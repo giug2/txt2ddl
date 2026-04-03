@@ -1,0 +1,95 @@
+{
+    "entities": [
+        {
+            "name": "Convegno",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Citt\u00e0",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_nazione",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Nazione",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Titolo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Materia",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Area",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Convegno",
+            "entity2": "Citt\u00e0",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Convegno",
+            "entity2": "Materia",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Citt\u00e0",
+            "entity2": "Nazione",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Area",
+            "entity2": "Materia",
+            "cardinality": "1:N"
+        }
+    ]
+}

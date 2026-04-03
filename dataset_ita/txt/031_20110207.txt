@@ -1,0 +1,10 @@
+Il sistema gestisce un catalogo di prodotti dove ogni prodotto identificato da un codice univoco e descritto da un nome una quantità disponibile e un prezzo .
+Ciascun prodotto appartiene a una specifica categoria ed associato a un determinato fornitore 
+Le categorie sono a loro volta definite da un codice e una descrizione mentre ogni fornitore registrato con un proprio codice e nome 
+Esistono vincoli che garantiscono la coerenza dei dati assicurando che la categoria e il fornitore assegnati a un prodotto esistano effettivamente nelle rispettive anagrafiche 
+Il sistema traccia anche i clienti ognuno registrato con un codice un nome e un indirizzo 
+Un cliente può effettuare degli ordini ciascuno caratterizzato da un numero identificativo una data e uno stato di avanzamento 
+Anche in questo caso un vincolo assicura che ogni ordine sia collegato a un cliente validamente registrato 
+Per dettagliare il contenuto di un ordine si utilizza una struttura di linea dordine 
+Ogni linea dordine mette in relazione un ordine con un singolo prodotto e ne specifica la quantità richiesta 
+Appositi vincoli garantiscono che sia l'ordine sia il prodotto a cui ogni linea fa riferimento siano presenti e validi all'interno del sistema

@@ -1,0 +1,127 @@
+{
+    "entities": [
+        {
+            "name": "EVENTO",
+            "attributes": [
+                {
+                    "name": "DATA_EVENTO",
+                    "is_pk": true
+                },
+                {
+                    "name": "ORA_INIZIO",
+                    "is_pk": false
+                },
+                {
+                    "name": "ORGANIZZATORE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "INTERVENTO",
+            "attributes": [
+                {
+                    "name": "id_intervento",
+                    "is_pk": false
+                },
+                {
+                    "name": "titolo_intervento",
+                    "is_pk": false
+                },
+                {
+                    "name": "relatore_principale",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "AZIENDA",
+            "attributes": [
+                {
+                    "name": "id_azienda",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome_azienda",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "PARTECIPAZIONE_RELATORE",
+            "attributes": [
+                {
+                    "name": "fk_azienda",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_relatore",
+                    "is_pk": true
+                },
+                {
+                    "name": "RUOLO_EVENTO",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "SESSIONE",
+            "attributes": [
+                {
+                    "name": "id_sessione",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome_sessione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "RELATORE",
+            "attributes": [
+                {
+                    "name": "id_relatore",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome_relatore",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "INTERVENTO",
+            "entity2": "EVENTO",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "SESSIONE",
+            "entity2": "INTERVENTO",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "orario_slot",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "PARTECIPAZIONE_RELATORE",
+            "entity2": "INTERVENTO",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "PARTECIPAZIONE_RELATORE",
+            "entity2": "RELATORE",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "PARTECIPAZIONE_RELATORE",
+            "entity2": "AZIENDA",
+            "cardinality": "N:1"
+        }
+    ]
+}

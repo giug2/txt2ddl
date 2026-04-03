@@ -1,0 +1,143 @@
+{
+    "entities": [
+        {
+            "name": "Centro Logistico",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Citt\u00e0",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Ristorante",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Prezzo",
+                    "is_pk": false
+                },
+                {
+                    "name": "Telefono",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Tipo di Promozione",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Fornitore",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Piatto",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Indirizzo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Menu Speciale",
+            "attributes": [
+                {
+                    "name": "Periodo di Validit\u00e0",
+                    "is_pk": true
+                },
+                {
+                    "name": "Prezzo",
+                    "is_pk": false
+                },
+                {
+                    "name": "Numero di Portate",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Fornitore",
+            "entity2": "Centro Logistico",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Centro Logistico",
+            "entity2": "Citt\u00e0",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Citt\u00e0",
+            "entity2": "Ristorante",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Tipo di Promozione",
+            "entity2": "Ristorante",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Piatto",
+            "entity2": "Ristorante",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Ristorante",
+            "entity2": "Menu Speciale",
+            "cardinality": "1:N"
+        }
+    ]
+}

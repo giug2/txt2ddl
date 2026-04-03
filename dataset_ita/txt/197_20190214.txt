@@ -1,0 +1,8 @@
+• ogni corso ha un codice (ID_Corso), un docente, un dipartimento e un livello
+• ogni docente ha un codice (ID_Docente), un nome (attributo Docente) e un ruolo, con codice (Cod_Ruolo) e
+descrizione (Ruolo)
+• ogni dipartimento ha un codice (Cod_Dip) e una descrizione (attributo Dipartimento)
+• ogni livello di corso ha un codice (Cod_Livello) e una descrizione (attributo Livello)
+• ogni corso comprende una o più lezioni
+• ogni lezione ha un numero progressivo (Num_Lezione) che la identifica nell’ambito del corso e si svolge in un'aula,
+con codice (Cod_Aula) e descrizione (attributo Aula)

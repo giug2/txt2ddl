@@ -1,0 +1,125 @@
+{
+    "entities": [
+        {
+            "name": "Students",
+            "attributes": [
+                {
+                    "name": "Freshman",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Date of birth",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Course Registration",
+            "attributes": [
+                {
+                    "name": "Registration_ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "Academic Year",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Already",
+            "attributes": [
+                {
+                    "name": "ID_Tax",
+                    "is_pk": true
+                },
+                {
+                    "name": "DataEmission",
+                    "is_pk": false
+                },
+                {
+                    "name": "Amount",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Payment",
+            "attributes": [
+                {
+                    "name": "ID_Pagement",
+                    "is_pk": true
+                },
+                {
+                    "name": "DataPayment",
+                    "is_pk": false
+                },
+                {
+                    "name": "Amount",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Degree Course",
+            "attributes": [
+                {
+                    "name": "CourseCode",
+                    "is_pk": true
+                },
+                {
+                    "name": "CourseName",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Department",
+            "attributes": [
+                {
+                    "name": "Department Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "DepartmentName",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Course Registration",
+            "entity2": "Students",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Already",
+            "entity2": "Course Registration",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Payment",
+            "entity2": "Course Registration",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Course Registration",
+            "entity2": "Degree Course",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Degree Course",
+            "entity2": "Department",
+            "cardinality": "N:1"
+        }
+    ]
+}

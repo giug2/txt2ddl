@@ -1,0 +1,11 @@
+Show the conceptual scheme of a football tournament database, according to the following
+specifications.
+• The various tournaments have a code and a name.
+• Each tournament is made up of a certain number of teams and a ranking that assigns to each team
+a score.
+• The teams participate in only one tournament and have a name and a roster of players whose names we record
+shirt number, name and date of birth.
+• Matches take place between two teams from the same tournament, on a certain date, in a certain stadium and have
+a final result.
+• We want to record the players who play in the various games and the role played (which is the same in one
+match but may vary in different matches).

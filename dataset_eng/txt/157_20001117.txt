@@ -1,0 +1,7 @@
+Define an Entity-Relationship schema that describes the data of an application relating to the educational offer of a set of university departments. They are of interest:
+The departments, with name (identifier) and headquarters.
+The degree courses (for example "Computer Engineering" or "Classical Literature"), with name, year of activation and disciplinary area of ​​reference (coded with an SSD code and with a brief description: for example, the "INF/01" area corresponds to the description "Informatics").
+The name uniquely identifies the degree course together with the department to which it belongs.
+The courses of the degree courses, identified by the name of the department, that of the degree course and a specific name (for example "Software Engineering"). For each course, the training credits (CFU), the lecturer, the lesson hours and the year of the course in which it is delivered are relevant. Each course has one and only one lecturer.
+The teachers (for example Professor Mario Rossi), identified through a serial number and with the following properties: band, years of experience and office number. There may be teachers (currently) without an assigned teaching position.
+Indicate the cardinalities of the relationships and an identifier for each entity.

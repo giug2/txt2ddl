@@ -1,0 +1,79 @@
+{
+    "entities": [
+        {
+            "name": "Employee",
+            "attributes": [
+                {
+                    "name": "employee_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Task",
+            "attributes": [
+                {
+                    "name": "id_task",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_tipotask",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_progetto",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Document",
+            "attributes": [
+                {
+                    "name": "document_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Project",
+            "attributes": [
+                {
+                    "name": "project_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "TipoTask",
+            "attributes": [
+                {
+                    "name": "id_tipotask",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "TipoTask",
+            "entity2": "Task",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Employee",
+            "entity2": "Task",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Task",
+            "entity2": "Project",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Task",
+            "entity2": "Document",
+            "cardinality": "N:1"
+        }
+    ]
+}

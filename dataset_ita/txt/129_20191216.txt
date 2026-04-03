@@ -1,0 +1,7 @@
+Definire uno schema Entity-Relationship che descriva un insieme di dati statistici (utilizzati ad esempio da un
+giornale sportivo o da una rete televisiva a supporto delle attività giornalistiche) relativi ad insieme di sciatori
+con le relative specialità, secondo le specifiche seguenti:
+• ogni sciatore ha codice, cognome, nome, luogo di nascita (città e nazione, ciascuna con codice e nome) e
+cittadinanza (nazione che può essere diversa da quella del luogo di nascita);
+• ogni specialità ha codice e nome;
+• per ogni sciatore interessano le specialità praticate con il numero di vittorie riportate in ciascuna di esse.

@@ -1,0 +1,143 @@
+{
+    "entities": [
+        {
+            "name": "Airport",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Departure city",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Location",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Examination",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Cost",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "College",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Address",
+                    "is_pk": false
+                },
+                {
+                    "name": "Telephone",
+                    "is_pk": false
+                },
+                {
+                    "name": "Ore",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Stay",
+            "attributes": [
+                {
+                    "name": "Period",
+                    "is_pk": true
+                },
+                {
+                    "name": "Prezzo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Type of Reduction",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Departure city",
+            "entity2": "Airport",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Location",
+            "entity2": "Airport",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Examination",
+            "entity2": "Location",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "College",
+            "entity2": "Location",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Stay",
+            "entity2": "College",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Type of Reduction",
+            "entity2": "College",
+            "cardinality": "N:N"
+        }
+    ]
+}

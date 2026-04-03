@@ -1,0 +1,123 @@
+{
+    "entities": [
+        {
+            "name": "Corso",
+            "attributes": [
+                {
+                    "name": "Course_ID",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Level",
+            "attributes": [
+                {
+                    "name": "Code_Level",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Role",
+            "attributes": [
+                {
+                    "name": "Role_Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Teaching",
+            "attributes": [
+                {
+                    "name": "Teacher_ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Department",
+            "attributes": [
+                {
+                    "name": "Cod_Dip",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Lesson",
+            "attributes": [
+                {
+                    "name": "Lesson_Number",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_course",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Classroom",
+            "attributes": [
+                {
+                    "name": "Class_Cod",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Corso",
+            "entity2": "Level",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Teaching",
+            "entity2": "Role",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Teaching",
+            "entity2": "Corso",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Corso",
+            "entity2": "Department",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Lesson",
+            "entity2": "Corso",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Classroom",
+            "entity2": "Lesson",
+            "cardinality": "1:N"
+        }
+    ]
+}

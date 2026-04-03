@@ -1,0 +1,88 @@
+{
+    "entities": [
+        {
+            "name": "Sciatore",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Specialit\u00e0",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Citt\u00e0",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Nazione",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Sciatore",
+            "entity2": "Citt\u00e0",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Specialit\u00e0",
+            "entity2": "Sciatore",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "VIttorie",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Citt\u00e0",
+            "entity2": "Nazione",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Sciatore",
+            "entity2": "Nazione",
+            "cardinality": "N:1"
+        }
+    ]
+}

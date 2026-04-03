@@ -1,0 +1,81 @@
+{
+  "entities": [
+    {
+      "name": "RASSEGNA",
+      "attributes": [
+        { "name": "DATA", "is_pk": true },
+        { "name": "ORA", "is_pk": false },
+        { "name": "CURATORE", "is_pk": false }
+      ]
+    },
+    {
+      "name": "ARTICOLO",
+      "attributes": [
+        { "name": "pk_articolo", "is_pk": false},
+        { "name": "titolo", "is_pk": false},
+        { "name": "autore", "is_pk": false}
+      ]
+    },
+    {
+      "name": "ENTE",
+      "attributes": [
+        { "name": "CODICE", "is_pk": true },
+        { "name": "NOME", "is_pk": false }
+      ]
+    },
+    {
+      "name": "AUTORE CON AFFERENZA E RUOLO",
+      "attributes": [
+        { "name": "fk_ENTE", "is_pk": true},
+        { "name": "fk_AUTORE", "is_pk": true},
+        { "name": "RUOLO", "is_pk": true }
+      ]
+    },
+    {
+      "name": "GIORNALE",
+      "attributes": [
+        { "name": "CODICE", "is_pk": true },
+        { "name": "nome", "is_pk": false}
+      ]
+    },
+    {
+      "name": "AUTORE",
+      "attributes": [
+        { "name": "CODICE", "is_pk": true },
+        { "name": "NOME", "is_pk": false }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "RASSEGNA",
+      "entity2": "ARTICOLO",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "ARTICOLO",
+      "entity2": "GIORNALE",
+      "cardinality": "N:N",
+      "attributes": [
+        {
+          "name": "Pagine", "is_pk": false
+        }
+      ]
+    },
+    {
+      "entity1": "ARTICOLO",
+      "entity2": "AUTORE CON AFFERENZA E RUOLO",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "AUTORE",
+      "entity2": "AUTORE CON AFFERENZA E RUOLO",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "ENTE",
+      "entity2": "AUTORE CON AFFERENZA E RUOLO",
+      "cardinality": "1:N"
+    }
+  ]
+}

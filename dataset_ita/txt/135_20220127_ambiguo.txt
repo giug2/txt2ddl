@@ -1,0 +1,5 @@
+Allora, in questo sistema abbiamo un po' di cose che girano attorno all'organizzazione del lavoro. Ci sono le sedi, che sono praticamente i posti fisici, e ognuna ha un suo codice per non confonderle. Poi ci sono i reparti, le varie aree o settori, e anche loro hanno un loro numeretto per riconoscerli.
+
+La parte interessante riguarda i manager, quelli che comandano. Per identificare un manager non basta un solo dato, ma devi mettere insieme il suo codice personale, il reparto a cui è legato e pure la sede. È l'insieme di queste tre informazioni che lo rende unico. Questo fa capire che c'è un bel collegamento tra i manager e i reparti, un gran miscuglio dove un capo può essere collegato a più settori e, allo stesso tempo, un settore può avere più di un responsabile.
+
+Infine, ci sono gli assistenti, quelli che aiutano i capi. Anche un assistente ha un suo codice identificativo, ma per essere sicuri di chi stiamo parlando, dobbiamo sapere anche a quale manager è agganciato e in quale sede. La regola qui è più semplice: un manager può avere un bel gruppo di assistenti che lavorano per lui, ma ogni assistente fa capo a un solo e unico manager.

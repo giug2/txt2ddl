@@ -1,0 +1,16 @@
+Definire uno schema Entity-Relationship che descriva la struttura del PNRR (Piano Nazionale di Ripresa e
+Resilienza) secondo le specifiche seguenti, modificate e semplificate rispetto alla realtà:
+• il piano è articolato in missioni e linee di azione
+• ogni missione ha un numero identificante e un nome; fa riferimento a zero o più raccomandazioni; è
+composta da una o più linee di azione
+• ogni raccomandazione è un’indicazione fornita
+all’Italia dalla Commissione Europea; per ogni raccomandazione interessano solo codice e nome
+• ogni linea di azione ha un numero progressivo, unico nell’ambito della missione, un nome e un budget.
+• le risorse a disposizione per le linee di azione delle missioni del PNRR provengono da diverse fonti
+finanziarie (ad esempio il PNRR stesso, il fondo React-EU, il cosiddetto fondo complementare, e altri)
+• per ogni linea di azione si vuole tenere traccia dell’importo finanziato da ciascuna fonte; ad esempio, si
+deve memorizzare il fatto che la linea di azione 2 della missione 1 è finanziata per 1 milione dal PNRR,
+per 700 mila Euro da REACT-EU e 300 mila Euro dal fondo complementare
+• ogni linea di azione è a sua volta articolata in progetti, ognuno dei quali ha un codice, un nome, un
+Ministero di riferimento (che lo coordina) e zero o più altri Ministeri che partecipano
+• per ogni Ministero sono di interesse codice e nome

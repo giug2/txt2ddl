@@ -1,0 +1,111 @@
+{
+    "entities": [
+        {
+            "name": "Museo",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Itinerary",
+            "attributes": [
+                {
+                    "name": "Sail",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_idmuseo",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Guided tour",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Hours",
+                    "is_pk": false
+                },
+                {
+                    "name": "term",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Opera",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Day",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Itinerary",
+            "entity2": "Museo",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Opera",
+            "entity2": "Itinerary",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "N_order",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Guided tour",
+            "entity2": "Itinerary",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Day",
+            "entity2": "Guided tour",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Num_participant",
+                    "is_pk": false
+                }
+            ]
+        }
+    ]
+}

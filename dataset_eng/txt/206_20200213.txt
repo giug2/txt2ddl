@@ -1,0 +1,4 @@
+• each project belongs to one and only one division and zero or more employees work on it;
+• each employee belongs to one and only one division, works in one and only one office and works on zero or more projects (even belonging to different divisions);
+• an office interacts with all and only the divisions to which the employees who work there belong;
+• an office interacts with all and only the projects in which the employees working in it work;

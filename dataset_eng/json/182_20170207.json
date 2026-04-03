@@ -1,0 +1,73 @@
+{
+    "entities": [
+        {
+            "name": "Owner",
+            "attributes": [
+                {
+                    "name": "owner_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "owner_name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "animated",
+            "attributes": [
+                {
+                    "name": "animal_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "animal_name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Treatment Plan",
+            "attributes": [
+                {
+                    "name": "treatment_plan_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "treatment_plan_name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Clinical Area",
+            "attributes": [
+                {
+                    "name": "id_clinic_area",
+                    "is_pk": true
+                },
+                {
+                    "name": "clinical_area_name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "animated",
+            "entity2": "Clinical Area",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "animated",
+            "entity2": "Treatment Plan",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Owner",
+            "entity2": "Treatment Plan",
+            "cardinality": "1:N"
+        }
+    ]
+}

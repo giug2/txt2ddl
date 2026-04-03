@@ -1,0 +1,4 @@
+- si vuole distinguere il concetto di modello (ad esempio iPhone 15 Pro) da quello di tipo di prodotto; i tipi di prodotto hanno un codice che li identifica, mentre i modelli sono identificati dal tipo di prodotto e da una variante (ad esempio "Pro" o anche una variante vuota, come accade per il modello base).
+- si vuole rappresentare il concetto di categoria con codice e nome (ad esempio ELC e Elettronica o CLO e Abbigliamento); ogni tipo di prodotto appartiene ad una e una sola categoria.
+- ogni marchio afferisce ad una e una sola categoria principale (ma potrebbe avere prodotti anche in altre categorie).
+- i fornitori hanno un ID e una ragione sociale.

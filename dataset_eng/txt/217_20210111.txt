@@ -1,0 +1,8 @@
+Show a conceptual scheme for a database that manages information relating to the departments of a university.
+The following aspects are of interest:
+- the departments, each with code (identifier), name and headquarters (assume it is a simple value, without particular structure)
+- the degree courses activated in the various departments (each department activates one or more degree courses and obviously each degree course can be managed by multiple departments); each degree course has an identification code and a name
+- the courses, for each of which the relevant degree course is relevant (one and only one); each course has a code, unique within the degree course, and a title; each course is offered by all the departments that manage the relevant degree course
+- professors, each of whom has a serial number (which identifies him), surname and name and belongs to zero or more departments, in each of which he has only one chair (which can vary from one department to another; however it is a simple value); every professor was born in a city and resides in a city
+- cities, which have an ISTAT code (identifying), name and region to which they belong
+- the regions, which have a code (identifier) and a name.

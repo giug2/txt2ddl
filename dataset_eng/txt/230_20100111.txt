@@ -1,0 +1,7 @@
+Show the conceptual scheme for a film festival programming database, according to the following specifications.
+• Each thematic event (e.g. "Horror Review") has a code, a title and a description, and is made up of a set of films.
+• Each film has a code, a title and a director (with code and name); the same film can be screened in different thematic events.
+• Each event is promoted by a production company; each production company has a name, a head producer (of which only first and last name is of interest) and a set of actors with whom it collaborates.
+• Each actor has an identification code, name and surname, and can work with multiple production companies, in each of which he is known for a main role, the same in all production companies he works with.
+• Each thematic event gives rise to multiple screenings, on different days and times, not necessarily always in the same cinema hall.
+• Each cinema hall has a code, a name and a number of seats.

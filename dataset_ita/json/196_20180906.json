@@ -1,0 +1,125 @@
+{
+    "entities": [
+        {
+            "name": "Paziente",
+            "attributes": [
+                {
+                    "name": "CodiceFiscale",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "DataNascita",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Ricovero",
+            "attributes": [
+                {
+                    "name": "ID_Ricovero",
+                    "is_pk": true
+                },
+                {
+                    "name": "Reparto",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Fattura",
+            "attributes": [
+                {
+                    "name": "NumeroFattura",
+                    "is_pk": true
+                },
+                {
+                    "name": "DataEmissione",
+                    "is_pk": false
+                },
+                {
+                    "name": "Importo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Pagamento",
+            "attributes": [
+                {
+                    "name": "ID_Transazione",
+                    "is_pk": true
+                },
+                {
+                    "name": "DataPagamento",
+                    "is_pk": false
+                },
+                {
+                    "name": "ImportoVersato",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Ospedale",
+            "attributes": [
+                {
+                    "name": "CodiceOspedale",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeStruttura",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "ASL",
+            "attributes": [
+                {
+                    "name": "CodiceASL",
+                    "is_pk": true
+                },
+                {
+                    "name": "Denominazione",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Paziente",
+            "entity2": "Ricovero",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Ricovero",
+            "entity2": "Fattura",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Ospedale",
+            "entity2": "Ricovero",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "ASL",
+            "entity2": "Ospedale",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Fattura",
+            "entity2": "Pagamento",
+            "cardinality": "1:N"
+        }
+    ]
+}

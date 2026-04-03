@@ -1,0 +1,202 @@
+{
+    "entities": [
+        {
+            "name": "Address",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Via",
+                    "is_pk": false
+                },
+                {
+                    "name": "NumCivico",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Common",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Province",
+            "attributes": [
+                {
+                    "name": "Sail",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Ristorante",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Dish",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Ingredients",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Intolerances/Allergies",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Persona",
+            "attributes": [
+                {
+                    "name": "CF",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Relationship",
+            "attributes": [
+                {
+                    "name": "fk_persona1",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_persona2",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Kinship Type",
+            "attributes": [
+                {
+                    "name": "CodTipo",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Address",
+            "entity2": "Ristorante",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Address",
+            "entity2": "Common",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Common",
+            "entity2": "Province",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Persona",
+            "entity2": "Ristorante",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Quota",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Dish",
+            "entity2": "Ristorante",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Cost",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Ingredients",
+            "entity2": "Dish",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Intolerances/Allergies",
+            "entity2": "Ingredients",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Relationship",
+            "entity2": "Persona",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Relationship",
+            "entity2": "Persona",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Relationship",
+            "entity2": "Kinship Type",
+            "cardinality": "N:1"
+        }
+    ]
+}

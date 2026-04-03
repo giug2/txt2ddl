@@ -1,0 +1,7 @@
+Mostrare lo schema concettuale di una base di dati per la gestione di festival musicali, secondo le seguenti specifiche.
+• L'area del festival ha una serie di palchi, ognuno dei quali ha un nome e una capacità massima di spettatori.
+• Un festival ha un nome, una data di inizio e una data di fine.
+• In ogni festival si esibiscono diversi artisti e uno stesso artista può partecipare a più festival.
+• Per ogni artista si rappresenta il genere musicale, l'anno di formazione, e il palco sul quale si esibisce (che può cambiare in festival diversi).
+È di interesse rappresentare possibili percorsi tematici di un festival, ognuno con un codice e costituito da una lista ordinata di palchi da visitare e, per ogni palco, da una lista ordinata di artisti da ascoltare.
+• Si vogliono rappresentare anche tour guidati del festival che hanno ciascuno un nome, un orario di partenza, una durata e si basano su un certo percorso tematico. I tour guidati si ripetono nei vari giorni del festival con un numero di iscritti diverso.

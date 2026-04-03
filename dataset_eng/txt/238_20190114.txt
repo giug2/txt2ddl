@@ -1,0 +1,6 @@
+Define an Entity-Relationship schema that describes the data of interest at a certain point in time (for example, now) for a set of music festivals and the artists performing at them, according to the following specifications:
+• each festival has a unique ID, a name, a location (city, with ID, name and country; the country is a simple string) and a year of edition;
+• every artist
+– has an identification code, a stage name, a real name and the year of the start of his career;
+– performs in one and only one festival;
+– belongs to one and only one “music genre” (with an identifying ID and name; there is a somewhat predefined set of genres).

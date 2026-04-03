@@ -1,0 +1,9 @@
+Allora, in pratica qui si parla di aerei, voli e tutta la roba che ci sta intorno. Partiamo dalle basi: ci sono le NAZIONI, ognuna con il suo nome e un codicillo per riconoscerla, e dentro ogni nazione ovviamente ci trovi un po' di CITTÀ. A loro volta, le città possono avere più di un AEROPORTO, e anche questi hanno un nome e un codice per non fare confusione.
+
+Poi ci sono le COMPAGNIE aeree, che sono legate a una nazione, e ciascuna di esse gestisce un sacco di VOLI. Un volo, per intenderci, è più la tratta, tipo il volo AZ123; per identificarlo senza sbagliarsi, infatti, non basta il suo numero, devi sapere anche a quale compagnia appartiene. Ogni volo è anche associato a un certo TIPO AEROMOBILE, che sarebbe il modello di aereo che di solito usano per quella tratta, tipo un Boeing 737.
+
+Chiaramente, un volo parte da un aeroporto e arriva in un altro. Un aeroporto quindi è un punto di partenza per un sacco di voli e un punto di arrivo per tanti altri.
+
+Per organizzare il tutto, si guarda ai GIORNI della settimana. Quando metti insieme un volo e un giorno, ottieni il cosiddetto VOLO NEL GIORNO, che è in pratica l'orario settimanale. È qui che si dice che il volo X del lunedì parte dall'aeroporto Y e arriva all'aeroporto Z.
+
+Infine, c'è il viaggio vero e proprio, il VOLO EFFETTIVO. Questo si aggancia a un volo programmato in un certo giorno e si riferisce a una DATA specifica, registrando l'orario reale di partenza e di arrivo. E per ogni volo effettivo, si sa esattamente quale AEROMOBILE fisico è stato utilizzato. A proposito di aeromobili, bisogna distinguere tra il modello, cioè il TIPO AEROMOBILE, e l'AEROMOBILE singolo, che è l'aereo vero e proprio con la sua matricola. Di un certo modello di aereo ce ne sono tanti esemplari in giro, e ogni singolo esemplare può fare un sacco di voli effettivi diversi.

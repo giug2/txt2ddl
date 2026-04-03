@@ -1,0 +1,9 @@
+Define an Entity-Relationship schema that describes the data of interest for a set of orchestras, according to
+following specifications:
+• each orchestra has a name, a location (city and country, each with code and name) and a date of foundation
+• the members of the orchestras vary from year to year and it is important to keep track of the composition
+each year (for example, knowing that Mario Rossi participates in the XY orchestra in 2015 and 2017, but not
+in 2016); the same person can participate in multiple orchestras, even in the same year
+• each musician (orchestra member) has an identification code, a surname, a name and is
+graduated from a conservatory
+• each conservatory has a code and a name

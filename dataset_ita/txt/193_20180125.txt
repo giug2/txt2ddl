@@ -1,0 +1,5 @@
+• Si gestiscono le edizioni dei festival musicali che si svolgono anche in anni diversi.
+• Ogni edizione del festival appartiene a un circuito e per ogni circuito (ad esempio, il circuito "Lollapalooza") esiste al massimo un'edizione all'anno (quindi ad esempio esiste il Lollapalooza 2024); ogni circuito ha un codice e un nome.
+• Ogni edizione del festival si svolge in una specifica città, in una certa data di inizio.
+• Ogni edizione del festival è composta da una serie di esibizioni, ognuna con un codice univoco, un orario e un palco specifico. Ad ogni esibizione partecipano uno o più artisti in cartellone, ognuno appartenente a una band (o come solista); si noti che la band di un artista può cambiare da un'edizione all'altra del festival.
+• Ogni band ha un codice, un nome e una città di origine in cui ha sede.

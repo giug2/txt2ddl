@@ -1,0 +1,3 @@
+- ogni corso ha uno e un solo docente titolare
+- ogni corso è frequentato da zero o più studenti
+- ogni corso è tenuto presso una o più aule

@@ -1,0 +1,73 @@
+{
+    "entities": [
+        {
+            "name": "Proprietario",
+            "attributes": [
+                {
+                    "name": "id_proprietario",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome_proprietario",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Animale",
+            "attributes": [
+                {
+                    "name": "id_animale",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome_animale",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Piano di Cura",
+            "attributes": [
+                {
+                    "name": "id_piano_cura",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome_piano_cura",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Area Clinica",
+            "attributes": [
+                {
+                    "name": "id_area_clinica",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome_area_clinica",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Area Clinica",
+            "entity2": "Animale",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Piano di Cura",
+            "entity2": "Animale",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Piano di Cura",
+            "entity2": "Proprietario",
+            "cardinality": "N:1"
+        }
+    ]
+}

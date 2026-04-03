@@ -1,0 +1,7 @@
+la targa identifica univocamente il veicolo;
+• proprietario e indirizzo del proprietario possono essere considerati come semplici stringhe di caratteri, senza modellazione ulteriore;
+• i registri di manutenzione sono tutti relativi alla vita del veicolo; quindi viene prodotto un solo registro per ciascun veicolo; il chilometraggio iniziale è un valore memorizzato; il chilometraggio attuale è l'ultimo valore noto aggiornato dopo gli interventi;
+• per ogni intervento elencato nel registro si può assumere (e si consiglia di farlo) che sia memorizzato nella base di dati un codice intervento univoco che lo identifica (in modo completo; ad esempio, ciascuno degli interventi effettuati sul veicolo ha un codice diverso);
+• nella lista degli interventi,
+– la colonna “Tipo Intervento” contiene un testo che dipende dal valore contenuto nella colonna “Codice Tipo” (si noti ad esempio che “05” corrisponde sempre a “Cambio Olio” e “43” a “Sostituzione Freni”); quindi “Codice Tipo” è un codice che identifica il “Tipo Intervento;”
+– la colonna “Note” contiene invece un testo libero, che è associato allo specifico intervento e va considerato indipendente da “Codice Tipo” e “Tipo Intervento.”

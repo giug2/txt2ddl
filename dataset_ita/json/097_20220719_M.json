@@ -1,0 +1,185 @@
+{
+    "entities": [
+        {
+            "name": "Pezzo",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Titolo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Compositore",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Concerto",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Titolo",
+                    "is_pk": false
+                },
+                {
+                    "name": "Sede",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Evento",
+            "attributes": [
+                {
+                    "name": "Data",
+                    "is_pk": true
+                },
+                {
+                    "name": "Ora",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Orchestra",
+            "attributes": [
+                {
+                    "name": "Nome",
+                    "is_pk": true
+                },
+                {
+                    "name": "Descrizione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Teatro",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Musicista",
+            "attributes": [
+                {
+                    "name": "Matricola",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Strumento",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Tipo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Composizione",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Compositore",
+            "entity2": "Pezzo",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Pezzo",
+            "entity2": "Concerto",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Evento",
+            "entity2": "Concerto",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Concerto",
+            "entity2": "Teatro",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Orchestra",
+            "entity2": "Concerto",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Musicista",
+            "entity2": "Orchestra",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Composizione",
+            "entity2": "Orchestra",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Musicista",
+            "entity2": "Composizione",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Strumento",
+            "entity2": "Composizione",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Composizione",
+            "entity2": "Composizione",
+            "cardinality": "N:1"
+        }
+    ]
+}

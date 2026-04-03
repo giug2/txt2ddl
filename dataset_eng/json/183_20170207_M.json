@@ -1,0 +1,98 @@
+{
+    "entities": [
+        {
+            "name": "Patient",
+            "attributes": [
+                {
+                    "name": "patient_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                },
+                {
+                    "name": "start_date",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Medico",
+            "attributes": [
+                {
+                    "name": "doctor_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_operational_unit",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                },
+                {
+                    "name": "surname",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Treatment",
+            "attributes": [
+                {
+                    "name": "treatment_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_patient",
+                    "is_pk": true
+                },
+                {
+                    "name": "treatment_name",
+                    "is_pk": false
+                },
+                {
+                    "name": "surname",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Operational Unit",
+            "attributes": [
+                {
+                    "name": "operational_unit_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "unit_name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Operational Unit",
+            "entity2": "Medico",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Treatment",
+            "entity2": "Patient",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Patient",
+            "entity2": "Medico",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Medico",
+            "entity2": "Treatment",
+            "cardinality": "N:N"
+        }
+    ]
+}

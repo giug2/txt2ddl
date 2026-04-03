@@ -1,0 +1,139 @@
+{
+    "entities": [
+        {
+            "name": "Persona",
+            "attributes": [
+                {
+                    "name": "Tax ID code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Purchase",
+            "attributes": [
+                {
+                    "name": "Data",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_auto",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Auto",
+            "attributes": [
+                {
+                    "name": "Targa",
+                    "is_pk": true
+                },
+                {
+                    "name": "Anno",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Version",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_model",
+                    "is_pk": true
+                },
+                {
+                    "name": "displacement",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Model",
+            "attributes": [
+                {
+                    "name": "Name",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_home",
+                    "is_pk": true
+                },
+                {
+                    "name": "Category",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Casa",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Nation",
+            "attributes": [
+                {
+                    "name": "Acronym Nation",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Purchase",
+            "entity2": "Persona",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Auto",
+            "entity2": "Purchase",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Version",
+            "entity2": "Auto",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Model",
+            "entity2": "Version",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Model",
+            "entity2": "Casa",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Nation",
+            "entity2": "Casa",
+            "cardinality": "N:1"
+        }
+    ]
+}

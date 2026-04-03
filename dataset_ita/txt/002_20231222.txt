@@ -1,0 +1,12 @@
+Il sistema descrive un dominio relativo al traffico aereo organizzato attorno a diverse entità interconnesse 
+Le entità fondamentali sono le Nazioni ciascuna identificata univocamente da un codice e caratterizzata da un nome 
+A queste sono collegate le Compagnie aeree ognuna definita da un proprio codice un nome e un riferimento diretto alla nazione di appartenenza 
+Il contesto geografico ulteriormente dettagliato dalle Città anchesse identificate da un codice e un nome e per ognuna delle quali di interesse la nazione di appartenenza 
+Le città ospitano gli Aeroporti ciascuno specificato da un codice identificativo un nome e un legame con la citt in cui si trova 
+Il cuore del modello rappresentato dai Voli intesi come tratte aeree schedulate 
+Un volo identificato in modo univoco dalla coppia di attributi formata dalla compagnia che lo opera e dal suo numero di volo 
+Per ogni volo sono registrati l'aeroporto di partenza e quello di arrivo gli orari previsti per la partenza e l'arrivo e il tipo di aeromobile designato per quella tratta importante notare che uno stesso numero di volo può essere offerto in giorni diversi della settimana anche con orari differenti .
+Per gestire le specifiche tecniche degli aerei esiste un'entità TipiAeromobile che censisce i vari modelli esistenti tramite un codice e un nome 
+Oltre ai tipi sono di interesse anche i singoli aeromobili fisici ognuno identificato da un codice univoco la sigla dipinta sulla coda e associato a uno specifico tipo di aeromobile 
+Infine per tracciare le operazioni reali vengono registrati i Voli Effettivi 
+Ogni volo effettivo rappresenta una specifica istanza di un volo schedulato avvenuta in una data precisa identificato dalla compagnia dal numero del volo e dalla data e registra gli orari effettivi di partenza e arrivo Un vincolo fondamentale stabilisce che ogni volo effettivo deve essere effettuato da un aeromobile specifico il quale deve obbligatoriamente essere del tipo associato al volo schedulato corrispondente

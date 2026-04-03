@@ -1,0 +1,7 @@
+Allora, in pratica qui abbiamo un sistema che gestisce un po' di roba legata a dei corsi. Ogni corso ha un suo codice identificativo, giusto per non fare confusione. Questi corsi, poi, non sono tutti uguali, hanno un certo livello di difficoltà, tipo base o avanzato, che ha un suo codice e una spiegazione. Naturalmente, uno stesso livello può essere associato a un sacco di corsi diversi.
+
+Poi ci sono i docenti, ognuno con il suo nome e un codice per riconoscerlo. A ogni docente è appiccicato un ruolo, che ha pure lui un suo codice e una descrizione per capire di cosa si tratta, e chiaramente più docenti possono avere lo stesso ruolo. Un docente, a sua volta, può tenere un bel po' di corsi, ma sembra che ogni corso sia legato a un solo prof.
+
+I corsi fanno capo a dei dipartimenti, ognuno con il suo codice e una descrizione. Un dipartimento, come è ovvio, ha sotto di sé un sacco di corsi.
+
+Andando nel dettaglio, ogni corso è fatto di tante lezioni. Una lezione è identificata da un numero, ma questo numero ha senso solo all'interno del suo corso, quindi è una specie di coppia "numero lezione - codice corso" che la rende unica. Infine, ogni lezione si tiene da qualche parte, in un'aula, che ha un suo codice e magari una descrizione. La stessa aula, ovviamente, può essere usata per un mucchio di lezioni diverse.

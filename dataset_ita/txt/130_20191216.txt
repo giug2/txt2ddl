@@ -1,0 +1,15 @@
+Definire uno schema Entity-Relationship che descriva un insieme di dati statistici (utilizzati ad esempio da un
+giornale sportivo o da una rete televisiva a supporto delle attività giornalistiche) relativi ad insieme di sciatori
+con le relative specialità, secondo le specifiche seguenti:
+• ogni sciatore ha codice, cognome, nome, luogo di nascita (città e nazione, ciascuna con codice e nome) e
+cittadinanza (nazione che può essere diversa da quella del luogo di nascita);
+• ogni specialità ha codice e nome;
+• per ogni sciatore interessano le specialità praticate con il numero di vittorie riportate in ciascuna di esse.
+
+• interessano le singole gare cui uno sciatore ha partecipato, con la relativa posizione; ad esempio, interessa
+tenere traccia del fatto che Alberto Tomba è arrivato primo nello slalom speciale disputato a Wengen il
+26/01/1992 e terzo in quello disputato al Sestriere il 15/02/1997;
+• supporre che una gara sia identificata da data, sede e specialità oltre che eventualmente da un codice;
+• ogni sede di gara ha codice, nome e nazione;
+• uno sciatore può cambiare nazionalità e interessa, per ogni gara, conoscere la nazionalità che aveva al
+momento.

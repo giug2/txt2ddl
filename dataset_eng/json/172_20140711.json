@@ -1,0 +1,73 @@
+{
+    "entities": [
+        {
+            "name": "Warehouse",
+            "attributes": [
+                {
+                    "name": "Warehouse Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Address",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Attendant",
+            "attributes": [
+                {
+                    "name": "Freshman",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Lotto",
+            "attributes": [
+                {
+                    "name": "CodeLotto",
+                    "is_pk": true
+                },
+                {
+                    "name": "Production Data",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Product",
+            "attributes": [
+                {
+                    "name": "SKU",
+                    "is_pk": true
+                },
+                {
+                    "name": "ProductName",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Warehouse",
+            "entity2": "Attendant",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Attendant",
+            "entity2": "Lotto",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Product",
+            "entity2": "Lotto",
+            "cardinality": "1:N"
+        }
+    ]
+}

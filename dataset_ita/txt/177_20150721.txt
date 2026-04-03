@@ -1,0 +1,6 @@
+• per ogni argomento possono esistere più sessioni, tenute dallo stesso speaker o da speaker diversi
+• ogni sessione è relativa ad uno e un solo argomento
+• ogni speaker tiene zero o più sessioni
+• ogni sessione ha uno o più speaker ed è offerta all'interno di un solo e unico evento
+• per ogni evento esistono una o più sessioni su un dato argomento, distinte da un identificativo che indica la "sala" (es.: Intelligenza Artificiale, sala 1)
+• ogni sessione ha un solo e unico materiale di supporto (es. slide); le sessioni su un dato argomento non hanno necessariamente lo stesso materiale

@@ -1,0 +1,99 @@
+{
+    "entities": [
+        {
+            "name": "ARTIST",
+            "attributes": [
+                {
+                    "name": "artist_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "artist_data",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "EVENT",
+            "attributes": [
+                {
+                    "name": "replica",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_tour",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_location",
+                    "is_pk": true
+                },
+                {
+                    "name": "event_name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "TOUR",
+            "attributes": [
+                {
+                    "name": "id_tour",
+                    "is_pk": true
+                },
+                {
+                    "name": "name_tour",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "LOCATION",
+            "attributes": [
+                {
+                    "name": "id_location",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome_location",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "LADDER",
+            "attributes": [
+                {
+                    "name": "playlist_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "song_title",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "EVENT",
+            "entity2": "ARTIST",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "EVENT",
+            "entity2": "TOUR",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "EVENT",
+            "entity2": "LOCATION",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "LADDER",
+            "entity2": "LOCATION",
+            "cardinality": "N:1"
+        }
+    ]
+}

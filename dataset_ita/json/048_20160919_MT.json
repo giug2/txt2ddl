@@ -1,0 +1,129 @@
+{
+    "entities": [
+        {
+            "name": "AUTOMOBILE",
+            "attributes": [
+                {
+                    "name": "TELAIO",
+                    "is_pk": true
+                },
+                {
+                    "name": "COLORE",
+                    "is_pk": false
+                },
+                {
+                    "name": "DATA",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "VERSIONE",
+            "attributes": [
+                {
+                    "name": "CODICE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                },
+                {
+                    "name": "CILINDRATA",
+                    "is_pk": false
+                },
+                {
+                    "name": "PREZZO",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "TIPO ALIMENTAZIONE",
+            "attributes": [
+                {
+                    "name": "CODICE",
+                    "is_pk": true
+                },
+                {
+                    "name": "DESCRIZIONE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "MODELLO",
+            "attributes": [
+                {
+                    "name": "CODICE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                },
+                {
+                    "name": "LUNGHEZZA",
+                    "is_pk": false
+                },
+                {
+                    "name": "POSTI",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "SEGMENTO DI MERCATO",
+            "attributes": [
+                {
+                    "name": "CODICE",
+                    "is_pk": true
+                },
+                {
+                    "name": "DESCRIZIONE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "MARCA",
+            "attributes": [
+                {
+                    "name": "CODICE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "AUTOMOBILE",
+            "entity2": "VERSIONE",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "VERSIONE",
+            "entity2": "TIPO ALIMENTAZIONE",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "VERSIONE",
+            "entity2": "MODELLO",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "MODELLO",
+            "entity2": "SEGMENTO DI MERCATO",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "MODELLO",
+            "entity2": "MARCA",
+            "cardinality": "N:1"
+        }
+    ]
+}

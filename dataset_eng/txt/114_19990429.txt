@@ -1,0 +1,7 @@
+- each sector has a code and name 
+- we want to distinguish the concept of matter from that of
+discipline; the disciplines have a name and are identified by the sector they belong to and by a unique number
+only in the sector, while the subjects are identified by discipline and
+by a suffix 
+- each professor belongs to one and only one sector (but could also teach courses in other sectors); 
+- each professor works in one and only one department; the departments have a code and name

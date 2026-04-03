@@ -1,0 +1,39 @@
+{
+    "entities": [
+        {
+            "name": "VERSION",
+            "attributes": [
+                {
+                    "name": "version_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "ACCESSORY",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "VERSION",
+            "entity2": "ACCESSORY",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "prezzo",
+                    "is_pk": false
+                }
+            ]
+        }
+    ]
+}

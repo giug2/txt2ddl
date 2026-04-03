@@ -1,0 +1,73 @@
+{
+  "entities": [
+    {
+      "name": "Dipartimento",
+      "attributes": [
+        {
+          "name": "Nome",
+          "is_pk": true
+        },
+        {
+          "name": "Indirizzo",
+          "is_pk": false
+        }
+      ]
+    },
+    {
+      "name": "Professore",
+      "attributes": [
+        {
+          "name": "Codice",
+          "is_pk": true
+        },
+        {
+          "name": "Nome",
+          "is_pk": false
+        }
+      ]
+    },
+    {
+      "name": "Edizione",
+      "attributes": [
+        {
+          "name": "Codice",
+          "is_pk": true
+        },
+        {
+          "name": "Anno",
+          "is_pk": false
+        }
+      ]
+    },
+    {
+      "name": "Corso",
+      "attributes": [
+        {
+          "name": "Codice",
+          "is_pk": true
+        },
+        {
+          "name": "Titolo",
+          "is_pk": false
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "Dipartimento",
+      "entity2": "Professore",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Professore",
+      "entity2": "Edizione",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Corso",
+      "entity2": "Edizione",
+      "cardinality": "1:N"
+    }
+  ]
+}

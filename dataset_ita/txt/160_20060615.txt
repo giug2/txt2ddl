@@ -1,0 +1,6 @@
+Mostrare lo schema concettuale di una base di dati per festival musicali, secondo le seguenti specifiche.
+• I vari festival hanno un codice e un nome.
+• Ogni festival è composto da un certo numero di band e da una classifica che assegna ad ogni band un punteggio totale.
+• Le band partecipano ad un solo festival e hanno un nome e una formazione di musicisti di cui registriamo un ID membro, il nome e la data di nascita.
+• Le esibizioni si svolgono tra due band dello stesso festival, in una certa data, su un certo palco e hanno una valutazione finale.
+• Si vogliono registrare i musicisti che suonano nelle varie esibizioni e il ruolo ricoperto sul palco (che è lo stesso in una esibizione ma può variare in esibizioni diverse).

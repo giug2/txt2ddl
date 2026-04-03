@@ -1,0 +1,13 @@
+Il modello descrive un sistema informativo per la gestione di una flotta di autonoleggio, partendo dall'entità logistica Filiale, identificata univocamente da un Codice e caratterizzata da una Città e un Indirizzo.
+Ogni filiale può avere in gestione uno o più veicoli.
+L'entità Veicolo è definita da un Codice identificativo e da una serie di attributi informativi quali Modello, Targa, Segmento, il Numero di Posti, l'Anno di Immatricolazione e la Motorizzazione.
+La configurazione di un veicolo è specificata dalla sua composizione in termini di equipaggiamenti.
+A questo scopo, l'entità Tipo Allestimento, identificata da un Codice e una Descrizione, classifica le diverse configurazioni disponibili (es. 'Sport', 'Business', 'Comfort').
+La relazione di Configurazione collega un veicolo a un tipo di allestimento, specificando le dotazioni incluse in quella particolare versione.
+Oltre all'allestimento di base, un noleggio può includere diverse opzioni modellate dall'entità ServizioAggiuntivo, anch'essa dotata di un Codice identificativo e di un Nome (es. 'GPS', 'Seggiolino Bambino').
+Il sistema di prezzi è dinamico e si basa su diversi fattori.
+L'entità Periodo, identificata da un Codice, possiede un Nome e un intervallo di date che per semplicità si assume essere una stringa testuale (es. 'Alta Stagione', 'Feriale').
+Il cuore del meccanismo di tariffazione è l'entità TariffaNoleggio, la quale rappresenta l'Importo Giornaliero di base che deriva dall'incrocio tra un veicolo, un tipo di servizio aggiuntivo e uno specifico periodo.
+In alternativa, come suggerito dalle note, questa entità potrebbe essere vista come una relazione ternaria tra le tre entità menzionate.
+Infine, per gestire ulteriori aggiustamenti di prezzo, è presente l'entità TipoPromozione, identificata da un Codice e una Descrizione.
+Questa si lega a una tariffa attraverso la relazione ScontoApplicato, che applica una modifica definita da un attributo Percentuale.

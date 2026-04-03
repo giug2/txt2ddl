@@ -1,0 +1,10 @@
+The system describes a reality in which provinces are managed, each uniquely identified by an acronym and characterized by a name 
+In turn, the provinces are divided into telephone districts, each district defined by a prefix, a name and the acronym of the province it belongs to, thus establishing a direct link with the entity of the provinces 
+At the same time, the system registers the people, recording for each one the tax code which acts as a unique identifier, the surname, the name and the date of birth. 
+The fulcrum of the model is represented by telephone users 
+Each user is identified by a pair of values, the prefix and the number, and also has an address 
+Each user associated with an owner whose tax code must correspond to a person registered in the system and its prefix must necessarily belong to one of the registered districts, thus connecting the user to a specific geographical area 
+Finally, the system tracks the economic activities linked to each user 
+The bills are managed, each with its own identification code Bill Code, issue date and amount, each bill unequivocally associated with a specific user via the prefix and number pair 
+Payments are recorded in the same way, each identified by a Payment Code and characterized by a date and an amount 
+Also in this case, each payment is directly linked to a specific user through its prefix and number, guaranteeing the referential integrity of the data

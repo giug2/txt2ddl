@@ -1,0 +1,16 @@
+Define an Entity-Relationship schema that describes the data of interest for a library, according to the following
+specifications:
+• the object of the loans are specimens (also called volumes or copies) of books, identified by a number
+inventory; each has a purchase date;
+• every book
+– may be present in multiple copies
+– has a code (called ISBN),
+– a title
+– one or more authors
+– is published by a publishing house
+• each publishing house has a name and code;
+• each author has a code, a surname, a name and date of birth and an affiliation (an "institution", with
+code and name)
+• for each ongoing loan (concluded ones are not of interest), the expected repayment date is relevant
+and the user (who can have multiple volumes on loan at the same time), with identification code, name,
+surname and telephone number.

@@ -1,0 +1,169 @@
+{
+    "entities": [
+        {
+            "name": "Course Session",
+            "attributes": [
+                {
+                    "name": "course_session_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "Data fine",
+                    "is_pk": false
+                },
+                {
+                    "name": "Start date",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Corso",
+            "attributes": [
+                {
+                    "name": "course_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "Title",
+                    "is_pk": false
+                },
+                {
+                    "name": "publication_year",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Teaching",
+            "attributes": [
+                {
+                    "name": "teacher_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Date of birth",
+                    "is_pk": false
+                },
+                {
+                    "name": "Collection date",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "E-learning platform",
+            "attributes": [
+                {
+                    "name": "platform_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                },
+                {
+                    "name": "site_url",
+                    "is_pk": false
+                },
+                {
+                    "name": "support_contact",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Discount type",
+            "attributes": [
+                {
+                    "name": "discount_type_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Rate",
+            "attributes": [
+                {
+                    "name": "id_tariff",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Access Level",
+            "attributes": [
+                {
+                    "name": "access_level_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Registration Type",
+            "attributes": [
+                {
+                    "name": "registration_type_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Course Session",
+            "entity2": "Corso",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Corso",
+            "entity2": "Teaching",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Course Session",
+            "entity2": "E-learning platform",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Discount type",
+            "entity2": "E-learning platform",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Rate",
+            "entity2": "E-learning platform",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Rate",
+            "entity2": "Access Level",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Rate",
+            "entity2": "Registration Type",
+            "cardinality": "N:1"
+        }
+    ]
+}

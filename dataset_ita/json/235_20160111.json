@@ -1,0 +1,39 @@
+{
+    "entities": [
+        {
+            "name": "PIANO_ABBONAMENTO",
+            "attributes": [
+                {
+                    "name": "id_piano",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "FUNZIONALITA",
+            "attributes": [
+                {
+                    "name": "codice_funzionalita",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome_funzionalita",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "PIANO_ABBONAMENTO",
+            "entity2": "FUNZIONALITA",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "costo_mensile",
+                    "is_pk": false
+                }
+            ]
+        }
+    ]
+}

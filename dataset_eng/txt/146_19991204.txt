@@ -1,0 +1,5 @@
+The Models and People entities remain conceptually identical to the first schema 
+However, the manufacturers are connected to a new Nations entity which associates a Nation Initials with an extended Name 
+The Versions entity is also introduced to further detail the models, each version linked to a HouseModel pair identified by its own Version Code and has a specific Displacement 
+Consequently, the Cars entity always identified by the license plate and with a production year is no longer directly connected to the model but to a specific variant via a composite reference to the manufacturer, model and version. 
+Finally the ownership relationship is modeled more explicitly through the Purchase entity which links a Car by reference to the Cars entity to a Buyer by reference to the People entity while also recording the Transaction Date

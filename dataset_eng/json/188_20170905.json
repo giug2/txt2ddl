@@ -1,0 +1,117 @@
+{
+    "entities": [
+        {
+            "name": "SQUAD",
+            "attributes": [
+                {
+                    "name": "Team_ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                },
+                {
+                    "name": "FOUNDATION_DATE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CITTA",
+            "attributes": [
+                {
+                    "name": "id_citta",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "NATION",
+            "attributes": [
+                {
+                    "name": "country_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "SEASONAL_PINK",
+            "attributes": [
+                {
+                    "name": "SEASON",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_team",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "PLAYER",
+            "attributes": [
+                {
+                    "name": "player_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                },
+                {
+                    "name": "surname",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "YOUTH_SOCIETY",
+            "attributes": [
+                {
+                    "name": "youth_society_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "CITTA",
+            "entity2": "SQUAD",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "NATION",
+            "entity2": "CITTA",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "SQUAD",
+            "entity2": "SEASONAL_PINK",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "SEASONAL_PINK",
+            "entity2": "PLAYER",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "YOUTH_SOCIETY",
+            "entity2": "PLAYER",
+            "cardinality": "1:N"
+        }
+    ]
+}

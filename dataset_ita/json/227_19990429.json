@@ -1,0 +1,123 @@
+{
+    "entities": [
+        {
+            "name": "Modello",
+            "attributes": [
+                {
+                    "name": "Variante",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_tipo_prodotto",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Articolo",
+            "attributes": [
+                {
+                    "name": "SKU",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_modello",
+                    "is_pk": true
+                },
+                {
+                    "name": "Stato",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "TipoProdotto",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Categoria",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Marchio",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Fornitore",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "RagioneSociale",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Articolo",
+            "entity2": "Modello",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Modello",
+            "entity2": "Modello",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "TipoProdotto",
+            "entity2": "Modello",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Categoria",
+            "entity2": "TipoProdotto",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Marchio",
+            "entity2": "Articolo",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Fornitore",
+            "entity2": "Marchio",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Marchio",
+            "entity2": "Categoria",
+            "cardinality": "1:N"
+        }
+    ]
+}

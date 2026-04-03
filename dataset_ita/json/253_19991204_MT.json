@@ -1,0 +1,121 @@
+{
+    "entities": [
+        {
+            "name": "Artista",
+            "attributes": [
+                {
+                    "name": "CodiceArtista",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Brano",
+            "attributes": [
+                {
+                    "name": "CodiceBrano",
+                    "is_pk": true
+                },
+                {
+                    "name": "Titolo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "GenereMusicale",
+            "attributes": [
+                {
+                    "name": "CodiceGenere",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Pubblicazione",
+            "attributes": [
+                {
+                    "name": "fk_brano",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_etichetta",
+                    "is_pk": true
+                },
+                {
+                    "name": "Anno",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Album",
+            "attributes": [
+                {
+                    "name": "CodiceAlbum",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "EtichettaDiscografica",
+            "attributes": [
+                {
+                    "name": "CodiceEtichetta",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Sede",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Brano",
+            "entity2": "Artista",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Brano",
+            "entity2": "GenereMusicale",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Pubblicazione",
+            "entity2": "Brano",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Pubblicazione",
+            "entity2": "Album",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Pubblicazione",
+            "entity2": "EtichettaDiscografica",
+            "cardinality": "N:1"
+        }
+    ]
+}

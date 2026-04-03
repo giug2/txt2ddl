@@ -1,0 +1,153 @@
+{
+    "entities": [
+        {
+            "name": "Director",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "City",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Nation",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Application",
+            "attributes": [
+                {
+                    "name": "AwardAchieved",
+                    "is_pk": false
+                },
+                {
+                    "name": "fk_projection",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_director",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Projection",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_genera",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_cinema",
+                    "is_pk": true
+                },
+                {
+                    "name": "Data",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Film Genre",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Cinema",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "City",
+            "entity2": "Director",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Nation",
+            "entity2": "City",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Application",
+            "entity2": "Director",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Application",
+            "entity2": "Projection",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Nation",
+            "entity2": "Application",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Film Genre",
+            "entity2": "Projection",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Cinema",
+            "entity2": "Projection",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Nation",
+            "entity2": "Cinema",
+            "cardinality": "1:N"
+        }
+    ]
+}

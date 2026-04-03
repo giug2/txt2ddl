@@ -1,0 +1,4 @@
+• each producer is under contract with one and only one record label;
+• each album belongs to only one artist and each artist can have one or more albums;
+• each record label has zero or more artists under contract and manages all and only their albums; each artist is signed by one and only one record label;
+• each producer works on all and only the albums of the artists of his own record label.

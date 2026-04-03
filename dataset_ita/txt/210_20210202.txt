@@ -1,0 +1,4 @@
+• ogni recensione viene scritta per un prodotto; ogni recensione ha un codice (IDRecensione), univoco, una data e una valutazione
+• ogni prodotto ha un codice SKU e un nome e appartiene ad una sottocategoria
+• ogni sottocategoria appartiene a una categoria, ha un codice (CodSottocategoria) che la identifica nell’ambito della categoria e ha una descrizione
+• ogni categoria ha un identificatore (IDCategoria) e un nome

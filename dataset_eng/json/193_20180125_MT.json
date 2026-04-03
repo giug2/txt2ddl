@@ -1,0 +1,132 @@
+{
+    "entities": [
+        {
+            "name": "CircuitoFestival",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Festival Edition",
+            "attributes": [
+                {
+                    "name": "fk_circuit",
+                    "is_pk": true
+                },
+                {
+                    "name": "DateInitiation",
+                    "is_pk": true
+                },
+                {
+                    "name": "Anno",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Performance",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomePalco",
+                    "is_pk": false
+                },
+                {
+                    "name": "Hours",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "ArtistaInCartellone",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Artist",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "NameArt",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Band",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "City",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Festival Edition",
+            "entity2": "CircuitoFestival",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "City",
+            "entity2": "Festival Edition",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Performance",
+            "entity2": "Festival Edition",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "ArtistaInCartellone",
+            "entity2": "Performance",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "ArtistaInCartellone",
+            "entity2": "Artist",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Band",
+            "entity2": "ArtistaInCartellone",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Band",
+            "entity2": "City",
+            "cardinality": "N:1"
+        }
+    ]
+}

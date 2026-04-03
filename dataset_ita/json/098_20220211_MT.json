@@ -1,0 +1,140 @@
+{
+    "entities": [
+        {
+            "name": "Museo",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Citt\u00e0",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Nazione",
+            "attributes": [
+                {
+                    "name": "Sigla",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Sala",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Dimensione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Opera",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Titolo",
+                    "is_pk": false
+                },
+                {
+                    "name": "Anno",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Autore",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Tipo",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Museo",
+            "entity2": "Citt\u00e0",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Sala",
+            "entity2": "Museo",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Citt\u00e0",
+            "entity2": "Nazione",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Autore",
+            "entity2": "Nazione",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Opera",
+            "entity2": "Sala",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Opera",
+            "entity2": "Autore",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Opera",
+            "entity2": "Tipo",
+            "cardinality": "N:1"
+        }
+    ]
+}

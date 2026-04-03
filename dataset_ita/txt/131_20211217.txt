@@ -1,0 +1,8 @@
+Definire uno schema Entity-Relationship che descriva la struttura del PNRR (Piano Nazionale di Ripresa e
+Resilienza) secondo le specifiche seguenti, modificate e semplificate rispetto alla realtà:
+• il piano è articolato in missioni e linee di azione
+• ogni missione ha un numero identificante e un nome; fa riferimento a zero o più raccomandazioni; è
+composta da una o più linee di azione
+• ogni raccomandazione è un’indicazione fornita
+all’Italia dalla Commissione Europea; per ogni raccomandazione interessano solo codice e nome
+• ogni linea di azione ha un numero progressivo, unico nell’ambito della missione, un nome e un budget

@@ -1,0 +1,126 @@
+{
+    "entities": [
+        {
+            "name": "WAREHOUSE",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CITTA",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "VILLAGE",
+            "attributes": [
+                {
+                    "name": "SAILING",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "SUPPLIER",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "COMPANY_REASON",
+                    "is_pk": false
+                },
+                {
+                    "name": "VAT_ENTRY",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "PRODUCT",
+            "attributes": [
+                {
+                    "name": "SKU",
+                    "is_pk": true
+                },
+                {
+                    "name": "PRODUCT_NAME",
+                    "is_pk": false
+                },
+                {
+                    "name": "PRODUCTION_YEAR",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "RACK",
+            "attributes": [
+                {
+                    "name": "SHELF_CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_warehouse",
+                    "is_pk": true
+                },
+                {
+                    "name": "CAPACITY",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "WAREHOUSE",
+            "entity2": "CITTA",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "RACK",
+            "entity2": "WAREHOUSE",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "PRODUCT",
+            "entity2": "RACK",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "PRODUCT",
+            "entity2": "SUPPLIER",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "SUPPLIER",
+            "entity2": "VILLAGE",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "CITTA",
+            "entity2": "VILLAGE",
+            "cardinality": "N:1"
+        }
+    ]
+}

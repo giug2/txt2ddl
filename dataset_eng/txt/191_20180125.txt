@@ -1,0 +1,5 @@
+• We manage concerts that were also held in different years.
+• Each concert belongs to a tour, and for each tour (for example, the "World Tour 2024") there can be multiple concerts; each tour has a code and a name.
+• Each concert takes place in a city (identified by a code and a name), on a specific date (for simplicity, a single day).
+• Each concert is made up of a series of performances (e.g. acoustic set, opening act), each with a code, a start time and a set of participating artists. Each artist participates with his band (for example, the support band or the main band); note that the band an artist performs with may vary from concert to concert.
+• Each band has a code, a name and a city where it has its headquarters.

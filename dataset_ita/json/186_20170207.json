@@ -1,0 +1,65 @@
+{
+    "entities": [
+        {
+            "name": "Docente",
+            "attributes": [
+                {
+                    "name": "id_docente",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Studente",
+            "attributes": [
+                {
+                    "name": "matricola_studente",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_corso_laurea",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Esame",
+            "attributes": [
+                {
+                    "name": "id_esame",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_docente",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "CorsoDiLaurea",
+            "attributes": [
+                {
+                    "name": "id_corso_laurea",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Studente",
+            "entity2": "CorsoDiLaurea",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Esame",
+            "entity2": "Docente",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Studente",
+            "entity2": "Esame",
+            "cardinality": "N:N"
+        }
+    ]
+}

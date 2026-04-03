@@ -1,0 +1,8 @@
+• ogni manager ha uno e un solo reparto e uno o più assistenti
+• ogni reparto ha uno o più manager e ad esso afferiscono tutti e soli gli assistenti che collaborano con tali
+manager
+• ogni assistente collabora con uno e un solo manager e il suo reparto è quello di tale manager
+• ogni assistente e ogni manager hanno ciascuno una e una sola sede, ma la sede di un assistente non
+coincide necessariamente con quella del relativo manager; per ogni sede ci possono essere più assistenti e
+più manager
+• si noti che il concetto di reparto è virtuale e non si parla di sede di un reparto

@@ -1,0 +1,3 @@
+• each feature has a code and a name and can be available in various subscription plans;
+• there are basic features included in a plan (and therefore in this case they do not have an associated monthly cost) and optional paid features, for which there is a monthly cost (which may vary from plan to plan);
+• the same feature may be included as standard in some plans and paid for in others.

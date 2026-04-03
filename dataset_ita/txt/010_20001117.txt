@@ -1,0 +1,8 @@
+Definire uno schema Entity-Relationship che descriva i dati di una applicazione relativa ai listini prezzi di un insieme di case automobilistiche. Sono di interesse: 
+Le case produttrici, con nome (identificante) e indirizzo. 
+I modelli (ad esempio la Punto o la Golf ), con nome, anno di lancio e segmento di mercato (codificato con una lettera e con una breve descrizione: ad esempio, al segmento "A" corrisponde la descrizione "utilitaria"). 
+Il nome identifica univocamente insieme alla casa costruttrice. 
+Le versioni dei modelli, identificate attraverso il nome della casa, quello del modello e un nome specifico (ad esempio la Fiat Punto 75S). Per ogni versione sono rilevanti il prezzo, il motore, la
+cilindrata, la potenza, il numero di porte e la velocità massima. Ogni versione di modello ha uno ed un solo motore. 
+I motori (ad esempio il motore Fire 1000), identificati attraverso un codice e con le seguenti proprietà: cilindrata, numero cilindri e potenza. Possono esistere motori (attualmente) non uilizzati in alcun modello.
+Indicare le cardinalità delle relazioni e un identificatore per ciascuna entità.

@@ -1,0 +1,19 @@
+Show, in the box on the following pages, a conceptual scheme for a reality relating to a set of
+restaurants in a region, according to the following specifications (much simplified compared to reality, but with some
+details that must be specified as required).
+• Each restaurant has a code, name and address; addresses are “standardized”, in the sense that the basis of
+data contains all the possible addresses of the region, each with street, house number, municipality (with code
+and name) and province (with code and name)
+• For each restaurant they are represented
+the owners, with tax code, name, surname, date of birth, share of ownership of the restaurant (e.g
+example Mario Rossi may own 30% of the Buon Gusto restaurant) and any existing relatives
+between owners (even of different restaurants), with type of relationship (for example Mario Rossi is cousin of
+Aldo Verdi and husband of Anna Pini). The relationships are represented with code and description 
+• Each restaurant has a menu, made up of a set of dishes offered. The dishes are characterized by a code (unique per dish for all restaurants) and a
+name. Each dish has a cost, which varies and depends on the restaurant, while the name of the dish is identical
+for all restaurants.
+• Each dish has a set of ingredients, which are each described by a code and a name (unique to
+all restaurants).
+• You want to keep track of possible food allergies or intolerances, indicating for each ingredient
+what intolerances or allergies it is associated with. Please note, this is very simplified and we only want to represent intolerances/allergies
+(with code and name) and associate them with the ingredients.

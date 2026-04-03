@@ -1,0 +1,85 @@
+{
+    "entities": [
+        {
+            "name": "Motorizzazione",
+            "attributes": [
+                {
+                    "name": "id_motorizzazione",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_modello",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Modello",
+            "attributes": [
+                {
+                    "name": "id_modello",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_marchio",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Marchio",
+            "attributes": [
+                {
+                    "name": "id_marchio",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_casa_automobilistica",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Casa Automobilistica",
+            "attributes": [
+                {
+                    "name": "id_casa_automobilistica",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Motorizzazione",
+            "entity2": "Modello",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Marchio",
+            "entity2": "Modello",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Casa Automobilistica",
+            "entity2": "Marchio",
+            "cardinality": "N:1"
+        }
+    ]
+}

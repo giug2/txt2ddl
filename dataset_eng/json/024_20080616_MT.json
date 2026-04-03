@@ -1,0 +1,185 @@
+{
+    "entities": [
+        {
+            "name": "Passenger",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Telephone",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Reservation",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Booking Segment",
+            "attributes": [
+                {
+                    "name": "Number",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_reservation",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Class",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Specific flight",
+            "attributes": [
+                {
+                    "name": "Hours",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_voloAstratto",
+                    "is_pk": true
+                },
+                {
+                    "name": "Data",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Abstract flight",
+            "attributes": [
+                {
+                    "name": "Number",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_company",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Company",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Aircraft",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Airport",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "City",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Reservation",
+            "entity2": "Passenger",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Booking Segment",
+            "entity2": "Reservation",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Class",
+            "entity2": "Booking Segment",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Specific flight",
+            "entity2": "Booking Segment",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Specific flight",
+            "entity2": "Abstract flight",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Company",
+            "entity2": "Abstract flight",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Aircraft",
+            "entity2": "Abstract flight",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Airport",
+            "entity2": "Abstract flight",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Airport",
+            "entity2": "Abstract flight",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Airport",
+            "entity2": "Abstract flight",
+            "cardinality": "1:N"
+        }
+    ]
+}

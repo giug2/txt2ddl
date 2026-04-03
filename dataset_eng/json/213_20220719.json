@@ -1,0 +1,94 @@
+{
+    "entities": [
+        {
+            "name": "Employee",
+            "attributes": [
+                {
+                    "name": "employee_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_division_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                },
+                {
+                    "name": "surname",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Division",
+            "attributes": [
+                {
+                    "name": "division_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_company_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "division_name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Project",
+            "attributes": [
+                {
+                    "name": "project_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_division_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "project_name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Agency",
+            "attributes": [
+                {
+                    "name": "company_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "company_name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Division",
+            "entity2": "Agency",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Employee",
+            "entity2": "Division",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Project",
+            "entity2": "Division",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Employee",
+            "entity2": "Project",
+            "cardinality": "N:N"
+        }
+    ]
+}

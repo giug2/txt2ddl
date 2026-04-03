@@ -1,0 +1,7 @@
+Show the conceptual scheme for a software project management database, according to the following specifications.
+• Each project has a code, a name and a description, and is made up of a sequence of different software modules (the order of integration affects).
+• Each module has an ID, a name and a main developer (with ID and name); the same module can be reused in different projects.
+• Each project is developed by a team; each team has a name (which identifies it), a creation date and a set of members.
+• Each team member has a serial number (unique within the database), name and surname, can participate in multiple teams, in each of which uses one and only one main technology, but in different teams can use different technologies.
+• Each technology has an ID and a name.
+• Each project is divided into multiple sprints, which end on different days and may have release versions that vary.

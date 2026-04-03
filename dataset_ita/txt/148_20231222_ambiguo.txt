@@ -1,0 +1,9 @@
+Allora, in pratica qui è tutto organizzato a livello geografico, diciamo. Ci sono le regioni, ognuna con un suo codice e un nome, e dentro ogni regione trovi un po' di province, identificate da una sigla. Sparsi in queste province ci sono i nostri magazzini, ognuno con il suo indirizzo e un codice per non confonderli. Questi magazzini sono fondamentali, perché sono i posti da cui le merci partono e dove arrivano, insomma, ogni tratta collega due di questi punti.
+
+A muovere la roba ci pensano i corrieri, ognuno con la sua ragione sociale e un ID. Di solito, un corriere lavora in una certa regione e si occupa di gestire un bel po' di tratte; ogni tratta, infatti, è legata a un corriere specifico, non è che chiunque può farla. Ogni percorso ha un suo codice per essere riconosciuto.
+
+Poi ci sono i mezzi. Abbiamo diverse categorie di veicoli, tipo "furgone" o "camion", e per ogni categoria abbiamo l'elenco dei veicoli veri e propri, ciascuno con la sua targa. Per ogni tratta, di solito, è previsto l'uso di un certo tipo di veicolo.
+
+La pianificazione funziona più o meno così: prendiamo i giorni della settimana, che sono numerati e hanno un nome, e per ogni tratta e per ogni giorno in cui si lavora, c'è un servizio pianificato. Questo servizio non è altro che un programma che dice a che ora si dovrebbe partire e a che ora arrivare. Quindi, la tratta Milano-Roma del lunedì è un servizio, quella del martedì un altro, e così via.
+
+Alla fine, però, quello che conta è quello che succede davvero. Per ogni servizio che abbiamo in programma, teniamo traccia delle spedizioni effettive che avvengono in una data precisa. Quindi, per il servizio del lunedì, avremo la spedizione del 10, poi quella del 17, e così via. Per ognuna di queste spedizioni reali, ci segniamo l'orario di partenza e di arrivo veri, che magari non sono quelli previsti, e ovviamente annotiamo anche quale veicolo specifico, con la sua targa, ha fatto il giro.

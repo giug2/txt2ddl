@@ -1,0 +1,7 @@
+• each congress has a code and a title and is held in a city
+• each city has a name, is located in a country and has a code that uniquely identifies it
+• each nation has a code and a name
+• each congress is related to a specific subject (for example orthopaedics) which in turn belongs to
+to a scientific area (for example medicine); each matter has a name and a code that identifies it
+within the scientific area
+• each scientific area has a code and a name

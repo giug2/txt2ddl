@@ -1,0 +1,7 @@
+So, basically we have a few things that revolve around a university or something like that. There are the Schools, which are the main structures, each with its own identification code and name, nothing strange. Then there are the Departments, also with a code to recognize them and a name. So far, everything is easy.
+
+Things get more interesting with the Professors. To find a specific professor, his number is not enough, you also need to know which School and which Department he is in. Therefore, each professor is practically pigeonholed into a specific School and Department. Naturally, we know the name and surname of each teacher.
+
+Then there are the Study Courses. Even for them, the course identifier alone is not enough, you must always associate it with the school you belong to. This means that a course necessarily belongs to one and only one School, while a School can have lots of different courses. And of course each course has its own name.
+
+Finally, the most flexible connection is that between professors and courses: a professor can easily teach multiple study courses, and at the same time a single course can be taught by a group of different professors. There's a nice mix there, it's not a hard bond.

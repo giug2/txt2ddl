@@ -1,0 +1,138 @@
+{
+    "entities": [
+        {
+            "name": "Shop",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Type",
+            "attributes": [
+                {
+                    "name": "Sail",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Product",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_producer",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Employee",
+            "attributes": [
+                {
+                    "name": "Freshman",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Address",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "City",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Producer",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Type",
+            "entity2": "Shop",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Employee",
+            "entity2": "Shop",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Product",
+            "entity2": "Type",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "City",
+            "entity2": "Employee",
+            "cardinality": "1:N",
+            "attributes": [
+                {
+                    "name": "Birth",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Employee",
+            "entity2": "City",
+            "cardinality": "N:1",
+            "attributes": [
+                {
+                    "name": "Resident",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Product",
+            "entity2": "Producer",
+            "cardinality": "N:1"
+        }
+    ]
+}

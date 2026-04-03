@@ -1,0 +1,95 @@
+{
+    "entities": [
+        {
+            "name": "Conference",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Title",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "City",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_nation",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Nation",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Materia",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Area",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "City",
+            "entity2": "Conference",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Materia",
+            "entity2": "Conference",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Nation",
+            "entity2": "City",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Area",
+            "entity2": "Materia",
+            "cardinality": "1:N"
+        }
+    ]
+}

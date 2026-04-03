@@ -1,0 +1,5 @@
+Mostrare lo schema concettuale per una base di dati per la gestione dei corsi di un anno accademico presso un'università, secondo le seguenti specifiche.
+• Ogni corso di laurea ha un codice, un nome e una descrizione, ed è costituito da un insieme di moduli didattici.
+• Ogni modulo didattico ha un codice, un titolo e un autore del materiale di riferimento (con codice e nome); uno stesso modulo può essere presente in diversi corsi di laurea.
+• Ogni corso di laurea è gestito da un dipartimento; ogni dipartimento ha un nome, un direttore (del quale interessano solo nome e cognome) e un insieme di docenti.
+• Ogni docente ha una matricola, nome e cognome, e può afferire a più dipartimenti, in ciascuno dei quali insegna una sola materia, ma in dipartimenti diversi può

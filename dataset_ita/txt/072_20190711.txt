@@ -1,0 +1,6 @@
+• ogni musicista, in ogni orchestra cui partecipa, suona uno o più strumenti (potenzialmente anche strumenti
+diversi in anni diversi)
+• gli strumenti sono “standardizzati”, ciascuno con nome e codice (ad esempio il codice il codice V corrisponde
+al violino, T alla tromba e così via)
+• i diplomi di conservatorio fanno riferimento ciascuno ad uno strumento
+• un musicista suona solo strumenti per i quali ha conseguito il diploma

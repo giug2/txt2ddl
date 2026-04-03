@@ -1,0 +1,13 @@
+Mostrare lo schema concettuale per una base di dati per un programma di concerti, secondo
+le seguenti specifiche.
+• Ogni concerto ha un codice, un titolo e una descrizione, ed è costituito da una sequenza di pezzi musicali
+diversi (interessa l’ordine)
+• Ogni pezzo ha un codice, un titolo e un autore (con codice e nome); uno stesso pezzo può essere
+rappresentato in diversi concerti.
+• Ogni concerto è eseguito da un’orchestra; ogni orchestra ha un nome (che la identifica), un anno di
+fondazione e un insieme di orchestrali.
+• Ogni orchestrale ha una matricola (univoca nell’ambito della base di dati), nome e cognome, può partecipare
+a più orchestre, in ciascuna delle quali suona uno e un solo strumento, ma in orchestre diverse può suonare
+strumenti diversi.
+• Ogni strumento ha un codice e un nome
+• Ogni concerto è tenuto più volte, in giorni diversi e in orari che possono variare

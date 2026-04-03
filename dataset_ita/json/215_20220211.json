@@ -1,0 +1,140 @@
+{
+    "entities": [
+        {
+            "name": "Insegnamento",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CorsoDiLaurea",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Dipartimento",
+            "attributes": [
+                {
+                    "name": "Sigla",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Lezione",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Titolo",
+                    "is_pk": false
+                },
+                {
+                    "name": "Durata",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "MaterialeDidattico",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeFile",
+                    "is_pk": false
+                },
+                {
+                    "name": "DataCaricamento",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Docente",
+            "attributes": [
+                {
+                    "name": "Matricola",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeCognome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Formato",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "Estensione",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "CorsoDiLaurea",
+            "entity2": "Insegnamento",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Insegnamento",
+            "entity2": "Lezione",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Dipartimento",
+            "entity2": "CorsoDiLaurea",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Dipartimento",
+            "entity2": "Docente",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Lezione",
+            "entity2": "MaterialeDidattico",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Docente",
+            "entity2": "MaterialeDidattico",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Formato",
+            "entity2": "MaterialeDidattico",
+            "cardinality": "1:N"
+        }
+    ]
+}

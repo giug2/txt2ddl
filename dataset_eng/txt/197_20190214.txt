@@ -1,0 +1,8 @@
+• each course has a code (Course_ID), a teacher, a department and a level
+• each teacher has a code (Teacher_ID), a name (Teacher attribute) and a role, with code (Role_Code) and
+description (Role)
+• each department has a code (Cod_Dep) and a description (Department attribute)
+• each course level has a code (Cod_Level) and a description (Level attribute)
+• each course includes one or more lessons
+• each lesson has a progressive number (Num_Lesson) which identifies it within the course and takes place in a classroom,
+with code (Cod_Aula) and description (Aula attribute)

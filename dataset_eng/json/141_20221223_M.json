@@ -1,0 +1,103 @@
+{
+    "entities": [
+        {
+            "name": "INSTITUTE",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                },
+                {
+                    "name": "DATE OF BIRTH",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CITTA'",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "NATION",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "RESEARCHER",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "SURNAME",
+                    "is_pk": false
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                },
+                {
+                    "name": "FOUNDATION YEAR",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "QUALIFICATION",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "CITTA'",
+            "entity2": "INSTITUTE",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "NATION",
+            "entity2": "CITTA'",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "RESEARCHER",
+            "entity2": "INSTITUTE",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "RESEARCHER",
+            "entity2": "QUALIFICATION",
+            "cardinality": "N:1"
+        }
+    ]
+}

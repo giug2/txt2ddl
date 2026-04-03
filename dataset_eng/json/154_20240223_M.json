@@ -1,0 +1,127 @@
+{
+    "entities": [
+        {
+            "name": "EVENT",
+            "attributes": [
+                {
+                    "name": "EVENT_DATE",
+                    "is_pk": true
+                },
+                {
+                    "name": "START_TIME",
+                    "is_pk": false
+                },
+                {
+                    "name": "session_name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "INTERVENTION",
+            "attributes": [
+                {
+                    "name": "intervention_id",
+                    "is_pk": false
+                },
+                {
+                    "name": "intervention_title",
+                    "is_pk": false
+                },
+                {
+                    "name": "key_speaker",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "AGENCY",
+            "attributes": [
+                {
+                    "name": "company_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "company_name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "PARTICIPATION_SPEAKER",
+            "attributes": [
+                {
+                    "name": "fk_company",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_rapporteur",
+                    "is_pk": true
+                },
+                {
+                    "name": "ROLE_EVENT",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "SESSION",
+            "attributes": [
+                {
+                    "name": "session_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "ORGANIZER",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "SPEAKER",
+            "attributes": [
+                {
+                    "name": "speaker_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "speaker_name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "INTERVENTION",
+            "entity2": "EVENT",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "SESSION",
+            "entity2": "INTERVENTION",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "slot_time",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "INTERVENTION",
+            "entity2": "PARTICIPATION_SPEAKER",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "PARTICIPATION_SPEAKER",
+            "entity2": "SPEAKER",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "PARTICIPATION_SPEAKER",
+            "entity2": "AGENCY",
+            "cardinality": "N:1"
+        }
+    ]
+}

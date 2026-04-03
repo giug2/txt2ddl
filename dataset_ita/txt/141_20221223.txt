@@ -1,0 +1,8 @@
+Definire uno schema Entity-Relationship che descriva i dati di interesse in un certo momento per un insieme di istituti scientifici e per i ricercatori che lavorano presso di essi, secondo le seguenti
+specifiche:
+• ogni istituto scientifico ha un codice, un nome, una sede (città, con codice, nome e nazione; la nazione ha
+pure codice e nome) e un anno di fondazione
+• ogni ricercatore
+– ha un codice identificativo, un cognome, un nome e una data di nascita;
+– lavora per uno e un solo istituto scientifico;
+– ha una e una sola “qualifica” (con codice identificativo e nome)

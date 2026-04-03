@@ -1,0 +1,7 @@
+- si vuole distinguere il concetto di materia (ad esempio Analisi I) da quello di disciplina
+ le discipline hanno un codice che le identifica, mentre le materie sono identificate dalla
+disciplina e da un suffisso (ad esempio "I" o anche il suffisso stringa vuota, come accade per Chimica) 
+- si vuole rappresentare il concetto di settore con codice e nome (ad esempio K05 e Informatica o
+K04 e Automatica); ogni disciplina appartiene ad uno e un solo settore; 
+- ogni docente afferisce ad uno e un solo settore (ma potrebbe insegnare anche corsi di altri settori); 
+- i dipartimenti hanno codice e nome.

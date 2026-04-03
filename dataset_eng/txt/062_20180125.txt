@@ -1,0 +1,12 @@
+• they involve conferences held even in different years
+• each congress belongs to a series, and for each series (for example, the VLDB series) there is at most one
+congress per year (so for example the VLDB 2017 exists); each series has a code and a title and is
+relating to a subject (which has code, name and scientific area with the same details as the question
+previous)
+• each conference takes place in a city (which has a code, name and country with the same details as the application
+previous), on a certain date (for simplicity, a single day)
+• each congress is made up of a series of sessions, each with a code and time
+and a set of participants, each of whom presents a report with a title (simple string of
+text) and has an institution, for example a university or a company; note that
+the affiliation of the same person can vary from one conference to another
+• each institution has a code, a name and a city in which it is based

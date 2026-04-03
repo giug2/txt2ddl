@@ -1,0 +1,11 @@
+The system is structured around the concept of Locations, each uniquely identified by a Code and characterized by a Name.
+Each location is associated with a specific exam and a reference airport.
+The Examination entity in turn defined by a Code, a Name and its own Cost,
+while Airports are described by a Code and a Name 
+Transport logistics managed through the Flights that connect a Departure City identified by the Departure City Code to a destination Airport via the Airport Code specifying a Cost for each route.
+Naturally each Departure City is defined by its own Code and Name 
+In each location it is possible to find one or more Colleges, each registered with a unique Code, Name, Address, telephone number and opening hours.
+Associated with each college there is the possibility of a stay defined by the code of the reference college CodiceCollege by a period of stay and a specific cost.
+Finally, the system provides a discount mechanism.
+There are different types of relief cataloged in the TipoDiRiduzione entity via a Code and a Description 
+The Effective Reduction is applied by linking a CodiceTipo type of reduction to a specific CodiceCollege college, thus establishing a Discount Percentage valid for that specific structure

@@ -1,0 +1,75 @@
+{
+    "entities": [
+        {
+            "name": "Current tale",
+            "attributes": [
+                {
+                    "name": "Number",
+                    "is_pk": true
+                },
+                {
+                    "name": "Holder",
+                    "is_pk": false
+                },
+                {
+                    "name": "Address",
+                    "is_pk": false
+                },
+                {
+                    "name": "Initial balance",
+                    "is_pk": false
+                },
+                {
+                    "name": "Final balance",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Movement",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Data",
+                    "is_pk": false
+                },
+                {
+                    "name": "Detail",
+                    "is_pk": false
+                },
+                {
+                    "name": "Amount",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Movement Type",
+            "attributes": [
+                {
+                    "name": "Id",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Current tale",
+            "entity2": "Movement",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Movement Type",
+            "entity2": "Movement",
+            "cardinality": "1:N"
+        }
+    ]
+}

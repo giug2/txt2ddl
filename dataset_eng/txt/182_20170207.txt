@@ -1,0 +1,3 @@
+• each animal is assigned to one and only one clinical area;
+• each animal follows only one treatment plan (which is not necessarily linked to a clinical area, i.e. animals from different areas can follow the same treatment plan);
+• each care plan is associated with only one owner and each animal is linked solely to the owner associated with its care plan.

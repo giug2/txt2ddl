@@ -1,0 +1,2 @@
+ad ogni conto corrente è associato uno e un solo cliente; 
+ogni cliente può avere più conti correnti e ha lo stesso indirizzo per tutti;

@@ -1,0 +1,4 @@
+- each category has a code and name
+- we want to distinguish the concept of product from that of subcategory; the subcategories have a name and are identified by the category they belong to and by a unique code only in the category, while the products are identified by the subcategory and a SKU
+- each supplier specializes in one and only one category (but could also supply products from other categories);
+- each supplier operates from one and only one warehouse; warehouses have a code and an address

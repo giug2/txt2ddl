@@ -1,0 +1,220 @@
+{
+    "entities": [
+        {
+            "name": "PROVINCE",
+            "attributes": [
+                {
+                    "name": "SAILING",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "REGION",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "WAREHOUSE",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "ADDRESS",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "COURIER",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "COMPANY_REASON",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "DEALS WITH",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_corriere",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "VEHICLE TYPE",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "DESCRIPTION",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "OPERATIONAL DAY",
+            "attributes": [
+                {
+                    "name": "NUMBER",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "SCHEDULED SERVICE",
+            "attributes": [
+                {
+                    "name": "ESTIMATED_ARRIVAL_TIME",
+                    "is_pk": false
+                },
+                {
+                    "name": "EXPECTED_DEPARTURE_TIME",
+                    "is_pk": false
+                },
+                {
+                    "name": "fk_operating_day",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_traits",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "ACTUAL SHIPPING",
+            "attributes": [
+                {
+                    "name": "DATA",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_scheduled_service",
+                    "is_pk": true
+                },
+                {
+                    "name": "REAL_DEPARTURE",
+                    "is_pk": false
+                },
+                {
+                    "name": "REAL_ARRIVAL",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "VEHICLE",
+            "attributes": [
+                {
+                    "name": "TARGA",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "REGION",
+            "entity2": "PROVINCE",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "PROVINCE",
+            "entity2": "WAREHOUSE",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "WAREHOUSE",
+            "entity2": "DEALS WITH",
+            "cardinality": "1:N",
+            "attributes": [
+                {
+                    "name": "I arrive",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "WAREHOUSE",
+            "entity2": "DEALS WITH",
+            "cardinality": "1:N",
+            "attributes": [
+                {
+                    "name": "Departure",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "REGION",
+            "entity2": "COURIER",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "COURIER",
+            "entity2": "DEALS WITH",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "VEHICLE TYPE",
+            "entity2": "DEALS WITH",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "DEALS WITH",
+            "entity2": "SCHEDULED SERVICE",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "OPERATIONAL DAY",
+            "entity2": "SCHEDULED SERVICE",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "SCHEDULED SERVICE",
+            "entity2": "ACTUAL SHIPPING",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "VEHICLE TYPE",
+            "entity2": "VEHICLE",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "VEHICLE",
+            "entity2": "ACTUAL SHIPPING",
+            "cardinality": "1:N"
+        }
+    ]
+}

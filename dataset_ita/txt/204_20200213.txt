@@ -1,0 +1,12 @@
+Il sistema descrive un ambiente di sviluppo software incentrato sui progetti.
+Ogni progetto è identificato da un codice univoco, possiede un nome, una descrizione ed è associato a uno specifico team che lo sviluppa e a un repository che lo ospita.
+I repository sono a loro volta entità definite da un ID e un URL.
+Il contenuto di ogni progetto è costituito da un insieme di moduli software.
+Ciascun modulo è definito da un ID, un nome e il suo autore, il quale è necessariamente uno sviluppatore presente in un'apposita anagrafica.
+Gli sviluppatori sono registrati con un ID identificativo, cognome e nome.
+La relazione che lega i moduli ai progetti è l'integrazione, la quale non solo associa un modulo a un progetto ma ne stabilisce anche il livello di urgenza tramite un attributo numerico chiamato priorità.
+I team sono caratterizzati da un nome e una metodologia di lavoro.
+I professionisti coinvolti sono i membri del team, entità che raggruppa tutte le figure professionali, ciascuna identificata da un ID, cognome e nome.
+La relazione tra i membri e i team è ulteriormente dettagliata attraverso l'assegnazione dei ruoli: questa associazione specifica quale membro del team utilizza una determinata tecnologia all'interno di un dato team.
+Le tecnologie sono a loro volta catalogate con un ID, un nome e una categoria.
+Infine, per gestire i singoli rilasci, l'entità Release associa ogni progetto a una specifica data e versione, permettendo così di pianificare più distribuzioni dello stesso software.

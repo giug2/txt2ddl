@@ -1,0 +1,39 @@
+{
+    "entities": [
+        {
+            "name": "SUBSCRIPTION_PLAN",
+            "attributes": [
+                {
+                    "name": "floor_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "FUNCTIONALITY",
+            "attributes": [
+                {
+                    "name": "feature_code",
+                    "is_pk": true
+                },
+                {
+                    "name": "feature_name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "SUBSCRIPTION_PLAN",
+            "entity2": "FUNCTIONALITY",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "monthly_cost",
+                    "is_pk": false
+                }
+            ]
+        }
+    ]
+}

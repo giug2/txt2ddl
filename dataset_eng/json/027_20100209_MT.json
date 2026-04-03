@@ -1,0 +1,51 @@
+{
+    "entities": [
+        {
+            "name": "Current tale",
+            "attributes": [
+                {
+                    "name": "Number",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Customer",
+            "attributes": [
+                {
+                    "name": "C.F.",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "DataNascita",
+                    "is_pk": false
+                },
+                {
+                    "name": "Main address",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Customer",
+            "entity2": "Current tale",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Specific address",
+                    "is_pk": false
+                }
+            ]
+        }
+    ]
+}

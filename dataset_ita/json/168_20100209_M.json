@@ -1,0 +1,47 @@
+{
+    "entities": [
+        {
+            "name": "Progetto",
+            "attributes": [
+                {
+                    "name": "CodiceProgetto",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Dipendente",
+            "attributes": [
+                {
+                    "name": "Matricola",
+                    "is_pk": true
+                },
+                {
+                    "name": "Ruolo",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "DataAssunzione",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Dipendente",
+            "entity2": "Progetto",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ]
+}

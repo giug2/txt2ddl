@@ -1,0 +1,8 @@
+Show a conceptual diagram for the database used by a dealer
+cars to store information about available cars, with the following specifications
+• each car has a chassis number, a colour, a date of arrival at the dealer, a brand
+(for example FIAT), a model (for example, Panda) and a version (for example, 1.2 Easy);
+• each model has a code, a name (for example Panda), a brand (for example FIAT), a length
+and a number of seats and belongs to a market "segment", with code and description (for example,
+segment B, “compact”)
+• each version has a type of power supply (with code and description), a displacement and a price.

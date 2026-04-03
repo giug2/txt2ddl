@@ -1,0 +1,5 @@
+- ogni professore insegna in uno e un solo dipartimento ed è seguito da uno o più studenti;
+- gli studenti seguiti da un professore sono tutti e soli quelli iscritti allo specifico dipartimento in cui il professore insegna;
+- ogni dipartimento ha sede in un solo campus, in un dipartimento insegnano uno o più professori e ad esso sono iscritti uno o più studenti;
+- in un campus ci possono essere più dipartimenti;
+- ogni studente è iscritto ad uno e un solo dipartimento e il suo campus di riferimento è quello del proprio dipartimento.

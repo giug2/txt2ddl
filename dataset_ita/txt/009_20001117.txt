@@ -1,0 +1,8 @@
+Definire uno schema Entity-Relationship che descriva i dati di una applicazione relativa all'archivio di un amministratore di condomini, secondo le seguenti specifiche.
+Ogni condominio ha un nome (che lo identifica) e un indirizzo e comprende un insieme di appartamenti raggruppati per "scale".
+Ogni scala è identificata da un codice e dal condominio di appartenenza. 
+Ogni appartamento è identificato, nel rispettivo condominio, dalla scala e da un numero (l'"interno").
+Ad ogni appartamento sono associati i "millesimi" (che indicano la frazione di condominio che è
+di proprietà del proprietario dell'appartamento) e un proprietario ed un inquilino (che possono
+coincidere), ciascuno con codice scale, cognome e nome.
+Indicare le cardinalità delle relazioni e un identificatore per ciascuna entità.

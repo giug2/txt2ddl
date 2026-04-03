@@ -1,0 +1,5 @@
+• each manager has one or more assistants; a manager's assistants are all and only those related to
+a specific office (only one);
+• each office has one and only one location, supports one or more managers and has one or more assistants
+• at one location there can be multiple offices
+• each assistant belongs to one and only one office and has a location which is that of his own office

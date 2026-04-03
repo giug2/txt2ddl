@@ -1,0 +1,112 @@
+{
+    "entities": [
+        {
+            "name": "Squad",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nation",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "City",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "YearFoundation",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Player",
+            "attributes": [
+                {
+                    "name": "Freshman",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Contract",
+            "attributes": [
+                {
+                    "name": "DateInitiation",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_player",
+                    "is_pk": true
+                },
+                {
+                    "name": "DataFine",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Role",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "City",
+            "entity2": "Squad",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Contract",
+            "entity2": "Squad",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Squad",
+            "entity2": "Player",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Player",
+            "entity2": "Contract",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Contract",
+            "entity2": "Role",
+            "cardinality": "N:1"
+        }
+    ]
+}

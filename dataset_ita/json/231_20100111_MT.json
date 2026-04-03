@@ -1,0 +1,192 @@
+{
+    "entities": [
+        {
+            "name": "ModuloDidattico",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Titolo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Autore",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Programma",
+            "attributes": [
+                {
+                    "name": "Ordine",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_corso",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Corso",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Titolo",
+                    "is_pk": false
+                },
+                {
+                    "name": "Descrizione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Lezione",
+            "attributes": [
+                {
+                    "name": "DataOra",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_corso",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Aula",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Posti",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Dipartimento",
+            "attributes": [
+                {
+                    "name": "Nome",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Docente",
+            "attributes": [
+                {
+                    "name": "Matricola",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "AnnoAccademico",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Anno",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Autore",
+            "entity2": "ModuloDidattico",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Programma",
+            "entity2": "ModuloDidattico",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Programma",
+            "entity2": "Corso",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Lezione",
+            "entity2": "Corso",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Aula",
+            "entity2": "Corso",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Dipartimento",
+            "entity2": "Corso",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "AnnoAccademico",
+            "entity2": "Corso",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Docente",
+            "entity2": "Dipartimento",
+            "cardinality": "1:1",
+            "attributes": [
+                {
+                    "name": "Presiede",
+                    "is_pk": false
+                },
+                {
+                    "name": "Cattedra",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Docente",
+            "entity2": "Dipartimento",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Afferisce",
+                    "is_pk": false
+                }
+            ]
+        }
+    ]
+}

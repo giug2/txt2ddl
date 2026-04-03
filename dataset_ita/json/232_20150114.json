@@ -1,0 +1,74 @@
+{
+    "entities": [
+        {
+            "name": "Dipartimento",
+            "attributes": [
+                {
+                    "name": "CodiceDipartimento",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Ateneo",
+            "attributes": [
+                {
+                    "name": "CodiceAteneo",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Iscrizione",
+            "attributes": [
+                {
+                    "name": "AnnoAccademico",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "CorsoDiLaurea",
+            "attributes": [
+                {
+                    "name": "CodiceCorso",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Studente",
+            "attributes": [
+                {
+                    "name": "Matricola",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Dipartimento",
+            "entity2": "Ateneo",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "StudenteImmatricolato",
+            "entity2": "Dipartimento",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "StudenteImmatricolato",
+            "entity2": "CorsoDiLaurea",
+            "cardinality": "N:1"
+        }
+    ]
+}

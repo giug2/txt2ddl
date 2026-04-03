@@ -1,0 +1,69 @@
+{
+    "entities": [
+        {
+            "name": "Studente",
+            "attributes": [
+                {
+                    "name": "id_studente",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome_completo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Corso",
+            "attributes": [
+                {
+                    "name": "id_corso",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_docente",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Docente",
+            "attributes": [
+                {
+                    "name": "id_docente",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome_completo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Aula",
+            "attributes": [
+                {
+                    "name": "id_aula",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Docente",
+            "entity2": "Corso",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Studente",
+            "entity2": "Corso",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Corso",
+            "entity2": "Aula",
+            "cardinality": "N:N"
+        }
+    ]
+}

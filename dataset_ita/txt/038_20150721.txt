@@ -1,0 +1,10 @@
+Il sistema descrive una realtà in cui sono gestite delle province ciascuna identificata univocamente da una sigla e caratterizzata da un nome 
+A loro volta le province sono suddivise in distretti telefonici ogni distretto definito da un prefisso un nome e la sigla della provincia di appartenenza stabilendo così un legame diretto con l'entità delle province 
+Parallelamente il sistema censisce le persone registrando per ognuna il codice fiscale che funge da identificativo unico il cognome il nome e la data di nascita 
+Il fulcro del modello rappresentato dalle utenze telefoniche 
+Ciascuna utenza identificata da una coppia di valori il prefisso e il numero e possiede inoltre un indirizzo 
+Ogni utenza associata a un titolare il cui codice fiscale deve corrispondere a una persona registrata nel sistema e il suo prefisso deve necessariamente appartenere a uno dei distretti censiti collegando così l'utenza a una specifica area geografica 
+Infine il sistema traccia le attività economiche legate a ogni utenza 
+Vengono gestite le bollette ognuna con un proprio codice identificativo CodiceBolletta una data di emissione e un importo ogni bolletta inequivocabilmente associata a una specifica utenza tramite la coppia prefisso e numero 
+Allo stesso modo vengono registrati i pagamenti ciascuno identificato da un CodicePagamento e caratterizzato da una data e un importo 
+Anche in questo caso ogni pagamento direttamente collegato a un'utenza specifica attraverso il suo prefisso e numero garantendo l'integrità referenziale dei dati

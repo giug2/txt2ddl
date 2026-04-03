@@ -1,0 +1,6 @@
+Definire uno schema Entity-Relationship che descriva i dati di interesse in un certo anno accademico per un insieme di studenti e di corsi di laurea di un ateneo, secondo le seguenti specifiche:
+• ogni corso di laurea ha un codice, un nome, un'afferenza (dipartimento e facoltà, ciascuna con codice e nome), un anno di attivazione e un tipo di laurea (es. Triennale)
+• ogni studente
+– ha una matricola identificativa, un cognome, un nome, una media voti e un numero di CFU acquisiti
+– è iscritto a uno e un solo corso di laurea
+– ha uno e un solo “stato” (identificato con codice e descrizione; esiste un insieme predefinito di stati, es. 'in corso', 'fuori corso')

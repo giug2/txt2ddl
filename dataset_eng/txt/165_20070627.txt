@@ -1,0 +1,5 @@
+Show the conceptual scheme of a database for managing a music catalogue, according to the following specifications.
+• The songs have a title, any featuring, one or more artists and lyrics.
+• Artists have a stage name, surname, contact email and a reference record label for which they record.
+• For each record label, the name, registered office and country are of interest.
+• The catalog is organized by series (e.g. a compilation series). Albums from a certain period are collected into a series (which is given an overall name). Each album has a catalog number, unique in the respective series, a release date and a list of songs, for each of which the track number and duration are recorded.

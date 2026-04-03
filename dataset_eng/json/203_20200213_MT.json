@@ -1,0 +1,94 @@
+{
+    "entities": [
+        {
+            "name": "Developer",
+            "attributes": [
+                {
+                    "name": "developer_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_company",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_team",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                },
+                {
+                    "name": "surname",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Project",
+            "attributes": [
+                {
+                    "name": "project_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_company",
+                    "is_pk": true
+                },
+                {
+                    "name": "project_name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Team",
+            "attributes": [
+                {
+                    "name": "id_team",
+                    "is_pk": true
+                },
+                {
+                    "name": "team_name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Agency",
+            "attributes": [
+                {
+                    "name": "company_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "company_name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Agency",
+            "entity2": "Project",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Agency",
+            "entity2": "Developer",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Team",
+            "entity2": "Developer",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Project",
+            "entity2": "Developer",
+            "cardinality": "N:N"
+        }
+    ]
+}

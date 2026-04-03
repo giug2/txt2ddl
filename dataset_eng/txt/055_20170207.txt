@@ -1,0 +1,6 @@
+The system describes the management of payment forms completed by taxpayers 
+At the center of the model is the taxpayer uniquely identified by his tax code and characterized by a taxpayer name and the city of residence 
+Each taxpayer associated with one or more payment forms, each of which identified by its own ID reports a Total amount and refers to the tax code of the taxpayer to which it belongs 
+Furthermore, the form is connected to a specific bank identified by the code through which the payment is made 
+The structure of each form detailed by a series of rows each with its own unique ID, a Row description, a specific Amount for that item and the Reference Year 
+Basically, each line is linked to a specific type of tax via the tax code, thus creating a direct link with the tax entity which associates this code with its description

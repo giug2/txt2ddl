@@ -1,0 +1,69 @@
+{
+    "entities": [
+        {
+            "name": "Dipendente",
+            "attributes": [
+                {
+                    "name": "id_dipendente",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_divisione",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_ufficio",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Progetto",
+            "attributes": [
+                {
+                    "name": "id_progetto",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_divisione",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Ufficio",
+            "attributes": [
+                {
+                    "name": "id_ufficio",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Divisione",
+            "attributes": [
+                {
+                    "name": "id_divisione",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Progetto",
+            "entity2": "Divisione",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Dipendente",
+            "entity2": "Divisione",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Dipendente",
+            "entity2": "Ufficio",
+            "cardinality": "N:1"
+        }
+    ]
+}

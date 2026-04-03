@@ -1,0 +1,61 @@
+{
+    "entities": [
+        {
+            "name": "Docente",
+            "attributes": [
+                {
+                    "name": "id_docente",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Corso",
+            "attributes": [
+                {
+                    "name": "id_corso",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_docente",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Studente",
+            "attributes": [
+                {
+                    "name": "id_dipartimento",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Dipartimento",
+            "attributes": [
+                {
+                    "name": "id_studente",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Docente",
+            "entity2": "Corso",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Studente",
+            "entity2": "Corso",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Corso",
+            "entity2": "Dipartimento",
+            "cardinality": "N:1"
+        }
+    ]
+}

@@ -1,0 +1,112 @@
+{
+    "entities": [
+        {
+            "name": "Squadra",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nazione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Citt\u00e0",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "AnnoFondazione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Giocatore",
+            "attributes": [
+                {
+                    "name": "Matricola",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Contratto",
+            "attributes": [
+                {
+                    "name": "DataInizio",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_giocatore",
+                    "is_pk": true
+                },
+                {
+                    "name": "DataFine",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Ruolo",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Citt\u00e0",
+            "entity2": "Squadra",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Contratto",
+            "entity2": "Squadra",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Squadra",
+            "entity2": "Giocatore",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Giocatore",
+            "entity2": "Contratto",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Contratto",
+            "entity2": "Ruolo",
+            "cardinality": "N:1"
+        }
+    ]
+}

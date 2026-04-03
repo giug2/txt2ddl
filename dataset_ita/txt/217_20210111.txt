@@ -1,0 +1,8 @@
+Mostrare uno schema concettuale per una base di dati che gestisca le informazioni relative ai dipartimenti di un ateneo.
+Sono di interesse i seguenti aspetti:
+- i dipartimenti, ognuno con codice (identificante), nome e sede (supporre sia un semplice valore, senza struttura particolare)
+- i corsi di laurea attivati presso i vari dipartimenti (ogni dipartimento attiva uno o più corsi di laurea e ovviamente ogni corso di laurea può essere gestito da più dipartimenti); ogni corso di laurea ha un codice identificativo e un nome
+- gli insegnamenti, per ognuno dei quali interessa il corso di laurea di appartenenza (uno e uno solo); ogni insegnamento ha un codice, univoco nell'ambito del corso di laurea, e un titolo; ogni insegnamento è offerto da tutti i dipartimenti che gestiscono il relativo corso di laurea
+- i professori, ognuno dei quali ha matricola (che lo identifica), cognome e nome e afferisce a zero o più dipartimenti, presso ognuno dei quali ha una sola cattedra (che può variare da un dipartimento all'altro; comunque si tratta di un semplice valore); ogni professore è nato in una città e risiede in una città
+- le città, che hanno un codice ISTAT (identificante), nome e regione di appartenenza
+- le regioni, che hanno un codice (identificante) e un nome.

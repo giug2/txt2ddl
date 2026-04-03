@@ -1,0 +1,52 @@
+{
+  "entities": [
+    {
+      "name": "Tampone",
+      "attributes": [
+        { "name": "CT", "is_pk": true },
+        { "name": "Data", "is_pk": false },
+        { "name": "Esito", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Paziente",
+      "attributes": [
+        { "name": "CF", "is_pk": true },
+        { "name": "Nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "ASL",
+      "attributes": [
+        { "name": "CodASL", "is_pk": true },
+        { "name": "fk_regione", "is_pk": true },
+        { "name": "Nome", "is_pk": false },
+        { "name": "Indirizzo", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Regione",
+      "attributes": [
+        { "name": "IDRegione", "is_pk": true },
+        { "name": "Nome", "is_pk": false }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "Paziente",
+      "entity2": "Tampone",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "ASL",
+      "entity2": "Paziente",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Regione",
+      "entity2": "ASL",
+      "cardinality": "1:N"
+    }
+  ]
+}

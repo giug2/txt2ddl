@@ -1,0 +1,143 @@
+{
+    "entities": [
+        {
+            "name": "Film",
+            "attributes": [
+                {
+                    "name": "FilmCode",
+                    "is_pk": true
+                },
+                {
+                    "name": "Main Role",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Director",
+            "attributes": [
+                {
+                    "name": "DirectorCode",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Event",
+            "attributes": [
+                {
+                    "name": "EventCode",
+                    "is_pk": true
+                },
+                {
+                    "name": "Title",
+                    "is_pk": false
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Projection",
+            "attributes": [
+                {
+                    "name": "DateTime",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_evento",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "HomeProduction",
+            "attributes": [
+                {
+                    "name": "Name",
+                    "is_pk": true
+                },
+                {
+                    "name": "ProducerChief",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Actor",
+            "attributes": [
+                {
+                    "name": "CodeActor",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Title",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "SalaCinema",
+            "attributes": [
+                {
+                    "name": "CodiceSala",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "PostiASeders",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Director",
+            "entity2": "Film",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Event",
+            "entity2": "Film",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Projection",
+            "entity2": "Event",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Event",
+            "entity2": "HomeProduction",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "SalaCinema",
+            "entity2": "Projection",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Actor",
+            "entity2": "HomeProduction",
+            "cardinality": "N:N"
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+Allora, in pratica abbiamo un po' di cose che girano attorno a un'università o qualcosa del genere. Ci sono le Scuole, che sono le strutture principali, ognuna con un suo codice identificativo e un nome, niente di strano. Poi ci sono i Dipartimenti, anche loro con un codice per riconoscerli e un nome. Fin qui, tutto facile.
+
+La cosa si fa più interessante con i Professori. Per trovare un prof specifico non basta un suo numero, devi sapere anche in quale Scuola e in quale Dipartimento sta. Quindi, ogni professore è praticamente incasellato in una Scuola e in un Dipartimento precisi. Naturalmente, di ogni prof conosciamo nome e cognome.
+
+Poi ci sono i Corsi di Studio. Anche per loro, l'identificativo del corso da solo non basta, devi sempre associarlo alla Scuola di appartenenza. Questo significa che un corso appartiene per forza a una e una sola Scuola, mentre una Scuola può avere un sacco di corsi diversi. E ovviamente ogni corso ha il suo nome.
+
+Infine, il collegamento più flessibile è quello tra professori e corsi: un professore può tranquillamente insegnare in più corsi di studio, e allo stesso tempo un singolo corso può essere tenuto da un gruppo di professori diversi. C'è un bel miscuglio lì, non è un legame rigido.

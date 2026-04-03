@@ -1,0 +1,8 @@
+• ogni corso di studio afferisce ad una e una sola facoltà e presso di esso insegnano zero o più
+docenti;
+• ogni docente appartiene ad una e una sola facoltà, lavora presso uno e un solo dipartimento e
+insegna in zero o più corsi di studio (anche appartenenti a facoltà diverse);
+• un dipartimento interagisce con tutte e sole le facoltà cui appartengono i docenti che lavorano
+presso di esso;
+• un dipartimento interagisce con tutti e soli i corsi di studio in cui insegnano i docenti che lavorano
+presso di esso;

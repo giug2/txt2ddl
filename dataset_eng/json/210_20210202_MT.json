@@ -1,0 +1,85 @@
+{
+    "entities": [
+        {
+            "name": "Review",
+            "attributes": [
+                {
+                    "name": "IDReview",
+                    "is_pk": true
+                },
+                {
+                    "name": "Data",
+                    "is_pk": false
+                },
+                {
+                    "name": "Assessment",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Product",
+            "attributes": [
+                {
+                    "name": "SKU",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Subcategory",
+            "attributes": [
+                {
+                    "name": "CodSottocategoria",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_categoria",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Category",
+            "attributes": [
+                {
+                    "name": "IDCategory",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Review",
+            "entity2": "Product",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Product",
+            "entity2": "Subcategory",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Subcategory",
+            "entity2": "Category",
+            "cardinality": "N:1"
+        }
+    ]
+}

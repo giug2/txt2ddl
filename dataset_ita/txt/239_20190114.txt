@@ -1,0 +1,8 @@
+Definire uno schema Entity-Relationship che descriva i dati di interesse in un certo momento (ad esempio, la stagione attuale) per un insieme di squadre sportive e per i giocatori che militano in esse, secondo le seguenti specifiche:
+• ogni squadra ha un codice, un nome, una sede (città, con codice, nome e nazione; la nazione è una semplice stringa) e un anno di fondazione.
+• ogni giocatore:
+– ha una matricola identificativa, un cognome e un nome;
+– milita in una e una sola squadra nella stagione attuale;
+– ricopre uno e un solo “ruolo” (con codice identificativo e nome; esiste un insieme predefinito di ruoli, come 'Portiere', 'Difensore', 'Attaccante').
+• un giocatore può cambiare squadra nel corso della sua carriera, ed è importante tenere traccia dei contratti storici; ad esempio, il giocatore Mario Rossi può aver avuto un contratto dal 01/07/2020 al 30/06/2022 per la squadra XY, e poi dal 01/07/2022 ad oggi per la squadra WZ;
+• un giocatore può cambiare ruolo nel tempo, e questo viene registrato nei diversi contratti stipulati.

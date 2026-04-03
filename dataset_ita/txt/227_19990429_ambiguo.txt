@@ -1,0 +1,7 @@
+Allora, in pratica qui gestiamo un po' di roba che vendiamo. Al centro di tutto c'è l'**Articolo**, che è il pezzo singolo che hai in magazzino, con un suo codice SKU e uno stato per capire se è disponibile o no. Ogni articolo, ovviamente, fa riferimento a un certo **Modello** di prodotto. Un modello può avere un sacco di articoli diversi, tipo tante paia di scarpe dello stesso tipo.
+
+Questo **Modello** è una specie di versione specifica, identificata dalla sua `Variante` e dal tipo di roba a cui appartiene. La cosa un po' ingarbugliata è che i modelli sono anche collegati tra di loro, tipo un modello base che poi ha delle sotto-versioni. Ogni modello, comunque, è legato a un solo **TipoProdotto**, che sarebbe, che so, "maglietta" o "pantalone", ognuno con un suo codice e nome.
+
+I tipi di prodotto, a loro volta, vengono messi dentro dei contenitori più grandi, le **Categorie** (tipo "abbigliamento uomo"). Una categoria può contenere un sacco di tipi di prodotto diversi.
+
+Poi c'è il **Marchio**, la marca insomma, con un suo ID e nome. Una marca è collegata a tutti i suoi articoli in vendita, ma anche alle varie categorie in cui opera. Infine, c'è il **Fornitore**, la ditta che ci porta la merce, identificato dalla sua ragione sociale; ogni fornitore può trattare diverse marche.

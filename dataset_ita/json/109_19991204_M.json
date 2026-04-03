@@ -1,0 +1,73 @@
+{
+    "entities": [
+        {
+            "name": "Scrittore",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "genere",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Libro",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Titolo",
+                    "is_pk": false
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Editore",
+            "attributes": [
+                {
+                    "name": "Nome",
+                    "is_pk": true
+                },
+                {
+                    "name": "Citt\u00e0",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Libro",
+            "entity2": "Scrittore",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Editore",
+            "entity2": "Libro",
+            "cardinality": "N:1",
+            "attributes": [
+                {
+                    "name": "collana",
+                    "is_pk": false
+                },
+                {
+                    "name": "anno",
+                    "is_pk": false
+                }
+            ]
+        }
+    ]
+}

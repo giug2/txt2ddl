@@ -1,0 +1,62 @@
+{
+    "entities": [
+        {
+            "name": "PROFESSOR",
+            "attributes": [
+                {
+                    "name": "pk_professor",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "DEPARTMENT",
+            "attributes": [
+                {
+                    "name": "pk_department",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "STUDENTS",
+            "attributes": [
+                {
+                    "name": "pk_students",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "CAMPUS",
+            "attributes": [
+                {
+                    "name": "id_campus",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "PROFESSOR",
+            "entity2": "DEPARTMENT",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "PROFESSOR",
+            "entity2": "STUDENTS",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "STUDENTS",
+            "entity2": "DEPARTMENT",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "CAMPUS",
+            "entity2": "DEPARTMENT",
+            "cardinality": "1:N"
+        }
+    ]
+}

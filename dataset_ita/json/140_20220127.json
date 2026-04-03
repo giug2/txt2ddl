@@ -1,0 +1,57 @@
+{
+  "entities": [
+    {
+      "name": "DIRIGENTE",
+      "attributes": [
+        {
+          "name": "id_dirigente",
+          "is_pk": true
+        }
+      ]
+    },
+    {
+      "name": "UFFICIO",
+      "attributes": [
+        {
+          "name": "id_ufficio",
+          "is_pk": true
+        },
+        {
+          "name": "fk_sede",
+          "is_pk": true
+        }
+      ]
+    },
+    {
+      "name": "ASSISTENTE",
+      "attributes": [
+        {
+          "name": "id_assistente",
+          "is_pk": true
+        }
+      ]
+    },
+    {
+      "name": "SEDE",
+      "attributes": [
+        {
+          "name": "id_sede",
+          "is_pk": true
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "Ufficio",
+      "entity2": "Sede",
+      "cardinality": "N:1"
+    },
+    {
+      "entity1": "Dirigente",
+      "entity2": "Assistente",
+      "entity3": "Ufficio",
+      "cardinality": "N:N:N"
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+    "entities": [
+        {
+            "name": "Artist",
+            "attributes": [
+                {
+                    "name": "CodeArtist",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Song",
+            "attributes": [
+                {
+                    "name": "SongCode",
+                    "is_pk": true
+                },
+                {
+                    "name": "Title",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "GenereMusicale",
+            "attributes": [
+                {
+                    "name": "CodiceGenere",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Publication",
+            "attributes": [
+                {
+                    "name": "fk_brano",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_label",
+                    "is_pk": true
+                },
+                {
+                    "name": "Anno",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Album",
+            "attributes": [
+                {
+                    "name": "CodeAlbum",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Record Label",
+            "attributes": [
+                {
+                    "name": "CodeLabel",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Site",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Artist",
+            "entity2": "Song",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "GenereMusicale",
+            "entity2": "Song",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Song",
+            "entity2": "Publication",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Album",
+            "entity2": "Publication",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Record Label",
+            "entity2": "Publication",
+            "cardinality": "1:N"
+        }
+    ]
+}

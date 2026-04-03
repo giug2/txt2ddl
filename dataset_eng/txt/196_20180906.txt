@@ -1,0 +1,10 @@
+The system described manages the patients' personal information, storing for each patient the tax code, surname, name and date of birth.
+Each patient can have one or more hospitalizations over time, which are uniquely identified by a Hospitalization ID and are associated with a specific department.
+There is a direct link between a hospitalization and the patient, since each hospitalization must refer to a valid tax code present in the patient registry.
+The organizational component is structured on several levels: each hospitalization takes place in a hospital, identified by its unique code.
+The hospitals are in turn characterized by the name of the structure and the local health authority they belong to.
+This ASL is linked by its code to an entity that describes the Local Health Authorities, each defined by its own code and official name.
+For each hospitalization, one or more invoices are issued, each identified by a unique invoice number and containing the date of issue and the amount.
+Each invoice is unambiguously associated with a single hospitalization, thus ensuring that each charge is correctly linked to the hospitalization to which it refers.
+Finally, the system tracks payments made to settle invoices.
+Each payment is recorded with its own transaction ID, date and amount paid, and is strictly linked to a specific existing invoice, ensuring the integrity and traceability of financial transactions.

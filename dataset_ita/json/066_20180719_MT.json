@@ -1,0 +1,126 @@
+{
+    "entities": [
+        {
+            "name": "MUSEO",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CITTA",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "NAZIONE",
+            "attributes": [
+                {
+                    "name": "SIGLA",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "ARTISTA",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                },
+                {
+                    "name": "COGNOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "OPERA D'ARTE",
+            "attributes": [
+                {
+                    "name": "CODICE",
+                    "is_pk": true
+                },
+                {
+                    "name": "TITOLO",
+                    "is_pk": false
+                },
+                {
+                    "name": "ANNO",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "SALA",
+            "attributes": [
+                {
+                    "name": "NOME",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_museo",
+                    "is_pk": true
+                },
+                {
+                    "name": "DIMENSIONE",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "MUSEO",
+            "entity2": "CITTA",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "SALA",
+            "entity2": "MUSEO",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "OPERA D'ARTE",
+            "entity2": "SALA",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "OPERA D'ARTE",
+            "entity2": "ARTISTA",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "ARTISTA",
+            "entity2": "NAZIONE",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "CITTA",
+            "entity2": "NAZIONE",
+            "cardinality": "N:1"
+        }
+    ]
+}

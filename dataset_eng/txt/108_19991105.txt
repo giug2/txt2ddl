@@ -1,0 +1,4 @@
+- every novel has one and only one author 
+- every novel has zero or more characters 
+- each character appears in zero or more novels 
+- each novel has one or more editions, each with a different publisher

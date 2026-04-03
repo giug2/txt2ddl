@@ -1,0 +1,69 @@
+{
+    "entities": [
+        {
+            "name": "Impiegato",
+            "attributes": [
+                {
+                    "name": "id_impiegato",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_team",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Team",
+            "attributes": [
+                {
+                    "name": "id_team",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_divisione",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Divisione",
+            "attributes": [
+                {
+                    "name": "id_divisione",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_azienda",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Azienda",
+            "attributes": [
+                {
+                    "name": "id_azienda",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Azienda",
+            "entity2": "Divisione",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Divisione",
+            "entity2": "Team",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Team",
+            "entity2": "Impiegato",
+            "cardinality": "1:N"
+        }
+    ]
+}

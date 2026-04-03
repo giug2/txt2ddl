@@ -1,0 +1,8 @@
+Show the conceptual scheme of a database for the management of articles in a scientific journal, according to the following specifications.
+• Articles have a title, subtitle, one or more authors and a text (a very large, but still manageable string)
+• The authors have name, surname, email and affiliation (the institution for which they work)
+• For each institution (of the authors), the name, address and country are of interest
+• The magazine is published a certain number of times in a year. A year's publications come
+collected in a volume (which is given an overall title). Each publication has a number, unique in
+respective volume, a publication date and a series of articles, for each of which is recorded
+the start page and the end page

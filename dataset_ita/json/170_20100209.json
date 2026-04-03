@@ -1,0 +1,75 @@
+{
+    "entities": [
+        {
+            "name": "Veicolo",
+            "attributes": [
+                {
+                    "name": "Targa",
+                    "is_pk": true
+                },
+                {
+                    "name": "Proprietario",
+                    "is_pk": false
+                },
+                {
+                    "name": "Indirizzo Proprietario",
+                    "is_pk": false
+                },
+                {
+                    "name": "Chilometraggio Iniziale",
+                    "is_pk": false
+                },
+                {
+                    "name": "Chilometraggio Attuale",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Intervento",
+            "attributes": [
+                {
+                    "name": "Codice Intervento",
+                    "is_pk": true
+                },
+                {
+                    "name": "Data Intervento",
+                    "is_pk": false
+                },
+                {
+                    "name": "Note",
+                    "is_pk": false
+                },
+                {
+                    "name": "Costo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Tipo Intervento",
+            "attributes": [
+                {
+                    "name": "Codice Tipo",
+                    "is_pk": true
+                },
+                {
+                    "name": "Descrizione",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Veicolo",
+            "entity2": "Intervento",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Tipo Intervento",
+            "entity2": "Intervento",
+            "cardinality": "1:N"
+        }
+    ]
+}

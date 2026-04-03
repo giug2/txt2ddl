@@ -1,0 +1,61 @@
+{
+    "entities": [
+        {
+            "name": "Autore",
+            "attributes": [
+                {
+                    "name": "id_autore",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Romanzo",
+            "attributes": [
+                {
+                    "name": "id_romanzo",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_autore",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Personaggio",
+            "attributes": [
+                {
+                    "name": "id_personaggio",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Editore",
+            "attributes": [
+                {
+                    "name": "id_editore",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Autore",
+            "entity2": "Romanzo",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Personaggio",
+            "entity2": "Romanzo",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Editore",
+            "entity2": "Romanzo",
+            "cardinality": "1:N"
+        }
+    ]
+}

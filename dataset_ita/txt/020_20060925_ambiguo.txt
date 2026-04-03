@@ -1,0 +1,5 @@
+Allora, in pratica qui abbiamo un po' di cose messe insieme. C'è una specie di elenco con tutte le mostre, ognuna con il suo codice unico per non fare confusione, un titolo e poi le date di quando inizia e finisce. Poi, da un'altra parte, teniamo traccia dei quadri, anche loro con un codice identificativo, e ci segniamo chi è l'autore e più o meno di che anno è.
+
+Il punto centrale è una specie di registro, chiamiamolo "Esposizione", che serve a collegare tutto. Dentro questa cosa ci mettiamo insieme il codice di una mostra con il codice di un quadro. Questo ci permette di dire che una certa mostra ha dentro un sacco di quadri diversi e, allo stesso tempo, che un singolo quadro può essere stato esposto in più mostre nel corso del tempo. È una specie di ponte tra le due cose.
+
+Infine, ci sono le sale. Ogni sala ha il suo codice, un nome e magari quanto è grande. La cosa interessante è che quel registro che collega le mostre ai quadri è anche legato alle sale. In pratica, per ogni quadro che finisce in una mostra, diciamo anche precisamente in quale stanza si trova. Quindi, ogni sala può contenere un bel po' di queste combinazioni quadro-mostra.

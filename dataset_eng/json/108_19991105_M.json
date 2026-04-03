@@ -1,0 +1,61 @@
+{
+    "entities": [
+        {
+            "name": "Author",
+            "attributes": [
+                {
+                    "name": "author_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Novel",
+            "attributes": [
+                {
+                    "name": "novel_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_author",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Character",
+            "attributes": [
+                {
+                    "name": "publisher_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Publisher",
+            "attributes": [
+                {
+                    "name": "character_id",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Author",
+            "entity2": "Novel",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Novel",
+            "entity2": "Character",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Publisher",
+            "entity2": "Novel",
+            "cardinality": "1:N"
+        }
+    ]
+}

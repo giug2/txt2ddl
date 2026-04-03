@@ -1,0 +1,88 @@
+{
+    "entities": [
+        {
+            "name": "Students",
+            "attributes": [
+                {
+                    "name": "Freshman",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Teaching",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Degree Course",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Department",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Degree Course",
+            "entity2": "Students",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Students",
+            "entity2": "Teaching",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Vote",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Department",
+            "entity2": "Degree Course",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Department",
+            "entity2": "Students",
+            "cardinality": "1:N"
+        }
+    ]
+}

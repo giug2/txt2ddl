@@ -1,0 +1,13 @@
+The data structure describes an aeronautical domain starting from the fundamental geographical entities.
+Each nation is identified by a unique code and has a name.
+In turn, the Cities are characterized by a code and name and are associated with a specific nation to which they belong.
+Continuing along this line, each Airport identified by its own code and name located in a specific city.
+The model includes the airlines, each defined by a code and a name and for each of them of interest the country of origin.
+At the same time, the types of aircraft defined by a Code and a Name are managed.
+In addition to the typology, the individual physical aircraft are also of interest, each identified by a unique code which corresponds to the acronym painted on the tail and associated with a specific aircraft type.
+The heart of the system is represented by scheduled flights uniquely identified by the pair of values ​​formed by the company that operates them and a flight number.
+For each flight, the departure and arrival airport are specified, the expected departure and arrival time and the TipoAeromobile required to carry it out, thus establishing relationships with the entities Companies Airports and TipiAeromobile, it is important to note that the same flight number for example the AK212 can be offered on different days of the week potentially with different times for each day such as Monday at 12:00 and Saturday at 13:00.
+When a scheduled flight actually takes place on a specific date, an instance of Actual Flight is generated.
+This entity is linked to the reference scheduled flight via the Company and Number pair and records the exact date on which the flight takes place together with the actual departure and arrival date.
+Furthermore, each Actual Flight is associated with a single and specific Aircraft that operates it.
+There is a fundamental constraint that the aircraft used such as the GNGRF must necessarily be of the type specified for that scheduled flight such as the A321A

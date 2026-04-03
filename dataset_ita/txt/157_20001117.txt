@@ -1,0 +1,7 @@
+Definire uno schema Entity-Relationship che descriva i dati di una applicazione relativa all'offerta formativa di un insieme di dipartimenti universitari. Sono di interesse:
+I dipartimenti, con nome (identificante) e sede.
+I corsi di laurea (ad esempio "Ingegneria Informatica" o "Lettere Classiche"), con nome, anno di attivazione e area disciplinare di afferenza (codificata con un codice SSD e con una breve descrizione: ad esempio, all'area "INF/01" corrisponde la descrizione "Informatica").
+Il nome identifica univocamente il corso di laurea insieme al dipartimento di appartenenza.
+Gli insegnamenti dei corsi di laurea, identificati attraverso il nome del dipartimento, quello del corso di laurea e un nome specifico (ad esempio "Ingegneria del Software"). Per ogni insegnamento sono rilevanti i crediti formativi (CFU), il docente titolare, le ore di lezione e l'anno di corso in cui è erogato. Ogni insegnamento ha uno ed un solo docente titolare.
+I docenti (ad esempio il professor Mario Rossi), identificati attraverso una matricola e con le seguenti proprietà: fascia di appartenenza, anni di esperienza e numero di ufficio. Possono esistere docenti (attualmente) senza un insegnamento assegnato.
+Indicare le cardinalità delle relazioni e un identificatore per ciascuna entità.

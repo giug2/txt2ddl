@@ -1,0 +1,6 @@
+Define an Entity-Relationship schema that describes the data of interest for the management of a set of warehouses and the products stored in them, according to the following specifications:
+• each warehouse has an ID, a name of the headquarters, a location (municipality, with ISTAT code, name and province; the province has an acronym and a name) and a year of opening
+• each product
+– has a SKU code, a name, a brand and a market launch date;
+– is stored in one and only one warehouse;
+– belongs to one and only one “category” (with one ID and one name)

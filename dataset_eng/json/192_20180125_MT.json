@@ -1,0 +1,95 @@
+{
+    "entities": [
+        {
+            "name": "Product",
+            "attributes": [
+                {
+                    "name": "SKU",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Subcategory",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_categoria",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Category",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Mark",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Producer",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Product",
+            "entity2": "Subcategory",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Product",
+            "entity2": "Mark",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Subcategory",
+            "entity2": "Category",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Mark",
+            "entity2": "Producer",
+            "cardinality": "N:1"
+        }
+    ]
+}

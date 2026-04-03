@@ -1,0 +1,5 @@
+• ogni professore appartiene a uno e un solo dipartimento e supervisiona uno o più dottorandi
+• ogni dipartimento ha uno o più professori e ad esso afferiscono tutti e soli i dottorandi che sono supervisionati da tali professori
+• ogni dottorando è supervisionato da uno e un solo professore e il suo dipartimento di afferenza è quello di tale professore
+• ogni dottorando e ogni professore hanno ciascuno uno e un solo campus di riferimento, ma il campus di un dottorando non coincide necessariamente con quello del relativo professore supervisore; per ogni campus ci possono essere più dottorandi e più professori
+• si noti che il concetto di dipartimento è logico e non si parla di campus di un dipartimento

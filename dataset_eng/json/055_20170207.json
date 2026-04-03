@@ -1,0 +1,99 @@
+{
+    "entities": [
+        {
+            "name": "Taxpayer",
+            "attributes": [
+                {
+                    "name": "Tax ID code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "City",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Modulo",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "Total",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Bank",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome Banca",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Riga",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "Amount",
+                    "is_pk": false
+                },
+                {
+                    "name": "Anno",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Already",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "in NomeTa",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Taxpayer",
+            "entity2": "Modulo",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Bank",
+            "entity2": "Modulo",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Modulo",
+            "entity2": "Riga",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Already",
+            "entity2": "Riga",
+            "cardinality": "1:N"
+        }
+    ]
+}

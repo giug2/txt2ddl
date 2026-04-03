@@ -1,0 +1,4 @@
+• ogni progetto afferisce ad una e una sola divisione e ad esso lavorano zero o più dipendenti;
+• ogni dipendente appartiene ad una e una sola divisione, lavora presso uno e un solo ufficio e lavora su zero o più progetti (anche appartenenti a divisioni diverse);
+• un ufficio interagisce con tutte e sole le divisioni cui appartengono i dipendenti che lavorano presso di esso;
+• un ufficio interagisce con tutti e soli i progetti in cui lavorano i dipendenti che lavorano presso di esso;

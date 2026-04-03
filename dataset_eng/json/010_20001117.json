@@ -1,0 +1,115 @@
+{
+    "entities": [
+        {
+            "name": "Casa",
+            "attributes": [
+                {
+                    "name": "Name",
+                    "is_pk": true
+                },
+                {
+                    "name": "Address",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Model",
+            "attributes": [
+                {
+                    "name": "FK_HOME",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": true
+                },
+                {
+                    "name": "Anno",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Version",
+            "attributes": [
+                {
+                    "name": "FK_MODEL",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": true
+                },
+                {
+                    "name": "Prezzo",
+                    "is_pk": false
+                },
+                {
+                    "name": "Porte",
+                    "is_pk": false
+                },
+                {
+                    "name": "Speed",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Segment",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Motor",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Displacement",
+                    "is_pk": false
+                },
+                {
+                    "name": "Cylinders",
+                    "is_pk": false
+                },
+                {
+                    "name": "Power",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Casa",
+            "entity2": "Model",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Model",
+            "entity2": "Segment",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Model",
+            "entity2": "Version",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Version",
+            "entity2": "Motor",
+            "cardinality": "N:1"
+        }
+    ]
+}

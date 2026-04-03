@@ -1,0 +1,6 @@
+• for each subject there can be multiple courses, held by the same professor or by different professors
+• each course is related to one and only one subject, has one and only one professor and is offered for one and only one study course
+• Each professor teaches zero or more courses
+• for each course of study there may be multiple courses of a given subject, distinguished by a progressive number
+indicates the "channel" (e.g.: Databases, channel 1)
+• all courses of a given subject have the same textbook (one and only one)

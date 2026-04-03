@@ -1,0 +1,7 @@
+Allora, in pratica c'è tutto un sistema per tener traccia delle spedizioni. Il pezzo forte è la Spedizione, che ha un suo numero identificativo, un ID e basta, per non confonderla con le altre.
+
+Ogni spedizione, ovviamente, deve avere un Mittente, che è una persona o un'azienda con un suo codice (CM) e un nome. Un mittente può fare un sacco di spedizioni, ma una spedizione viene sempre e solo da un mittente. Questi mittenti, poi, sono raggruppati in una specie di Categoria, che ha una sua sigla (CCM) e una descrizione, giusto per classificarli. Ogni mittente sta in una sola categoria, ma una categoria può contenere un bel po' di mittenti.
+
+Poi, una spedizione ha anche un Tipo, tipo per dire se è standard o express, che è definito da un codice (CT) e una descrizione. Ogni spedizione ha un solo tipo, ma lo stesso tipo si può applicare a un mucchio di spedizioni diverse. E, naturalmente, ogni spedizione è diretta verso una Destinazione, che ha un suo codice (CDes) e una descrizione. Un sacco di spedizioni possono andare verso la stessa destinazione, ma una spedizione ha una sola meta.
+
+Dentro ogni spedizione ci sono uno o più Pacchi. Un pacco non può esistere da solo, è sempre legato a una e una sola spedizione. Per identificarlo, infatti, non basta il suo numero (NP), ma serve anche l'ID della spedizione a cui appartiene. Infine, ogni pacco ha una sua Dimensione, che è una cosa a parte con un codice (CDim) e una descrizione tipo "piccolo" o "grande". Chiaramente, tanti pacchi possono avere la stessa dimensione.

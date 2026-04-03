@@ -1,0 +1,5 @@
+• We manage the editions of music festivals which also take place in different years.
+• Each edition of the festival belongs to a circuit and for each circuit (for example, the "Lollapalooza" circuit) there is a maximum of one edition per year (so for example there is Lollapalooza 2024); each circuit has a code and a name.
+• Each edition of the festival takes place in a specific city, on a certain start date.
+• Each edition of the festival is made up of a series of performances, each with a unique code, time and specific stage. One or more artists on the bill participate in each performance, each belonging to a band (or as a soloist); note that an artist's band may change from one edition of the festival to another.
+• Each band has a code, a name and a city of origin where it is based.

@@ -1,0 +1,13 @@
+La struttura dei dati descrive un dominio della logistica e delle spedizioni partendo dalle entità territoriali fondamentali.
+Ogni Regione è identificata da un codice univoco e possiede un nome.
+A loro volta le Province sono caratterizzate da una sigla, un nome e sono associate a una specifica Regione di appartenenza.
+Proseguendo su questa linea, ogni Magazzino, identificato da un proprio codice e indirizzo, è situato in una determinata Provincia.
+Il modello include i Corrieri, ciascuno definito da un ID e una ragione sociale, e per ognuno di essi è di interesse la Regione della sede legale.
+Parallelamente, vengono gestite le tipologie di veicolo, definite da un Codice e una Descrizione.
+Oltre alla tipologia, sono di interesse anche i singoli Veicoli fisici, ognuno identificato da una targa univoca e associato a un preciso Tipo Veicolo.
+Il cuore del sistema è rappresentato dalle Tratte standard, identificate univocamente dalla coppia di valori formata dal Corriere che le opera e da un Codice di tratta.
+Per ogni tratta sono specificati il magazzino di partenza e quello di arrivo, e il Tipo Veicolo richiesto per effettuarla, stabilendo così relazioni con le entità Corrieri, Magazzini e Tipi Veicolo. È importante notare che una medesima tratta, ad esempio la MI-RM-01, può essere percorsa in giorni diversi della settimana, generando un Servizio Pianificato con orari di partenza e arrivo previsti specifici per quel giorno, come il lunedì alle 08:00 e il mercoledì alle 09:00.
+Quando un servizio pianificato su una tratta viene effettivamente eseguito in una data specifica, si genera un'istanza di Spedizione Effettiva.
+Questa entità è legata al servizio pianificato di riferimento e registra la data esatta in cui la spedizione ha luogo, insieme all'ora di partenza e di arrivo reali.
+Inoltre, ogni Spedizione Effettiva è associata a un singolo e specifico Veicolo che la esegue.
+Esiste un vincolo fondamentale: il veicolo utilizzato, come ad esempio quello con targa AB123CD, deve obbligatoriamente essere del tipo specificato per quella tratta, come ad esempio un 'Furgone Refrigerato'.

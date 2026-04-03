@@ -1,0 +1,7 @@
+Show the conceptual scheme of a database for the management of music festivals, according to the following specifications.
+• The festival area has a series of stages, each of which has a name and a maximum capacity of spectators.
+• A festival has a name, a start date and an end date.
+• Different artists perform in each festival and the same artist can participate in multiple festivals.
+• For each artist, the musical genre, the year of formation, and the stage on which they perform are represented (which can change at different festivals).
+It is of interest to represent possible thematic itineraries of a festival, each with a code and consisting of an ordered list of stages to visit and, for each stage, an ordered list of artists to listen to.
+• We also want to represent guided tours of the festival which each have a name, a starting time, a duration and are based on a certain thematic route. The guided tours are repeated on the various days of the festival with a different number of participants.

@@ -1,0 +1,111 @@
+{
+    "entities": [
+        {
+            "name": "Facolt\u00e0",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CorsoDiLaurea",
+            "attributes": [
+                {
+                    "name": "Sigla",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_idfacolta",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Lezione",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Titolo",
+                    "is_pk": false
+                },
+                {
+                    "name": "Orario",
+                    "is_pk": false
+                },
+                {
+                    "name": "Durata",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Materia",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "GiornoDellaSettimana",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "CorsoDiLaurea",
+            "entity2": "Facolt\u00e0",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Materia",
+            "entity2": "CorsoDiLaurea",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "AnnoDiCorso",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Lezione",
+            "entity2": "CorsoDiLaurea",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "GiornoDellaSettimana",
+            "entity2": "Lezione",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "CapienzaAula",
+                    "is_pk": false
+                }
+            ]
+        }
+    ]
+}

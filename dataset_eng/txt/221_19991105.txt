@@ -1,0 +1,6 @@
+- for each type of task there can be multiple tasks, assigned to the same employee or to different employees
+- each task is related to one and only one type of task
+- each employee is assigned to zero or more tasks
+- each task has one or more employees assigned and belongs to one and only one project
+- for each project there is at most one task of a given type
+- each task has one and only one reference document; tasks of a given type do not necessarily have the same reference document

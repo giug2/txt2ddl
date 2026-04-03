@@ -1,0 +1,153 @@
+{
+    "entities": [
+        {
+            "name": "Regista",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Citt\u00e0",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Nazione",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Candidatura",
+            "attributes": [
+                {
+                    "name": "PremioOttenuto",
+                    "is_pk": false
+                },
+                {
+                    "name": "fk_proiezione",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_regista",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Proiezione",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_genere",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_cinema",
+                    "is_pk": true
+                },
+                {
+                    "name": "Data",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "GenereCinematografico",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Cinema",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Citt\u00e0",
+            "entity2": "Regista",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Nazione",
+            "entity2": "Citt\u00e0",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Candidatura",
+            "entity2": "Regista",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Candidatura",
+            "entity2": "Proiezione",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Nazione",
+            "entity2": "Candidatura",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "GenereCinematografico",
+            "entity2": "Proiezione",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Cinema",
+            "entity2": "Proiezione",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Nazione",
+            "entity2": "Cinema",
+            "cardinality": "1:N"
+        }
+    ]
+}

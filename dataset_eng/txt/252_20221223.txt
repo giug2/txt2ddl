@@ -1,0 +1,6 @@
+Define an Entity-Relationship schema that describes the data of interest in a certain academic year for a set of students and university departments, according to the following specifications:
+• each department has a code, a name, a headquarters (city and country, each with code and name), a year of foundation and a logo color
+• every student
+– has a student number, a surname, a name, a city and country of birth (each with code and name), a date of birth and an average grade
+– pertains to one and only one department
+– is enrolled in one and only one “degree course” (identified with code and name; there is a predefined set of degree courses)

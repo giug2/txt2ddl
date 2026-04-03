@@ -1,0 +1,5 @@
+• each professor teaches one and only one course of study;
+• each course of study generally has multiple professors and belongs to one and only one department;
+• each department belongs to one and only one school;
+• each professor works only in the department to which the course of study in which he works belongs
+and only at the school to which the department belongs.

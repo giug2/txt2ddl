@@ -1,0 +1,53 @@
+{
+  "entities": [
+    {
+      "name": "Mostra",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Titolo", "is_pk": false },
+        { "name": "DataIn", "is_pk": false },
+        { "name": "DataFine", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Esposizione",
+      "attributes": [
+        { "name": "fk_mostra", "is_pk": true },
+        { "name": "fk_quadro", "is_pk": true }
+      ]
+    },
+    {
+      "name": "Quadro",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Autore", "is_pk": false },
+        { "name": "Anno", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Sala",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Nome", "is_pk": false },
+        { "name": "Dimensione", "is_pk": false }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "Mostra",
+      "entity2": "Esposizione",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Quadro",
+      "entity2": "Esposizione",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Sala",
+      "entity2": "Esposizione",
+      "cardinality": "1:N"
+    }
+  ]
+}

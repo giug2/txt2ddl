@@ -1,0 +1,6 @@
+- ogni dirigente opera presso uno o più reparti e collabora con uno o più assistenti,
+• se un dirigente X collabora con un assistente Y presso un reparto Z e con un altro assistente V presso un altro reparto W, allora X collabora con Y anche presso W e collabora con V presso Z
+• presso ogni reparto operano uno o più dirigenti e ad esso afferiscono gli assistenti che collaborano con tali dirigenti
+• ogni assistente collabora con uno o più dirigenti e afferisce ai reparti presso cui tali dirigenti operano
+• ogni reparto ha una e una sola sede e ogni sede ha più reparti
+• dirigenti e assistenti hanno legami con le sedi solo attraverso i reparti

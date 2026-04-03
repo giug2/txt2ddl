@@ -1,0 +1,4 @@
+Define an Entity-Relationship scheme that describes the academic career of students (used for example by a university secretariat for administrative management) relating to the students of a university and the exams they take, according to the following specifications:
+• each student is identified by student number, surname, name, degree course of enrollment (with the relevant department, each with code and name) and a main department of affiliation (which may be different from that of the degree course);
+• each teaching has a code and a name;
+• for each student, the courses for which he took the exam are of interest, with the grade obtained in each of them.

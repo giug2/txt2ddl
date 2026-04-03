@@ -1,0 +1,19 @@
+Mostrare, nel riquadro alla pagine seguente, uno schema concettuale per una realtà relativa ad un insieme di
+ristoranti di una regione, secondo le specifiche seguenti (molto semplificate rispetto alla realtà, ma con alcuni
+dettagli che vanno specificati come richiesto).
+• Ogni ristorante ha codice, nome e indirizzo; gli indirizzi sono “standardizzati”, nel senso che la base di
+dati contiene tutti i possibili indirizzi della regione, ciascuno con via, numero civico, comune (con codice
+e nome) e provincia (con codice e nome)
+• Per ogni ristorante si rappresentano
+i proprietari, con codice fiscale, nome, cognome, data di nascita, quota di possesso del ristorante (ad
+esempio Mario Rossi può possedere il 30% del ristorante Buon Gusto) e parentele eventualmente esistenti
+tra proprietari (anche di ristoranti diversi), con tipo di parentela (ad esempio Mario Rossi è cugino di
+Aldo Verdi e marito di Anna Pini). Le parentele sono rappresentate con codice e descrizione 
+• Ogni ristorante ha un menu, composto da un insieme di piatti offerti. I piatti sono caratterizzati da un codice (unico per piatto per tutti i ristoranti) e un
+nome. Ogni piatto ha un costo, che varia e dipende dal ristorante, mentre il nome del piatto è identico
+per tutti i ristoranti.
+• Ogni piatto ha un insieme di ingredienti, che sono descritti ciascuno da un codice e un nome (unici per
+tutti i ristoranti).
+• Si vuole tenere traccia delle possibili allergie o intolleranze alimentari, indicando, per ciascun ingrediente
+quali sono le intolleranze o allergie cui è associato. Nota bene, il tutto è molto semplificato e si desidera solo rappresentare intolleranze/allergie
+(con codice e nome) e associarle agli ingredienti.

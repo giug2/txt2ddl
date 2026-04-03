@@ -1,0 +1,4 @@
+• ogni progetto afferisce ad una e una sola azienda e ad esso sono assegnati zero o più sviluppatori;
+• ogni sviluppatore lavora per una e una sola azienda, è membro di uno e un solo team e lavora a zero o più progetti;
+• un team è associato a tutte e sole le aziende per cui lavorano gli sviluppatori che ne fanno parte;
+• un team è associato a tutti e soli i progetti a cui lavorano gli sviluppatori che ne fanno parte;

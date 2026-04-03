@@ -1,0 +1,75 @@
+{
+    "entities": [
+        {
+            "name": "Chef",
+            "attributes": [
+                {
+                    "name": "id_chef",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Piatto",
+            "attributes": [
+                {
+                    "name": "fk_menu",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_tipologia_piatto",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Menu",
+            "attributes": [
+                {
+                    "name": "id_menu",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "TipologiaPiatto",
+            "attributes": [
+                {
+                    "name": "id_tipologia_piatto",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Ricetta",
+            "attributes": [
+                {
+                    "name": "id_ricetta",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Piatto",
+            "entity2": "Chef",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Piatto",
+            "entity2": "Menu",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Piatto",
+            "entity2": "TipologiaPiatto",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Ricetta",
+            "entity2": "TipologiaPiatto",
+            "cardinality": "N:1"
+        }
+    ]
+}

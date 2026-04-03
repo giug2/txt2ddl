@@ -1,0 +1,8 @@
+The scheme outlines an information system in which there are Nations, each identified by a Nation Abbreviation and described by a Name 
+The Manufacturers defined by an identification code, a name and the country to which they belong are connected to these, establishing a referential integrity bond with the Nations entity. 
+However, a new Category entity identified by a Category Code and a Name is introduced. Consequently, the Models entity, while maintaining its identification key composed of House and Name, now establishes a referential integrity constraint with the new Categories entity through its Category attribute 
+The most significant change is the inclusion of the Versions entity which is interposed between the models and the cars 
+Each Version identified by the trio of attributes House Model and Version Code has a Displacement attribute and refers to the Models entity via the House and Model pair 
+The Cars entity always identified by the License Plate and characterized by the Year is no longer linked directly to a model but to a specific Version through a referential constraint on the House, Model and Version attributes  
+Finally, the ownership relationship is made explicit through a new associative entity Property that connects a Car through the Car attribute to an Owner through the Owner attribute, establishing referential integrity constraints with the respective Cars and People entities
+The latter collects the personal information of individuals identified by their Tax Code and described by Surname and Name

@@ -1,0 +1,8 @@
+• each course of study belongs to one and only one school and in it they teach zero or more
+professors;
+• each professor belongs to one and only one school, works in one and only one department and
+teaches in zero or more study courses (even belonging to different schools);
+• a department interacts with all and only the schools to which the working professors belong
+near it;
+• a department interacts with all and only the courses of study in which the professors teach
+they work at it;

@@ -1,0 +1,6 @@
+The diagram describes three main entities store brand and category 
+The store entity identified by a unique code and characterized by the Name, Address and Floor attributes 
+The category entity defined by a code and the name of the Category itself 
+Finally, the brand entity identified by the code and has a Brand attribute and is also connected to a category via the CC code. It is important to note that in specific contexts such as tasks B and D the structure of these entities undergoes variations 
+In these cases the store indicated as relationship R0 is described solely by Name and Address, thus omitting the Floor attribute 
+Similarly, the brand indicated as the R1 relationship is enriched with the Nation attribute, thus being defined by the Nation Brand and the category code

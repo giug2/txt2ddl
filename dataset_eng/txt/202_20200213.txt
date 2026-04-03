@@ -1,0 +1,5 @@
+• each actor is linked to one and only one franchise;
+• each actor plays in all and only the films of the franchise to which he is linked;
+• each film belongs to one and only one franchise and all and only the actors linked to that franchise star in it;
+• each franchise belongs to one and only one production company;
+• each actor works exclusively for the production company that owns the franchise he is part of.

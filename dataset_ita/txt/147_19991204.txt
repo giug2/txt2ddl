@@ -1,0 +1,9 @@
+
+Lo schema delinea un sistema informativo in cui sono presenti delle Nazioni ciascuna identificata da una SiglaNazione e descritta da un Nome 
+A queste sono collegate le CaseCostruttrici definite da un Codice identificativo un Nome e la Nazione di appartenenza stabilendo un vincolo di integrità referenziale con l'entità Nazioni 
+Tuttavia viene introdotta una nuova entità Categoria identificata da un CodiceCategoria e un Nome Di conseguenza l'entità Modelli pur mantenendo la sua chiave identificativa composta da Casa e Nome ora stabilisce un vincolo di integrità referenziale con la nuova entità Categorie attraverso il suo attributo Categoria 
+La modifica più significativa l'inserimento dell'entità Versioni che si interpone tra i modelli e le automobili 
+Ogni Versione identificata dalla terna di attributi Casa Modello e CodiceVersione possiede un attributo Cilindrata e fa riferimento all'entità Modelli tramite la coppia Casa e Modello 
+L'entità Automobili sempre identificata dalla Targa e caratterizzata dall'Anno non più legata direttamente a un modello ma a una specifica Versione tramite un vincolo referenziale sugli attributi Casa Modello e Versione  
+Infine la relazione di proprietà viene esplicitata attraverso una nuova entità associativa Proprietà che collega un'Automobile attraverso l'attributo Auto a un Proprietario attraverso l'attributo Proprietario stabilendo vincoli di integrità referenziale con le rispettive entità Automobili e Persone
+Quest'ultima raccoglie le informazioni anagrafiche degli individui identificati dal loro CodiceFiscale e descritti da Cognome e Nome 

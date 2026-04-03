@@ -1,0 +1,8 @@
+Define an Entity-Relationship schema that describes the data of interest at a certain point in time (for example, the current season) for a set of sports teams and the players who play in them, according to the following specifications:
+• each team has a code, a name, a location (city, with code, name and country; the country is a simple string) and a year of foundation.
+• each player:
+– has an identification number, a surname and a name;
+– plays in one and only one team in the current season;
+– covers one and only one “role” (with identification code and name; there is a predefined set of roles, such as 'Goalkeeper', 'Defender', 'Attacker').
+• a player can change teams during his career, and it is important to keep track of historical contracts; for example, the player Mario Rossi may have had a contract from 01/07/2020 to 30/06/2022 for team XY, and then from 01/07/2022 to today for team WZ;
+• a player can change roles over time, and this is recorded in the various contracts stipulated.

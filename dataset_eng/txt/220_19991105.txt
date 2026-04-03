@@ -1,0 +1,6 @@
+- for each product there may be multiple offers, managed by the same seller or by different sellers
+- each offer relates to one and only one product
+- each seller manages zero or more offers
+- each offer has one and only one seller and is included in one and only one catalogue
+- for each catalog there is at most one offer of a given product
+- all offers of a given product come from the same supplier (one and only one)

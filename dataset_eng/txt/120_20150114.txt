@@ -1,0 +1,4 @@
+• Each college belongs to a region and is identified by a number, unique for the region (therefore
+there are the “Lazio 1”, “Lazio 2” and “Lombardia 1” colleges). A region has a code and a name.
+• For each election (at most one per year, as mentioned above), the date and number are of interest
+total number of voters.

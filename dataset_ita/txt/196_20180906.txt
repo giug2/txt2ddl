@@ -1,0 +1,10 @@
+Il sistema descritto gestisce le informazioni anagrafiche dei pazienti, memorizzando per ciascuno il codice fiscale, il cognome, il nome e la data di nascita.
+Ogni paziente può avere uno o più ricoveri nel tempo, i quali sono identificati univocamente da un ID Ricovero e sono associati a un reparto specifico.
+Esiste un vincolo diretto tra un ricovero e il paziente, poiché ogni ricovero deve fare riferimento a un codice fiscale valido presente nell'anagrafica dei pazienti.
+La componente organizzativa è strutturata su più livelli: ogni ricovero avviene in un ospedale, identificato dal suo codice univoco.
+Gli ospedali sono a loro volta caratterizzati dal nome della struttura e da una ASL di appartenenza.
+Questa ASL è collegata tramite il suo codice a un'entità che descrive le Aziende Sanitarie Locali, ciascuna definita dal proprio codice e dalla denominazione ufficiale.
+Per ogni ricovero vengono emesse una o più fatture, ciascuna identificata da un numero di fattura univoco e contenente la data di emissione e l'importo.
+Ogni fattura è inequivocabilmente associata a un singolo ricovero, garantendo così che ogni addebito sia correttamente collegato alla degenza a cui si riferisce.
+Infine, il sistema traccia i pagamenti effettuati per saldare le fatture.
+Ogni pagamento è registrato con un proprio ID di transazione, la data e l'importo versato, ed è strettamente vincolato a una specifica fattura esistente, assicurando l'integrità e la tracciabilità delle transazioni finanziarie.

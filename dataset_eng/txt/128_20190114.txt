@@ -1,0 +1,15 @@
+Define an Entity-Relationship schema that describes the data of interest at a certain point in time (for example,
+now) for a set of universities and for the teachers who work at them, according to the following specifications:
+• each university has a code, a name, a location (city, with code, name and nation; the nation is a simple
+string) and a year of foundation
+• every teacher
+– has an identification code, a surname, a name and a date of birth;
+– works for one and only one university;
+– has one and only one “qualification” (with identification code and name; a set exists in some way
+default qualifications).
+• a teacher can change university, and it is important to keep track of the affiliations; for example, the teacher
+Mario Rossi may have worked from 1/1/2010 to 7/31/2012 and then also from 1/1/2016 to today for the university
+XY, and instead from 8/1/2012 to 12/31/2015 for the WZ university;
+• a teacher can change qualification over time;
+• each teacher has obtained a doctorate from a university (of which the same information is of interest
+indicated for universities in the previous question).

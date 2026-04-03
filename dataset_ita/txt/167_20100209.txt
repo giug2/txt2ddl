@@ -1,0 +1,2 @@
+a ogni ordine è associato uno e un solo utente; 
+ogni utente può effettuare più ordini e ha lo stesso indirizzo di spedizione predefinito per tutti;

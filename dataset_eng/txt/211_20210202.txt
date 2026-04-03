@@ -1,0 +1,4 @@
+• each exam is taken by a student; each exam has a recording code (Verbalization ID), unique among that student's exams, a date and a grade
+• each student has a student number and a name and is enrolled in a degree course
+• each Degree Course belongs to a Department, has a code (Course Code) that uniquely identifies it and has a teaching location
+• each Department has an identifier (Department Code) and a name

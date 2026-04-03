@@ -1,0 +1,123 @@
+{
+    "entities": [
+        {
+            "name": "Festival",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Band",
+            "attributes": [
+                {
+                    "name": "Nome",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Esibizione",
+            "attributes": [
+                {
+                    "name": "FK_BAND_SFIDANTE",
+                    "is_pk": true
+                },
+                {
+                    "name": "FK_BAND_PRINCIPALE",
+                    "is_pk": true
+                },
+                {
+                    "name": "Data",
+                    "is_pk": true
+                },
+                {
+                    "name": "Palco",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Musicista",
+            "attributes": [
+                {
+                    "name": "FK_BAND",
+                    "is_pk": true
+                },
+                {
+                    "name": "ID_Membro",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Data_di_Nascita",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Band",
+            "entity2": "Festival",
+            "cardinality": "N:1",
+            "attributes": [
+                {
+                    "name": "POSIZIONE_CLASSIFICA",
+                    "is_pk": false
+                },
+                {
+                    "name": "PUNTEGGIO_TOTALE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Esibizione",
+            "entity2": "Band",
+            "cardinality": "N:1",
+            "attributes": [
+                {
+                    "name": "VOTI_RICEVUTI",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Esibizione",
+            "entity2": "Band",
+            "cardinality": "N:1",
+            "attributes": [
+                {
+                    "name": "VOTI_RICEVUTI",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Musicista",
+            "entity2": "Band",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Musicista",
+            "entity2": "Esibizione",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "RUOLO_SUL_PALCO",
+                    "is_pk": false
+                }
+            ]
+        }
+    ]
+}

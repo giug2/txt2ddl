@@ -1,0 +1,93 @@
+{
+    "entities": [
+        {
+            "name": "FLIGHT_OF_THE_DAY",
+            "attributes": [
+                {
+                    "name": "flight_id_day",
+                    "is_pk": true
+                },
+                {
+                    "name": "flight_date",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "PILOT_AIRCRAFT_QUALIFICATION",
+            "attributes": [
+                {
+                    "name": "fk_pilot",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_airplane_model",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "AIRCRAFT_MODEL",
+            "attributes": [
+                {
+                    "name": "aircraft_model_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "PILOT",
+            "attributes": [
+                {
+                    "name": "id_pilota",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "FLIGHT_LICENSE",
+            "attributes": [
+                {
+                    "name": "id_license",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "FLIGHT_SCHOOL",
+            "attributes": [
+                {
+                    "name": "flight_school_id",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "FLIGHT_OF_THE_DAY",
+            "entity2": "PILOT_AIRCRAFT_QUALIFICATION",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "AIRCRAFT_MODEL",
+            "entity2": "PILOT_AIRCRAFT_QUALIFICATION",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "PILOT",
+            "entity2": "PILOT_AIRCRAFT_QUALIFICATION",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "PILOT_AIRCRAFT_QUALIFICATION",
+            "entity2": "FLIGHT_LICENSE",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "FLIGHT_SCHOOL",
+            "entity2": "FLIGHT_LICENSE",
+            "cardinality": "1:N"
+        }
+    ]
+}

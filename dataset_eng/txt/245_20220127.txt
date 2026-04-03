@@ -1,0 +1,6 @@
+• each doctor works in one or more departments and with one or more nurses, and it is important to be able to say that he collaborates with a nurse in one department and with another nurse (or others or even with the same one) in another department
+• it is possible that a doctor X collaborates with a nurse Y at a department Z and with another nurse V at another department W without X collaborating with Y at department W
+• one or more doctors and one or more nurses collaborate in each department
+• each nurse collaborates with one or more departments and with one or more doctors
+• each department belongs to one and only hospital and each hospital has multiple departments
+• Doctors and nurses have links to hospitals only through departments

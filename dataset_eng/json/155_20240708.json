@@ -1,0 +1,179 @@
+{
+    "entities": [
+        {
+            "name": "Materia",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Department",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Degree Course",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "SessioneEsame",
+            "attributes": [
+                {
+                    "name": "Data",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_degree_course",
+                    "is_pk": true
+                },
+                {
+                    "name": "Ora",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Chair",
+            "attributes": [
+                {
+                    "name": "Name",
+                    "is_pk": true
+                },
+                {
+                    "name": "Office",
+                    "is_pk": false
+                },
+                {
+                    "name": "Full Professor",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Classroom",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Teaching Assignment",
+            "attributes": [
+                {
+                    "name": "fk_cattedra",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_teacher",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Teaching",
+            "attributes": [
+                {
+                    "name": "Freshman",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Academic Role",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Materia",
+            "entity2": "Department",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Materia",
+            "entity2": "Degree Course",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Degree Course",
+            "entity2": "SessioneEsame",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Degree Course",
+            "entity2": "Chair",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "SessioneEsame",
+            "entity2": "Classroom",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Chair",
+            "entity2": "Teaching Assignment",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Teaching",
+            "entity2": "Teaching Assignment",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Teaching Assignment",
+            "entity2": "Academic Role",
+            "cardinality": "N:1"
+        }
+    ]
+}

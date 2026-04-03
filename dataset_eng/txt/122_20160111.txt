@@ -1,0 +1,4 @@
+• each accessory has a code and a name and can be available in various versions;
+• there are accessories available as standard on a version (and therefore in this case they do not have an associated price) e
+accessories available for a fee, for which there is a price (which may vary from version to version);
+• the same accessory may be standard for some versions and paid for for others.

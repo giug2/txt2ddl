@@ -1,0 +1,144 @@
+{
+    "entities": [
+        {
+            "name": "Catena",
+            "attributes": [
+                {
+                    "name": "Sail",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Shop",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_catena",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Address",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Product",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "City",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Employee",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Producer",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Shop",
+            "entity2": "Catena",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Product",
+            "entity2": "Shop",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Employee",
+            "entity2": "Shop",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Role",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Employee",
+            "entity2": "City",
+            "cardinality": "N:1",
+            "attributes": [
+                {
+                    "name": "Birth",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Employee",
+            "entity2": "City",
+            "cardinality": "N:1",
+            "attributes": [
+                {
+                    "name": "Residence",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Producer",
+            "entity2": "Product",
+            "cardinality": "1:N"
+        }
+    ]
+}

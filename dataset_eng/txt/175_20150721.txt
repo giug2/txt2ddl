@@ -1,0 +1,6 @@
+• for each type of dish there can be multiple dishes, prepared by the same chef or by different chefs
+• each dish relates to one and only one type of dish
+• each chef prepares zero or more dishes
+• each dish has one and only one chef and is offered on one and only one menu
+• for each menu there is at most one dish of a given type
+• each type of dish can have multiple associated recipes (e.g. variations of the same type)

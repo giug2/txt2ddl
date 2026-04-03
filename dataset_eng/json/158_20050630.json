@@ -1,0 +1,147 @@
+{
+    "entities": [
+        {
+            "name": "Subsidiary",
+            "attributes": [
+                {
+                    "name": "pk_subsidiary",
+                    "is_pk": true
+                },
+                {
+                    "name": "citta",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Vehicle",
+            "attributes": [
+                {
+                    "name": "pk_vehicle",
+                    "is_pk": true
+                },
+                {
+                    "name": "model",
+                    "is_pk": false
+                },
+                {
+                    "name": "targa",
+                    "is_pk": false
+                },
+                {
+                    "name": "segment",
+                    "is_pk": false
+                },
+                {
+                    "name": "Number of places",
+                    "is_pk": false
+                },
+                {
+                    "name": "registration_year",
+                    "is_pk": false
+                },
+                {
+                    "name": "motorization",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Setup type",
+            "attributes": [
+                {
+                    "name": "pk_type_setup",
+                    "is_pk": true
+                },
+                {
+                    "name": "description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "TypePromotion",
+            "attributes": [
+                {
+                    "name": "pk_type_promotion",
+                    "is_pk": true
+                },
+                {
+                    "name": "description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Rental Rate",
+            "attributes": [
+                {
+                    "name": "pk_rental_tariff",
+                    "is_pk": true
+                },
+                {
+                    "name": "daily_amount",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Additional Service",
+            "attributes": [
+                {
+                    "name": "pk_additional_service",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Period",
+            "attributes": [
+                {
+                    "name": "pk_period",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Subsidiary",
+            "entity2": "Vehicle",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Vehicle",
+            "entity2": "Setup type",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Vehicle",
+            "entity2": "TypePromotion",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Vehicle",
+            "entity2": "Rental Rate",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Period",
+            "entity2": "Rental Rate",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Additional Service",
+            "entity2": "Rental Rate",
+            "cardinality": "1:N"
+        }
+    ]
+}

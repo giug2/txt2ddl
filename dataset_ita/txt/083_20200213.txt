@@ -1,0 +1,12 @@
+Il sistema descrive l'organizzazione di eventi musicali concerti e le entità ad essi correlate 
+Ogni pezzo musicale identificato da un codice e caratterizzato da un titolo e da un autore 
+L'autore di un pezzo un riferimento diretto a un compositore le cui informazioni come codice cognome e nome sono gestite nell'entità Compositori 
+I concerti sono definiti da un codice un titolo una descrizione e sono eseguiti da una specifica orchestra 
+Le orchestre a loro volta sono identificate dal nome e possiedono attributi come la sede e il nome del direttore quest'ultimo rappresentato come una stringa 
+La relazione tra i pezzi e i concerti stabilita attraverso l'entità Programmazione la quale associa un pezzo a un concerto specificando anche la sua posizione nell'ordine di esecuzione tramite un valore intero
+Un concerto si concretizza in uno o più eventi 
+L'entità Eventi collega infatti un concerto a un teatro specifico in una data e un'ora precise 
+I teatri sono registrati con un codice identificativo e un nome 
+Il personale musicale rappresentato dall'entità Musicisti dove ogni musicista identificato da una matricola e registrato con cognome e nome 
+L'appartenenza di un musicista a un'orchestra e lo strumento che suona sono definiti nell'entità Composizione che associa un musicista a un'orchestra e a uno strumento specifico 
+Infine gli strumenti sono catalogati con un codice un nome e un tipo

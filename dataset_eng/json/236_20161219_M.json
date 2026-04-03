@@ -1,0 +1,113 @@
+{
+    "entities": [
+        {
+            "name": "UNIVERSITY",
+            "attributes": [
+                {
+                    "name": "UNIVERSITY_CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "COURSE_NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "REGION",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "STATE",
+            "attributes": [
+                {
+                    "name": "SAILING",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "DEPARTMENT",
+            "attributes": [
+                {
+                    "name": "NAME",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_universita",
+                    "is_pk": true
+                },
+                {
+                    "name": "CLASSROOM_NUMBER",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "DEGREE COURSE",
+            "attributes": [
+                {
+                    "name": "COURSE_CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                },
+                {
+                    "name": "YEAR_INSTITUTION",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "TEACHING",
+            "attributes": [
+                {
+                    "name": "SERIAL NUMBER",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "UNIVERSITY",
+            "entity2": "REGION",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "REGION",
+            "entity2": "STATE",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "UNIVERSITY",
+            "entity2": "DEPARTMENT",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "DEGREE COURSE",
+            "entity2": "DEPARTMENT",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "TEACHING",
+            "entity2": "DEGREE COURSE",
+            "cardinality": "1:N"
+        }
+    ]
+}

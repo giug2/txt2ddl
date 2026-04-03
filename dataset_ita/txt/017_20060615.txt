@@ -1,0 +1,11 @@
+Mostrare lo schema concettuale di una base di dati per tornei di calcio, secondo le seguenti
+specifiche.
+• I vari tornei hanno un codice e un nome.
+• Ogni torneo è composto da un certo numero di squadre e da una classifica che assegna ad ogni squadra
+un punteggio.
+• Le squadre partecipano ad un solo torneo e hanno un nome e una rosa di giocatori di cui registriamo il
+numero di maglia, il nome e la data di nascita.
+• Le partite si svolgono tra due squadre dello stesso torneo, in una certa data, in un certo stadio e hanno
+un risultato finale.
+• Si vogliono registrare i giocatori che giocano nelle varie partite e il ruolo ricoperto (che è lo stesso in una
+partita ma può variare in partite diverse).

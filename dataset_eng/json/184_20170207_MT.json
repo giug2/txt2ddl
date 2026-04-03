@@ -1,0 +1,99 @@
+{
+    "entities": [
+        {
+            "name": "Customer",
+            "attributes": [
+                {
+                    "name": "Customer Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Address",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Order",
+            "attributes": [
+                {
+                    "name": "Order_ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "ImportoTotale",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Courier",
+            "attributes": [
+                {
+                    "name": "Courier Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeCorriere",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "OrderDetail",
+            "attributes": [
+                {
+                    "name": "ID_Riga",
+                    "is_pk": true
+                },
+                {
+                    "name": "Prezzo",
+                    "is_pk": false
+                },
+                {
+                    "name": "DataInserimento",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Product",
+            "attributes": [
+                {
+                    "name": "Product Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "ProductName",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Order",
+            "entity2": "Customer",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Order",
+            "entity2": "Courier",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "OrderDetail",
+            "entity2": "Order",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "OrderDetail",
+            "entity2": "Product",
+            "cardinality": "N:1"
+        }
+    ]
+}

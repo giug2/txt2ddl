@@ -1,0 +1,7 @@
+Mostrare lo schema concettuale per una base di dati per la programmazione di un festival cinematografico, secondo le seguenti specifiche.
+• Ogni evento tematico (es. "Rassegna Horror") ha un codice, un titolo e una descrizione, ed è costituito da un insieme di film.
+• Ogni film ha un codice, un titolo e un regista (con codice e nome); uno stesso film può essere proiettato in diversi eventi tematici.
+• Ogni evento è promosso da una casa di produzione; ogni casa di produzione ha un nome, un produttore capo (del quale interessano solo nome e cognome) e un insieme di attori con cui collabora.
+• Ogni attore ha un codice identificativo, nome e cognome, e può lavorare con più case di produzione, in ciascuna delle quali è noto per un ruolo principale, lo stesso in tutte le case di produzione con cui lavora.
+• Ogni evento tematico dà luogo a più proiezioni, in giorni e orari diversi, non necessariamente sempre nella stessa sala cinema.
+• Ogni sala cinema ha un codice, un nome e un numero di posti a sedere.

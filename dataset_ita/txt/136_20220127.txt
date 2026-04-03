@@ -1,0 +1,9 @@
+• ogni manager opera presso uno o più reparti e con uno o più assistenti, ed è importante poter dire che
+collabora con un assistente presso un reparto e con un altro assistente (o altri o anche con lo stesso) presso
+un altro reparto
+• è possibile che un manager X collabori con un assistente Y presso un reparto Z e con un altro assistente
+V presso un altro reparto W senza che X collabori con Y presso reparto W
+• con ogni reparto collaborano uno o più manager e uno o più assistenti
+• ogni assistente collabora con uno o più reparti e con uno o più manager
+• ogni reparto ha una e una sola sede e ogni sede ha più reparti
+• manager e assistenti hanno legami con le sedi solo attraverso reparti

@@ -1,0 +1,117 @@
+{
+    "entities": [
+        {
+            "name": "SQUADRA",
+            "attributes": [
+                {
+                    "name": "ID_squadra",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                },
+                {
+                    "name": "DATA_FONDAZIONE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CITTA",
+            "attributes": [
+                {
+                    "name": "id_citta",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "NAZIONE",
+            "attributes": [
+                {
+                    "name": "id_nazione",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "ROSA_STAGIONALE",
+            "attributes": [
+                {
+                    "name": "STAGIONE",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_squadra",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "GIOCATORE",
+            "attributes": [
+                {
+                    "name": "id_giocatore",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "cognome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "SOCIETA_GIOVANILE",
+            "attributes": [
+                {
+                    "name": "id_societa_giovanile",
+                    "is_pk": true
+                },
+                {
+                    "name": "nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "CITTA",
+            "entity2": "SQUADRA",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "NAZIONE",
+            "entity2": "CITTA",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "SQUADRA",
+            "entity2": "ROSA_STAGIONALE",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "ROSA_STAGIONALE",
+            "entity2": "GIOCATORE",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "SOCIETA_GIOVANILE",
+            "entity2": "GIOCATORE",
+            "cardinality": "1:N"
+        }
+    ]
+}

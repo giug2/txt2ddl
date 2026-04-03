@@ -1,0 +1,129 @@
+{
+    "entities": [
+        {
+            "name": "EtichettaDiscografica",
+            "attributes": [
+                {
+                    "name": "ID_Etichetta",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "SedeLegale",
+                    "is_pk": false
+                },
+                {
+                    "name": "Paese",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Artista",
+            "attributes": [
+                {
+                    "name": "ID_Artista",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "NomeArte",
+                    "is_pk": false
+                },
+                {
+                    "name": "EmailContatto",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Brano",
+            "attributes": [
+                {
+                    "name": "ID_Brano",
+                    "is_pk": true
+                },
+                {
+                    "name": "Titolo",
+                    "is_pk": false
+                },
+                {
+                    "name": "Featuring",
+                    "is_pk": false
+                },
+                {
+                    "name": "Testo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Album",
+            "attributes": [
+                {
+                    "name": "NumeroCatalogo",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_serie",
+                    "is_pk": true
+                },
+                {
+                    "name": "DataUscita",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Serie",
+            "attributes": [
+                {
+                    "name": "AnnoInizio",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeSerie",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "EtichettaDiscografica",
+            "entity2": "Artista",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Artista",
+            "entity2": "Brano",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Album",
+            "entity2": "Brano",
+            "cardinality": "1:N",
+            "attributes": [
+                {
+                    "name": "NumeroTraccia",
+                    "is_pk": false
+                },
+                {
+                    "name": "Durata",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Serie",
+            "entity2": "Album",
+            "cardinality": "1:N"
+        }
+    ]
+}

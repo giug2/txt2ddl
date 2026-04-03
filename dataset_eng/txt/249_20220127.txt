@@ -1,0 +1,5 @@
+• each professor belongs to one and only one department and has one or more tutors
+• each department has one or more professors and all and only the tutors who collaborate with these professors belong to it
+• each tutor collaborates with one and only one professor and his reference department is that of that professor
+• each tutor and each professor each have one and only one campus of affiliation, but the campus of a tutor does not necessarily coincide with that of the relevant professor; for each campus there can be multiple tutors and multiple professors
+• note that the concept of department is logical/organizational and we are not talking about a campus of a department

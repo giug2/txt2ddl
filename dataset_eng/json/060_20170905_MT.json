@@ -1,0 +1,65 @@
+{
+    "entities": [
+        {
+            "name": "ORCHESTRA COMPOSITION",
+            "attributes": [
+                {
+                    "name": "ANNO",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "MUSICIAN",
+            "attributes": [
+                {
+                    "name": "musician_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "ROLE",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "PARTICIPATION",
+            "attributes": [
+                {
+                    "name": "fk_musician",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_composition_orchestra",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "PARTICIPATION",
+            "entity2": "ORCHESTRA COMPOSITION",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "PARTICIPATION",
+            "entity2": "MUSICIAN",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "PARTICIPATION",
+            "entity2": "ROLE",
+            "cardinality": "N:1"
+        }
+    ]
+}

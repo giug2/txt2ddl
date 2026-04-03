@@ -1,0 +1,6 @@
+- per ogni prodotto possono esistere più offerte, gestite dallo stesso venditore o da venditori diversi
+- ogni offerta è relativa ad uno e un solo prodotto
+- ogni venditore gestisce zero o più offerte
+- ogni offerta ha uno e un solo venditore ed è inserita in uno e un solo catalogo
+- per ogni catalogo esiste al più una offerta di un dato prodotto
+- tutte le offerte di un dato prodotto provengono dallo stesso fornitore (uno e uno solo)

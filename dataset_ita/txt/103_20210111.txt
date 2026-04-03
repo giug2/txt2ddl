@@ -1,0 +1,8 @@
+Mostrare uno schema concettuale per una base di dati che gestisca le informazioni relative ai negozi di una certa catena 
+Sono di interesse i seguenti aspetti:
+- i negozi, ognuno con codice (identificante), nome e indirizzo (supporre sia un semplice valore, senza struttura particolare)
+- i tipi di prodotti venduti presso i vari negozi (ogni negozio vende prodotti di uno o più tipi e ovviamente ogni tipo è venduto da più negozi); ogni tipo ha sigla (identificante) e nome 
+- i prodotti, per ognuno dei quali interessano il produttore (uno e uno solo) e il tipo (uno e uno solo); ogni prodotto ha un codice, univoco nell'ambito dei prodotti di un produttore e un nome; ogni prodotto è venduto da tutti i negozi che vendono prodotti del relativo tipo
+- i produttori, ognuni dei quali ha codice (che lo identifica) e nome
+- i dipendenti, ognuno dei quali ha codice (che lo identifica), cognome e nome e collabora con zero o più negozi; ogni dipendente è nato in una città e risiede in una città
+- le città, che hanno codice (che identifica) e nome

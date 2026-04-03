@@ -1,0 +1,7 @@
+Mostrare uno schema concettuale per la base di dati utilizzata da un concessionario di automobili per memorizzare
+le informazioni sulle automobili disponibili, con le seguenti specifiche
+• le automobili sono tutte dello stesso costruttore;
+• ogni automobile ha un numero di telaio, un colore, una data di arrivo presso il concessionario, un modello e una versione;
+• ogni modello ha una lunghezza e un numero di posti e appartiene ad un “segmento” di mercato, con codice
+e descrizione;
+• ogni versione ha un tipo di alimentazione (con codice e descrizione), una cilindrata e un prezzo

@@ -1,0 +1,79 @@
+{
+    "entities": [
+        {
+            "name": "Venditore",
+            "attributes": [
+                {
+                    "name": "id_venditore",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "AnnuncioVendita",
+            "attributes": [
+                {
+                    "name": "fk_categoria_prodotto",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_prodotto",
+                    "is_pk": true
+                },
+                {
+                    "name": "Lotto",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "CategoriaProdotto",
+            "attributes": [
+                {
+                    "name": "id_categoria_prodotto",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Prodotto",
+            "attributes": [
+                {
+                    "name": "id_prodotto",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Recensione",
+            "attributes": [
+                {
+                    "name": "id_recensione",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "AnnuncioVendita",
+            "entity2": "Venditore",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "AnnuncioVendita",
+            "entity2": "CategoriaProdotto",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "AnnuncioVendita",
+            "entity2": "Prodotto",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Recensione",
+            "entity2": "Prodotto",
+            "cardinality": "N:1"
+        }
+    ]
+}

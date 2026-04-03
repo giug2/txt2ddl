@@ -1,0 +1,8 @@
+• each manager has one and only one office and one or more assistants
+• each office has one or more managers and all and only the assistants who collaborate with them belong to it
+managers
+• each assistant works with one and only one manager and his office is that of that manager
+• Each assistant and each manager each have one and only one location, but an assistant's location does not
+necessarily coincides with that of the relevant manager; for each location there can be multiple assistants e
+more managers
+• note that the concept of office is virtual and we are not talking about an office location

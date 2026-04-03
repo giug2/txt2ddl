@@ -1,0 +1,8 @@
+Show a conceptual scheme for a database that manages information relating to the stores of a certain chain 
+The following aspects are of interest:
+- the shops, each with code (identifier), name and address (assume it is a simple value, without particular structure)
+- the types of products sold at the various shops (each shop sells products of one or more types and obviously each type is sold by multiple shops); each type has an acronym (identifier) and name 
+- the products, for each of which the producer (one and only one) and the type (one and only one) are of interest; each product has a code, unique within the products of a manufacturer and a name; each product is sold by all stores that sell products of the relevant type
+- the producers, each of which has a code (which identifies it) and name
+- the employees, each of whom has a code (which identifies him), surname and name and collaborates with zero or more stores; each employee was born in a city and resides in a city
+- cities, which have a code (which identifies) and a name

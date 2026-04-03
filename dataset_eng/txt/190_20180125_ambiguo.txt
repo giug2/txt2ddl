@@ -1,0 +1,5 @@
+So basically here we have a system for keeping track of a lot of products. Each product has its identification code, the SKU, and obviously a name to understand what it is. These products are always tied to a brand, you know, a specific brand. A brand, which has its own code and name, can have a lot of stuff under it, many different products.
+
+The brands, in turn, are not isolated; they usually belong to a larger industrial group, a sort of parent company. Therefore a group, identified by its code, can own several brands, but each brand belongs to only one group.
+
+To organize everything, the products are also placed in subcategories. Each product fits into one and only one subcategory, and a subcategory can contain a bunch of items. These subcategories, which have a name and their own code, are not placed there at random, but derive from larger categories. In practice, a main category, also with a code and name, is divided into many subcategories. The important thing is that a subcategory is always and only under a main category; to identify it well, in fact, you have to look at both its code and that of the category to which it is linked.

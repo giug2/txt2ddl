@@ -1,0 +1,10 @@
+The system described manages the personal information of people by storing for each person the tax code, surname, name and date of birth 
+Each person can own one or more telephone accounts which are uniquely identified by the prefix and number attribute pair and are associated with a specific address 
+There is a direct link between a user and its owner since the Owner field must refer to a valid tax code present in the person registry 
+The geographical component is structured on multiple levels, each user belongs to a district identified by its prefix 
+The districts are in turn characterized by a name and the province they belong to 
+This province connected by its acronym to an entity that describes the Italian provinces, each defined by its own acronym and full name 
+For each user, bills are periodically issued, each identified by a unique code and containing the date of issue and the amount 
+Each bill unequivocally associated with a single user through the prefix and number pair, thus ensuring that each invoice is correctly linked to the service to which it refers 
+Finally, the system tracks the payments made to settle bills 
+Each payment recorded with its own code, date and amount and strictly linked to a specific existing bill ensuring the integrity and traceability of financial transactions

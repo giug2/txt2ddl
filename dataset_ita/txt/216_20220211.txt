@@ -1,0 +1,2 @@
+• È di interesse rappresentare i possibili piani di studio. Ogni Corso di Laurea è relativo a una Facoltà, ha una sigla identificativa (unica nell'ambito della Facoltà) ed è costituito da una lista ordinata di materie da seguire.
+• Si vogliono rappresentare anche le lezioni, che hanno ciascuna un titolo, un orario di inizio, una durata e si basano su un certo Corso di Laurea. Le lezioni si ripetono nei vari giorni della settimana con una capienza massima dell'aula diversa.

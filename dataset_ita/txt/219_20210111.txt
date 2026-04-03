@@ -1,0 +1,8 @@
+Mostrare uno schema concettuale per una base di dati che gestisca le informazioni relative a diverse università.
+Sono di interesse i seguenti aspetti:
+- le università, ognuna con acronimo e nome completo
+- i dipartimenti, ognuno dei quali appartiene a una e una sola università e ha un codice (univoco nell'ambito dell'università), nome e sede
+- i corsi di laurea, ognuno dei quali è offerto presso zero o più dipartimenti, ha un codice univoco e un nome ed è afferente a una e una sola facoltà
+- le facoltà, ognuna delle quali ha codice (identificante) e nome
+- i docenti, ognuno dei quali ha matricola (identificante), cognome e nome e afferisce a zero o più dipartimenti, presso ognuno dei quali ha un inquadramento (un semplice valore, che può essere diverso da un dipartimento all'altro); ogni docente è nato in un comune e risiede in un comune
+- i comuni, che hanno codice ISTAT (identificante) e nome

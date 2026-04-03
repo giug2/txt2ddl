@@ -1,0 +1,8 @@
+• ogni dirigente ha uno e un solo ufficio e uno o più assistenti
+• ogni ufficio ha uno o più dirigenti e ad esso afferiscono tutti e soli gli assistenti che collaborano con tali
+dirigenti
+• ogni assistente collabora con uno e un solo dirigente e il suo ufficio è quello di tale dirigente
+• ogni assistente e ogni dirigente hanno ciascuno una e una sola sede, ma la sede di un assistente non
+coincide necessariamente con quella del relativo dirigente; per ogni sede ci possono essere più assistenti e
+più dirigenti
+• si noti che il concetto di ufficio è virtuale e non si parla di sede di un ufficio

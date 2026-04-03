@@ -1,0 +1,85 @@
+{
+    "entities": [
+        {
+            "name": "Tampone",
+            "attributes": [
+                {
+                    "name": "CT",
+                    "is_pk": true
+                },
+                {
+                    "name": "Data",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Paziente",
+            "attributes": [
+                {
+                    "name": "CF",
+                    "is_pk": true
+                },
+                {
+                    "name": "Esito",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "ASL",
+            "attributes": [
+                {
+                    "name": "CodASL",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_regione",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Indirizzo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Regione",
+            "attributes": [
+                {
+                    "name": "IDRegione",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Tampone",
+            "entity2": "Paziente",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Paziente",
+            "entity2": "ASL",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "ASL",
+            "entity2": "Regione",
+            "cardinality": "N:1"
+        }
+    ]
+}

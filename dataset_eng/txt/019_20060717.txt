@@ -1,0 +1,10 @@
+The system describes an organization of study trips 
+The fulcrum of the model is represented by the colleges, each identified by a unique code and characterized by a name, an address and a telephone number 
+Each college located in a specific location and associated with a particular exam 
+The locations are defined by a code, a name and the reference airport while the airports are in turn entities with their own code and name 
+As regards the training offer, each exam is described by a code, a name and an associated cost 
+Connected to each college, it is possible to define a stay by specifying the period of duration, the cost and the number of hours of lessons expected 
+Transport logistics managed through flights which connect a departure city identified by code and name to a specific destination airport with a specific cost for each route 
+Finally, the model includes a discount system 
+There are different types of reduction, each with its own code and description 
+An effective reduction is applied by associating a type of reduction with a specific college, establishing a precise discount percentage for this combination

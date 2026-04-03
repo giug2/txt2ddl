@@ -1,0 +1,8 @@
+• each course of study belongs to one and only one faculty and in it they teach zero or more
+teachers;
+• each teacher belongs to one and only one faculty, works in one and only one department and
+teaches in zero or more study courses (even belonging to different faculties);
+• a department interacts with all and only the faculties to which the working teachers belong
+near it;
+• a department interacts with all and only the study courses in which the working teachers teach
+near it;

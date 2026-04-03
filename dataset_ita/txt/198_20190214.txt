@@ -1,0 +1,6 @@
+• ogni progetto ha un codice (ID), un reparto responsabile, un cliente e uno stato
+• ogni reparto ha un codice (CRep), un nome (attributo Reparto)
+• ogni cliente ha un codice (CCliente) e una descrizione (attributo Cliente) e appartiene a un settore, con codice (CSett) e descrizione (SettoreCliente)
+• ogni stato del progetto ha un codice (CStato) e una descrizione (attributo StatoProgetto)
+• ogni progetto comprende uno o più task
+• ogni task ha un numero progressivo (NTask) che lo identifica nell’ambito del progetto e ha una priorità, con codice (CPrio) e descrizione (attributo Priorita)

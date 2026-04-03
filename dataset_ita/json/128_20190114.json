@@ -1,0 +1,70 @@
+{
+  "entities": [
+    {
+      "name": "Università",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Nome", "is_pk": false },
+        { "name": "Fondazione", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Città",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Nome", "is_pk": false },
+        { "name": "Nazione", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Professore",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Cognome", "is_pk": false },
+        { "name": "Nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Afferenza",
+      "attributes": [
+        { "name": "Data InIZIO", "is_pk": true },
+        { "name": "fk_professore", "is_pk": true },
+        { "name": "Data fine", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Qualifica",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Nome", "is_pk": false }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "Università",
+      "entity2": "Città",
+      "cardinality": "N:1"
+    },
+    {
+      "entity1": "Università",
+      "entity2": "Afferenza",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Professore",
+      "entity2": "Università",
+      "cardinality": "N:1"
+    },
+    {
+      "entity1": "Professore",
+      "entity2": "Afferenza",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Qualifica",
+      "entity2": "Afferenza",
+      "cardinality": "1:N"
+    }
+  ]
+}

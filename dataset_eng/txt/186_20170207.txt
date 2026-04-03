@@ -1,0 +1,4 @@
+• each student is enrolled in one and only one degree course;
+• each exam is created by one and only one teacher, while each teacher can create multiple exams;
+• each student can take zero or more exams (and therefore interact with all and only the relevant teachers);
+• each degree course has as teachers and exams those associated with its students.

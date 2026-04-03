@@ -1,0 +1,10 @@
+Definire uno schema Entity-Relationship che descriva i dati di interesse in un certo anno per un insieme di
+giocatori e di società professionistiche di pallacanestro, secondo le seguenti specifiche:
+• ogni società ha un codice, un nome, una sede (città e nazione, ciascuna con codice e nome), una data di
+fondazione e un colore di maglia
+• ogni giocatore
+– ha un codice identificativo, un cognome, un nome, una città e una nazione di nascita (ciascuna con
+codice e nome), un’altezza e un peso forma
+– gioca per una e una sola società
+– ha uno e un solo “ruolo” (identificato con codice e nome; esiste un insieme in qualche modo predefinito
+di ruoli)

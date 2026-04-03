@@ -1,0 +1,5 @@
+• each employee belongs to one and only one department;
+• each project has one and only one customer
+• Each employee works for zero or more clients and potentially all of those clients' projects
+(and for no other project)
+• each department has its own employees as customers and projects

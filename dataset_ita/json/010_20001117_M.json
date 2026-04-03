@@ -1,0 +1,115 @@
+{
+    "entities": [
+        {
+            "name": "Casa",
+            "attributes": [
+                {
+                    "name": "Nome",
+                    "is_pk": true
+                },
+                {
+                    "name": "Descrizione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Modello",
+            "attributes": [
+                {
+                    "name": "FK_CASA",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": true
+                },
+                {
+                    "name": "Anno",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Versione",
+            "attributes": [
+                {
+                    "name": "FK_MODELLO",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": true
+                },
+                {
+                    "name": "Prezzo",
+                    "is_pk": false
+                },
+                {
+                    "name": "Porte",
+                    "is_pk": false
+                },
+                {
+                    "name": "Velocit\u00e0",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Segmento",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Indirizzo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Motore",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cilindrata",
+                    "is_pk": false
+                },
+                {
+                    "name": "Cilindri",
+                    "is_pk": false
+                },
+                {
+                    "name": "Potenza",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Modello",
+            "entity2": "Casa",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Segmento",
+            "entity2": "Modello",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Versione",
+            "entity2": "Modello",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Versione",
+            "entity2": "Motore",
+            "cardinality": "N:1"
+        }
+    ]
+}

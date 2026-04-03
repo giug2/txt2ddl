@@ -1,0 +1,6 @@
+• each professor teaches one or more courses and with one or more tutors, and it is important to be able to say that he collaborates with a tutor for one course and with another tutor (or others or even with the same one) for another course
+• it is possible that a professor X collaborates with a tutor Y for course Z and with another tutor V for another course W without X collaborating with Y for course W
+• each course is associated with one or more professors and one or more tutors
+• each tutor collaborates on one or more courses and with one or more professors
+• Each course belongs to only one department and each department offers multiple courses
+• professors and tutors have links with departments only through courses

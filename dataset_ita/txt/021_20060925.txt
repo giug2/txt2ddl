@@ -1,0 +1,12 @@
+Mostrare lo schema concettuale di una base di dati per mostre di pittura in una galleria d’arte, secondo le seguenti 
+specifiche. 
+• La galleria ha una serie di sale, ognuna delle quali ha un nome e una dimensione. 
+• Una mostra ha un titolo, una data di inizio e una data di fine. 
+• In ogni mostra vengono esposti diversi quadri e uno stesso quadro può comparire in più mostre. 
+• Per ogni quadro si rappresenta l’autore, l’anno, e la sala nella quale viene esposto (che può cambiare in mostre 
+diverse)
+E’ di interesse rappresentare possibili itinerari di una mostra, ognuno con un codice e costituito da una lista 
+ordinata di sale da visitare e, per ogni sala, da una lista ordinata di quadri da vedere. 
+• Si vogliono rappresentare anche visite guidate alle mostre che hanno ciascuna un nome, un orario di inizio, una 
+durata e si basano su un certo itinerario. Le visite guidate si ripetono nei vari giorni della mostra con un numero di 
+partecipanti diverso

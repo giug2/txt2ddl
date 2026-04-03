@@ -1,0 +1,5 @@
+• ogni impiegato afferisce ad uno e un solo reparto;
+• ogni impiegato partecipa ad un solo progetto (che non è necessariamente legato ad un reparto,
+cioè impiegati di reparti diversi possono lavorare sul medesimo progetto);
+• ogni progetto ha un solo cliente e ogni impiegato interagisce solo con il cliente del proprio
+progetto

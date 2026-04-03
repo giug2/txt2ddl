@@ -1,0 +1,5 @@
+Mostrare lo schema concettuale di una base di dati per la gestione di un catalogo musicale, secondo le seguenti specifiche.
+• I brani hanno un titolo, eventuali featuring, uno o più artisti e un testo (lyrics).
+• Gli artisti hanno nome d'arte, cognome, email di contatto e un'etichetta discografica di riferimento per la quale incidono.
+• Per ogni etichetta discografica sono di interesse il nome, la sede legale e il paese.
+• Il catalogo è organizzato per serie (es. una collana di compilation). Gli album di un certo periodo vengono raccolti in una serie (a cui viene dato un nome complessivo). Ogni album ha un numero di catalogo, unico nella rispettiva serie, una data di uscita e una lista di brani, per ognuno dei quali viene registrato il numero di traccia e la durata.

@@ -1,0 +1,6 @@
+- each professor teaches one or more courses and collaborates with one or more tutors,
+• if a professor X collaborates with a tutor Y for a course Z and with another tutor V for another course W, then
+• one or more professors teach each course and tutors who collaborate with these professors are assigned to it
+• each tutor collaborates with one or more professors and is assigned to the courses in which these professors teach
+• Each course belongs to one and only one department and each department offers multiple courses
+• professors and tutors have links with departments only through courses

@@ -1,0 +1,7 @@
+Show a conceptual diagram for the database used by a car dealership to store
+information on available cars, with the following specifications
+• the cars are all from the same manufacturer;
+• each car has a chassis number, a colour, a date of arrival at the dealer, a model and a version;
+• each model has a length and a number of seats and belongs to a market "segment", with a code
+and description;
+• each version has a type of power supply (with code and description), a displacement and a price

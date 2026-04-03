@@ -1,0 +1,126 @@
+{
+    "entities": [
+        {
+            "name": "UNIVERSITA",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CITTA",
+            "attributes": [
+                {
+                    "name": "ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "REGIONE",
+            "attributes": [
+                {
+                    "name": "SIGLA",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "DIPARTIMENTO",
+            "attributes": [
+                {
+                    "name": "NOME",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_universita",
+                    "is_pk": true
+                },
+                {
+                    "name": "NUMERO_UFFICI",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CORSO",
+            "attributes": [
+                {
+                    "name": "CODICE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME_CORSO",
+                    "is_pk": false
+                },
+                {
+                    "name": "ANNO_ACCADEMICO",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "PROFESSORE",
+            "attributes": [
+                {
+                    "name": "MATRICOLA",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                },
+                {
+                    "name": "COGNOME",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "CITTA",
+            "entity2": "UNIVERSITA",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "REGIONE",
+            "entity2": "CITTA",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "UNIVERSITA",
+            "entity2": "DIPARTIMENTO",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "REGIONE",
+            "entity2": "PROFESSORE",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "PROFESSORE",
+            "entity2": "CORSO",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "DIPARTIMENTO",
+            "entity2": "CORSO",
+            "cardinality": "N:N"
+        }
+    ]
+}

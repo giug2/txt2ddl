@@ -1,0 +1,90 @@
+{
+  "entities": [
+    {
+      "name": "Frazione",
+      "attributes": [
+        { "name": "pk_frazione", "is_pk": true },
+        { "name": "nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Albergo",
+      "attributes": [
+        { "name": "pk_albergo", "is_pk": true },
+        { "name": "nome", "is_pk": false },
+        { "name": "indirizzo", "is_pk": false },
+        { "name": "categoria", "is_pk": false },
+        { "name": "Numero Totale Letti", "is_pk": false },
+        { "name": "telefono", "is_pk": false },
+        { "name": "fax", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Tipo Camera",
+      "attributes": [
+        { "name": "pk_tipo_camera", "is_pk": true },
+        { "name": "descrizione", "is_pk": false }
+      ]
+    },
+    {
+      "name": "TipoVariantePrezzo",
+      "attributes": [
+        { "name": "pk_tipo_variante_prezzo", "is_pk": true },
+        { "name": "descrizione", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Tariffa",
+      "attributes": [
+        { "name": "pk_tariffa", "is_pk": true },
+        { "name": "prezzo", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Servizio",
+      "attributes": [
+        { "name": "pk_servizio", "is_pk": true },
+        { "name": "nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Stagione",
+      "attributes": [
+        { "name": "pk_stagione", "is_pk": true },
+        { "name": "nome", "is_pk": false }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "Frazione",
+      "entity2": "Albergo",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Albergo",
+      "entity2": "Tipo Camera",
+      "cardinality": "N:N"
+    },
+    {
+      "entity1": "Albergo",
+      "entity2": "TipoVariantePrezzo",
+      "cardinality": "N:N"
+    },
+    {
+      "entity1": "Albergo",
+      "entity2": "Tariffa",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Stagione",
+      "entity2": "Tariffa",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Servizio",
+      "entity2": "Tariffa",
+      "cardinality": "1:N"
+    }
+  ]
+}

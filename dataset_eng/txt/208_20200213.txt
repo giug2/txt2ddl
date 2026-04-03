@@ -1,0 +1,12 @@
+The system describes the management of film production and related entities.
+Each scene is identified by a code and is characterized by a title and an author.
+The author of a scene is a direct reference to a writer, whose information such as code and name is managed in the Writers entity.
+Films are defined by a code, a title, a plot and are produced by a specific production company.
+The production companies, in turn, are identified by name and have attributes such as the location and the director's name, the latter represented as a string.
+The relationship between scenes and movies defines which scenes make up a movie, also specifying their position in the order of appearance via the ORDER attribute.
+A film takes the form of one or more screenings.
+The Screenings entity actually links a film to a specific cinema at a specific date and time.
+Cinemas are registered with an identification code and a name.
+The artistic cast is represented by the Actors entity, where each actor is identified by a serial number and registered with surname and name.
+An actor's participation in a production and the role they play are defined in the Participation entity, which associates an actor with a production company and a specific role.
+Finally, the roles are cataloged with a code and a name.

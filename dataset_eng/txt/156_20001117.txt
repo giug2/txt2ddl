@@ -1,0 +1,6 @@
+Define an Entity-Relationship schema that describes the data of an application for the editorial management of a publishing house, according to the following specifications.
+Each editorial series has a title (which identifies it) and a genre of reference and includes a set of articles grouped by "volumes".
+Each volume is identified by a number and the series it belongs to.
+Each article is identified, in the respective series, by the volume and a number (the "chapter").
+Each article is associated with the number of pages and an author and a reviewer (who may coincide), each with their own ID, surname and name.
+Indicate the cardinalities of the relationships and an identifier for each entity.

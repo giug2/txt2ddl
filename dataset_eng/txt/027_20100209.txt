@@ -1,0 +1,4 @@
+one or more customers are associated with each current account; 
+each customer can have multiple current accounts and can use a different address for each one, 
+but with the observation that each customer has a primary address that is used
+unless otherwise specified

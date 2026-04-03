@@ -1,0 +1,132 @@
+{
+    "entities": [
+        {
+            "name": "Serie",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Title",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Conference",
+            "attributes": [
+                {
+                    "name": "fk_series",
+                    "is_pk": true
+                },
+                {
+                    "name": "Data",
+                    "is_pk": true
+                },
+                {
+                    "name": "anno",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Session",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Title",
+                    "is_pk": false
+                },
+                {
+                    "name": "Ora",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Person with affiliation",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Persona",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Institution",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "City",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Conference",
+            "entity2": "Serie",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "City",
+            "entity2": "Conference",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Session",
+            "entity2": "Conference",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Person with affiliation",
+            "entity2": "Session",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Person with affiliation",
+            "entity2": "Persona",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Institution",
+            "entity2": "Person with affiliation",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Institution",
+            "entity2": "City",
+            "cardinality": "N:1"
+        }
+    ]
+}

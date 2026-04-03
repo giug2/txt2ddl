@@ -1,0 +1,6 @@
+• ogni ordine è relativo ad un cliente ed è composto da un certo numero di righe d'ordine
+• ogni cliente ha codice cliente, cognome e nome
+• ogni riga d'ordine (che costituisce una “riga” del relativo ordine) ha
+– una descrizione del prodotto, che è una semplice stringa di testo
+– un fornitore (da cui proviene il prodotto) che può essere un produttore o un distributore, ma assumiamo ancora che sia una semplice stringa di testo
+– una data di consegna e un prezzo

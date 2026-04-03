@@ -1,0 +1,7 @@
+So, we basically run a bunch of stuff here that we sell. At the center of everything is the **Item**, which is the single piece you have in stock, with its SKU code and a status to understand whether it is available or not. Each article, obviously, refers to a certain **Model** of product. A model can have a lot of different items, such as many pairs of shoes of the same type.
+
+This **Model** is a kind of specific version, identified by its `Variant` and the type of stuff it belongs to. The somewhat confusing thing is that the models are also connected to each other, like a basic model which then has sub-versions. Each model, however, is linked to only one **Product Type**, which would be, I don't know, "t-shirt" or "trousers", each with its own code and name.
+
+The product types, in turn, are placed in larger containers, the **Categories** (such as "men's clothing"). A category can contain lots of different product types.
+
+Then there is the **Brand**, the brand, in short, with its own ID and name. A brand is linked to all its items for sale, but also to the various categories in which it operates. Finally, there is the **Supplier**, the company that brings us the goods, identified by its company name; each supplier can deal with different brands.

@@ -1,0 +1,5 @@
+So, basically here we have a few things that revolve around the university. There is a list of professors, each with their own identification code so as not to confuse them. Then there are study paths, such as degrees, and these also have their own number to recognize them. Separately, we have a list of all possible subjects, and these also have a unique code.
+
+The central point of everything is the actual courses. A course is not a thing in itself, but is a kind of combination: to define one, you have to say which study path it belongs to and which specific subject it is. These two data together make it unique.
+
+Now let's see how it all connects. Each professor can teach quite a few courses, but a single course is always tied to just one professor. Similarly, a course of study is made up of many different courses, but each course belongs to a single path. The same thing applies to subjects: a subject can be taught in several courses, but each course always refers to one subject only. Finally, there are the textbooks. Each subject can have different texts associated with it, but each book is specific to only one subject.

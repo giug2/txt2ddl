@@ -1,0 +1,12 @@
+Show the conceptual scheme for a database for the educational offer of courses of an academic year at a university, according to the following specifications.
+• Each course has a code, a title and a description, and is made up of a set of teaching modules.
+• Each teaching module has a code, a title and an author of the reference material (with code and name); the same module can be part of several courses.
+• Each course is offered by a department; each department has a name, a director (of which the name and surname are relevant) and a set of related teachers.
+• Each teacher has a serial number (unique within the database), name and surname, and can belong to multiple departments, in each of which he has a specific affiliation.
+• Each course takes place in several lessons, on different dates and times, not necessarily always in the same classroom.
+• Each classroom has a code, a name and a number of seats.
+• affects the university's educational offering for various academic years (for example those of the last three years); for each academic year a code and the year are relevant.
+• For each course, the order of the teaching modules is also of interest and it is also possible that a module is taken several times in the same course.
+• Department directors (who each direct a maximum of one department) can also be teachers (in the same department they direct or in others).
+• Each teacher has only one main chair in a department, but in different departments he or she may have different affiliations.
+• Each course takes place in several lessons, on different days, but always in the same classroom.

@@ -1,0 +1,122 @@
+{
+  "entities": [
+    {
+      "name": "Passeggero",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Nome", "is_pk": false },
+        { "name": "Cognome", "is_pk": false },
+        { "name": "Telefono", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Prenotazione",
+      "attributes": [
+        { "name": "Codice", "is_pk": true }
+      ]
+    },
+    {
+      "name": "Segmento di Prenotazione",
+      "attributes": [
+        { "name": "Numero", "is_pk": true },
+        { "name": "fk_prenotazione", "is_pk": true }
+      ]
+    },
+    {
+      "name": "Classe",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Descrizione", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Volo specifico",
+      "attributes": [
+        { "name": "Orario", "is_pk": true },
+        { "name": "fk_voloAstratto", "is_pk": true },
+        { "name": "Data", "is_pk": true }
+      ]
+    },
+    {
+      "name": "Volo astratto",
+      "attributes": [
+        { "name": "Numero", "is_pk": true },
+        { "name": "fk_compagnia", "is_pk": true }
+      ]
+    },
+    {
+      "name": "Compagnia",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Aeromobile",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Nome", "is_pk": false }
+      ]
+    },
+    {
+      "name": "Aeroporto",
+      "attributes": [
+        { "name": "Codice", "is_pk": true },
+        { "name": "Nome", "is_pk": false },
+        { "name": "Città", "is_pk": false }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "Passeggero",
+      "entity2": "Prenotazione",
+      "cardinality": "N:N"
+    },
+    {
+      "entity1": "Prenotazione",
+      "entity2": "Segmento di Prenotazione",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Segmento di Prenotazione",
+      "entity2": "Classe",
+      "cardinality": "N:1"
+    },
+    {
+      "entity1": "Segmento di Prenotazione",
+      "entity2": "Volo specifico",
+      "cardinality": "N:1"
+    },
+    {
+      "entity1": "Volo astratto",
+      "entity2": "Volo specifico",
+      "cardinality": "1:N"
+    },
+    {
+      "entity1": "Volo astratto",
+      "entity2": "Compagnia",
+      "cardinality": "N:1"
+    },
+    {
+      "entity1": "Volo astratto",
+      "entity2": "Aeromobile",
+      "cardinality": "N:1"
+    },
+    {
+      "entity1": "Volo astratto",
+      "entity2": "Aeroporto",
+      "cardinality": "N:1"
+    },
+    {
+      "entity1": "Volo astratto",
+      "entity2": "Aeroporto",
+      "cardinality": "N:1"
+    },
+    {
+      "entity1": "Volo astratto",
+      "entity2": "Aeroporto",
+      "cardinality": "N:1"
+    }
+  ]
+}

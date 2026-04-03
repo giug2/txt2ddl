@@ -1,0 +1,5 @@
+• each professor belongs to one and only one department and supervises one or more doctoral students
+• each department has one or more professors and all and only the doctoral students who are supervised by these professors belong to it
+• each PhD student is supervised by one and only one professor and his/her department is that of that professor
+• each doctoral student and each professor each have one and only one reference campus, but the campus of a doctoral student does not necessarily coincide with that of the relevant supervising professor; for each campus there can be more doctoral students and more professors
+• note that the concept of department is logical and we are not talking about a campus of a department

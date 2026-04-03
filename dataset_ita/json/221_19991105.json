@@ -1,0 +1,79 @@
+{
+    "entities": [
+        {
+            "name": "Dipendente",
+            "attributes": [
+                {
+                    "name": "id_dipendente",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Task",
+            "attributes": [
+                {
+                    "name": "id_task",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_tipotask",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_progetto",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Documento",
+            "attributes": [
+                {
+                    "name": "id_documento",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Progetto",
+            "attributes": [
+                {
+                    "name": "id_progetto",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "TipoTask",
+            "attributes": [
+                {
+                    "name": "id_tipotask",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "TipoTask",
+            "entity2": "Task",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Dipendente",
+            "entity2": "Task",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Task",
+            "entity2": "Progetto",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Task",
+            "entity2": "Documento",
+            "cardinality": "N:1"
+        }
+    ]
+}

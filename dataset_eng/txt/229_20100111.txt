@@ -1,0 +1,5 @@
+Show the conceptual scheme for a database for managing courses for an academic year at a university, according to the following specifications.
+• Each degree course has a code, a name and a description, and is made up of a set of teaching modules.
+• Each teaching module has a code, a title and an author of the reference material (with code and name); the same module can be present in different degree courses.
+• Each degree program is managed by a department; each department has a name, a director (of which only first and last name is of interest) and a set of teachers.
+• Each teacher has a serial number, name and surname, and can belong to multiple departments, in each of which he teaches only one subject, but in different departments he can

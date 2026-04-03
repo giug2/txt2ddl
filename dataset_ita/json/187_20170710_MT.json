@@ -1,0 +1,131 @@
+{
+    "entities": [
+        {
+            "name": "ARTISTA",
+            "attributes": [
+                {
+                    "name": "ID_ARTISTA",
+                    "is_pk": true
+                },
+                {
+                    "name": "COGNOME",
+                    "is_pk": false
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                },
+                {
+                    "name": "DATA_NASCITA",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "STUDIO_PRODUZIONE",
+            "attributes": [
+                {
+                    "name": "ID_STUDIO",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "FILM",
+            "attributes": [
+                {
+                    "name": "ISAN",
+                    "is_pk": true
+                },
+                {
+                    "name": "TITOLO",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "DISTRIBUTORE",
+            "attributes": [
+                {
+                    "name": "ID_DISTRIBUTORE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "SUPPORTO_FISICO",
+            "attributes": [
+                {
+                    "name": "CODICE_COPIA",
+                    "is_pk": true
+                },
+                {
+                    "name": "DATA_INGRESSO",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CLIENTE",
+            "attributes": [
+                {
+                    "name": "ID_CLIENTE",
+                    "is_pk": true
+                },
+                {
+                    "name": "COGNOME",
+                    "is_pk": false
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                },
+                {
+                    "name": "TELEFONO",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "STUDIO_PRODUZIONE",
+            "entity2": "ARTISTA",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "FILM",
+            "entity2": "ARTISTA",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "DISTRIBUTORE",
+            "entity2": "FILM",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "SUPPORTO_FISICO",
+            "entity2": "FILM",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "CLIENTE",
+            "entity2": "SUPPORTO_FISICO",
+            "cardinality": "1:N",
+            "attributes": [
+                {
+                    "name": "DATA_SCADENZA_NOLEGGIO",
+                    "is_pk": false
+                }
+            ]
+        }
+    ]
+}

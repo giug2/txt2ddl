@@ -1,0 +1,16 @@
+Definire uno schema Entity-Relationship che descriva i dati di interesse per una biblioteca, secondo le seguenti
+specifiche:
+• oggetto dei prestiti sono esemplari (detti anche volumi o copie) di libri, identificati attraverso un numero
+di inventario; ognuno ha una data di acquisto;
+• ogni libro
+– può essere presente in più copie
+– ha un codice (chiamato ISBN),
+– un titolo
+– uno o più autori
+– è pubblicato da una casa editrice
+• ogni casa editrice ha un nome e un codice;
+• ogni autore ha un codice, un cognome, un nome e una data di nascita e una affiliazione (un “ente”, con
+codice e nome)
+• per ogni prestito in corso (quelli conclusi non interessano), sono rilevanti la data prevista di restituzione
+e l’utente (che può avere più volumi in prestito contemporaneamente), con codice identificativo, nome,
+cognome e recapito telefonico.

@@ -1,0 +1,79 @@
+{
+    "entities": [
+        {
+            "name": "Speaker",
+            "attributes": [
+                {
+                    "name": "id_speaker",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Materiale",
+            "attributes": [
+                {
+                    "name": "id_materiale",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Sessione",
+            "attributes": [
+                {
+                    "name": "Sala",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_argomento",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_evento",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Argomento",
+            "attributes": [
+                {
+                    "name": "id_argomento",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Evento",
+            "attributes": [
+                {
+                    "name": "id_evento",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Speaker",
+            "entity2": "Sessione",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Sessione",
+            "entity2": "Materiale",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Argomento",
+            "entity2": "Sessione",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Evento",
+            "entity2": "Sessione",
+            "cardinality": "1:N"
+        }
+    ]
+}

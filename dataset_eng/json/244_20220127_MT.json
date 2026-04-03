@@ -1,0 +1,65 @@
+{
+    "entities": [
+        {
+            "name": "ARTIST",
+            "attributes": [
+                {
+                    "name": "artist_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "ALBUM",
+            "attributes": [
+                {
+                    "name": "id_album",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_genera",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "SONG",
+            "attributes": [
+                {
+                    "name": "song_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_album",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "TYPE",
+            "attributes": [
+                {
+                    "name": "id_type",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Type",
+            "entity2": "Album",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Album",
+            "entity2": "Song",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Artist",
+            "entity2": "Album",
+            "cardinality": "N:N"
+        }
+    ]
+}

@@ -1,0 +1,194 @@
+{
+    "entities": [
+        {
+            "name": "FACOLTA",
+            "attributes": [
+                {
+                    "name": "CODICE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "UNIVERSITA",
+            "attributes": [
+                {
+                    "name": "CODICE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "AULA",
+            "attributes": [
+                {
+                    "name": "CODICE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "DIPARTIMENTO",
+            "attributes": [
+                {
+                    "name": "CODICE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CORSO_ACCADEMICO",
+            "attributes": [
+                {
+                    "name": "CODICE_CORSO",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_dipartimento",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "GIORNO_LEZIONE",
+            "attributes": [
+                {
+                    "name": "NUMERO",
+                    "is_pk": true
+                },
+                {
+                    "name": "INIZIO_EFFETTIVO",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "TIPO_ATTREZZATURA",
+            "attributes": [
+                {
+                    "name": "CODICE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "LEZIONE_EFFETTIVA",
+            "attributes": [
+                {
+                    "name": "DATA",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_corso",
+                    "is_pk": true
+                },
+                {
+                    "name": "DESCRIZIONE",
+                    "is_pk": false
+                },
+                {
+                    "name": "FINE_EFFETTIVA",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "ATTREZZATURA",
+            "attributes": [
+                {
+                    "name": "MATRICOLA",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "UNIVERSITA",
+            "entity2": "FACOLTA",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "FACOLTA",
+            "entity2": "AULA",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "AULA",
+            "entity2": "CORSO_ACCADEMICO",
+            "cardinality": "1:N",
+            "attributes": [
+                {
+                    "name": "Orario_Fine",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "CORSO_ACCADEMICO",
+            "entity2": "AULA",
+            "cardinality": "N:1",
+            "attributes": [
+                {
+                    "name": "Orario_Inizio",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "UNIVERSITA",
+            "entity2": "DIPARTIMENTO",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "DIPARTIMENTO",
+            "entity2": "CORSO_ACCADEMICO",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "TIPO_ATTREZZATURA",
+            "entity2": "CORSO_ACCADEMICO",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "CORSO_ACCADEMICO",
+            "entity2": "GIORNO_LEZIONE",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "LEZIONE_EFFETTIVA",
+            "entity2": "CORSO_ACCADEMICO",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "TIPO_ATTREZZATURA",
+            "entity2": "ATTREZZATURA",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "ATTREZZATURA",
+            "entity2": "LEZIONE_EFFETTIVA",
+            "cardinality": "1:N"
+        }
+    ]
+}

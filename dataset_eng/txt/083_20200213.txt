@@ -1,0 +1,12 @@
+The system describes the organization of musical events concerts and the entities related to them 
+Each piece of music identified by a code and characterized by a title and an author 
+The author of a piece is a direct reference to a composer whose information such as surname code and name are managed in the Composers entity 
+The concerts are defined by a code, title and description and are performed by a specific orchestra 
+The orchestras in turn are identified by name and have attributes such as the venue and the name of the director, the latter represented as a string 
+The relationship between pieces and concerts established through the Programming entity which associates a piece with a concert also specifying its position in the playing order via an integer value
+A concert takes the form of one or more events 
+The Events entity actually links a concert to a specific theater at a specific date and time 
+Theaters are registered with an identification code and a name 
+The musical personnel represented by the Musicians entity where each musician is identified by a serial number and registered with surname and name 
+A musician's membership in an orchestra and the instrument he plays are defined in the Composition entity that associates a musician with an orchestra and a specific instrument 
+Finally, the instruments are cataloged with a code, name and type

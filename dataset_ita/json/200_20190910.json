@@ -1,0 +1,75 @@
+{
+    "entities": [
+        {
+            "name": "Cliente",
+            "attributes": [
+                {
+                    "name": "CodiceCliente",
+                    "is_pk": true
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Ordine",
+            "attributes": [
+                {
+                    "name": "IDOrdine",
+                    "is_pk": true
+                },
+                {
+                    "name": "DataOrdine",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "RigaOrdine",
+            "attributes": [
+                {
+                    "name": "fk_ordine",
+                    "is_pk": true
+                },
+                {
+                    "name": "NumeroRiga",
+                    "is_pk": true
+                },
+                {
+                    "name": "DescrizioneProdotto",
+                    "is_pk": false
+                },
+                {
+                    "name": "DataConsegna",
+                    "is_pk": false
+                },
+                {
+                    "name": "Prezzo",
+                    "is_pk": false
+                },
+                {
+                    "name": "Fornitore",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Cliente",
+            "entity2": "Ordine",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Ordine",
+            "entity2": "RigaOrdine",
+            "cardinality": "1:N"
+        }
+    ]
+}

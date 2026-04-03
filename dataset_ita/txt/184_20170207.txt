@@ -1,0 +1,6 @@
+Il sistema descrive la gestione di ordini effettuati da clienti di un negozio online.
+Al centro del modello si trova il cliente, identificato univocamente dal suo codice cliente e caratterizzato da un nome e dall'indirizzo di spedizione.
+Ogni cliente è associato a uno o più ordini; ciascun ordine, identificato da un proprio ID, riporta un importo totale e fa riferimento al codice del cliente che lo ha effettuato.
+Inoltre, l'ordine è collegato a uno specifico corriere, identificato tramite il suo codice, attraverso il quale avviene la spedizione.
+La struttura di ogni ordine è dettagliata da una serie di righe di dettaglio, ognuna con un proprio ID univoco, un prezzo specifico per quella voce e la data di inserimento.
+Fondamentalmente, ogni riga di dettaglio è legata a un preciso prodotto tramite il codice prodotto, creando così un collegamento diretto con l'entità prodotto, la quale associa tale codice alla sua descrizione.

@@ -1,0 +1,68 @@
+{
+    "entities": [
+        {
+            "name": "PROFESSORE",
+            "attributes": [
+                {
+                    "name": "id_professore",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_dipartimento",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_campus",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "DIPARTIMENTO",
+            "attributes": [
+                {
+                    "name": "id_dipartimento",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "TUTOR",
+            "attributes": [
+                {
+                    "name": "id_tutor",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_professore",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_campus",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "CAMPUS",
+            "attributes": [
+                {
+                    "name": "id_campus",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Dipartimento",
+            "entity2": "Professore",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Professore",
+            "entity2": "Tutor",
+            "cardinality": "1:N"
+        }
+    ]
+}

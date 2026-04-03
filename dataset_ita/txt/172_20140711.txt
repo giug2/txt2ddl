@@ -1,0 +1,7 @@
+Lo schema descrive un sistema di gestione logistica organizzato attorno a quattro entità principali.
+La prima è il Magazzino, identificato in modo univoco dal suo CodiceMagazzino e caratterizzato da un Indirizzo.
+A questa entità è collegato l'Addetto, il quale è identificato da una Matricola univoca e descritto da un Nome.
+Ogni Addetto è assegnato a un Magazzino specifico, stabilendo così una relazione uno-a-molti.
+La merce è rappresentata da due entità correlate: Prodotto e Lotto.
+L'entità Prodotto definisce le caratteristiche generali di un articolo, associando in modo univoco uno SKU al suo NomeProdotto.
+L'entità Lotto, invece, rappresenta una specifica partita di produzione di quell'articolo; ogni lotto ha un proprio CodiceLotto, è caratterizzato da una DataProduzione, si riferisce a un unico Prodotto ed è gestito da un singolo Addetto, creando così un legame diretto con le altre entità.

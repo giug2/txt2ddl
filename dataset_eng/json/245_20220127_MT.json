@@ -1,0 +1,89 @@
+{
+    "entities": [
+        {
+            "name": "NURSE",
+            "attributes": [
+                {
+                    "name": "nurse_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                },
+                {
+                    "name": "surname",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "DOCTOR",
+            "attributes": [
+                {
+                    "name": "doctor_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                },
+                {
+                    "name": "surname",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "HOSPITAL",
+            "attributes": [
+                {
+                    "name": "hospital_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "address",
+                    "is_pk": false
+                },
+                {
+                    "name": "citta",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "DEPARTMENT",
+            "attributes": [
+                {
+                    "name": "department_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_hospital",
+                    "is_pk": true
+                },
+                {
+                    "name": "department_name",
+                    "is_pk": false
+                },
+                {
+                    "name": "piano",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Hospital",
+            "entity2": "Department",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Nursing",
+            "entity2": "Doctor",
+            "entity3": "Department",
+            "cardinality": "N:N:N"
+        }
+    ]
+}

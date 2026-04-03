@@ -1,0 +1,7 @@
+- per ogni materia possono esistere più corsi, tenuti dallo stesso professore o da professori diversi 
+- ogni corso è relativo ad una e una sola materia
+- ogni professore tiene zero o più corsi 
+- ogni corso ha uno o più professori ed è o certo ad uno e un solo corso di studio
+- per ogni corso di studio esiste al più un corso di una data materia
+- ogni corso ha uno e un solo libro di testo; i corsi di una data materia non hanno necessariamente
+lo stesso libro di testo

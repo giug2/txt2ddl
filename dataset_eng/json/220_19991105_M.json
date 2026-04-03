@@ -1,0 +1,83 @@
+{
+    "entities": [
+        {
+            "name": "Salesperson",
+            "attributes": [
+                {
+                    "name": "seller_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Offer",
+            "attributes": [
+                {
+                    "name": "offer_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_seller",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_product",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_catalog",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Catalog",
+            "attributes": [
+                {
+                    "name": "catalog_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Product",
+            "attributes": [
+                {
+                    "name": "product_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Supplier",
+            "attributes": [
+                {
+                    "name": "supplier_id",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Offer",
+            "entity2": "Product",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Offer",
+            "entity2": "Salesperson",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Catalog",
+            "entity2": "Offer",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Product",
+            "entity2": "Supplier",
+            "cardinality": "N:1"
+        }
+    ]
+}

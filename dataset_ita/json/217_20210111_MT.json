@@ -1,0 +1,138 @@
+{
+    "entities": [
+        {
+            "name": "Dipartimento",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Sede",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CorsoDiLaurea",
+            "attributes": [
+                {
+                    "name": "CodiceCorso",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Insegnamento",
+            "attributes": [
+                {
+                    "name": "CodiceMateria",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_corso_laurea",
+                    "is_pk": true
+                },
+                {
+                    "name": "Titolo",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Professore",
+            "attributes": [
+                {
+                    "name": "Matricola",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Cognome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Citt\u00e0",
+            "attributes": [
+                {
+                    "name": "CodiceISTAT",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Regione",
+            "attributes": [
+                {
+                    "name": "CodiceRegione",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "CorsoDiLaurea",
+            "entity2": "Dipartimento",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Insegnamento",
+            "entity2": "CorsoDiLaurea",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Professore",
+            "entity2": "Dipartimento",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Professore",
+            "entity2": "Citt\u00e0",
+            "cardinality": "N:1",
+            "attributes": [
+                {
+                    "name": "Residente",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Professore",
+            "entity2": "Citt\u00e0",
+            "cardinality": "N:1",
+            "attributes": [
+                {
+                    "name": "Nascita",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Citt\u00e0",
+            "entity2": "Regione",
+            "cardinality": "N:1"
+        }
+    ]
+}

@@ -1,0 +1,157 @@
+{
+    "entities": [
+        {
+            "name": "Show",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Author",
+                    "is_pk": false
+                },
+                {
+                    "name": "DateInitiation",
+                    "is_pk": false
+                },
+                {
+                    "name": "DataFine",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Itinerary",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Exposure",
+            "attributes": [
+                {
+                    "name": "fk_show",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_quadro",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Quadro",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Title",
+                    "is_pk": false
+                },
+                {
+                    "name": "Anno",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Sala",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Size",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "TipoVisita",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Ora",
+                    "is_pk": false
+                },
+                {
+                    "name": "term",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Visit",
+            "attributes": [
+                {
+                    "name": "Data",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_type_visit",
+                    "is_pk": true
+                },
+                {
+                    "name": "Number of Participants",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Exposure",
+            "entity2": "Show",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Itinerary",
+            "entity2": "Exposure",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Order Number",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Exposure",
+            "entity2": "Sala",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Quadro",
+            "entity2": "Exposure",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "TipoVisita",
+            "entity2": "Itinerary",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Visit",
+            "entity2": "TipoVisita",
+            "cardinality": "N:1"
+        }
+    ]
+}

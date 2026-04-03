@@ -1,0 +1,9 @@
+Definire uno schema Entity-Relationship che descriva un archivio dati (utilizzato ad esempio da una rivista di cinema o da un'emittente televisiva a supporto delle attività critiche e di programmazione) relativi ad un insieme di registi con i relativi generi cinematografici, secondo le specifiche seguenti:
+• ogni regista ha codice, cognome, nome e luogo di nascita (città e nazione, ciascuna con codice e nome);
+• ogni genere cinematografico ha codice e nome;
+• per ogni regista interessano i generi cinematografici in cui ha concorso con i propri film e il numero di premi vinti in ciascuno di essi.
+
+• interessano le singole proiezioni a festival cui un regista ha partecipato con un film, con il relativo premio ottenuto; ad esempio, interessa tenere traccia del fatto che un regista ha vinto la "Palma d'Oro" per il genere "Drammatico" proiettato a Cannes il 25/05/2023 e ha ricevuto una "Menzione Speciale" per lo stesso genere a Venezia il 10/09/2021;
+• supporre che una proiezione in un festival sia identificata da data, cinema e genere cinematografico, oltre che eventualmente da un codice;
+• ogni cinema in cui si svolge una proiezione ha codice, nome e nazione;
+• un film può essere prodotto da diverse nazioni nel tempo; interessa, per ogni candidatura ad un festival, conoscere la nazione di produzione con cui il film concorreva in quel momento.

@@ -1,0 +1,4 @@
+• each project belongs to one and only one company and zero or more developers are assigned to it;
+• each developer works for one and only one company, is a member of one and only one team and works on zero or more projects;
+• a team is associated with all and only the companies for which the developers who are part of it work;
+• a team is associated with all and only the projects on which the developers who are part of it work;

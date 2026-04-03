@@ -1,0 +1,145 @@
+{
+    "entities": [
+        {
+            "name": "Teaching Module",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Title",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Author",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Degree Course",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "SessioneEsame",
+            "attributes": [
+                {
+                    "name": "Data",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_course",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Classroom",
+            "attributes": [
+                {
+                    "name": "Code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Seat Capacity",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Department",
+            "attributes": [
+                {
+                    "name": "Name",
+                    "is_pk": true
+                },
+                {
+                    "name": "Director",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Teaching",
+            "attributes": [
+                {
+                    "name": "Freshman",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Teaching Module",
+            "entity2": "Author",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Degree Course",
+            "entity2": "Teaching Module",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "SessioneEsame",
+            "entity2": "Degree Course",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Degree Course",
+            "entity2": "Classroom",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Degree Course",
+            "entity2": "Department",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Teaching",
+            "entity2": "Department",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Materia",
+                    "is_pk": false
+                }
+            ]
+        }
+    ]
+}

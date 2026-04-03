@@ -1,0 +1,5 @@
+So basically we handle some book related stuff here. At the center of everything is the literary work, the abstract idea of ​​the book, which has its own code to be recognized and some general information, such as how many pages it usually has or if it is made up of several pieces. Each work, then, is somehow labeled with a genre, which is simply a category with a name and its identifier; obviously a genre can contain a lot of different works.
+
+From a work you then move on to the specific editions, the ones you buy. The same story can be published in many ways, and each edition has its own ISBN that distinguishes it, a precise title, a format (paperback type, hardback...) and a cover price. Each of these editions is written in a certain language, which in turn is identified by a code and a name. Of course, a language can be used for an infinite number of editions.
+
+Finally, for each edition, we have the actual copies that we keep in stock. Each individual piece has its own unique identification code, a note on how it is stored and the date it came in. It is clear that we can have quite a few identical copies of a specific edition on the shelves.

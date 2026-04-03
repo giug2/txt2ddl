@@ -1,0 +1,117 @@
+{
+    "entities": [
+        {
+            "name": "ORCHESTRA",
+            "attributes": [
+                {
+                    "name": "ID_orchestra",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                },
+                {
+                    "name": "DATA",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CITTA",
+            "attributes": [
+                {
+                    "name": "id_citta",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "NATION",
+            "attributes": [
+                {
+                    "name": "country_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "ORCHESTRA COMPOSITION",
+            "attributes": [
+                {
+                    "name": "ANNO",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_orchestra",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "MUSICIAN",
+            "attributes": [
+                {
+                    "name": "musician_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                },
+                {
+                    "name": "surname",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CONSERVATORY",
+            "attributes": [
+                {
+                    "name": "conservatory_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "CITTA",
+            "entity2": "ORCHESTRA",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "NATION",
+            "entity2": "CITTA",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "ORCHESTRA",
+            "entity2": "ORCHESTRA COMPOSITION",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "ORCHESTRA COMPOSITION",
+            "entity2": "MUSICIAN",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "CONSERVATORY",
+            "entity2": "MUSICIAN",
+            "cardinality": "1:N"
+        }
+    ]
+}

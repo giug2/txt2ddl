@@ -1,0 +1,157 @@
+{
+    "entities": [
+        {
+            "name": "Modulo",
+            "attributes": [
+                {
+                    "name": "Module_ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Developer",
+            "attributes": [
+                {
+                    "name": "Developer_ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Project",
+            "attributes": [
+                {
+                    "name": "Project_ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "Project_Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Creation_Date",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Sprint",
+            "attributes": [
+                {
+                    "name": "Data_Fine",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_progetto",
+                    "is_pk": true
+                },
+                {
+                    "name": "Release_Version",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Team",
+            "attributes": [
+                {
+                    "name": "Team_Name",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Assignment",
+            "attributes": [
+                {
+                    "name": "fk_membro_team",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_team",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Team Member",
+            "attributes": [
+                {
+                    "name": "Freshman",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Technology",
+            "attributes": [
+                {
+                    "name": "ID_Technology",
+                    "is_pk": true
+                },
+                {
+                    "name": "Technology_Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Modulo",
+            "entity2": "Developer",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Project",
+            "entity2": "Modulo",
+            "cardinality": "N:N"
+        },
+        {
+            "entity1": "Sprint",
+            "entity2": "Project",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Project",
+            "entity2": "Team",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Team",
+            "entity2": "Assignment",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Assignment",
+            "entity2": "Team Member",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Technology",
+            "entity2": "Assignment",
+            "cardinality": "1:N"
+        }
+    ]
+}

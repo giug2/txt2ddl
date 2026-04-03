@@ -1,0 +1,6 @@
+• each project has a code (ID), a responsible department, a customer and a status
+• each department has a code (CRep), a name (Department attribute)
+• each customer has a code (Customer CC) and a description (Customer attribute) and belongs to a sector, with code (CSett) and description (Customer Sector)
+• each project status has a code (CState) and a description (ProjectState attribute)
+• each project includes one or more tasks
+• each task has a progressive number (NTask) that identifies it within the project and has a priority, with code (CPrio) and description (Priority attribute)

@@ -1,0 +1,7 @@
+- we want to distinguish the concept of subject (for example Analysis I) from that of discipline
+ the disciplines have a code that identifies them, while the subjects are identified by
+discipline and by a suffix (for example "I" or even the empty string suffix, as happens for Chemistry) 
+- you want to represent the sector concept with code and name (for example K05 and Informatica o
+K04 and Automatic); each discipline belongs to one and only one sector; 
+- each teacher belongs to one and only one sector (but could also teach courses in other sectors); 
+- the departments have a code and name.

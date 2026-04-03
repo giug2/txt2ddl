@@ -1,0 +1,7 @@
+• ogni congresso ha un codice e un titolo e si tiene una città
+• ogni città ha un nome, si trova in una nazione e ha un codice che la identifica univocamente
+• ogni nazione ha un codice e un nome
+• ogni congresso è relativo ad una materia specifica (ad esempio l’ortopedia) che a sua volta appartiene
+ad un’area scientifica (ad esempio la medicina); ogni materia ha un nome e un codice che la identifica
+nell’ambito dell’area scientifica
+• ogni area scientifica ha un codice e un nome

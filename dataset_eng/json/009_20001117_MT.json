@@ -1,0 +1,98 @@
+{
+    "entities": [
+        {
+            "name": "Condominium",
+            "attributes": [
+                {
+                    "name": "Name",
+                    "is_pk": true
+                },
+                {
+                    "name": "Address",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Scala",
+            "attributes": [
+                {
+                    "name": "FK_CONDOMINIUM",
+                    "is_pk": true
+                },
+                {
+                    "name": "Code",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Apartment",
+            "attributes": [
+                {
+                    "name": "FK_SCALA",
+                    "is_pk": true
+                },
+                {
+                    "name": "Internal",
+                    "is_pk": true
+                },
+                {
+                    "name": "Thousandths",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Persona",
+            "attributes": [
+                {
+                    "name": "Tax ID code",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Scala",
+            "entity2": "Condominium",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Apartment",
+            "entity2": "Scala",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Persona",
+            "entity2": "Apartment",
+            "cardinality": "N:1",
+            "attributes": [
+                {
+                    "name": "owner",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Persona",
+            "entity2": "Apartment",
+            "cardinality": "N:1",
+            "attributes": [
+                {
+                    "name": "tenant",
+                    "is_pk": false
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,65 @@
+{
+    "entities": [
+        {
+            "name": "ARTISTA",
+            "attributes": [
+                {
+                    "name": "id_artista",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "ALBUM",
+            "attributes": [
+                {
+                    "name": "id_album",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_album",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "CANZONE",
+            "attributes": [
+                {
+                    "name": "id_canzone",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_genere",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "GENERE",
+            "attributes": [
+                {
+                    "name": "id_genere",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Genere",
+            "entity2": "Album",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Album",
+            "entity2": "Canzone",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Artista",
+            "entity2": "Album",
+            "cardinality": "N:N"
+        }
+    ]
+}

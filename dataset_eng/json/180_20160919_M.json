@@ -1,0 +1,83 @@
+{
+    "entities": [
+        {
+            "name": "TRACK",
+            "attributes": [
+                {
+                    "name": "song_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "artist_real_name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "PERFORMANCE",
+            "attributes": [
+                {
+                    "name": "fk_festival",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_music_genre",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "MUSICAL_GENRE",
+            "attributes": [
+                {
+                    "name": "musical_genre_id",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "FESTIVAL",
+            "attributes": [
+                {
+                    "name": "id_festival",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "ARTIST",
+            "attributes": [
+                {
+                    "name": "artist_id",
+                    "is_pk": true
+                },
+                {
+                    "name": "song_title",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "TRACK",
+            "entity2": "PERFORMANCE",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "MUSICAL_GENRE",
+            "entity2": "PERFORMANCE",
+            "cardinality": "1:1"
+        },
+        {
+            "entity1": "PERFORMANCE",
+            "entity2": "FESTIVAL",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "ARTIST",
+            "entity2": "MUSICAL_GENRE",
+            "cardinality": "1:N"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+Il sistema descrive unorganizzazione di viaggi studio 
+Il fulcro del modello rappresentato dai college ciascuno identificato da un codice univoco e caratterizzato da un nome un indirizzo e un numero di telefono 
+Ogni college situato in una specifica località ed associato a un particolare esame 
+Le località sono definite da un codice un nome e l'aeroporto di riferimento mentre gli aeroporti sono a loro volta entità con un proprio codice e nome 
+Per quanto riguarda l'offerta formativa ogni esame descritto da un codice un nome e un costo associato 
+Collegato a ogni college possibile definire un soggiorno specificandone il periodo di svolgimento il costo e il numero di ore di lezione previste 
+La logistica dei trasporti gestita attraverso i voli i quali collegano una città di partenza identificata da codice e nome a un determinato aeroporto di destinazione con un costo specifico per ogni tratta 
+Infine il modello prevede un sistema di sconti 
+Esistono diverse tipologie di riduzione ciascuna con un proprio codice e una descrizione 
+Una riduzione effettiva viene applicata associando un tipo di riduzione a un determinato college stabilendo per questa combinazione una precisa percentuale di sconto

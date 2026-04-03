@@ -1,0 +1,6 @@
+Lo schema descrive tre entità principali: studente, corso di laurea e dipartimento.
+L'entità studente, identificata da una matricola univoca, è caratterizzata dagli attributi NomeStudente, Indirizzo e AnnoDiCorso.
+L'entità dipartimento è definita da un codice e dal nome del Dipartimento stesso.
+Infine, l'entità corso di laurea, identificata dal codice corso e che possiede un attributo NomeCorso, è collegata a un dipartimento. È importante notare che in contesti specifici, come per le analisi accademiche X e Y, la struttura di queste entità subisce delle variazioni.
+In questi casi, lo studente, indicato come relazione R0, viene descritto unicamente da NomeStudente e Indirizzo, omettendo quindi l'attributo AnnoDiCorso.
+Allo stesso modo, il corso di laurea, indicato come relazione R1, viene arricchito con l'attributo "TipoLaurea", risultando così definito da NomeCorso, TipoLaurea e dal codice del dipartimento.

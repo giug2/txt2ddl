@@ -1,0 +1,75 @@
+{
+    "entities": [
+        {
+            "name": "TESTO",
+            "attributes": [
+                {
+                    "name": "id_materia",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "CORSO",
+            "attributes": [
+                {
+                    "name": "fk_corso_di_studio",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_materia",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "MATERIA",
+            "attributes": [
+                {
+                    "name": "id_testo",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "CORSO DI STUDIO",
+            "attributes": [
+                {
+                    "name": "id_corso_di_studio",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "PROFESSORE",
+            "attributes": [
+                {
+                    "name": "id_profESSORE",
+                    "is_pk": true
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "TESTO",
+            "entity2": "CORSO",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "MATERIA",
+            "entity2": "CORSO",
+            "cardinality": "1:1"
+        },
+        {
+            "entity1": "CORSO",
+            "entity2": "CORSO DI STUDIO",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "MATERIA",
+            "entity2": "PROFESSORE",
+            "cardinality": "N:1"
+        }
+    ]
+}

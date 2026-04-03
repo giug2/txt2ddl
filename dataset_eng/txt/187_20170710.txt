@@ -1,0 +1,12 @@
+Define an Entity-Relationship schema that describes the data of interest for a video store, according to the following
+specifications:
+• the object of the rentals are the physical media (DVD, Blu-ray) of the films, identified by a copy code; each has a date of entry into the catalogue;
+• every film
+– may be present in multiple physical media
+– has an identification code (called ISAN),
+– a title
+– one or more artists (actors, directors)
+– is distributed by a distribution company
+• each distribution company has a name and code;
+• each artist has a code, a surname, a first name, a date of birth and an affiliation with a production studio (with code and name)
+• for each ongoing rental (concluded ones are not relevant), the rental expiry date and the customer (who can have multiple physical media rentals at the same time), with identification code, name, surname and telephone number, are relevant.

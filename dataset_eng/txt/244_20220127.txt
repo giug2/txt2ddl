@@ -1,0 +1,4 @@
+• each album belongs to one and only one genre, is associated with one or more artists and contains one or more songs.
+• a genre can group multiple albums.
+• each artist can be associated with multiple albums and, vice versa, an album can contain songs by multiple artists.
+• each song belongs to one and only one album, and its genre is inherited from that of the album it belongs to.

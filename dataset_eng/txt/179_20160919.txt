@@ -1,0 +1,4 @@
+Show a conceptual diagram for the database used by a library to store information about available books, with the following specifications:
+• each physical copy of a book has a unique ID, a conservation status, a date of purchase from the bookshop, a publishing house (for example Mondadori), a reference book (for example, Il Nome della Rosa) and a specific edition (for example, Bompiani 2020);
+• each book has a code, an original title (for example, Il Nome della Rosa), a publishing house (for example Bompiani), a year of publication and an author and belongs to a literary genre, with code and name (for example, Giallo Storico);
+• each edition has a format (with a code and a description, e.g. 'Paperback'), a number of pages and a price.

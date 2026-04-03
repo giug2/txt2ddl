@@ -1,0 +1,4 @@
+• ogni album appartiene a uno e un solo genere, è associato a uno o più artisti e contiene una o più canzoni.
+• un genere può raggruppare più album.
+• ogni artista può essere associato a più album e, viceversa, un album può contenere brani di più artisti.
+• ogni canzone appartiene a uno e un solo album, e il suo genere è ereditato da quello dell'album di appartenenza.

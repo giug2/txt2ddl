@@ -1,0 +1,157 @@
+{
+    "entities": [
+        {
+            "name": "Festival",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "DataInizio",
+                    "is_pk": false
+                },
+                {
+                    "name": "DataFine",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "PercorsoTematico",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Esibizione",
+            "attributes": [
+                {
+                    "name": "fk_festival",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_artista",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Artista",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "GenereMusicale",
+                    "is_pk": false
+                },
+                {
+                    "name": "AnnoFormazione",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Palco",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "Capacita",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "TourGuidato",
+            "attributes": [
+                {
+                    "name": "Codice",
+                    "is_pk": true
+                },
+                {
+                    "name": "Nome",
+                    "is_pk": false
+                },
+                {
+                    "name": "OrarioPartenza",
+                    "is_pk": false
+                },
+                {
+                    "name": "Durata",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "GruppoTour",
+            "attributes": [
+                {
+                    "name": "Data",
+                    "is_pk": true
+                },
+                {
+                    "name": "fk_tour_guidato",
+                    "is_pk": true
+                },
+                {
+                    "name": "NumeroIscritti",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Esibizione",
+            "entity2": "Festival",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Esibizione",
+            "entity2": "PercorsoTematico",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "OrdineTappa",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Esibizione",
+            "entity2": "Palco",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Esibizione",
+            "entity2": "Artista",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "TourGuidato",
+            "entity2": "PercorsoTematico",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "GruppoTour",
+            "entity2": "TourGuidato",
+            "cardinality": "N:1"
+        }
+    ]
+}

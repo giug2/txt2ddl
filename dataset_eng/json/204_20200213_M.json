@@ -1,0 +1,186 @@
+{
+    "entities": [
+        {
+            "name": "Modulo",
+            "attributes": [
+                {
+                    "name": "IDModule",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Developer",
+            "attributes": [
+                {
+                    "name": "Developer_ID",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Project",
+            "attributes": [
+                {
+                    "name": "IDProgetto",
+                    "is_pk": true
+                },
+                {
+                    "name": "NomeProgetto",
+                    "is_pk": false
+                },
+                {
+                    "name": "Methodology",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Release",
+            "attributes": [
+                {
+                    "name": "ReleaseDate",
+                    "is_pk": true
+                },
+                {
+                    "name": "Version",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Team",
+            "attributes": [
+                {
+                    "name": "NameTeam",
+                    "is_pk": true
+                },
+                {
+                    "name": "Description",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Repository",
+            "attributes": [
+                {
+                    "name": "IDRepository",
+                    "is_pk": true
+                },
+                {
+                    "name": "URL",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Role Assignment",
+            "attributes": [
+                {
+                    "name": "AssignmentID",
+                    "is_pk": true
+                }
+            ]
+        },
+        {
+            "name": "Team Member",
+            "attributes": [
+                {
+                    "name": "ID member",
+                    "is_pk": true
+                },
+                {
+                    "name": "Surname",
+                    "is_pk": false
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "Technology",
+            "attributes": [
+                {
+                    "name": "IDTechnology",
+                    "is_pk": true
+                },
+                {
+                    "name": "Name",
+                    "is_pk": false
+                },
+                {
+                    "name": "Category",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "Modulo",
+            "entity2": "Developer",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Modulo",
+            "entity2": "Project",
+            "cardinality": "N:N",
+            "attributes": [
+                {
+                    "name": "Priority",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "entity1": "Release",
+            "entity2": "Project",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Project",
+            "entity2": "Team",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Project",
+            "entity2": "Repository",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Team Member",
+            "entity2": "Team",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Role Assignment",
+            "entity2": "Team",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "Team Member",
+            "entity2": "Role Assignment",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "Role Assignment",
+            "entity2": "Technology",
+            "cardinality": "N:1"
+        }
+    ]
+}

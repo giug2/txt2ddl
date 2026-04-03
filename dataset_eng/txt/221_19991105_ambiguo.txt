@@ -1,0 +1,9 @@
+So basically here we have a system for keeping track of a few things. There are **Employees**, who are people, each with their own identification code. Then there are **Projects**, which are like big containers for the work to be done, and these also have their own unique ID.
+
+The heart of everything are the **Tasks**, that is, the individual activities. Each task is a bit particular, because to identify it a single code is not enough, but a combination of its ID, the type of task it is and the project it belongs to. This means that each task is necessarily linked to a single project, it cannot exist on its own.
+
+To understand what type of task it is, there is a list of **TypeTask**. Think of things like "analysis", "development", "testing", etc. Each task must fall into one of these categories, but obviously the same category can be used for a lot of different tasks.
+
+The connection between people and work is quite flexible: an employee can work on multiple tasks at the same time, and similarly a single task can be assigned to an entire team of people. It's quite a tangle, in short.
+
+Finally, there are **Documents**. Each document has its own code, and the strange thing is that lots of different tasks can all reference the same, exact document. It's like there's an instruction manual and lots of different little tasks use it as a guide.

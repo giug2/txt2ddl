@@ -1,0 +1,103 @@
+{
+    "entities": [
+        {
+            "name": "MAGAZZINO",
+            "attributes": [
+                {
+                    "name": "ID_MAGAZZINO",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME_SEDE",
+                    "is_pk": false
+                },
+                {
+                    "name": "ANNO_APERTURA",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "COMUNE",
+            "attributes": [
+                {
+                    "name": "CODICE_ISTAT",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME_COMUNE",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "PROVINCIA",
+            "attributes": [
+                {
+                    "name": "SIGLA_PROVINCIA",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME_PROVINCIA",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "PRODOTTO",
+            "attributes": [
+                {
+                    "name": "SKU",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME_PRODOTTO",
+                    "is_pk": false
+                },
+                {
+                    "name": "MARCA",
+                    "is_pk": false
+                },
+                {
+                    "name": "DATA_LANCIO",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "CATEGORIA",
+            "attributes": [
+                {
+                    "name": "ID_CATEGORIA",
+                    "is_pk": true
+                },
+                {
+                    "name": "NOME_CATEGORIA",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "MAGAZZINO",
+            "entity2": "COMUNE",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "COMUNE",
+            "entity2": "PROVINCIA",
+            "cardinality": "N:1"
+        },
+        {
+            "entity1": "MAGAZZINO",
+            "entity2": "PRODOTTO",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "PRODOTTO",
+            "entity2": "CATEGORIA",
+            "cardinality": "N:1"
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+{
+  "entities": [
+    {
+      "name": "MANAGER",
+      "attributes": [
+        { "name": "id_manager", "is_pk": true },
+        { "name": "nome_manager", "is_pk": false }
+      ]
+    },
+    {
+      "name": "REPARTO",
+      "attributes": [
+        { "name": "id_reparto", "is_pk": true },
+        { "name": "nome_reparto", "is_pk": false }
+      ]
+    },
+    {
+      "name": "ASSISTENTE",
+      "attributes": [
+        { "name": "id_assistente", "is_pk": true },
+        { "name": "nome_assistente", "is_pk": false }
+      ]
+    },
+    {
+      "name": "SEDE",
+      "attributes": [
+        { "name": "id_sede", "is_pk": true },
+        { "name": "indirizzo_sede", "is_pk": false }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "Reparto",
+      "entity2": "Sede",
+      "cardinality": "N:1"
+    },
+    {
+      "entity1": "Manager",
+      "entity2": "Assistente",
+      "entity3": "Reparto",
+      "cardinality": "N:N:N"
+    }
+  ]
+}

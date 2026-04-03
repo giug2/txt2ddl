@@ -1,0 +1,6 @@
+• for each product there may be multiple sales advertisements, published by the same seller or by different sellers
+• each sales announcement relates to one and only one product
+• Each seller posts zero or more sales ads
+• each sales announcement has one and only one seller and is placed in one and only one product category
+• for each product category there are one or more sales announcements for a given product, distinguished with a progressive number indicating the "batch" (e.g.: Smartphone X, batch 1)
+• each product can have one or more associated reviews, which are valid for all sales advertisements for that product.

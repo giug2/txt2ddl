@@ -1,0 +1,9 @@
+So basically there's this structure to handle some college stuff. At the center of everything is the University, which has its own name and a code to recognize it. This university includes a lot of Departments and also several Faculties, each with its own name and identifier. Thus, each faculty or department belongs to one and only one university.
+
+The faculties, in turn, have classrooms inside them, which are the physical places where lessons are held, and these also have a name and a code. Now, the important part is the Academic Courses. Each course is linked to a department, so one department offers many different courses. These courses obviously take place in classrooms, and it seems that a course can be held in multiple classrooms and, vice versa, a classroom can host lessons from several courses; for each combination of room and course, we note down more or less what time the lesson starts and ends there.
+
+For the time, there is a kind of list of days of the week, like Monday, Tuesday, etc. A course can be spread over several days and, of course, on any given day there are lessons from a lot of courses.
+
+Then there's the whole equipment part. We have a list of Equipment Types, such as "projector" or "computer", each with its own code. It seems like every academic course needs some type of equipment. In addition to the category, there are also the individual pieces of Equipment, the real ones, each with its serial number. Clearly, each piece of equipment belongs to only one type, so there may be many projectors, but they are all of the "projector" type.
+
+Finally, we keep track of the Effective Lessons, i.e. when a lesson was actually held. Each lesson is linked to a specific course, has a precise date and you know the exact start and end time. The curious thing is that every single lesson is somehow associated with a specific piece of equipment, the one with its serial number, perhaps to know what was used that day in that classroom.

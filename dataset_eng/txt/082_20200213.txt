@@ -1,0 +1,5 @@
+• each teacher teaches one and only one study course;
+• each course of study generally has multiple teachers and belongs to one and only one department;
+• each department belongs to one and only one faculty;
+• each teacher works only in the department to which the course of study in which he or she works belongs e
+only at the faculty to which the department belongs.

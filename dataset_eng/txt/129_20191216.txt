@@ -1,0 +1,7 @@
+Define an Entity-Relationship schema that describes a set of statistical data (used for example by a
+sports newspaper or by a television network to support journalistic activities) relating to a group of skiers
+with the relevant specialties, according to the following specifications:
+• each skier has a code, surname, name, place of birth (city and country, each with code and name) and
+citizenship (nation which may be different from that of the place of birth);
+• each specialty has a code and name;
+• for each skier the specialties practiced are of interest with the number of victories achieved in each of them.

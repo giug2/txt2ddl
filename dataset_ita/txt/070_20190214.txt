@@ -1,0 +1,8 @@
+• ogni spedizione ha un codice (ID), un mittente, una destinazione e un tipo
+• ogni mittente ha un codice (CM), un nome (attributo Mittente)
+• ogni destinazione ha un codice (CDes) e una descrizione (attributo Destinazione) e una categoria, con
+codice (CCD) e descrizione (Categoria)
+• ogni tipo di spedizione ha un codice (CT) e una descrizione (attributo Tipo)
+• ogni spedizione comprende uno o più pacchi
+• ogni pacco ha un numero progressivo (NP) che lo identifica nell’ambito della spedizione e ha una dimensione,
+con codice (CDim) e descrizione (attributo Dimens.)

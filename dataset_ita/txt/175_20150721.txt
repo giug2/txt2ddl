@@ -1,0 +1,6 @@
+• per ogni tipologia di piatto possono esistere più piatti, preparati dallo stesso chef o da chef diversi
+• ogni piatto è relativo ad una e una sola tipologia di piatto
+• ogni chef prepara zero o più piatti
+• ogni piatto ha uno e un solo chef ed è offerto in uno e un solo menu
+• per ogni menu esiste al più un piatto di una data tipologia
+• ogni tipologia di piatto può avere più ricette associate (es. varianti della stessa tipologia)

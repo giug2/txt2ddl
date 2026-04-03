@@ -1,0 +1,9 @@
+Il sistema descrive la gestione di una Piattaforma E-learning, identificata in modo univoco da un Codice e caratterizzata da attributi quali Nome, URL del sito e Contatto di supporto.
+All'interno del catalogo formativo, ogni Corso è definito da un Codice univoco, un Titolo e l'Anno di pubblicazione.
+A ciascun corso è associato almeno un Docente, anch'esso identificato da un Codice e descritto tramite Cognome, Nome, Data di nascita e una Data di ritiro, quest'ultima opzionale.
+L'erogazione di un corso su una specifica piattaforma è gestita tramite l'entità Sessione Corso, che possiede un proprio identificatore e specifica il periodo di fruizione attraverso una Data di inizio e una Data di fine.
+La struttura delle tariffe è determinata da diverse componenti.
+Esistono differenti Tipi di Iscrizione, ciascuno con un proprio Codice e una Descrizione, e diversi Livelli di Accesso, anch'essi identificati da un Codice e una Descrizione.
+L'entità Tariffa, dotata di un proprio identificatore, stabilisce l'effettivo Importo basandosi sulla combinazione di un tipo di iscrizione e un livello di accesso.
+Infine, il sistema prevede la possibilità di applicare promozioni.
+Ogni Tipo Sconto è identificato da un Codice e una Descrizione, ad esempio per studenti o per iscrizioni anticipate. La relazione tra Piattaforma e Tipo Sconto permette di definire le promozioni applicabili.

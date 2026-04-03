@@ -1,0 +1,129 @@
+{
+    "entities": [
+        {
+            "name": "AUTOMOBILE",
+            "attributes": [
+                {
+                    "name": "CHASSIS",
+                    "is_pk": true
+                },
+                {
+                    "name": "COLOR",
+                    "is_pk": false
+                },
+                {
+                    "name": "DATA",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "VERSION",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                },
+                {
+                    "name": "DISPLACEMENT",
+                    "is_pk": false
+                },
+                {
+                    "name": "PREZZO",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "POWER TYPE",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "DESCRIPTION",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "MODEL",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                },
+                {
+                    "name": "LENGTH",
+                    "is_pk": false
+                },
+                {
+                    "name": "PLACES",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "MARKET SEGMENT",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "DESCRIPTION",
+                    "is_pk": false
+                }
+            ]
+        },
+        {
+            "name": "MARK",
+            "attributes": [
+                {
+                    "name": "CODE",
+                    "is_pk": true
+                },
+                {
+                    "name": "NAME",
+                    "is_pk": false
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "entity1": "VERSION",
+            "entity2": "AUTOMOBILE",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "POWER TYPE",
+            "entity2": "VERSION",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "MODEL",
+            "entity2": "VERSION",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "MARKET SEGMENT",
+            "entity2": "MODEL",
+            "cardinality": "1:N"
+        },
+        {
+            "entity1": "MARK",
+            "entity2": "MODEL",
+            "cardinality": "1:N"
+        }
+    ]
+}

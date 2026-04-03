@@ -1,0 +1,4 @@
+- ogni categoria ha codice e nome
+- si vuole distinguere il concetto di prodotto da quello di sottocategoria; le sottocategorie hanno un nome e sono identificate dalla categoria di appartenenza e da un codice univoco solo nella categoria, mentre i prodotti sono identificati dalla sottocategoria e da uno SKU
+- ogni fornitore è specializzato in una e una sola categoria (ma potrebbe fornire anche prodotti di altre categorie);
+- ogni fornitore opera da uno e un solo magazzino; i magazzini hanno un codice e un indirizzo
